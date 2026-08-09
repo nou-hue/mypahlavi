@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
-import { getProduct, estimateShippingGBP } from "@/data/shop";
+import { estimateShippingGBP } from "@/data/shop";
+import { resolveProductForCheckout } from "@/lib/shop/catalog.server";
 import { insertOrder, updateOrder } from "@/lib/shop/orders.server";
 import { getStripe, poundsToPence, stripeConfigured } from "@/lib/stripe/client";
 
@@ -58,14 +59,21 @@ export const Route = createFileRoute("/api/shop/checkout")({
         const data = parsed.data;
         const resolved = [];
         for (const line of data.lines) {
-          const product = getProduct(line.productId);
+          const product = await resolveProductForCheckout({
+            productId: line.productId,
+            variantId: line.variantId,
+          });
           if (!product) {
             return Response.json(
               { error: `Unknown product ${line.productId}` },
               { status: 400 },
             );
           }
-          const variant = product.variants.find((v) => v.id === line.variantId);
+          const variant =
+            product.variants.find((v) => v.id === line.variantId) ??
+            product.variants.find(
+              (v) => String(v.printifyVariantId) === line.variantId,
+            );
           if (!variant) {
             return Response.json(
               { error: `Unknown variant ${line.variantId}` },
@@ -176,7 +184,11 @@ export const Route = createFileRoute("/api/shop/checkout")({
                 product_data: {
                   name: `${l.name} — ${l.variantLabel}`,
                   description: `SKU ${l.sku}`,
-                  images: l.imageSrc ? [`${origin}${l.imageSrc}`] : undefined,
+                  images: l.imageSrc?.startsWith("http")
+                    ? [l.imageSrc]
+                    : l.imageSrc
+                      ? [`${origin}${l.imageSrc}`]
+                      : undefined,
                   metadata: {
                     productId: l.productId,
                     variantId: l.variantId,

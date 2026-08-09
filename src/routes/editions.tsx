@@ -7,6 +7,7 @@ import {
   shopCategories,
   shopProducts,
   startingPrice,
+  type ShopProduct,
 } from "@/data/shop";
 import { useCartStore } from "@/lib/cart-store";
 import { cn } from "@/lib/utils";
@@ -15,23 +16,54 @@ export const Route = createFileRoute("/editions")({
   component: ShopPage,
 });
 
+type CatalogResponse = {
+  source: "printify" | "editorial";
+  connected: boolean;
+  shopTitle: string | null;
+  products: ShopProduct[];
+  message: string;
+  error?: string;
+};
+
 function ShopPage() {
   const [cat, setCat] = useState("all");
   const openCart = useCartStore((s) => s.openCart);
   const count = useCartStore((s) => s.count());
-  const [status, setStatus] = useState<string | null>(null);
+  const [catalog, setCatalog] = useState<CatalogResponse | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/shop/status")
+    let cancelled = false;
+    fetch("/api/shop/catalog")
       .then((r) => r.json())
-      .then((d) => setStatus(d.message ?? null))
-      .catch(() => null);
+      .then((d: CatalogResponse) => {
+        if (!cancelled) setCatalog(d);
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setCatalog({
+            source: "editorial",
+            connected: false,
+            shopTitle: null,
+            products: shopProducts,
+            message: "Could not load catalogue",
+          });
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
+  const products = catalog?.products ?? shopProducts;
+
   const items = useMemo(() => {
-    if (cat === "all") return shopProducts;
-    return shopProducts.filter((e) => e.category === cat);
-  }, [cat]);
+    if (cat === "all") return products;
+    return products.filter((e) => e.category === cat);
+  }, [cat, products]);
 
   return (
     <LayoutShell>
@@ -48,8 +80,18 @@ function ShopPage() {
               Archival prints, apparel, and objects — produced on demand through
               Printify. Small catalogue, quiet presentation.
             </p>
-            {status && (
-              <p className="text-xs text-ink-subtle">{status}</p>
+            {catalog && (
+              <p
+                className={cn(
+                  "text-xs",
+                  catalog.connected && catalog.source === "printify"
+                    ? "text-ink-muted"
+                    : "text-ink-subtle",
+                )}
+              >
+                {catalog.message}
+                {catalog.error ? ` · ${catalog.error}` : ""}
+              </p>
             )}
           </div>
           <button
@@ -80,52 +122,61 @@ function ShopPage() {
           ))}
         </div>
 
-        <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((item, i) => (
-            <article
-              key={item.id}
-              className="group flex flex-col archive-fade"
-              style={{ animationDelay: `${i * 30}ms` }}
-            >
-              <Link
-                to="/editions/$productId"
-                params={{ productId: item.slug }}
-                className="block overflow-hidden border border-border bg-deep"
+        {loading ? (
+          <p className="font-sans text-sm text-ink-subtle">Loading editions…</p>
+        ) : items.length === 0 ? (
+          <p className="font-sans text-sm text-ink-muted">
+            No products in this category yet. Publish items in your Printify shop,
+            then refresh.
+          </p>
+        ) : (
+          <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {items.map((item, i) => (
+              <article
+                key={item.id}
+                className="group flex flex-col archive-fade"
+                style={{ animationDelay: `${i * 30}ms` }}
               >
-                {item.imageSrc ? (
-                  <img
-                    src={item.imageSrc}
-                    alt={item.name}
-                    className="aspect-[3/4] w-full object-cover transition-opacity duration-300 group-hover:opacity-90"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div
-                    className={cn(
-                      "aspect-[3/4] bg-gradient-to-br",
-                      item.gradient,
-                    )}
-                  />
-                )}
-              </Link>
-              <div className="mt-3 space-y-1">
-                <p className="font-sans text-[0.62rem] uppercase tracking-[0.14em] text-ink-subtle">
-                  {item.accentLabel} · from {formatGBP(startingPrice(item))}
-                </p>
                 <Link
                   to="/editions/$productId"
                   params={{ productId: item.slug }}
-                  className="font-serif text-xl leading-snug hover:text-accent"
+                  className="block overflow-hidden border border-border bg-deep"
                 >
-                  {item.name}
+                  {item.imageSrc ? (
+                    <img
+                      src={item.imageSrc}
+                      alt={item.name}
+                      className="aspect-[3/4] w-full object-cover transition-opacity duration-300 group-hover:opacity-90"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div
+                      className={cn(
+                        "aspect-[3/4] bg-gradient-to-br",
+                        item.gradient,
+                      )}
+                    />
+                  )}
                 </Link>
-                <p className="text-sm leading-relaxed text-ink-muted">
-                  {item.shortDescription}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
+                <div className="mt-3 space-y-1">
+                  <p className="font-sans text-[0.62rem] uppercase tracking-[0.14em] text-ink-subtle">
+                    {item.accentLabel} · from {formatGBP(startingPrice(item))}
+                  </p>
+                  <Link
+                    to="/editions/$productId"
+                    params={{ productId: item.slug }}
+                    className="font-serif text-xl leading-snug hover:text-accent"
+                  >
+                    {item.name}
+                  </Link>
+                  <p className="text-sm leading-relaxed text-ink-muted">
+                    {item.shortDescription}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
       </div>
     </LayoutShell>
   );

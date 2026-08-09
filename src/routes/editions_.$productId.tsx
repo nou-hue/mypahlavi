@@ -1,10 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, Check } from "lucide-react";
 import { LayoutShell } from "@/components/archive/layout-shell";
 import {
   formatGBP,
-  getProduct,
   shopProducts,
   startingPrice,
   type ShopProduct,
@@ -18,7 +17,40 @@ export const Route = createFileRoute("/editions_/$productId")({
 
 function ProductPage() {
   const { productId } = Route.useParams();
-  const product = getProduct(productId);
+  const [products, setProducts] = useState<ShopProduct[] | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/shop/catalog")
+      .then((r) => r.json())
+      .then((d: { products?: ShopProduct[] }) => {
+        if (!cancelled) setProducts(d.products ?? shopProducts);
+      })
+      .catch(() => {
+        if (!cancelled) setProducts(shopProducts);
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const list = products ?? shopProducts;
+  const product =
+    list.find((p) => p.slug === productId || p.id === productId) ?? null;
+
+  if (loading) {
+    return (
+      <LayoutShell>
+        <div className="mx-auto max-w-lg px-5 py-24 text-center text-sm text-ink-subtle">
+          Loading edition…
+        </div>
+      </LayoutShell>
+    );
+  }
 
   if (!product) {
     return (
@@ -36,10 +68,16 @@ function ProductPage() {
     );
   }
 
-  return <ProductDetail product={product} />;
+  return <ProductDetail product={product} all={list} />;
 }
 
-function ProductDetail({ product }: { product: ShopProduct }) {
+function ProductDetail({
+  product,
+  all,
+}: {
+  product: ShopProduct;
+  all: ShopProduct[];
+}) {
   const [variantId, setVariantId] = useState(product.variants[0]?.id ?? "");
   const [added, setAdded] = useState(false);
   const addItem = useCartStore((s) => s.addItem);
@@ -49,7 +87,7 @@ function ProductDetail({ product }: { product: ShopProduct }) {
     [product, variantId],
   );
 
-  const related = shopProducts
+  const related = all
     .filter((p) => p.id !== product.id && p.category === product.category)
     .slice(0, 3);
 
