@@ -156,22 +156,13 @@ export const Route = createFileRoute("/api/shop/checkout")({
             metadata: { mode: "stripe" },
           });
 
-          const lineItems: Array<{
-            quantity: number;
-            price_data: {
-              currency: string;
-              unit_amount: number;
-              product_data: {
-                name: string;
-                description?: string;
-                images?: string[];
-                metadata?: Record<string, string>;
-              };
-            };
-          }> = resolved.map((l) => ({
+          const TAX_GENERAL = "txcd_99999999";
+          const TAX_SHIPPING = "txcd_92010001";
+
+          const lineItems = resolved.map((l) => ({
             quantity: l.quantity,
             price_data: {
-              currency: "gbp",
+              currency: "gbp" as const,
               unit_amount: poundsToPence(l.unitPriceGBP),
               product_data: {
                 name: `${l.name} — ${l.variantLabel}`.slice(0, 120),
@@ -181,6 +172,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
                   : l.imageSrc
                     ? [`${origin}${l.imageSrc}`]
                     : undefined,
+                tax_code: TAX_GENERAL,
                 metadata: {
                   productId: l.productId,
                   variantId: l.variantId,
@@ -190,13 +182,11 @@ export const Route = createFileRoute("/api/shop/checkout")({
             },
           }));
 
-          // Shipping as a line item — compatible with Stripe Managed Payments
-          // (shipping_options is rejected when managed payments is on).
           if (shippingCost > 0) {
             lineItems.push({
               quantity: 1,
               price_data: {
-                currency: "gbp",
+                currency: "gbp" as const,
                 unit_amount: poundsToPence(shippingCost),
                 product_data: {
                   name:
@@ -204,12 +194,21 @@ export const Route = createFileRoute("/api/shop/checkout")({
                       ? "UK shipping"
                       : "International shipping",
                   description: `Ship to ${data.country}`,
+                  images: undefined,
+                  tax_code: TAX_SHIPPING,
+                  metadata: {
+                    productId: "shipping",
+                    variantId: "flat",
+                    sku: "SHIP",
+                  },
                 },
               },
             });
           }
 
-          const session = await stripe.checkout.sessions.create({
+          const sessionParams: Parameters<
+            typeof stripe.checkout.sessions.create
+          >[0] = {
             mode: "payment",
             customer_email: data.email,
             client_reference_id: id,
@@ -217,7 +216,14 @@ export const Route = createFileRoute("/api/shop/checkout")({
             cancel_url: `${origin}/checkout?cancelled=1`,
             metadata: orderToStripeMetadata(row),
             line_items: lineItems,
-          });
+          };
+          // Disable Stripe Managed Payments (default on some accounts) so classic
+          // Checkout works for POD without strict tax-code product catalog rules.
+          (sessionParams as Record<string, unknown>).managed_payments = {
+            enabled: false,
+          };
+
+          const session = await stripe.checkout.sessions.create(sessionParams);
 
           await updateOrder(id, {
             stripe_session_id: session.id,
