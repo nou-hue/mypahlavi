@@ -156,6 +156,59 @@ export const Route = createFileRoute("/api/shop/checkout")({
             metadata: { mode: "stripe" },
           });
 
+          const lineItems: Array<{
+            quantity: number;
+            price_data: {
+              currency: string;
+              unit_amount: number;
+              product_data: {
+                name: string;
+                description?: string;
+                images?: string[];
+                metadata?: Record<string, string>;
+              };
+            };
+          }> = resolved.map((l) => ({
+            quantity: l.quantity,
+            price_data: {
+              currency: "gbp",
+              unit_amount: poundsToPence(l.unitPriceGBP),
+              product_data: {
+                name: `${l.name} — ${l.variantLabel}`.slice(0, 120),
+                description: `SKU ${l.sku}`,
+                images: l.imageSrc?.startsWith("http")
+                  ? [l.imageSrc]
+                  : l.imageSrc
+                    ? [`${origin}${l.imageSrc}`]
+                    : undefined,
+                metadata: {
+                  productId: l.productId,
+                  variantId: l.variantId,
+                  sku: l.sku,
+                },
+              },
+            },
+          }));
+
+          // Shipping as a line item — compatible with Stripe Managed Payments
+          // (shipping_options is rejected when managed payments is on).
+          if (shippingCost > 0) {
+            lineItems.push({
+              quantity: 1,
+              price_data: {
+                currency: "gbp",
+                unit_amount: poundsToPence(shippingCost),
+                product_data: {
+                  name:
+                    data.country === "United Kingdom"
+                      ? "UK shipping"
+                      : "International shipping",
+                  description: `Ship to ${data.country}`,
+                },
+              },
+            });
+          }
+
           const session = await stripe.checkout.sessions.create({
             mode: "payment",
             customer_email: data.email,
@@ -163,42 +216,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
             success_url: `${origin}/order/${id}?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `${origin}/checkout?cancelled=1`,
             metadata: orderToStripeMetadata(row),
-            shipping_options: [
-              {
-                shipping_rate_data: {
-                  type: "fixed_amount",
-                  fixed_amount: {
-                    amount: poundsToPence(shippingCost),
-                    currency: "gbp",
-                  },
-                  display_name:
-                    data.country === "United Kingdom"
-                      ? "UK shipping"
-                      : "International shipping",
-                },
-              },
-            ],
-            line_items: resolved.map((l) => ({
-              quantity: l.quantity,
-              price_data: {
-                currency: "gbp",
-                unit_amount: poundsToPence(l.unitPriceGBP),
-                product_data: {
-                  name: `${l.name} — ${l.variantLabel}`.slice(0, 120),
-                  description: `SKU ${l.sku}`,
-                  images: l.imageSrc?.startsWith("http")
-                    ? [l.imageSrc]
-                    : l.imageSrc
-                      ? [`${origin}${l.imageSrc}`]
-                      : undefined,
-                  metadata: {
-                    productId: l.productId,
-                    variantId: l.variantId,
-                    sku: l.sku,
-                  },
-                },
-              },
-            })),
+            line_items: lineItems,
           });
 
           await updateOrder(id, {
