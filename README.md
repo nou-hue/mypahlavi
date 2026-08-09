@@ -1,50 +1,66 @@
 # mypahlavi.com
 
-Independent royal archive of the **Pahlavi family** — gallery, lineage, library, editions shop, and patronage.
+Independent archive of the **Pahlavi family** — gallery, lineage, library, limited editions shop.
 
-Built with TanStack Start · React · Tailwind · ready for **Vercel**.
+**This is the single production site.** Do not create a second Vercel project.
 
-## Live repo
+| | |
+|---|---|
+| GitHub | https://github.com/nou-hue/mypahlavi |
+| Vercel project | `noushinsteam/mypahlavi` |
+| Production URL | https://mypahlavi.vercel.app |
+| Custom domain | mypahlavi.com (attach in Vercel → Domains) |
 
-https://github.com/nou-hue/mypahlavi
-
-## Deploy to Vercel (one-time)
-
-1. Open [vercel.com/new](https://vercel.com/new)
-2. **Import** the GitHub repo `nou-hue/mypahlavi`
-3. Framework preset: leave default (Vite / Nitro)
-4. Click **Deploy**
-5. In Project → **Domains**, add `mypahlavi.com` (and `www`) and set DNS at your registrar:
-
-```
-A     @     76.76.21.21
-CNAME www   cname.vercel-dns.com
-```
-
-Or from CLI (after `vercel login`):
-
-```bash
-vercel link
-vercel --prod
-```
+Pushing to `main` deploys that Vercel project automatically.
 
 ## Local
 
 ```bash
 npm install
-npm run dev      # http://localhost:8080
+npm run dev      # 0.0.0.0:8080
 npm run build
+npm run typecheck
 ```
+
+## Shop (Printify + Stripe)
+
+Set these on the **same** Vercel project (Settings → Environment Variables):
+
+```
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+VITE_STRIPE_PUBLISHABLE_KEY=
+PRINTIFY_API_TOKEN=
+PRINTIFY_SHOP_ID=
+DATABASE_URL=          # Neon recommended on Vercel
+```
+
+Stripe webhook endpoint (Production):
+
+```
+https://mypahlavi.vercel.app/api/shop/webhook
+```
+
+Event: `checkout.session.completed`
+
+Inspect Printify products: `GET /api/shop/printify/products`  
+Shop status: `GET /api/shop/status`
+
+Map Printify product/variant IDs onto catalogue entries in `src/data/shop.ts` for auto-fulfilment.
 
 ## Sections
 
-- **Gallery** — framed archival plates + captions
-- **Lineage** — interactive family tree
-- **Library** — essays, letters, books
-- **Shop / Editions** — Printify-ready cart + checkout
-- **Patronage** — subscription tiers
+- **Gallery** — collection with captions
+- **Lineage** — family tree (Fawzia, Soraya, Farah distinct)
+- **Library** — essays & letters
+- **Editions** — bag, Stripe checkout, Printify production
+- **Patronage** — support tiers
 
-## Notes
+## Domain
 
-- Images live in `public/archive/`
-- Shop is wired for Printify (connect API keys when ready)
+In Vercel project `mypahlavi` → Domains → add `mypahlavi.com` / `www`:
+
+```
+A     @     76.76.21.21
+CNAME www   cname.vercel-dns.com
+```

@@ -6,7 +6,7 @@ function blockSave(e: SyntheticEvent) {
   e.stopPropagation();
 }
 
-/** Dark brown museum frame around archival plates — view only, not for download */
+/** Editorial plate — thin border, view-protected */
 export function ArchiveImage({
   src,
   alt,
@@ -14,6 +14,7 @@ export function ArchiveImage({
   gradient = "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
   imgClassName,
   framed = true,
+  fit = "cover",
 }: {
   src?: string;
   alt: string;
@@ -21,6 +22,7 @@ export function ArchiveImage({
   gradient?: string;
   imgClassName?: string;
   framed?: boolean;
+  fit?: "cover" | "contain";
 }) {
   const plate = (
     <div
@@ -43,11 +45,11 @@ export function ArchiveImage({
             onDragStart={blockSave}
             onContextMenu={blockSave}
             className={cn(
-              "pointer-events-none h-full w-full select-none object-cover object-center",
+              "pointer-events-none h-full w-full select-none object-center",
+              fit === "contain" ? "object-contain" : "object-cover",
               imgClassName,
             )}
           />
-          {/* Transparent shield — blocks right-click / long-press save on the plate */}
           <span
             aria-hidden
             className="absolute inset-0 z-[1] cursor-default"

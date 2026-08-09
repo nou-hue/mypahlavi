@@ -19,107 +19,105 @@ function HomePage() {
         g.src &&
         (g.personIds.includes("mohammad-reza") ||
           g.personIds.includes("farah") ||
+          g.personIds.includes("soraya") ||
+          g.personIds.includes("fawzia") ||
           g.room === "coronation" ||
           g.room === "family"),
     )
-    .slice(0, 8);
+    .slice(0, 6);
   const people = familyMembers.filter((m) =>
-    ["reza-shah", "mohammad-reza", "farah", "reza"].includes(m.id),
+    ["mohammad-reza", "farah", "soraya", "fawzia", "reza", "reza-shah"].includes(
+      m.id,
+    ),
   );
   const shopFeatured = shopProducts.filter((p) => p.featured).slice(0, 3);
   const essays = libraryItems.slice(0, 3);
 
   return (
-    <LayoutShell ghostHeader>
-      <section className="relative min-h-[100svh] overflow-hidden bg-deep text-cream">
-        {heroSrc ? (
-          <img
-            src={heroSrc}
-            alt={siteCopy.heroCaption}
-            className="absolute inset-0 h-full w-full object-cover object-[center_20%] opacity-75"
-          />
-        ) : null}
-        <div className="absolute inset-0 bg-gradient-to-t from-deep via-deep/60 to-deep/30" />
+    <LayoutShell>
+      {/* Hero — centered editorial plate, natural aspect (no stretch) */}
+      <section className="bg-ground">
+        <div className="mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center justify-center px-5 pb-16 pt-28 sm:px-8 sm:pb-20 sm:pt-32">
+          <p className="mb-10 font-sans text-[0.65rem] uppercase tracking-[0.32em] text-ink-subtle archive-rise">
+            {siteCopy.heroKicker}
+          </p>
 
-        <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-16 pt-32 sm:px-8 sm:pb-20">
-          <div className="archive-rise max-w-3xl space-y-6">
-            <p className="font-sans text-[0.7rem] uppercase tracking-[0.28em] text-cream/55">
-              {siteCopy.heroKicker} · {galleryImages.length} plates
-            </p>
-            <h1 className="font-serif text-[clamp(3rem,10vw,6.5rem)] leading-[0.92] tracking-[-0.03em]">
+          {heroSrc ? (
+            <figure className="archive-rise w-full max-w-[min(100%,420px)] sm:max-w-[min(100%,480px)]">
+              <div className="hero-plate relative w-full overflow-hidden bg-deep archive-view-only">
+                <img
+                  src={heroSrc}
+                  alt={siteCopy.heroCaption}
+                  draggable={false}
+                  className="mx-auto block h-auto w-full select-none object-contain"
+                  style={{ maxHeight: "min(62svh, 640px)" }}
+                />
+                <span aria-hidden className="absolute inset-0" />
+              </div>
+              <figcaption className="mt-5 text-center">
+                <p className="font-serif text-base italic leading-relaxed text-ink-muted sm:text-lg">
+                  {siteCopy.heroCaption}
+                </p>
+              </figcaption>
+            </figure>
+          ) : null}
+
+          <div className="mt-12 max-w-lg text-center archive-rise space-y-5">
+            <h1 className="font-serif text-[clamp(2.75rem,8vw,4.5rem)] leading-[0.95] tracking-[-0.02em]">
               {siteCopy.heroTitle}
             </h1>
-            <p className="max-w-xl font-serif text-xl leading-relaxed text-cream/78 sm:text-2xl">
+            <p className="text-base leading-relaxed text-ink-muted sm:text-lg">
               {siteCopy.heroSub}
             </p>
-            <p className="max-w-md text-sm leading-relaxed text-cream/50">
-              {siteCopy.heroCaption}
-            </p>
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <Link
                 to="/gallery"
-                className="inline-flex h-12 items-center gap-2 border border-cream/30 bg-cream/5 px-6 font-sans text-[0.72rem] uppercase tracking-[0.18em] text-cream transition-colors hover:bg-cream hover:text-deep"
+                className="inline-flex h-11 items-center gap-2 bg-ink px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] text-cream transition-opacity hover:opacity-85"
               >
-                Enter the archive
-                <ArrowRight className="size-4" />
+                Gallery
+                <ArrowRight className="size-3.5" />
               </Link>
               <Link
-                to="/library"
-                className="inline-flex h-12 items-center px-2 font-sans text-[0.72rem] uppercase tracking-[0.18em] text-cream/60 transition-colors hover:text-cream"
+                to="/editions"
+                className="inline-flex h-11 items-center border border-border px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] text-ink transition-colors hover:border-ink/40"
               >
-                Reading room
+                Editions
               </Link>
             </div>
           </div>
-
-          <div className="mt-14 grid gap-6 border-t border-cream/15 pt-6 sm:grid-cols-3">
-            <Meta label="Gallery" value={`${galleryImages.length} framed plates`} />
-            <Meta label="Library" value="Essays · letters · books" />
-            <Meta label="Lineage" value="An interactive house" />
-          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-            Manifesto
-          </p>
-          <h2 className="mt-4 font-serif text-3xl tracking-tight sm:text-5xl text-balance">
-            History deserves rooms, not noise
-          </h2>
-          <p className="mt-6 text-base leading-relaxed text-ink-muted sm:text-lg">
-            mypahlavi.com is an independent archive of the Pahlavi family — the last
-            imperial house of Iran. We gather photographs, essays, and lineage with
-            museum calm: ivory ground, measured type, and images held in dark brown
-            frames as if they still hung in a private wing after hours.
+      {/* Intro — journalistic, tight */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-2xl px-5 py-20 text-center sm:px-8 sm:py-24">
+          <p className="font-serif text-2xl leading-snug tracking-tight text-ink-soft sm:text-3xl text-balance">
+            An independent record of the Pahlavi century — from Reza Shah to the
+            household of Farah — in image, lineage, and prose.
           </p>
         </div>
       </section>
 
-      <section className="border-y border-border bg-ground-elevated">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-xl space-y-3">
-              <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-                From the gallery
+      {/* Featured gallery strip */}
+      <section className="border-t border-border bg-ground-elevated">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="mb-10 flex items-end justify-between gap-6">
+            <div>
+              <p className="font-sans text-[0.65rem] uppercase tracking-[0.28em] text-ink-subtle">
+                Selected
               </p>
-              <h2 className="font-serif text-4xl tracking-tight sm:text-5xl">
-                Faces the century kept
+              <h2 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl">
+                From the collection
               </h2>
-              <p className="text-base leading-relaxed text-ink-muted">
-                Coronation light, state visits, family silence — plates chosen for
-                presence, not volume. Each carries a written wall label.
-              </p>
             </div>
             <Link
               to="/gallery"
-              className="inline-flex items-center gap-2 font-sans text-[0.72rem] uppercase tracking-[0.18em] text-accent"
+              className="hidden items-center gap-2 font-sans text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted transition-colors hover:text-ink sm:inline-flex"
             >
-              Open gallery <ArrowRight className="size-4" />
+              All {galleryImages.length} <ArrowRight className="size-3.5" />
             </Link>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((img, i) => (
               <Link
                 key={img.id}
@@ -132,221 +130,178 @@ function HomePage() {
                   src={img.src}
                   alt={img.title}
                   gradient={img.gradient}
-                  className="aspect-[4/5] transition-transform duration-500 group-hover:scale-[1.01]"
+                  className="aspect-[3/4] transition-opacity duration-300 group-hover:opacity-90"
                 />
-                <div className="mt-3 space-y-1 px-0.5">
-                  <p className="font-serif text-lg leading-snug">{img.title}</p>
-                  <p className="text-sm text-ink-muted line-clamp-2">
-                    {img.cardCaption || img.caption}
+                <div className="mt-3 space-y-1">
+                  <p className="font-sans text-[0.62rem] uppercase tracking-[0.14em] text-ink-subtle">
+                    {img.year}
+                    {img.place && img.place !== "Archive" ? ` · ${img.place}` : ""}
                   </p>
+                  <p className="font-serif text-lg leading-snug">{img.title}</p>
                 </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 text-center sm:hidden">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center gap-2 font-sans text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted"
+            >
+              Full gallery <ArrowRight className="size-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Library */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="mb-10 flex items-end justify-between gap-6">
+            <div>
+              <p className="font-sans text-[0.65rem] uppercase tracking-[0.28em] text-ink-subtle">
+                Journal
+              </p>
+              <h2 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl">
+                Essays & letters
+              </h2>
+            </div>
+            <Link
+              to="/library"
+              className="hidden items-center gap-2 font-sans text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted hover:text-ink sm:inline-flex"
+            >
+              Library <ArrowRight className="size-3.5" />
+            </Link>
+          </div>
+          <div className="grid gap-px bg-border md:grid-cols-3">
+            {essays.map((e) => (
+              <Link
+                key={e.id}
+                to="/library"
+                className="group flex flex-col bg-ground p-7 transition-colors hover:bg-ground-elevated"
+              >
+                <p className="font-sans text-[0.62rem] uppercase tracking-[0.16em] text-ink-subtle">
+                  {e.kind} · {e.year}
+                </p>
+                <h3 className="mt-3 font-serif text-2xl leading-snug tracking-tight">
+                  {e.title}
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">
+                  {e.excerpt}
+                </p>
+                <span className="mt-6 font-sans text-[0.65rem] uppercase tracking-[0.14em] text-accent">
+                  Read
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
-        <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-xl space-y-3">
-            <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-              Reading room
-            </p>
-            <h2 className="font-serif text-4xl tracking-tight sm:text-5xl">
-              Words with weight
-            </h2>
-            <p className="text-base leading-relaxed text-ink-muted">
-              Essays and letters written for slow attention — on image, exile,
-              ceremony, and how a dynasty becomes an archive.
-            </p>
-          </div>
-          <Link
-            to="/library"
-            className="inline-flex items-center gap-2 font-sans text-[0.72rem] uppercase tracking-[0.18em] text-accent"
-          >
-            All writing <ArrowRight className="size-4" />
-          </Link>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {essays.map((e) => (
+      {/* Lineage strip */}
+      <section className="border-t border-border bg-deep text-cream">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="font-sans text-[0.65rem] uppercase tracking-[0.28em] text-cream/40">
+                Lineage
+              </p>
+              <h2 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl">
+                The house
+              </h2>
+            </div>
             <Link
-              key={e.id}
-              to="/library"
-              className="group flex flex-col border border-border bg-ground p-6 transition-colors hover:border-accent/40"
+              to="/lineage"
+              className="inline-flex items-center gap-2 font-sans text-[0.68rem] uppercase tracking-[0.16em] text-cream/55 hover:text-cream"
             >
-              <p className="font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-subtle">
-                {e.kind} · {e.year}
-              </p>
-              <h3 className="mt-3 font-serif text-2xl leading-snug group-hover:text-accent">
-                {e.title}
-              </h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">
-                {e.excerpt}
-              </p>
-              <p className="mt-6 font-sans text-[0.68rem] uppercase tracking-[0.14em] text-accent">
-                Read
-              </p>
+              Family tree <ArrowRight className="size-3.5" />
             </Link>
-          ))}
+          </div>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            {people.map((p) => (
+              <Link key={p.id} to="/lineage" search={{ person: p.id }} className="group">
+                <ArchiveImage
+                  src={p.portraitSrc}
+                  alt={p.name}
+                  gradient={p.portraitGradient}
+                  className="aspect-[3/4] transition-opacity group-hover:opacity-85"
+                />
+                <p className="mt-2.5 font-serif text-sm leading-snug text-cream/90">
+                  {p.name}
+                </p>
+                <p className="text-[0.65rem] text-cream/40">{p.years}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="border-y border-border bg-deep text-cream">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-xl space-y-3">
-              <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-cream/45">
-                Editions
+      {/* Editions — limited / exclusive */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="mb-10 flex items-end justify-between gap-6">
+            <div className="max-w-md">
+              <p className="font-sans text-[0.65rem] uppercase tracking-[0.28em] text-ink-subtle">
+                Limited editions
               </p>
-              <h2 className="font-serif text-4xl tracking-tight sm:text-5xl">
-                Objects from the archive
+              <h2 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl">
+                For the wall
               </h2>
-              <p className="text-base leading-relaxed text-cream/65">
-                Quiet merch — prints and apparel fulfilled on demand through Printify.
-                Designed to feel commissioned, not sold loudly.
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+                Small-run prints and apparel, produced on demand. Quiet objects from
+                the collection.
               </p>
             </div>
             <Link
               to="/editions"
-              className="inline-flex items-center gap-2 font-sans text-[0.72rem] uppercase tracking-[0.18em] text-accent-soft"
+              className="hidden items-center gap-2 font-sans text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted hover:text-ink sm:inline-flex"
             >
-              Browse shop <ArrowRight className="size-4" />
+              Shop <ArrowRight className="size-3.5" />
             </Link>
           </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-3">
             {shopFeatured.map((p) => (
               <Link
                 key={p.id}
                 to="/editions/$productId"
                 params={{ productId: p.slug }}
-                className="group border border-cream/15 bg-cream/[0.03]"
+                className="group"
               >
                 <div
                   className={cn(
-                    "aspect-[4/5] bg-gradient-to-br transition-transform duration-500 group-hover:scale-[1.01]",
+                    "aspect-[4/5] border border-border bg-gradient-to-br transition-opacity group-hover:opacity-90",
                     p.gradient,
                   )}
                 />
-                <div className="p-4">
-                  <p className="font-serif text-xl leading-snug">{p.name}</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.12em] text-cream/45">
-                    from {formatGBP(startingPrice(p))}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-ground-elevated">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-28">
-          <div className="space-y-5">
-            <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-              Lineage
-            </p>
-            <h2 className="font-serif text-4xl tracking-tight sm:text-5xl">
-              A family as a journey
-            </h2>
-            <p className="max-w-md text-base leading-relaxed text-ink-muted">
-              From Reza Shah to the children of Farah — sparse nodes, soft dossiers,
-              and portraits that lead before the biography speaks.
-            </p>
-            <Link
-              to="/lineage"
-              className="inline-flex h-11 items-center gap-2 border border-ink/15 px-5 font-sans text-[0.72rem] uppercase tracking-[0.16em] transition-colors hover:border-ink/40"
-            >
-              Explore family tree
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {people.map((p) => (
-              <Link
-                key={p.id}
-                to="/lineage"
-                search={{ person: p.id }}
-                className="group"
-              >
-                <ArchiveImage
-                  src={p.portraitSrc}
-                  alt={p.name}
-                  gradient={p.portraitGradient}
-                  className="aspect-square"
-                />
                 <p className="mt-3 font-serif text-lg leading-snug">{p.name}</p>
-                <p className="text-xs text-ink-subtle">{p.years}</p>
+                <p className="mt-0.5 font-sans text-[0.65rem] uppercase tracking-[0.12em] text-ink-subtle">
+                  from {formatGBP(startingPrice(p))}
+                </p>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
-        <div className="grid gap-10 lg:grid-cols-3">
-          <Feature
-            kicker="Patronage"
-            title="Keep the lights on"
-            body="Subscriptions as quiet patronage — higher-resolution rooms, early exhibitions, and support for digitization."
+      {/* Closing CTA */}
+      <section className="border-t border-border bg-ground-elevated">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 px-5 py-16 sm:flex-row sm:items-center sm:px-8 sm:py-20">
+          <div>
+            <h2 className="font-serif text-3xl tracking-tight sm:text-4xl">
+              Support the archive
+            </h2>
+            <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-muted">
+              Patronage funds digitization, research, and new chapters of the
+              collection.
+            </p>
+          </div>
+          <Link
             to="/patronage"
-            cta="See tiers"
-          />
-          <Feature
-            kicker="Gallery"
-            title={`${galleryImages.length} framed plates`}
-            body="Dark brown frames, pale mats, written captions. An exhibition you can walk with the arrow keys."
-            to="/gallery"
-            cta="Enter gallery"
-          />
-          <Feature
-            kicker="Shop"
-            title="Editions for the wall"
-            body="Archival prints and soft goods, Printify-ready — objects that feel like they left a museum store quietly."
-            to="/editions"
-            cta="Open shop"
-          />
+            className="inline-flex h-11 shrink-0 items-center gap-2 bg-ink px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] text-cream hover:opacity-85"
+          >
+            Patronage <ArrowRight className="size-3.5" />
+          </Link>
         </div>
       </section>
     </LayoutShell>
-  );
-}
-
-function Meta({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <p className="font-sans text-[0.65rem] uppercase tracking-[0.2em] text-cream/40">
-        {label}
-      </p>
-      <p className="mt-1 font-serif text-lg text-cream/85">{value}</p>
-    </div>
-  );
-}
-
-function Feature({
-  kicker,
-  title,
-  body,
-  to,
-  cta,
-}: {
-  kicker: string;
-  title: string;
-  body: string;
-  to: "/library" | "/editions" | "/patronage" | "/gallery";
-  cta: string;
-}) {
-  return (
-    <div className="flex flex-col border-t border-border pt-8">
-      <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-        {kicker}
-      </p>
-      <h3 className="mt-3 font-serif text-3xl tracking-tight">{title}</h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">{body}</p>
-      <Link
-        to={to}
-        className="mt-6 inline-flex items-center gap-2 font-sans text-[0.72rem] uppercase tracking-[0.16em] text-accent"
-      >
-        {cta} <ArrowRight className="size-3.5" />
-      </Link>
-    </div>
   );
 }

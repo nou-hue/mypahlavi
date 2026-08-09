@@ -13,6 +13,9 @@ export type CartLine = {
   quantity: number;
   gradient: string;
   sku: string;
+  imageSrc?: string;
+  printifyProductId?: string | null;
+  printifyVariantId?: number | null;
 };
 
 type CartState = {
@@ -74,6 +77,9 @@ export const useCartStore = create<CartState>()(
                 quantity,
                 gradient: product.gradient,
                 sku: variant.sku,
+                imageSrc: product.imageSrc,
+                printifyProductId: product.printifyProductId ?? null,
+                printifyVariantId: variant.printifyVariantId ?? null,
               },
             ],
           };

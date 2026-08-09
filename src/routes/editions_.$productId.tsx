@@ -24,13 +24,10 @@ function ProductPage() {
     return (
       <LayoutShell>
         <div className="mx-auto max-w-lg px-5 py-24 text-center">
-          <h1 className="font-serif text-3xl">Edition not found</h1>
-          <p className="mt-3 text-sm text-ink-muted">
-            This product is not in the current catalogue.
-          </p>
+          <h1 className="font-serif text-3xl">Not found</h1>
           <Link
             to="/editions"
-            className="mt-8 inline-flex h-11 items-center border border-ink/20 px-6 font-sans text-[0.72rem] uppercase tracking-[0.16em] hover:bg-ink hover:text-cream"
+            className="mt-8 inline-flex h-11 items-center border border-border px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] hover:bg-ink hover:text-cream"
           >
             Back to shop
           </Link>
@@ -46,7 +43,6 @@ function ProductDetail({ product }: { product: ShopProduct }) {
   const [variantId, setVariantId] = useState(product.variants[0]?.id ?? "");
   const [added, setAdded] = useState(false);
   const addItem = useCartStore((s) => s.addItem);
-  const openCart = useCartStore((s) => s.openCart);
 
   const variant = useMemo(
     () => product.variants.find((v) => v.id === variantId) ?? product.variants[0],
@@ -66,27 +62,34 @@ function ProductDetail({ product }: { product: ShopProduct }) {
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-14">
+      <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
         <Link
           to="/editions"
-          className="mb-8 inline-flex items-center gap-2 font-sans text-[0.7rem] uppercase tracking-[0.16em] text-ink-subtle hover:text-ink"
+          className="mb-8 inline-flex items-center gap-2 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-subtle hover:text-ink"
         >
-          <ArrowLeft className="size-3.5" /> All editions
+          <ArrowLeft className="size-3.5" /> Editions
         </Link>
 
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div
-            className={cn(
-              "aspect-[4/5] w-full bg-gradient-to-br shadow-soft",
-              product.gradient,
+          <div className="overflow-hidden border border-border bg-deep">
+            {product.imageSrc ? (
+              <img
+                src={product.imageSrc}
+                alt={product.name}
+                className="aspect-[3/4] w-full object-cover"
+              />
+            ) : (
+              <div
+                className={cn("aspect-[3/4] w-full bg-gradient-to-br", product.gradient)}
+              />
             )}
-          />
+          </div>
 
           <div className="flex flex-col archive-rise">
-            <p className="font-sans text-[0.68rem] uppercase tracking-[0.18em] text-ink-subtle">
-              {product.accentLabel} · Printify edition
+            <p className="font-sans text-[0.65rem] uppercase tracking-[0.18em] text-ink-subtle">
+              {product.accentLabel}
             </p>
-            <h1 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">
+            <h1 className="mt-2 font-serif text-4xl tracking-tight sm:text-5xl">
               {product.name}
             </h1>
             <p className="mt-4 font-serif text-2xl text-ink-soft">
@@ -99,8 +102,8 @@ function ProductDetail({ product }: { product: ShopProduct }) {
             </p>
 
             <div className="mt-8 space-y-3">
-              <p className="font-sans text-[0.68rem] uppercase tracking-[0.16em] text-ink-subtle">
-                {product.category === "apparel" ? "Size" : "Options"}
+              <p className="font-sans text-[0.65rem] uppercase tracking-[0.14em] text-ink-subtle">
+                Options
               </p>
               <div className="flex flex-wrap gap-2">
                 {product.variants.map((v) => (
@@ -109,92 +112,83 @@ function ProductDetail({ product }: { product: ShopProduct }) {
                     type="button"
                     onClick={() => setVariantId(v.id)}
                     className={cn(
-                      "min-h-11 px-4 font-sans text-[0.72rem] uppercase tracking-[0.12em] transition-colors",
+                      "h-10 px-3.5 font-sans text-[0.65rem] uppercase tracking-[0.12em] transition-colors",
                       variantId === v.id
                         ? "bg-ink text-cream"
-                        : "border border-border text-ink-muted hover:border-ink/40",
+                        : "border border-border text-ink-muted hover:border-ink/30",
                     )}
                   >
                     {v.label}
-                    {product.variants.length > 1 && product.category === "print" ? (
-                      <span className="ml-2 opacity-70">{formatGBP(v.priceGBP)}</span>
-                    ) : null}
                   </button>
                 ))}
               </div>
             </div>
 
-            <div className="mt-8 grid gap-3 text-sm text-ink-muted sm:grid-cols-2">
-              <div className="border border-border p-4">
-                <p className="font-sans text-[0.65rem] uppercase tracking-[0.14em] text-ink-subtle">
-                  Materials
-                </p>
-                <p className="mt-2">{product.materials}</p>
+            <dl className="mt-8 space-y-2 border-t border-border pt-6 text-sm text-ink-muted">
+              <div className="flex gap-3">
+                <dt className="w-24 shrink-0 text-ink-subtle">Materials</dt>
+                <dd>{product.materials}</dd>
               </div>
-              <div className="border border-border p-4">
-                <p className="font-sans text-[0.65rem] uppercase tracking-[0.14em] text-ink-subtle">
-                  Fulfilment
-                </p>
-                <p className="mt-2">{product.fulfilment}</p>
+              <div className="flex gap-3">
+                <dt className="w-24 shrink-0 text-ink-subtle">Fulfilment</dt>
+                <dd>{product.fulfilment}</dd>
               </div>
-            </div>
+            </dl>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-wrap gap-3">
               <button
                 type="button"
                 onClick={handleAdd}
-                className="flex h-12 flex-1 items-center justify-center gap-2 bg-ink font-sans text-[0.72rem] uppercase tracking-[0.16em] text-cream transition-colors hover:bg-deep"
+                className="inline-flex h-12 min-w-[10rem] items-center justify-center gap-2 bg-ink px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] text-cream hover:opacity-90"
               >
                 {added ? (
                   <>
-                    <Check className="size-4" /> Added to bag
+                    <Check className="size-4" /> Added
                   </>
                 ) : (
                   "Add to bag"
                 )}
               </button>
-              <button
-                type="button"
-                onClick={() => {
-                  handleAdd();
-                  openCart();
-                }}
-                className="flex h-12 items-center justify-center border border-ink/20 px-6 font-sans text-[0.72rem] uppercase tracking-[0.16em] hover:border-ink"
+              <Link
+                to="/checkout"
+                search={{}}
+                className="inline-flex h-12 items-center border border-border px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] hover:border-ink/40"
               >
-                Add & view bag
-              </button>
+                Checkout
+              </Link>
             </div>
-
-            <p className="mt-4 text-xs leading-relaxed text-ink-subtle">
-              SKU {variant?.sku}. Produced on demand when you complete checkout.
-              Connect your Printify store API for live production routing.
-            </p>
           </div>
         </div>
 
         {related.length > 0 && (
           <section className="mt-20 border-t border-border pt-12">
-            <h2 className="font-serif text-3xl tracking-tight">Related editions</h2>
-            <div className="mt-8 grid gap-6 sm:grid-cols-3">
+            <h2 className="font-serif text-2xl tracking-tight">Also in this series</h2>
+            <div className="mt-8 grid gap-8 sm:grid-cols-3">
               {related.map((p) => (
                 <Link
                   key={p.id}
                   to="/editions/$productId"
                   params={{ productId: p.slug }}
-                  className="group border border-border"
+                  className="group"
                 >
-                  <div
-                    className={cn(
-                      "aspect-[4/5] bg-gradient-to-br transition-transform duration-500 group-hover:scale-[1.01]",
-                      p.gradient,
-                    )}
-                  />
-                  <div className="p-4">
-                    <p className="font-serif text-lg leading-snug">{p.name}</p>
-                    <p className="mt-1 text-xs text-ink-subtle">
-                      from {formatGBP(startingPrice(p))}
-                    </p>
-                  </div>
+                  {p.imageSrc ? (
+                    <img
+                      src={p.imageSrc}
+                      alt={p.name}
+                      className="aspect-[3/4] w-full border border-border object-cover transition-opacity group-hover:opacity-90"
+                    />
+                  ) : (
+                    <div
+                      className={cn(
+                        "aspect-[3/4] border border-border bg-gradient-to-br",
+                        p.gradient,
+                      )}
+                    />
+                  )}
+                  <p className="mt-2 font-serif text-lg">{p.name}</p>
+                  <p className="text-xs text-ink-subtle">
+                    from {formatGBP(startingPrice(p))}
+                  </p>
                 </Link>
               ))}
             </div>

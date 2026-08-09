@@ -8,7 +8,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { CreatedWithGrokBanner } from "@/components/created-with-grok-banner";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Pahlavi — Royal Archive";
+const APP_NAME = "mypahlavi";
 const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
 const ogImage = host ? `https://${host}/og.jpg` : "/og.jpg";
 
@@ -21,15 +21,15 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "An independent royal archive of the Pahlavi family — HD gallery, interactive lineage, library, and limited editions.",
+          "mypahlavi.com — photographs, lineage, and writing on the Pahlavi family. Independent archive.",
       },
-      { name: "apple-mobile-web-app-title", content: "Pahlavi Archive" },
+      { name: "apple-mobile-web-app-title", content: "mypahlavi" },
       { name: "theme-color", content: "#F7F4EF" },
       { property: "og:title", content: APP_NAME },
       {
         property: "og:description",
         content:
-          "Quiet digital wing for the history of the Pahlavi family — photographs, lineage, letters, and limited editions.",
+          "Photographs, lineage, and writing on the last imperial family of Iran.",
       },
       { property: "og:image", content: ogImage },
       { property: "og:image:width", content: "1200" },

@@ -20,6 +20,11 @@ import { Route as PatronageRouteImport } from './routes/patronage'
 import { Route as EditionsProductIdRouteImport } from './routes/editions_.$productId'
 import { Route as OrderOrderIdRouteImport } from './routes/order.$orderId'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiShopCheckoutRouteImport } from './routes/api/shop/checkout'
+import { Route as ApiShopStatusRouteImport } from './routes/api/shop/status'
+import { Route as ApiShopWebhookRouteImport } from './routes/api/shop/webhook'
+import { Route as ApiShopOrderOrderIdRouteImport } from './routes/api/shop/order.$orderId'
+import { Route as ApiShopPrintifyProductsRouteImport } from './routes/api/shop/printify/products'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +81,31 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiShopCheckoutRoute = ApiShopCheckoutRouteImport.update({
+  id: '/api/shop/checkout',
+  path: '/api/shop/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiShopStatusRoute = ApiShopStatusRouteImport.update({
+  id: '/api/shop/status',
+  path: '/api/shop/status',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiShopWebhookRoute = ApiShopWebhookRouteImport.update({
+  id: '/api/shop/webhook',
+  path: '/api/shop/webhook',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiShopOrderOrderIdRoute = ApiShopOrderOrderIdRouteImport.update({
+  id: '/api/shop/order/$orderId',
+  path: '/api/shop/order/$orderId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiShopPrintifyProductsRoute = ApiShopPrintifyProductsRouteImport.update({
+  id: '/api/shop/printify/products',
+  path: '/api/shop/printify/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -89,6 +119,11 @@ export interface FileRoutesByFullPath {
   '/editions/$productId': typeof EditionsProductIdRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/shop/checkout': typeof ApiShopCheckoutRoute
+  '/api/shop/status': typeof ApiShopStatusRoute
+  '/api/shop/webhook': typeof ApiShopWebhookRoute
+  '/api/shop/order/$orderId': typeof ApiShopOrderOrderIdRoute
+  '/api/shop/printify/products': typeof ApiShopPrintifyProductsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -102,6 +137,11 @@ export interface FileRoutesByTo {
   '/editions/$productId': typeof EditionsProductIdRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/shop/checkout': typeof ApiShopCheckoutRoute
+  '/api/shop/status': typeof ApiShopStatusRoute
+  '/api/shop/webhook': typeof ApiShopWebhookRoute
+  '/api/shop/order/$orderId': typeof ApiShopOrderOrderIdRoute
+  '/api/shop/printify/products': typeof ApiShopPrintifyProductsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -116,6 +156,11 @@ export interface FileRoutesById {
   '/editions_/$productId': typeof EditionsProductIdRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/shop/checkout': typeof ApiShopCheckoutRoute
+  '/api/shop/status': typeof ApiShopStatusRoute
+  '/api/shop/webhook': typeof ApiShopWebhookRoute
+  '/api/shop/order/$orderId': typeof ApiShopOrderOrderIdRoute
+  '/api/shop/printify/products': typeof ApiShopPrintifyProductsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -131,6 +176,11 @@ export interface FileRouteTypes {
     | '/editions/$productId'
     | '/order/$orderId'
     | '/api/auth/$'
+    | '/api/shop/checkout'
+    | '/api/shop/status'
+    | '/api/shop/webhook'
+    | '/api/shop/order/$orderId'
+    | '/api/shop/printify/products'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -144,6 +194,11 @@ export interface FileRouteTypes {
     | '/editions/$productId'
     | '/order/$orderId'
     | '/api/auth/$'
+    | '/api/shop/checkout'
+    | '/api/shop/status'
+    | '/api/shop/webhook'
+    | '/api/shop/order/$orderId'
+    | '/api/shop/printify/products'
   id:
     | '__root__'
     | '/'
@@ -157,6 +212,11 @@ export interface FileRouteTypes {
     | '/editions_/$productId'
     | '/order/$orderId'
     | '/api/auth/$'
+    | '/api/shop/checkout'
+    | '/api/shop/status'
+    | '/api/shop/webhook'
+    | '/api/shop/order/$orderId'
+    | '/api/shop/printify/products'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -171,6 +231,11 @@ export interface RootRouteChildren {
   EditionsProductIdRoute: typeof EditionsProductIdRoute
   OrderOrderIdRoute: typeof OrderOrderIdRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiShopCheckoutRoute: typeof ApiShopCheckoutRoute
+  ApiShopStatusRoute: typeof ApiShopStatusRoute
+  ApiShopWebhookRoute: typeof ApiShopWebhookRoute
+  ApiShopOrderOrderIdRoute: typeof ApiShopOrderOrderIdRoute
+  ApiShopPrintifyProductsRoute: typeof ApiShopPrintifyProductsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -252,6 +317,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/shop/checkout': {
+      id: '/api/shop/checkout'
+      path: '/api/shop/checkout'
+      fullPath: '/api/shop/checkout'
+      preLoaderRoute: typeof ApiShopCheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/shop/status': {
+      id: '/api/shop/status'
+      path: '/api/shop/status'
+      fullPath: '/api/shop/status'
+      preLoaderRoute: typeof ApiShopStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/shop/webhook': {
+      id: '/api/shop/webhook'
+      path: '/api/shop/webhook'
+      fullPath: '/api/shop/webhook'
+      preLoaderRoute: typeof ApiShopWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/shop/order/$orderId': {
+      id: '/api/shop/order/$orderId'
+      path: '/api/shop/order/$orderId'
+      fullPath: '/api/shop/order/$orderId'
+      preLoaderRoute: typeof ApiShopOrderOrderIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/shop/printify/products': {
+      id: '/api/shop/printify/products'
+      path: '/api/shop/printify/products'
+      fullPath: '/api/shop/printify/products'
+      preLoaderRoute: typeof ApiShopPrintifyProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -267,6 +367,11 @@ const rootRouteChildren: RootRouteChildren = {
   EditionsProductIdRoute: EditionsProductIdRoute,
   OrderOrderIdRoute: OrderOrderIdRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiShopCheckoutRoute: ApiShopCheckoutRoute,
+  ApiShopStatusRoute: ApiShopStatusRoute,
+  ApiShopWebhookRoute: ApiShopWebhookRoute,
+  ApiShopOrderOrderIdRoute: ApiShopOrderOrderIdRoute,
+  ApiShopPrintifyProductsRoute: ApiShopPrintifyProductsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
