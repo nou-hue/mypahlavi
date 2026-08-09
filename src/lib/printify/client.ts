@@ -3,8 +3,8 @@
  * Docs: https://developers.printify.com/
  *
  * Env:
- *   PRINTIFY_API_TOKEN  — Personal access token from Printify → My Profile → Connections
- *   PRINTIFY_SHOP_ID    — Numeric shop id (GET /shops.json)
+ *   PRINTIFY_API_TOKEN  — Personal access token from Printify → Connections
+ *   PRINTIFY_SHOP_ID    — Optional if the account has exactly one shop
  */
 
 const PRINTIFY_BASE = "https://api.printify.com/v1";
@@ -34,17 +34,12 @@ export type PrintifyAddress = {
   zip: string;
 };
 
+/** True when an API token is present (shop id can auto-resolve). */
 export function printifyConfigured() {
-  return Boolean(
-    process.env.PRINTIFY_API_TOKEN?.trim() && process.env.PRINTIFY_SHOP_ID?.trim(),
-  );
+  return Boolean(process.env.PRINTIFY_API_TOKEN?.trim());
 }
 
-export function getPrintifyShopId() {
-  const id = process.env.PRINTIFY_SHOP_ID?.trim();
-  if (!id) throw new Error("PRINTIFY_SHOP_ID is not set");
-  return id;
-}
+let cachedShopId: string | null = null;
 
 async function printifyFetch<T>(
   path: string,
@@ -75,8 +70,57 @@ export async function listPrintifyShops() {
   return printifyFetch<PrintifyShop[]>("/shops.json");
 }
 
+/**
+ * Resolve shop id: env PRINTIFY_SHOP_ID, else sole shop on the account,
+ * else shop titled mypahlavi / matching domain.
+ */
+export async function resolvePrintifyShopId(): Promise<string> {
+  if (cachedShopId) return cachedShopId;
+
+  const fromEnv = process.env.PRINTIFY_SHOP_ID?.trim();
+  if (fromEnv) {
+    cachedShopId = fromEnv;
+    return fromEnv;
+  }
+
+  const shops = await listPrintifyShops();
+  if (shops.length === 0) {
+    throw new Error("No Printify shops on this account");
+  }
+
+  if (shops.length === 1) {
+    cachedShopId = String(shops[0]!.id);
+    return cachedShopId;
+  }
+
+  const named =
+    shops.find((s) => /mypahlavi/i.test(s.title)) ??
+    shops.find((s) => /pahlavi/i.test(s.title));
+  if (named) {
+    cachedShopId = String(named.id);
+    return cachedShopId;
+  }
+
+  throw new Error(
+    `Multiple Printify shops — set PRINTIFY_SHOP_ID. Options: ${shops
+      .map((s) => `${s.id} (${s.title})`)
+      .join(", ")}`,
+  );
+}
+
+/** Sync helper — prefer resolvePrintifyShopId() for auto-detect. */
+export function getPrintifyShopId() {
+  const id = process.env.PRINTIFY_SHOP_ID?.trim() || cachedShopId;
+  if (!id) {
+    throw new Error(
+      "PRINTIFY_SHOP_ID not set and shop not resolved yet — call resolvePrintifyShopId()",
+    );
+  }
+  return id;
+}
+
 export async function listPrintifyProducts(page = 1, limit = 50) {
-  const shopId = getPrintifyShopId();
+  const shopId = await resolvePrintifyShopId();
   return printifyFetch<{
     current_page: number;
     data: Array<{
@@ -98,10 +142,11 @@ export async function listPrintifyProducts(page = 1, limit = 50) {
 }
 
 export async function getPrintifyProduct(productId: string) {
-  const shopId = getPrintifyShopId();
+  const shopId = await resolvePrintifyShopId();
   return printifyFetch<{
     id: string;
     title: string;
+    description?: string;
     variants: Array<{
       id: number;
       sku: string;
@@ -122,7 +167,7 @@ export async function createPrintifyOrder(input: {
   addressTo: PrintifyAddress;
   sendToProduction?: boolean;
 }) {
-  const shopId = getPrintifyShopId();
+  const shopId = await resolvePrintifyShopId();
   const body = {
     external_id: input.externalId,
     label: input.label ?? input.externalId,
@@ -151,7 +196,6 @@ export async function createPrintifyOrder(input: {
         method: "POST",
       });
     } catch (err) {
-      // Order exists; production may require funds/setup — surface later
       console.warn("[printify] send_to_production failed", err);
     }
   }

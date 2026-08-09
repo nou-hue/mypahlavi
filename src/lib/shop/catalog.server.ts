@@ -3,7 +3,7 @@ import {
   listPrintifyShops,
   printifyConfigured,
   getPrintifyProduct,
-  getPrintifyShopId,
+  resolvePrintifyShopId,
 } from "@/lib/printify/client";
 import {
   shopProducts,
@@ -74,7 +74,8 @@ export function mapPrintifyProduct(p: {
     id: `pfy-${p.id}`,
     slug: slugify(p.title, p.id),
     name: p.title,
-    shortDescription: plain.slice(0, 140) || "Print-on-demand edition from the archive shop.",
+    shortDescription:
+      plain.slice(0, 140) || "Print-on-demand edition from the archive shop.",
     description:
       plain.slice(0, 800) ||
       "Produced on demand through Printify and shipped from their production network.",
@@ -107,13 +108,13 @@ export async function getLiveCatalog(): Promise<{
       shopTitle: null,
       products: shopProducts,
       message:
-        "Printify not connected — showing editorial catalogue. Set PRINTIFY_API_TOKEN and PRINTIFY_SHOP_ID on Vercel, then redeploy.",
+        "Printify not connected — showing editorial catalogue. Set PRINTIFY_API_TOKEN on Vercel, then redeploy.",
     };
   }
 
   try {
     const shops = await listPrintifyShops();
-    const shopId = getPrintifyShopId();
+    const shopId = await resolvePrintifyShopId();
     const shop = shops.find((s) => String(s.id) === String(shopId));
     const catalog = await listPrintifyProducts(1, 50);
     const live = catalog.data
@@ -128,8 +129,7 @@ export async function getLiveCatalog(): Promise<{
         shopId,
         shopTitle: shop?.title ?? null,
         products: shopProducts,
-        message:
-          "Printify connected, but this shop has no published products yet. Publish products in Printify, then refresh.",
+        message: `Printify connected (“${shop?.title ?? shopId}”), but no published products yet. Publish in Printify, then refresh.`,
       };
     }
 
@@ -139,7 +139,7 @@ export async function getLiveCatalog(): Promise<{
       shopId,
       shopTitle: shop?.title ?? null,
       products: live,
-      message: `Connected to Printify shop “${shop?.title ?? shopId}” · ${live.length} product${live.length === 1 ? "" : "s"}`,
+      message: `Connected to Printify “${shop?.title ?? shopId}” · ${live.length} product${live.length === 1 ? "" : "s"}`,
     };
   } catch (err) {
     return {
@@ -158,7 +158,6 @@ export async function resolveProductForCheckout(input: {
   productId: string;
   variantId: string;
 }): Promise<ShopProduct | null> {
-  // Live Printify ids are stored as pfy-{id}
   if (input.productId.startsWith("pfy-")) {
     const printifyId = input.productId.slice(4);
     try {
