@@ -56,6 +56,16 @@
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
   }
+
+  /* Archival plates: discourage drag / long-press save */
+  .archive-view-only,
+  .archive-view-only img,
+  .archive-frame img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
 }
 
 @layer utilities {

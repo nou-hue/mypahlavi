@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, type SyntheticEvent } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { z } from "zod";
 import { LayoutShell } from "@/components/archive/layout-shell";
@@ -16,6 +16,11 @@ export const Route = createFileRoute("/gallery")({
   validateSearch: searchSchema,
   component: GalleryPage,
 });
+
+function blockSave(e: SyntheticEvent | Event) {
+  e.preventDefault();
+  e.stopPropagation();
+}
 
 function GalleryPage() {
   const search = Route.useSearch();
@@ -47,9 +52,25 @@ function GalleryPage() {
         const prev = filtered[(activeIndex - 1 + filtered.length) % filtered.length];
         if (prev) setActiveId(prev.id);
       }
+      if ((e.ctrlKey || e.metaKey) && (e.key === "s" || e.key === "S")) {
+        e.preventDefault();
+      }
+    };
+    const onCtx = (e: Event) => {
+      const t = e.target as HTMLElement | null;
+      if (t?.closest?.(".archive-view-only")) {
+        e.preventDefault();
+      }
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("contextmenu", onCtx);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("contextmenu", onCtx);
+      document.body.style.overflow = prev;
+    };
   }, [active, activeIndex, filtered]);
 
   return (
@@ -57,14 +78,15 @@ function GalleryPage() {
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
         <header className="mb-10 max-w-2xl space-y-4 archive-rise">
           <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-            Gallery · {galleryImages.length} plates
+            Gallery · {galleryImages.length} plates · view only
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
             Exhibition rooms
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
             Plates in dark brown frames. Wall labels written with care. Open any image
-            for the full reading — arrow keys to walk the room.
+            for the full reading — arrow keys to walk the room. Images are for viewing
+            only; download is not available.
           </p>
         </header>
 
@@ -171,12 +193,27 @@ function Viewer({
   onPrev: () => void;
   onNext: () => void;
 }) {
+  const aspect =
+    image.aspect === "portrait"
+      ? "3 / 4"
+      : image.aspect === "square"
+        ? "1 / 1"
+        : "4 / 3";
+
   return (
-    <div className="fixed inset-0 z-[60] flex flex-col bg-deep text-cream">
+    <div
+      className="fixed inset-0 z-[60] flex flex-col bg-deep text-cream archive-view-only"
+      onContextMenu={blockSave}
+    >
       <div className="flex items-center justify-between px-4 py-4 sm:px-6">
-        <p className="font-sans text-[0.68rem] uppercase tracking-[0.18em] text-cream/50">
-          {index + 1} / {total}
-        </p>
+        <div className="flex items-center gap-4">
+          <p className="font-sans text-[0.68rem] uppercase tracking-[0.18em] text-cream/50">
+            {index + 1} / {total}
+          </p>
+          <p className="hidden font-sans text-[0.62rem] uppercase tracking-[0.16em] text-cream/35 sm:block">
+            View only · not for download
+          </p>
+        </div>
         <button
           type="button"
           onClick={onClose}
@@ -200,18 +237,37 @@ function Viewer({
         <div className="flex w-full max-w-6xl flex-col gap-6 lg:flex-row lg:items-end">
           <div
             className={cn(
-              "w-full overflow-hidden bg-black/40 shadow-soft",
+              "relative w-full overflow-hidden bg-black/40 shadow-soft",
               image.aspect === "portrait" && "max-h-[72vh] lg:max-w-md",
               image.aspect === "landscape" && "max-h-[68vh]",
               image.aspect === "square" && "max-h-[68vh] lg:max-w-lg",
             )}
+            onContextMenu={blockSave}
+            onDragStart={blockSave}
           >
             {image.src ? (
-              <img
-                src={image.src}
-                alt={image.caption || image.title}
-                className="max-h-[72vh] w-full object-contain"
-              />
+              <>
+                {/* Protected background plate — no native img download UI */}
+                <div
+                  role="img"
+                  aria-label={image.caption || image.title}
+                  className="max-h-[72vh] w-full select-none bg-contain bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage: `url("${image.src}")`,
+                    aspectRatio: aspect,
+                    minHeight: "min(56vh, 520px)",
+                  }}
+                  draggable={false}
+                  onContextMenu={blockSave}
+                  onDragStart={blockSave}
+                />
+                <span
+                  aria-hidden
+                  className="absolute inset-0 z-[2] cursor-default"
+                  onContextMenu={blockSave}
+                  onDragStart={blockSave}
+                />
+              </>
             ) : (
               <div className={cn("aspect-[4/3] bg-gradient-to-br", image.gradient)} />
             )}
@@ -226,6 +282,9 @@ function Viewer({
               {image.caption}
             </p>
             <p className="text-xs leading-relaxed text-cream/40">{image.sourceNote}</p>
+            <p className="font-sans text-[0.62rem] uppercase tracking-[0.14em] text-cream/30">
+              Exhibition view · download disabled
+            </p>
             <div className="flex flex-wrap gap-2 pt-1">
               {image.personIds.map((id) => {
                 const m = getMember(id);

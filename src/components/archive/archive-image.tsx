@@ -1,6 +1,12 @@
+import type { SyntheticEvent } from "react";
 import { cn } from "@/lib/utils";
 
-/** Dark brown museum frame around archival plates */
+function blockSave(e: SyntheticEvent) {
+  e.preventDefault();
+  e.stopPropagation();
+}
+
+/** Dark brown museum frame around archival plates — view only, not for download */
 export function ArchiveImage({
   src,
   alt,
@@ -19,23 +25,36 @@ export function ArchiveImage({
   const plate = (
     <div
       className={cn(
-        "relative overflow-hidden bg-deep",
+        "relative overflow-hidden bg-deep archive-view-only",
         !src && `bg-gradient-to-br ${gradient}`,
         !framed && className,
         framed && "h-full w-full",
       )}
+      onContextMenu={blockSave}
     >
       {src ? (
-        <img
-          src={src}
-          alt={alt}
-          loading="lazy"
-          decoding="async"
-          className={cn(
-            "h-full w-full object-cover object-center",
-            imgClassName,
-          )}
-        />
+        <>
+          <img
+            src={src}
+            alt={alt}
+            loading="lazy"
+            decoding="async"
+            draggable={false}
+            onDragStart={blockSave}
+            onContextMenu={blockSave}
+            className={cn(
+              "pointer-events-none h-full w-full select-none object-cover object-center",
+              imgClassName,
+            )}
+          />
+          {/* Transparent shield — blocks right-click / long-press save on the plate */}
+          <span
+            aria-hidden
+            className="absolute inset-0 z-[1] cursor-default"
+            onContextMenu={blockSave}
+            onDragStart={blockSave}
+          />
+        </>
       ) : null}
     </div>
   );
@@ -43,12 +62,7 @@ export function ArchiveImage({
   if (!framed) return plate;
 
   return (
-    <div
-      className={cn(
-        "archive-frame",
-        className,
-      )}
-    >
+    <div className={cn("archive-frame", className)} onContextMenu={blockSave}>
       <div className="archive-frame-inner">{plate}</div>
     </div>
   );
