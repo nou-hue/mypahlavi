@@ -20,10 +20,16 @@ function slugify(title: string, id: string) {
   return `${base || "edition"}-${id.slice(0, 8)}`;
 }
 
+/** "Abstract Night Sky … | distressed moon" → clean display name */
+function cleanTitle(title: string) {
+  const primary = title.split("|")[0]?.trim() || title;
+  return primary.replace(/\s{2,}/g, " ").trim();
+}
+
 function guessCategory(title: string): ProductCategory {
   const t = title.toLowerCase();
   if (/tee|t-shirt|shirt|hoodie|apparel|sweat/.test(t)) return "apparel";
-  if (/mug|tote|poster|print|canvas|frame/.test(t)) return "print";
+  if (/mug|tote|poster|print|canvas|frame|mat|pad/.test(t)) return "print";
   if (/object|pin|sticker|candle/.test(t)) return "object";
   return "print";
 }
@@ -35,7 +41,6 @@ const gradients = [
   "from-[#161412] via-[#2e2824] to-[#0a0908]",
 ];
 
-/** Printify variant.price is in the shop's minor currency unit (cents). */
 function centsToGbp(cents: number) {
   return Math.round(cents) / 100;
 }
@@ -70,19 +75,26 @@ export function mapPrintifyProduct(p: {
     .replace(/\s+/g, " ")
     .trim();
 
+  const name = cleanTitle(p.title);
+  const subtitle = p.title.includes("|")
+    ? p.title.split("|").slice(1).join("|").trim()
+    : "";
+
   return {
     id: `pfy-${p.id}`,
-    slug: slugify(p.title, p.id),
-    name: p.title,
+    slug: slugify(name, p.id),
+    name,
     shortDescription:
-      plain.slice(0, 140) || "Print-on-demand edition from the archive shop.",
+      subtitle.slice(0, 140) ||
+      plain.slice(0, 140) ||
+      "Print-on-demand edition from the archive shop.",
     description:
       plain.slice(0, 800) ||
       "Produced on demand through Printify and shipped from their production network.",
     category: guessCategory(p.title),
     gradient: gradients[p.id.charCodeAt(0) % gradients.length]!,
-    accentLabel: "Printify",
-    materials: "As specified on Printify product",
+    accentLabel: "Edition",
+    materials: "As specified on product",
     fulfilment: "Printify · print on demand",
     featured: true,
     imageSrc: image,
@@ -108,7 +120,7 @@ export async function getLiveCatalog(): Promise<{
       shopTitle: null,
       products: shopProducts,
       message:
-        "Printify not connected — showing editorial catalogue. Set PRINTIFY_API_TOKEN on Vercel, then redeploy.",
+        "Printify not connected — showing editorial catalogue.",
     };
   }
 
@@ -129,7 +141,7 @@ export async function getLiveCatalog(): Promise<{
         shopId,
         shopTitle: shop?.title ?? null,
         products: shopProducts,
-        message: `Printify connected (“${shop?.title ?? shopId}”), but no published products yet. Publish in Printify, then refresh.`,
+        message: `Printify connected (“${shop?.title ?? shopId}”), but no published products yet.`,
       };
     }
 
@@ -139,7 +151,7 @@ export async function getLiveCatalog(): Promise<{
       shopId,
       shopTitle: shop?.title ?? null,
       products: live,
-      message: `Connected to Printify “${shop?.title ?? shopId}” · ${live.length} product${live.length === 1 ? "" : "s"}`,
+      message: `Connected · ${live.length} product${live.length === 1 ? "" : "s"}`,
     };
   } catch (err) {
     return {

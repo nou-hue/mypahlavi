@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   getOrderById,
   getOrderByStripeSession,
+  orderFromStripeMetadata,
   updateOrder,
 } from "@/lib/shop/orders.server";
 import { fulfillOrderWithPrintify } from "@/lib/shop/fulfill.server";
@@ -45,6 +46,11 @@ export const Route = createFileRoute("/api/shop/webhook")({
             let order = orderId ? await getOrderById(orderId) : null;
             if (!order && session.id) {
               order = await getOrderByStripeSession(session.id);
+            }
+            if (!order && session.metadata) {
+              order = orderFromStripeMetadata(
+                session.metadata as Record<string, string>,
+              );
             }
             if (!order) {
               console.error("[stripe webhook] order not found", orderId, session.id);

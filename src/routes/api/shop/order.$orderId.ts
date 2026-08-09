@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   getOrderById,
   getOrderByStripeSession,
+  orderFromStripeMetadata,
   parseOrder,
   updateOrder,
 } from "@/lib/shop/orders.server";
@@ -16,7 +17,25 @@ export const Route = createFileRoute("/api/shop/order/$orderId")({
         const sessionId = url.searchParams.get("session_id");
         let row = await getOrderById(params.orderId);
 
-        // After Stripe redirect: confirm session if webhook is delayed
+        // Reconstruct from Stripe metadata (serverless without durable DB)
+        if (!row && sessionId && stripeConfigured()) {
+          try {
+            const stripe = getStripe();
+            const session = await stripe.checkout.sessions.retrieve(sessionId);
+            row = orderFromStripeMetadata(
+              session.metadata as Record<string, string> | null,
+            );
+            if (row) {
+              await updateOrder(row.id, {
+                stripe_session_id: session.id,
+              });
+              row = await getOrderById(params.orderId);
+            }
+          } catch (err) {
+            console.error("[order recover]", err);
+          }
+        }
+
         if (
           sessionId &&
           stripeConfigured() &&

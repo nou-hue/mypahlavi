@@ -1,9 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { LayoutShell } from "@/components/archive/layout-shell";
 import { ArchiveImage } from "@/components/archive/archive-image";
 import { galleryImages, familyMembers, libraryItems } from "@/data/archive";
-import { formatGBP, shopProducts, startingPrice } from "@/data/shop";
+import {
+  formatGBP,
+  shopProducts,
+  startingPrice,
+  type ShopProduct,
+} from "@/data/shop";
 import siteCopy from "@/data/site-copy.json";
 import { cn } from "@/lib/utils";
 
@@ -30,8 +36,20 @@ function HomePage() {
       m.id,
     ),
   );
-  const shopFeatured = shopProducts.filter((p) => p.featured).slice(0, 3);
   const essays = libraryItems.slice(0, 3);
+  const [shopFeatured, setShopFeatured] = useState<ShopProduct[]>(
+    shopProducts.filter((p) => p.featured).slice(0, 3),
+  );
+
+  useEffect(() => {
+    fetch("/api/shop/catalog")
+      .then((r) => r.json())
+      .then((d: { products?: ShopProduct[] }) => {
+        const list = d.products ?? [];
+        if (list.length) setShopFeatured(list.slice(0, 3));
+      })
+      .catch(() => null);
+  }, []);
 
   return (
     <LayoutShell>
@@ -62,7 +80,7 @@ function HomePage() {
             </figure>
           ) : null}
 
-          <div className="mt-12 max-w-lg text-center archive-rise space-y-5">
+          <div className="mt-12 max-w-lg space-y-5 text-center archive-rise">
             <h1 className="font-serif text-[clamp(2.75rem,8vw,4.5rem)] leading-[0.95] tracking-[-0.02em]">
               {siteCopy.heroTitle}
             </h1>
@@ -88,17 +106,15 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Intro — journalistic, tight */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-2xl px-5 py-20 text-center sm:px-8 sm:py-24">
-          <p className="font-serif text-2xl leading-snug tracking-tight text-ink-soft sm:text-3xl text-balance">
+          <p className="font-serif text-2xl leading-snug tracking-tight text-ink-soft text-balance sm:text-3xl">
             An independent record of the Pahlavi century — from Reza Shah to the
             household of Farah — in image, lineage, and prose.
           </p>
         </div>
       </section>
 
-      {/* Featured gallery strip */}
       <section className="border-t border-border bg-ground-elevated">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="mb-10 flex items-end justify-between gap-6">
@@ -153,7 +169,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Library */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="mb-10 flex items-end justify-between gap-6">
@@ -197,7 +212,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Lineage strip */}
       <section className="border-t border-border bg-deep text-cream">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -235,7 +249,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Editions — limited / exclusive */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="mb-10 flex items-end justify-between gap-6">
@@ -244,11 +257,10 @@ function HomePage() {
                 Limited editions
               </p>
               <h2 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl">
-                For the wall
+                From the shop
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                Small-run prints and apparel, produced on demand. Quiet objects from
-                the collection.
+                Objects from the Printify atelier — produced on demand.
               </p>
             </div>
             <Link
@@ -266,12 +278,21 @@ function HomePage() {
                 params={{ productId: p.slug }}
                 className="group"
               >
-                <div
-                  className={cn(
-                    "aspect-[4/5] border border-border bg-gradient-to-br transition-opacity group-hover:opacity-90",
-                    p.gradient,
-                  )}
-                />
+                {p.imageSrc ? (
+                  <img
+                    src={p.imageSrc}
+                    alt={p.name}
+                    className="aspect-[4/5] w-full border border-border object-cover transition-opacity group-hover:opacity-90"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div
+                    className={cn(
+                      "aspect-[4/5] border border-border bg-gradient-to-br transition-opacity group-hover:opacity-90",
+                      p.gradient,
+                    )}
+                  />
+                )}
                 <p className="mt-3 font-serif text-lg leading-snug">{p.name}</p>
                 <p className="mt-0.5 font-sans text-[0.65rem] uppercase tracking-[0.12em] text-ink-subtle">
                   from {formatGBP(startingPrice(p))}
@@ -282,7 +303,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Closing CTA */}
       <section className="border-t border-border bg-ground-elevated">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 px-5 py-16 sm:flex-row sm:items-center sm:px-8 sm:py-20">
           <div>

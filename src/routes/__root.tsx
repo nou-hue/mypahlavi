@@ -17,15 +17,15 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: APP_NAME },
+      { title: "mypahlavi — archive of the Pahlavi family" },
       {
         name: "description",
         content:
-          "mypahlavi.com — photographs, lineage, and writing on the Pahlavi family. Independent archive.",
+          "mypahlavi.com — photographs, lineage, essays, and limited editions. Independent archive of the Pahlavi family.",
       },
-      { name: "apple-mobile-web-app-title", content: "mypahlavi" },
+      { name: "apple-mobile-web-app-title", content: APP_NAME },
       { name: "theme-color", content: "#F7F4EF" },
-      { property: "og:title", content: APP_NAME },
+      { property: "og:title", content: "mypahlavi" },
       {
         property: "og:description",
         content:
@@ -34,6 +34,7 @@ export const Route = createRootRoute({
       { property: "og:image", content: ogImage },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
+      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

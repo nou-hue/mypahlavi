@@ -2,7 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { estimateShippingGBP } from "@/data/shop";
 import { resolveProductForCheckout } from "@/lib/shop/catalog.server";
-import { insertOrder, updateOrder } from "@/lib/shop/orders.server";
+import {
+  insertOrder,
+  orderToStripeMetadata,
+  updateOrder,
+} from "@/lib/shop/orders.server";
 import { getStripe, poundsToPence, stripeConfigured } from "@/lib/stripe/client";
 
 const bodySchema = z.object({
@@ -140,7 +144,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
         const origin = originFrom(request);
 
         try {
-          await insertOrder({
+          const row = await insertOrder({
             id,
             email: data.email,
             status: "pending",
@@ -158,9 +162,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
             client_reference_id: id,
             success_url: `${origin}/order/${id}?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `${origin}/checkout?cancelled=1`,
-            metadata: {
-              orderId: id,
-            },
+            metadata: orderToStripeMetadata(row),
             shipping_options: [
               {
                 shipping_rate_data: {
@@ -182,7 +184,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
                 currency: "gbp",
                 unit_amount: poundsToPence(l.unitPriceGBP),
                 product_data: {
-                  name: `${l.name} — ${l.variantLabel}`,
+                  name: `${l.name} — ${l.variantLabel}`.slice(0, 120),
                   description: `SKU ${l.sku}`,
                   images: l.imageSrc?.startsWith("http")
                     ? [l.imageSrc]
