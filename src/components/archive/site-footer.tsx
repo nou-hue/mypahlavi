@@ -10,6 +10,12 @@ export function SiteFooter() {
             Independent archive of the Pahlavi family. Journalism, image, and
             limited editions.
           </p>
+          <a
+            href="mailto:hello@mypahlavi.com"
+            className="inline-block pt-1 text-sm text-ink-muted transition-colors hover:text-ink"
+          >
+            hello@mypahlavi.com
+          </a>
         </div>
         <div className="flex flex-wrap gap-x-7 gap-y-3 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-subtle">
           <Link to="/gallery" className="hover:text-ink">
@@ -27,6 +33,9 @@ export function SiteFooter() {
           <Link to="/patronage" className="hover:text-ink">
             Patronage
           </Link>
+          <a href="mailto:hello@mypahlavi.com" className="hover:text-ink">
+            Contact
+          </a>
         </div>
       </div>
       <div className="border-t border-border">
