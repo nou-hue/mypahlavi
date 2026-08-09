@@ -221,15 +221,15 @@
   },
   {
     "id": "g-012",
-    "title": "Farah Pahlavi descending the wedding stairs",
+    "title": "Farah Pahlavi on the wedding stairs, 1959",
     "year": "1959",
     "place": "Tehran",
     "personIds": [
       "farah"
     ],
     "room": "family",
-    "caption": "December 1959: Farah in white, tiara and long gloves, descending palace stairs among attendants.",
-    "cardCaption": "December 1959: Farah in white, tiara and long gloves, descending palace stairs among attendants.",
+    "caption": "Farah Diba on her wedding day to Mohammad Reza Shah — 21 December 1959. Third marriage of the Shah. Not Fawzia (1939), not Soraya (1951).",
+    "cardCaption": "Farah’s wedding stairs, 1959 — third marriage of the Shah.",
     "sourceNote": "Private collection plate · view only · mypahlavi.com",
     "src": "/archive/farah-pahlavi/user-wedding-stairs-procession.jpg",
     "aspect": "portrait",
@@ -596,7 +596,7 @@
   },
   {
     "id": "g-031",
-    "title": "Wedding formal: Shah and Farah with train",
+    "title": "Wedding formal: Mohammad Reza Shah and Farah, 1959",
     "year": "1959",
     "place": "Tehran",
     "personIds": [
@@ -604,8 +604,8 @@
       "farah"
     ],
     "room": "family",
-    "caption": "1959 wedding light: full dress uniform and a white embroidered gown with long train.",
-    "cardCaption": "1959 wedding light: full dress uniform and a white embroidered gown with long train.",
+    "caption": "Wedding portrait of Mohammad Reza Shah and Farah Diba, 1959 — white train, full dress uniform. Third marriage. Distinct from Fawzia (1939) and Soraya (1951).",
+    "cardCaption": "Farah and the Shah, wedding formal 1959.",
     "sourceNote": "Private collection plate · view only · mypahlavi.com",
     "src": "/archive/other-family/user-wedding-formal-white-train.jpg",
     "aspect": "portrait",
@@ -655,63 +655,6 @@
   },
   {
     "id": "g-034",
-    "title": "Queen Soraya in emerald satin",
-    "year": "1950s",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary — emerald gown, diamond cascade, white feather fan. A prior chapter of the court.",
-    "cardCaption": "Queen Soraya Esfandiary.",
-    "sourceNote": "Private collection plate · view only · mypahlavi.com",
-    "src": "/archive/other-family/user-soraya-emerald-gown-tiara.jpg",
-    "aspect": "portrait",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "user-upload",
-    "featured": true
-  },
-  {
-    "id": "g-035",
-    "title": "Queen Soraya, diamond cascade portrait",
-    "year": "1950s",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Close portrait of Soraya: multi-strand diamonds, emerald accents, soft fur — studio glamour of the 1950s.",
-    "cardCaption": "Close portrait of Soraya: multi-strand diamonds, emerald accents, soft fur.",
-    "sourceNote": "Private collection plate · view only · mypahlavi.com",
-    "src": "/archive/other-family/user-soraya-diamond-cascade-portrait.jpg",
-    "aspect": "portrait",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "user-upload",
-    "featured": true
-  },
-  {
-    "id": "g-036",
-    "title": "Early court wedding group",
-    "year": "1950s",
-    "place": "Archive",
-    "personIds": [
-      "mohammad-reza"
-    ],
-    "room": "family",
-    "caption": "Wide court group in white and palm fronds — a young Shah among family at a mid-century celebration.",
-    "cardCaption": "Wide court group in white and palm fronds.",
-    "sourceNote": "Private collection plate · view only · mypahlavi.com",
-    "src": "/archive/other-family/user-early-court-wedding-group.jpg",
-    "aspect": "portrait",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "user-upload",
-    "featured": true
-  },
-  {
-    "id": "g-037",
     "title": "Mohammad Reza Shah smiling in a mirrored room",
     "year": "1960s",
     "place": "Tehran",
@@ -730,7 +673,7 @@
     "featured": true
   },
   {
-    "id": "g-038",
+    "id": "g-035",
     "title": "Late imperial family formal portrait",
     "year": "1970s",
     "place": "Archive",
@@ -754,7 +697,7 @@
     "featured": true
   },
   {
-    "id": "g-039",
+    "id": "g-036",
     "title": "Walking the portrait gallery",
     "year": "1960s",
     "place": "Archive",
@@ -773,8 +716,8 @@
     "featured": true
   },
   {
-    "id": "g-040",
-    "title": "Wedding procession, arm in arm",
+    "id": "g-037",
+    "title": "Wedding procession: Farah and Mohammad Reza Shah, 1959",
     "year": "1959",
     "place": "Tehran",
     "personIds": [
@@ -782,8 +725,8 @@
       "farah"
     ],
     "room": "family",
-    "caption": "Corridor of officers: Farah’s embroidered train, the Shah in full dress — the wedding procession mid-step.",
-    "cardCaption": "Corridor of officers: Farah’s embroidered train, the Shah in full dress.",
+    "caption": "Wedding procession, 1959 — Farah’s embroidered train beside the Shah. Third marriage of Mohammad Reza Shah.",
+    "cardCaption": "1959 wedding procession — Farah and the Shah.",
     "sourceNote": "Private collection plate · view only · mypahlavi.com",
     "src": "/archive/other-family/user-wedding-procession-arm-in-arm.jpg",
     "aspect": "portrait",
@@ -793,7 +736,7 @@
     "featured": true
   },
   {
-    "id": "g-041",
+    "id": "g-038",
     "title": "Farah Pahlavi in Thailand, 1968",
     "year": "1968",
     "place": "Thailand",
@@ -812,7 +755,7 @@
     "featured": true
   },
   {
-    "id": "g-042",
+    "id": "g-039",
     "title": "Casual seventies — sunglasses and red turtleneck",
     "year": "1970s",
     "place": "Archive",
@@ -832,7 +775,7 @@
     "featured": true
   },
   {
-    "id": "g-043",
+    "id": "g-040",
     "title": "In the Alps",
     "year": "1970s",
     "place": "Europe",
@@ -852,7 +795,7 @@
     "featured": true
   },
   {
-    "id": "g-044",
+    "id": "g-041",
     "title": "Under a fringed umbrella",
     "year": "1970s",
     "place": "Archive",
@@ -872,7 +815,7 @@
     "featured": true
   },
   {
-    "id": "g-045",
+    "id": "g-042",
     "title": "The Shah walking in a light suit",
     "year": "1960s",
     "place": "Europe",
@@ -891,7 +834,7 @@
     "featured": true
   },
   {
-    "id": "g-046",
+    "id": "g-043",
     "title": "Stepping from the car",
     "year": "1970s",
     "place": "Archive",
@@ -910,7 +853,7 @@
     "featured": true
   },
   {
-    "id": "g-047",
+    "id": "g-044",
     "title": "Beach, pipe, wet hair",
     "year": "1950s",
     "place": "Archive",
@@ -929,7 +872,7 @@
     "featured": true
   },
   {
-    "id": "g-048",
+    "id": "g-045",
     "title": "Press plate — economic growth headline",
     "year": "1970s",
     "place": "Tehran",
@@ -949,7 +892,7 @@
     "featured": true
   },
   {
-    "id": "g-049",
+    "id": "g-046",
     "title": "The Shah crowning himself, 1967",
     "year": "1967",
     "place": "Tehran",
@@ -968,7 +911,7 @@
     "featured": true
   },
   {
-    "id": "g-050",
+    "id": "g-047",
     "title": "On a boat with a striped towel",
     "year": "1950s",
     "place": "Archive",
@@ -987,7 +930,7 @@
     "featured": true
   },
   {
-    "id": "g-051",
+    "id": "g-048",
     "title": "Crown Prince Reza with an F-20 model",
     "year": "1980s",
     "place": "Archive",
@@ -1006,7 +949,7 @@
     "featured": true
   },
   {
-    "id": "g-052",
+    "id": "g-049",
     "title": "Young Crown Prince Reza on the throne",
     "year": "1970s",
     "place": "Tehran",
@@ -1025,7 +968,7 @@
     "featured": true
   },
   {
-    "id": "g-053",
+    "id": "g-050",
     "title": "The Shah and young Crown Prince on the red carpet",
     "year": "1970s",
     "place": "Tehran",
@@ -1045,7 +988,7 @@
     "featured": true
   },
   {
-    "id": "g-054",
+    "id": "g-051",
     "title": "Crown Prince Reza as a fighter pilot",
     "year": "1970s",
     "place": "Archive",
@@ -1064,7 +1007,934 @@
     "featured": true
   },
   {
+    "id": "g-052",
+    "title": "Wedding court of Mohammad Reza and Princess Fawzia (Fawzieh)",
+    "year": "1939",
+    "place": "Tehran",
+    "personIds": [
+      "fawzia",
+      "mohammad-reza"
+    ],
+    "room": "early",
+    "caption": "Princess Fawzia Fuad of Egypt (Fawzieh / فوزیه) — first wife of Mohammad Reza Shah — with the young Crown Prince among the court. 1939 marriage. Not Soraya, not Farah.",
+    "cardCaption": "Princess Fawzia (Fawzieh) of Egypt with the young Mohammad Reza — first marriage, 1939.",
+    "sourceNote": "Private collection plate · Princess Fawzia (Fawzieh) · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/user-early-court-wedding-group.jpg",
+    "aspect": "portrait",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "user-upload",
+    "featured": true
+  },
+  {
+    "id": "g-053",
+    "title": "Queen Soraya in emerald satin",
+    "year": "1950s",
+    "place": "Archive",
+    "personIds": [
+      "soraya",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary — second wife of Mohammad Reza Shah (1951–1958). Emerald satin and diamonds. Not Fawzia, not Farah.",
+    "cardCaption": "Queen Soraya — emerald satin. Second wife of the Shah (not Farah).",
+    "sourceNote": "Private collection plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/user-soraya-emerald-gown-tiara.jpg",
+    "aspect": "portrait",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "user-upload",
+    "featured": true
+  },
+  {
+    "id": "g-054",
+    "title": "Queen Soraya — diamond cascade portrait",
+    "year": "1950s",
+    "place": "Archive",
+    "personIds": [
+      "soraya",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary in diamond cascade and fur. Second Queen consort (1951–1958). Distinct from Fawzia (first) and Farah (third).",
+    "cardCaption": "Queen Soraya — second wife of Mohammad Reza Shah.",
+    "sourceNote": "Private collection plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/user-soraya-diamond-cascade-portrait.jpg",
+    "aspect": "portrait",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "user-upload",
+    "featured": true
+  },
+  {
     "id": "g-055",
+    "title": "Wedding of Mohammad Reza and Princess Fawzia, 1939",
+    "year": "1939",
+    "place": "Tehran",
+    "personIds": [
+      "fawzia",
+      "mohammad-reza"
+    ],
+    "room": "early",
+    "caption": "The 1939 wedding of Crown Prince Mohammad Reza Pahlavi and Princess Fawzia (Fawzieh) of Egypt — first of the Shah’s three marriages. Not the Farah wedding of 1959.",
+    "cardCaption": "1939 wedding — Mohammad Reza and Princess Fawzia (Fawzieh) of Egypt.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/modernegypt-wedding-of-mohammad-reza-pahlavi-fawzia-dhp13655-20-5-01.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-056",
+    "title": "Wedding of Mohammad Reza and Princess Fawzia, 1939",
+    "year": "1939",
+    "place": "Tehran",
+    "personIds": [
+      "fawzia",
+      "mohammad-reza"
+    ],
+    "room": "early",
+    "caption": "The 1939 wedding of Crown Prince Mohammad Reza Pahlavi and Princess Fawzia (Fawzieh) of Egypt — first of the Shah’s three marriages. Not the Farah wedding of 1959.",
+    "cardCaption": "1939 wedding — Mohammad Reza and Princess Fawzia (Fawzieh) of Egypt.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/banquet-à-téhéran-lors-du-mariage-de-fawzia-fuad-et-de-mohammad-reza-pahlavi-1.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-057",
+    "title": "Fawzia with the Queen Mother and court",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "fawzia",
+      "tadj-ol-molouk"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia (Fawzieh) among the early Pahlavi court — with Tadj ol-Molouk and family. First marriage chapter of Mohammad Reza Shah.",
+    "cardCaption": "Fawzia (Fawzieh) with the early Pahlavi court.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/fawzia-et-tadj-ol-molouk.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-058",
+    "title": "Fawzia, Mohammad Reza, and Princess Shahnaz",
+    "year": "1940s",
+    "place": "Archive",
+    "personIds": [
+      "fawzia",
+      "shahnaz",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia (Fawzieh) of Egypt with Mohammad Reza Shah and their daughter, Princess Shahnaz. First marriage of the Shah (1939–1948).",
+    "cardCaption": "Fawzia (Fawzieh), the Shah, and Princess Shahnaz — the first royal household.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/fawzia-fuad-of-egypt-with-mohammad-reza-pahlavi-and-their-daughter-shahnaz-pahlavi.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-059",
+    "title": "Princess Fawzia (Fawzieh) at Cairo Airport",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "fawzia"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia of Egypt (Fawzieh) — first wife of Mohammad Reza Shah — photographed in Egypt. After the divorce she returned to Cairo.",
+    "cardCaption": "Princess Fawzia (Fawzieh) in Egypt — first Queen consort of Iran.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/fawzia-of-egypt-at-cairo-airport.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-060",
+    "title": "Princess Fawzia (Fawzieh) of Egypt",
+    "year": "1940s",
+    "place": "Archive",
+    "personIds": [
+      "fawzia"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia Fuad of Egypt — known in Persian as Fawzieh (فوزیه) — first Queen consort of Mohammad Reza Shah (1939–1948). Sister of King Farouk. Distinct from Queen Soraya and Shahbanu Farah.",
+    "cardCaption": "Princess Fawzia (Fawzieh) of Egypt — first wife of Mohammad Reza Shah.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/fawzia-official.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-061",
+    "title": "Fawzia with the Queen Mother and court",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "fawzia",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia (Fawzieh) among the early Pahlavi court — with Tadj ol-Molouk and family. First marriage chapter of Mohammad Reza Shah.",
+    "cardCaption": "Fawzia (Fawzieh) with the early Pahlavi court.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/fawzia-rezashah-nazli-mohammadrezapahlavi.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-062",
+    "title": "Wedding of Mohammad Reza and Princess Fawzia, 1939",
+    "year": "1939",
+    "place": "Tehran",
+    "personIds": [
+      "fawzia",
+      "mohammad-reza"
+    ],
+    "room": "early",
+    "caption": "The 1939 wedding of Crown Prince Mohammad Reza Pahlavi and Princess Fawzia (Fawzieh) of Egypt — first of the Shah’s three marriages. Not the Farah wedding of 1959.",
+    "cardCaption": "1939 wedding — Mohammad Reza and Princess Fawzia (Fawzieh) of Egypt.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/king-farouks-sister-princess-fawzia-married-mohammad-reza-pahlavi-crown-prince-of-persia-3.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-063",
+    "title": "Mohammad Reza Pahlavi And Fawzia Fuad Of Egypt In Manzariyeh Ettela At Newspaper Of 25 Aug",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "fawzia",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Mohammad Reza Pahlavi And Fawzia Fuad Of Egypt In Manzariyeh Ettela At Newspaper Of 25 Aug. Princess Fawzia Fuad of Egypt (Fawzieh / فوزیه), first wife of Mohammad Reza Shah (1939–1948). Not Soraya, not Farah.",
+    "cardCaption": "Princess Fawzia (Fawzieh) of Egypt — first wife of the Shah.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/mohammad-reza-pahlavi-and-fawzia-fuad-of-egypt-in-manzariyeh-ettela-at-newspaper-of-25-aug.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-064",
+    "title": "Princess Fawzia (Fawzieh) of Egypt",
+    "year": "1940s",
+    "place": "Archive",
+    "personIds": [
+      "fawzia"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia Fuad of Egypt — known in Persian as Fawzieh (فوزیه) — first Queen consort of Mohammad Reza Shah (1939–1948). Sister of King Farouk. Distinct from Queen Soraya and Shahbanu Farah.",
+    "cardCaption": "Princess Fawzia (Fawzieh) of Egypt — first wife of Mohammad Reza Shah.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/princess-fawzia-bint-fuad-of-egypt.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-065",
+    "title": "Princess Fawzia (Fawzieh) of Egypt",
+    "year": "1940s",
+    "place": "Archive",
+    "personIds": [
+      "fawzia"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia Fuad of Egypt — known in Persian as Fawzieh (فوزیه) — first Queen consort of Mohammad Reza Shah (1939–1948). Sister of King Farouk. Distinct from Queen Soraya and Shahbanu Farah.",
+    "cardCaption": "Princess Fawzia (Fawzieh) of Egypt — first wife of Mohammad Reza Shah.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/princess-fawzia-fouad.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-066",
+    "title": "Princess Fawzia (Fawzieh) of Egypt",
+    "year": "1940s",
+    "place": "Archive",
+    "personIds": [
+      "fawzia"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia Fuad of Egypt — known in Persian as Fawzieh (فوزیه) — first Queen consort of Mohammad Reza Shah (1939–1948). Sister of King Farouk. Distinct from Queen Soraya and Shahbanu Farah.",
+    "cardCaption": "Princess Fawzia (Fawzieh) of Egypt — first wife of Mohammad Reza Shah.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/princess-fawzia-fuad-of-egypt-by-armand-3x4-cropped.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-067",
+    "title": "Princess Fawzia (Fawzieh) of Egypt",
+    "year": "1940s",
+    "place": "Archive",
+    "personIds": [
+      "fawzia"
+    ],
+    "room": "state",
+    "caption": "Princess Fawzia Fuad of Egypt — known in Persian as Fawzieh (فوزیه) — first Queen consort of Mohammad Reza Shah (1939–1948). Sister of King Farouk. Distinct from Queen Soraya and Shahbanu Farah.",
+    "cardCaption": "Princess Fawzia (Fawzieh) of Egypt — first wife of Mohammad Reza Shah.",
+    "sourceNote": "Archival plate · Princess Fawzia (Fawzieh) of Egypt · view only · mypahlavi.com",
+    "src": "/archive/fawzia-fuad/princess-fawzia-fuad-of-egypt-by-armand.jpg",
+    "aspect": "landscape",
+    "folder": "fawzia-fuad",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-068",
+    "title": "1962 Soraya By Wolfgang Fischer 01",
+    "year": "1962",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1962. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/1962-soraya-by-wolfgang-fischer-01.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-069",
+    "title": "Queen Soraya In Noordwijk 5684",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-bestanddeelnr-910-5684.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-070",
+    "title": "Queen Soraya In Noordwijk 5685",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-bestanddeelnr-910-5685.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-071",
+    "title": "Queen Soraya In Noordwijk In Zee Zwemmend 5689",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-in-zee-zwemmend-bestanddeelnr-910-5689.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-072",
+    "title": "Queen Soraya In Noordwijk Rit Te Paard Met Haar Broer Prins Byra 5",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-rit-te-paard-met-haar-broer-prins-byra-bestanddeelnr-910-5.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-073",
+    "title": "Queen Soraya In Noordwijk Uit Zee Komend En Zich Afdrogend 5686",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-uit-zee-komend-en-zich-afdrogend-bestanddeelnr-910-5686.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-074",
+    "title": "Queen Soraya In Noordwijk Uit Zee Komend Met Haar Broer Prins Byra",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-uit-zee-komend-met-haar-broer-prins-byra-bestanddeelnr-910.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-075",
+    "title": "Queen Soraya Esfandiary-Bakhtiary",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-vlnr-prins-byra-prinses-soraya-en-haar-moeder-bestanddeeln.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-076",
+    "title": "Iran Over Volcano Queen Soraya",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/iran-over-volcano-queen-soraya.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-077",
+    "title": "Mohammadreza Pahlavi And Soraya Esfandiary",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/mohammadreza-pahlavi-and-soraya-esfandiary.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-078",
+    "title": "Museo Ferragamo Modello In Legno Per Calzature Su Misura Di Soraya Di Persia",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/museo-ferragamo-modello-in-legno-per-calzature-su-misura-di-soraya-di-persia.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-079",
+    "title": "Princess Soraya And Mohammad Reza Pahlavi Pilgrimage Imam Husayn Shrine 1953",
+    "year": "1953",
+    "place": "Archive",
+    "personIds": [
+      "soraya",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1953. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/princess-soraya-and-mohammad-reza-pahlavi-pilgrimage-imam-husayn-shrine-1953.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-080",
+    "title": "Queen Soraya Autofabrikante Bij Wenen 0218",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/prinses-soraya-autofabrikante-bij-wenen-bestanddeelnr-912-0218.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-081",
+    "title": "Queen Soraya In Madrid 9666",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/prinses-soraya-in-madrid-bestanddeelnr-917-9666.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-082",
+    "title": "Queen Soraya In Spanje Aan Het Strand Te Bagur 3695",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/prinses-soraya-in-spanje-aan-het-strand-te-bagur-bestanddeelnr-919-3695.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-083",
+    "title": "Queen Soraya In Spanje 3694",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/prinses-soraya-in-spanje-bestanddeelnr-919-3694.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-084",
+    "title": "Queen Soraya Esfandiary-Bakhtiary",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/prinses-soraya-tweede-ex-vrouw-van-de-laatste-sjah-van-iran-mohammad-reza-pahl-bestanddeel.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-085",
+    "title": "Queen Shabanu Soraya Esfandiary Bakhtiari Tehran 1953",
+    "year": "1953",
+    "place": "Tehran",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1953. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/queen-shabanu-soraya-esfandiary-bakhtiari-tehran-1953.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-086",
+    "title": "Soraya 2",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-2.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-087",
+    "title": "Soraya Esfandiary Bakhtiari 045 3X4 Cropped",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari-045-3x4-cropped.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-088",
+    "title": "Soraya Esfandiary Bakhtiari 045",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari-045.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-089",
+    "title": "Soraya Esfandiary Bakhtiari Blkwht",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari-blkwht.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-090",
+    "title": "Soraya Esfandiary Bakhtiari Cropped",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari-cropped.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-091",
+    "title": "Soraya Esfandiary Bakhtiari",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-092",
+    "title": "Soraya In Rome 1959",
+    "year": "1959",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1959. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-in-rome-1959.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-093",
+    "title": "Soraya Mutter Erde Fec",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-mutter-erde-fec.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-094",
+    "title": "Soraya Pahlavi 1956 Cropped Retouched",
+    "year": "1956",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1956. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-pahlavi-1956-cropped-retouched.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-095",
+    "title": "Soraya Pahlavi 1956",
+    "year": "1956",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1956. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya-pahlavi-1956.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-096",
+    "title": "Soraya1947",
+    "year": "1947",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1947. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/soraya1947.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-097",
+    "title": "Sorayababy",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "family",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/sorayababy.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-098",
+    "title": "Sorayaesfandyari",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/sorayaesfandyari.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-099",
+    "title": "The Separation Of Soraya And Shah Mohammad Reza Pahlavi Announcement Distributed With Etel",
+    "year": "—",
+    "place": "Archive",
+    "personIds": [
+      "soraya",
+      "mohammad-reza"
+    ],
+    "room": "state",
+    "caption": "Queen Soraya Esfandiary-Bakhtiary. Former Queen of Iran (1951–1958). Held here as part of the dynasty’s earlier court — not Queen Soraya.",
+    "cardCaption": "Queen Soraya Esfandiary-Bakhtiary — earlier Queen of Iran, not Farah.",
+    "sourceNote": "Archival plate · Queen Soraya · view only · mypahlavi.com",
+    "src": "/archive/soraya-esfandiary/the-separation-of-soraya-and-shah-mohammad-reza-pahlavi-announcement-distributed-with-etel.jpg",
+    "aspect": "landscape",
+    "folder": "soraya-esfandiary",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "see source",
+    "featured": false
+  },
+  {
+    "id": "g-100",
     "title": "Ashraf Pahlavi 1350",
     "year": "—",
     "place": "Archive",
@@ -1083,7 +1953,7 @@
     "featured": false
   },
   {
-    "id": "g-056",
+    "id": "g-101",
     "title": "First 1960S Years Ashraf Pahlavi And Student Nurses",
     "year": "1960",
     "place": "Archive",
@@ -1102,7 +1972,7 @@
     "featured": false
   },
   {
-    "id": "g-057",
+    "id": "g-102",
     "title": "Iran Over Volcano Princess Ashraf",
     "year": "—",
     "place": "Archive",
@@ -1121,7 +1991,7 @@
     "featured": false
   },
   {
-    "id": "g-058",
+    "id": "g-103",
     "title": "Palais De Saadabad Téhéran Villa D Ashraf Pahlavi",
     "year": "—",
     "place": "Archive",
@@ -1140,7 +2010,7 @@
     "featured": false
   },
   {
-    "id": "g-059",
+    "id": "g-104",
     "title": "Princessashrafpahlavi2537",
     "year": "—",
     "place": "Archive",
@@ -1159,7 +2029,7 @@
     "featured": false
   },
   {
-    "id": "g-060",
+    "id": "g-105",
     "title": "Book Farah Diba",
     "year": "—",
     "place": "Archive",
@@ -1178,7 +2048,7 @@
     "featured": false
   },
   {
-    "id": "g-061",
+    "id": "g-106",
     "title": "Commemorative Coin Issued On The Occasion Of The Coronation Of Farah Diba Pahlavi As Shahb",
     "year": "—",
     "place": "Archive",
@@ -1197,7 +2067,7 @@
     "featured": false
   },
   {
-    "id": "g-062",
+    "id": "g-107",
     "title": "Commemorative Medal Issued On The Occasion Of The Coronation Of Farah Diba Pahlavi As Shah",
     "year": "—",
     "place": "Archive",
@@ -1216,7 +2086,7 @@
     "featured": false
   },
   {
-    "id": "g-063",
+    "id": "g-108",
     "title": "Coronation Of The Persian Empress Farah Pahlavi",
     "year": "—",
     "place": "Archive",
@@ -1235,7 +2105,7 @@
     "featured": false
   },
   {
-    "id": "g-064",
+    "id": "g-109",
     "title": "Einde Van Het Feest Vertrek Koninklijke Gasten Farah Dib En De Sjah 8623",
     "year": "—",
     "place": "Archive",
@@ -1255,7 +2125,7 @@
     "featured": false
   },
   {
-    "id": "g-065",
+    "id": "g-110",
     "title": "Emperor Mohammad Reza Pahlavi With Empress Farah",
     "year": "—",
     "place": "Archive",
@@ -1275,7 +2145,7 @@
     "featured": false
   },
   {
-    "id": "g-066",
+    "id": "g-111",
     "title": "Empress Farah",
     "year": "—",
     "place": "Archive",
@@ -1294,7 +2164,7 @@
     "featured": false
   },
   {
-    "id": "g-067",
+    "id": "g-112",
     "title": "Farah Diba 1959 Iran",
     "year": "1959",
     "place": "Archive",
@@ -1313,7 +2183,7 @@
     "featured": false
   },
   {
-    "id": "g-068",
+    "id": "g-113",
     "title": "Farah Diba 1962",
     "year": "1962",
     "place": "Archive",
@@ -1332,7 +2202,7 @@
     "featured": false
   },
   {
-    "id": "g-069",
+    "id": "g-114",
     "title": "Farah Diba Y Silvia Martorell",
     "year": "—",
     "place": "Archive",
@@ -1351,7 +2221,7 @@
     "featured": false
   },
   {
-    "id": "g-070",
+    "id": "g-115",
     "title": "Farah Pahlavi 1960S",
     "year": "1960",
     "place": "Archive",
@@ -1370,7 +2240,7 @@
     "featured": false
   },
   {
-    "id": "g-071",
+    "id": "g-116",
     "title": "Farah Pahlavi 1962",
     "year": "1962",
     "place": "Archive",
@@ -1389,7 +2259,7 @@
     "featured": false
   },
   {
-    "id": "g-072",
+    "id": "g-117",
     "title": "Farah Pahlavi 1972 Cropped",
     "year": "1972",
     "place": "Archive",
@@ -1408,7 +2278,7 @@
     "featured": false
   },
   {
-    "id": "g-073",
+    "id": "g-118",
     "title": "Farah Pahlavi 1972",
     "year": "1972",
     "place": "Archive",
@@ -1427,7 +2297,7 @@
     "featured": false
   },
   {
-    "id": "g-074",
+    "id": "g-119",
     "title": "Farah Pahlavi 2016 03 12",
     "year": "2016",
     "place": "Archive",
@@ -1446,7 +2316,7 @@
     "featured": false
   },
   {
-    "id": "g-075",
+    "id": "g-120",
     "title": "Farah Pahlavi And Her Mother Farideh Ghotbi 01",
     "year": "—",
     "place": "Archive",
@@ -1465,7 +2335,7 @@
     "featured": false
   },
   {
-    "id": "g-076",
+    "id": "g-121",
     "title": "Farah Pahlavi And Mohammad Reza Shah Pahlavi In Their Seats",
     "year": "—",
     "place": "Archive",
@@ -1485,7 +2355,7 @@
     "featured": false
   },
   {
-    "id": "g-077",
+    "id": "g-122",
     "title": "Farah Pahlavi And Rosalynn Carter",
     "year": "—",
     "place": "Archive",
@@ -1504,7 +2374,7 @@
     "featured": false
   },
   {
-    "id": "g-078",
+    "id": "g-123",
     "title": "Farah Pahlavi Portrait 1",
     "year": "—",
     "place": "Archive",
@@ -1523,7 +2393,7 @@
     "featured": false
   },
   {
-    "id": "g-079",
+    "id": "g-124",
     "title": "Farah Pahlavi Portrait",
     "year": "—",
     "place": "Archive",
@@ -1542,7 +2412,7 @@
     "featured": false
   },
   {
-    "id": "g-080",
+    "id": "g-125",
     "title": "Farah Pahlavi S Dressing Table",
     "year": "—",
     "place": "Archive",
@@ -1561,7 +2431,7 @@
     "featured": false
   },
   {
-    "id": "g-081",
+    "id": "g-126",
     "title": "Frič Jaroslav And Farah Diba Pahlavi",
     "year": "—",
     "place": "Archive",
@@ -1580,7 +2450,7 @@
     "featured": false
   },
   {
-    "id": "g-082",
+    "id": "g-127",
     "title": "From The Quieter Times Sha Mohammad Reza Pahlavi Along With Empress Farah In The Garden Of",
     "year": "—",
     "place": "Archive",
@@ -1600,7 +2470,7 @@
     "featured": false
   },
   {
-    "id": "g-083",
+    "id": "g-128",
     "title": "Habib Bourguiba Shah And Queen Farah In Isfahan 1968",
     "year": "1968",
     "place": "Archive",
@@ -1619,7 +2489,7 @@
     "featured": false
   },
   {
-    "id": "g-084",
+    "id": "g-129",
     "title": "Hua Guofeng With Shah Mohammad Reza Pahlavi During A State Visit In Iran Farah Diba",
     "year": "—",
     "place": "Archive",
@@ -1639,7 +2509,7 @@
     "featured": false
   },
   {
-    "id": "g-085",
+    "id": "g-130",
     "title": "Joyaux Dynastiques Hôtel De La Marine Couronne Impératrice Farah Pahlavi Shah D Iran",
     "year": "—",
     "place": "Archive",
@@ -1658,7 +2528,7 @@
     "featured": false
   },
   {
-    "id": "g-086",
+    "id": "g-131",
     "title": "Keizerin Farah Diba Aan Het Skien Op De Axamer Lizum Bij Insbruck 0043 C",
     "year": "—",
     "place": "Archive",
@@ -1677,7 +2547,7 @@
     "featured": false
   },
   {
-    "id": "g-087",
+    "id": "g-132",
     "title": "Koninklijk Huis Prinsessen Koninginnen Keizers Bezoeken Vakanties Farah Di",
     "year": "—",
     "place": "Archive",
@@ -1696,7 +2566,7 @@
     "featured": false
   },
   {
-    "id": "g-088",
+    "id": "g-133",
     "title": "Mohammad Reza Pahlavi And Farah Diba At The Mehrabad Airport",
     "year": "—",
     "place": "Tehran",
@@ -1716,7 +2586,7 @@
     "featured": false
   },
   {
-    "id": "g-089",
+    "id": "g-134",
     "title": "Mohammad Reza Pahlavi Farah Diba And Joffrey Ballet Dancers",
     "year": "—",
     "place": "Archive",
@@ -1736,7 +2606,7 @@
     "featured": false
   },
   {
-    "id": "g-090",
+    "id": "g-135",
     "title": "Mohammad Reza Pahlavi Middle And Farah Pahlavi Right Meet Indira Gandhi Left In 1970",
     "year": "1970",
     "place": "India",
@@ -1756,7 +2626,7 @@
     "featured": false
   },
   {
-    "id": "g-091",
+    "id": "g-136",
     "title": "Mohammad Reza Shah And Shahbanu Farah 1962",
     "year": "1962",
     "place": "Archive",
@@ -1776,7 +2646,7 @@
     "featured": false
   },
   {
-    "id": "g-092",
+    "id": "g-137",
     "title": "Mohammad Reza Shah And Shahbanu Farah On A Motor",
     "year": "—",
     "place": "Archive",
@@ -1796,7 +2666,7 @@
     "featured": false
   },
   {
-    "id": "g-093",
+    "id": "g-138",
     "title": "Mohammed Reza Pahlavi And Farah Diba Coronation Cropped",
     "year": "—",
     "place": "Archive",
@@ -1817,7 +2687,7 @@
     "featured": false
   },
   {
-    "id": "g-094",
+    "id": "g-139",
     "title": "Photograph Of President Gerald R Ford And First Lady Betty Ford Bidding Farewell To Shah M",
     "year": "—",
     "place": "Archive",
@@ -1836,7 +2706,7 @@
     "featured": false
   },
   {
-    "id": "g-095",
+    "id": "g-140",
     "title": "President John F Kennedy First Lady Jacqueline Kennedy Mohammad Reza Pahlavi And Farah Pah",
     "year": "—",
     "place": "Washington, D.C.",
@@ -1856,7 +2726,7 @@
     "featured": false
   },
   {
-    "id": "g-096",
+    "id": "g-141",
     "title": "Prince Bernhard Shah Of Persia Queen Farah 1970",
     "year": "1970",
     "place": "Archive",
@@ -1875,7 +2745,7 @@
     "featured": false
   },
   {
-    "id": "g-097",
+    "id": "g-142",
     "title": "Queen Farah Of Persia Egyption President Anwar Sadat Mohammad Reza Shah Pahlavi Of Persia",
     "year": "—",
     "place": "Archive",
@@ -1895,7 +2765,7 @@
     "featured": false
   },
   {
-    "id": "g-098",
+    "id": "g-143",
     "title": "Shah And Farah",
     "year": "—",
     "place": "Archive",
@@ -1914,7 +2784,7 @@
     "featured": false
   },
   {
-    "id": "g-099",
+    "id": "g-144",
     "title": "Shah And Queen Farah At The High Urban Planning Council Tehran Iran 1966",
     "year": "1966",
     "place": "Tehran",
@@ -1933,7 +2803,7 @@
     "featured": false
   },
   {
-    "id": "g-100",
+    "id": "g-145",
     "title": "Shah And Shahbanu 2",
     "year": "—",
     "place": "Archive",
@@ -1952,7 +2822,7 @@
     "featured": false
   },
   {
-    "id": "g-101",
+    "id": "g-146",
     "title": "Shah And Shahbanu At University Of Tehran",
     "year": "—",
     "place": "Tehran",
@@ -1971,7 +2841,7 @@
     "featured": false
   },
   {
-    "id": "g-102",
+    "id": "g-147",
     "title": "Shah And Shahbanu In A Public Meetingg",
     "year": "—",
     "place": "Archive",
@@ -1990,7 +2860,7 @@
     "featured": false
   },
   {
-    "id": "g-103",
+    "id": "g-148",
     "title": "Shah And Shahbanu In An Art Gallery",
     "year": "—",
     "place": "Archive",
@@ -2009,7 +2879,7 @@
     "featured": false
   },
   {
-    "id": "g-104",
+    "id": "g-149",
     "title": "Shah And Shahbanu Leaving Iran 16 January 1979",
     "year": "1979",
     "place": "Archive",
@@ -2028,7 +2898,7 @@
     "featured": false
   },
   {
-    "id": "g-105",
+    "id": "g-150",
     "title": "Shah And Shahbanu Leaving Iran Mehrabad International Airport 16 January 1979 3",
     "year": "1979",
     "place": "Tehran",
@@ -2047,7 +2917,7 @@
     "featured": false
   },
   {
-    "id": "g-106",
+    "id": "g-151",
     "title": "Shah And Shahbanu Leaving Iran Mehrabad International Airport 16 January 1979",
     "year": "1979",
     "place": "Tehran",
@@ -2066,7 +2936,7 @@
     "featured": false
   },
   {
-    "id": "g-107",
+    "id": "g-152",
     "title": "Shah Farah Leave",
     "year": "—",
     "place": "Archive",
@@ -2085,7 +2955,7 @@
     "featured": false
   },
   {
-    "id": "g-108",
+    "id": "g-153",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 12",
     "year": "1970",
     "place": "Finland",
@@ -2105,7 +2975,7 @@
     "featured": false
   },
   {
-    "id": "g-109",
+    "id": "g-154",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 13",
     "year": "1970",
     "place": "Finland",
@@ -2125,7 +2995,7 @@
     "featured": false
   },
   {
-    "id": "g-110",
+    "id": "g-155",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 14",
     "year": "1970",
     "place": "Finland",
@@ -2145,7 +3015,7 @@
     "featured": false
   },
   {
-    "id": "g-111",
+    "id": "g-156",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 15",
     "year": "1970",
     "place": "Finland",
@@ -2165,7 +3035,7 @@
     "featured": false
   },
   {
-    "id": "g-112",
+    "id": "g-157",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 16",
     "year": "1970",
     "place": "Finland",
@@ -2185,7 +3055,7 @@
     "featured": false
   },
   {
-    "id": "g-113",
+    "id": "g-158",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 17",
     "year": "1970",
     "place": "Finland",
@@ -2205,7 +3075,7 @@
     "featured": false
   },
   {
-    "id": "g-114",
+    "id": "g-159",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 18",
     "year": "1970",
     "place": "Finland",
@@ -2225,7 +3095,7 @@
     "featured": false
   },
   {
-    "id": "g-115",
+    "id": "g-160",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 19",
     "year": "1970",
     "place": "Finland",
@@ -2245,7 +3115,7 @@
     "featured": false
   },
   {
-    "id": "g-116",
+    "id": "g-161",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 20",
     "year": "1970",
     "place": "Finland",
@@ -2265,7 +3135,7 @@
     "featured": false
   },
   {
-    "id": "g-117",
+    "id": "g-162",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 22",
     "year": "1970",
     "place": "Finland",
@@ -2285,7 +3155,7 @@
     "featured": false
   },
   {
-    "id": "g-118",
+    "id": "g-163",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 32",
     "year": "1970",
     "place": "Finland",
@@ -2305,7 +3175,7 @@
     "featured": false
   },
   {
-    "id": "g-119",
+    "id": "g-164",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 35",
     "year": "1970",
     "place": "Finland",
@@ -2325,7 +3195,7 @@
     "featured": false
   },
   {
-    "id": "g-120",
+    "id": "g-165",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 40",
     "year": "1970",
     "place": "Finland",
@@ -2345,7 +3215,7 @@
     "featured": false
   },
   {
-    "id": "g-121",
+    "id": "g-166",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 41",
     "year": "1970",
     "place": "Finland",
@@ -2365,7 +3235,7 @@
     "featured": false
   },
   {
-    "id": "g-122",
+    "id": "g-167",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 42",
     "year": "1970",
     "place": "Finland",
@@ -2385,7 +3255,7 @@
     "featured": false
   },
   {
-    "id": "g-123",
+    "id": "g-168",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 43",
     "year": "1970",
     "place": "Finland",
@@ -2405,7 +3275,7 @@
     "featured": false
   },
   {
-    "id": "g-124",
+    "id": "g-169",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 46",
     "year": "1970",
     "place": "Finland",
@@ -2425,7 +3295,7 @@
     "featured": false
   },
   {
-    "id": "g-125",
+    "id": "g-170",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 6",
     "year": "1970",
     "place": "Finland",
@@ -2445,7 +3315,7 @@
     "featured": false
   },
   {
-    "id": "g-126",
+    "id": "g-171",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Finland 1970 9",
     "year": "1970",
     "place": "Finland",
@@ -2465,7 +3335,7 @@
     "featured": false
   },
   {
-    "id": "g-127",
+    "id": "g-172",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Helsinki 1970 1",
     "year": "1970",
     "place": "Finland",
@@ -2485,7 +3355,7 @@
     "featured": false
   },
   {
-    "id": "g-128",
+    "id": "g-173",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Helsinki 1970 36",
     "year": "1970",
     "place": "Finland",
@@ -2505,7 +3375,7 @@
     "featured": false
   },
   {
-    "id": "g-129",
+    "id": "g-174",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Helsinki 1970 37",
     "year": "1970",
     "place": "Finland",
@@ -2525,7 +3395,7 @@
     "featured": false
   },
   {
-    "id": "g-130",
+    "id": "g-175",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Kuopio 1970 11",
     "year": "1970",
     "place": "Archive",
@@ -2545,7 +3415,7 @@
     "featured": false
   },
   {
-    "id": "g-131",
+    "id": "g-176",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Lapland 1970 28",
     "year": "1970",
     "place": "Archive",
@@ -2565,7 +3435,7 @@
     "featured": false
   },
   {
-    "id": "g-132",
+    "id": "g-177",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Lapland 1970 29",
     "year": "1970",
     "place": "Archive",
@@ -2585,7 +3455,7 @@
     "featured": false
   },
   {
-    "id": "g-133",
+    "id": "g-178",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Lapland 1970 30",
     "year": "1970",
     "place": "Archive",
@@ -2605,7 +3475,7 @@
     "featured": false
   },
   {
-    "id": "g-134",
+    "id": "g-179",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Lapland 1970 31",
     "year": "1970",
     "place": "Archive",
@@ -2625,7 +3495,7 @@
     "featured": false
   },
   {
-    "id": "g-135",
+    "id": "g-180",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Tapiola 1970 2",
     "year": "1970",
     "place": "Archive",
@@ -2645,7 +3515,7 @@
     "featured": false
   },
   {
-    "id": "g-136",
+    "id": "g-181",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Tapiola 1970 23",
     "year": "1970",
     "place": "Archive",
@@ -2665,7 +3535,7 @@
     "featured": false
   },
   {
-    "id": "g-137",
+    "id": "g-182",
     "title": "Shah Mohammad Reza Pahlavi And Farah Diba In Tapiola 1970 4",
     "year": "1970",
     "place": "Archive",
@@ -2685,7 +3555,7 @@
     "featured": false
   },
   {
-    "id": "g-138",
+    "id": "g-183",
     "title": "Shahbanoofarahpahlavi",
     "year": "—",
     "place": "Archive",
@@ -2704,7 +3574,7 @@
     "featured": false
   },
   {
-    "id": "g-139",
+    "id": "g-184",
     "title": "Shahbanu Farah Pahlavi 23",
     "year": "—",
     "place": "Archive",
@@ -2723,7 +3593,7 @@
     "featured": false
   },
   {
-    "id": "g-140",
+    "id": "g-185",
     "title": "Shahbanu Of Iran",
     "year": "—",
     "place": "Archive",
@@ -2742,7 +3612,7 @@
     "featured": false
   },
   {
-    "id": "g-141",
+    "id": "g-186",
     "title": "Stamp Of Ajman 1971 Colnect 870005 Shah Reza And Empress Farah Dibi",
     "year": "1971",
     "place": "Archive",
@@ -2761,7 +3631,7 @@
     "featured": false
   },
   {
-    "id": "g-142",
+    "id": "g-187",
     "title": "Arrival Ceremony Shah Of Iran",
     "year": "1945",
     "place": "Archive",
@@ -2780,7 +3650,7 @@
     "featured": false
   },
   {
-    "id": "g-143",
+    "id": "g-188",
     "title": "Commemorative Print Of Mohammad Reza Shah Pahlavi Issued By The Iranian Gendarmerie",
     "year": "—",
     "place": "Archive",
@@ -2799,7 +3669,7 @@
     "featured": false
   },
   {
-    "id": "g-144",
+    "id": "g-189",
     "title": "Eleanor Roosevelt And Shah Of Iran In Teheran Iran",
     "year": "1961",
     "place": "Archive",
@@ -2818,7 +3688,7 @@
     "featured": false
   },
   {
-    "id": "g-145",
+    "id": "g-190",
     "title": "Fahrang Mehr And The Shah Of Iran",
     "year": "—",
     "place": "Archive",
@@ -2837,7 +3707,7 @@
     "featured": false
   },
   {
-    "id": "g-146",
+    "id": "g-191",
     "title": "Funeral Ceremony Of Mohammad Reza Pahlavi",
     "year": "—",
     "place": "Archive",
@@ -2856,7 +3726,7 @@
     "featured": false
   },
   {
-    "id": "g-147",
+    "id": "g-192",
     "title": "Hua Guofeng With Shah Mohammad Reza Pahlavi During A State Visit In Iran",
     "year": "—",
     "place": "Archive",
@@ -2875,7 +3745,7 @@
     "featured": false
   },
   {
-    "id": "g-148",
+    "id": "g-193",
     "title": "Jimmy Carter And Shah Of Iran Inspect The Troop During Welcoming Ceremony For The Shah Nar",
     "year": "—",
     "place": "Archive",
@@ -2894,7 +3764,7 @@
     "featured": false
   },
   {
-    "id": "g-149",
+    "id": "g-194",
     "title": "Jimmy Carter And The Shah Of Iran",
     "year": "—",
     "place": "Archive",
@@ -2913,7 +3783,7 @@
     "featured": false
   },
   {
-    "id": "g-150",
+    "id": "g-195",
     "title": "Jimmy Carter And The Shah Toast At A State Dinner Hosted By The Shah Of Iran",
     "year": "—",
     "place": "Archive",
@@ -2932,7 +3802,7 @@
     "featured": false
   },
   {
-    "id": "g-151",
+    "id": "g-196",
     "title": "Jimmy Carter Speaks At A State Dinner Hosted By The Shah Of Iran",
     "year": "—",
     "place": "Archive",
@@ -2951,7 +3821,7 @@
     "featured": false
   },
   {
-    "id": "g-152",
+    "id": "g-197",
     "title": "Jimmy Carter With King Hussein Of Jordan The Shah Of Iran And Shahbanou Of Iran",
     "year": "—",
     "place": "Archive",
@@ -2971,7 +3841,7 @@
     "featured": false
   },
   {
-    "id": "g-153",
+    "id": "g-198",
     "title": "Kennedy S Welcome Shah Of Iran To W House Digital File From Original Item",
     "year": "—",
     "place": "Washington, D.C.",
@@ -2990,7 +3860,7 @@
     "featured": false
   },
   {
-    "id": "g-154",
+    "id": "g-199",
     "title": "Kennedy With Shah Of Iran 1961",
     "year": "1961",
     "place": "Washington, D.C.",
@@ -3009,7 +3879,7 @@
     "featured": false
   },
   {
-    "id": "g-155",
+    "id": "g-200",
     "title": "Meeting Between Jimmy Carter And The Shah Of Iran",
     "year": "—",
     "place": "Archive",
@@ -3028,7 +3898,7 @@
     "featured": false
   },
   {
-    "id": "g-156",
+    "id": "g-201",
     "title": "Meeting With The Shah Of Iran Mohammad Reza Shah Pahlavi President Kennedy Secretary Of De",
     "year": "—",
     "place": "Washington, D.C.",
@@ -3047,26 +3917,7 @@
     "featured": false
   },
   {
-    "id": "g-157",
-    "title": "Modernegypt Wedding Of Mohammad Reza Pahlavi Fawzia Dhp13655 20 5 01",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "mohammad-reza"
-    ],
-    "room": "family",
-    "caption": "Mohammad Reza Shah. From the rooms of the Pahlavi century.",
-    "cardCaption": "Mohammad Reza Shah.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/mohammad-reza-shah/modernegypt-wedding-of-mohammad-reza-pahlavi-fawzia-dhp13655-20-5-01.jpg",
-    "aspect": "landscape",
-    "folder": "mohammad-reza-shah",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-158",
+    "id": "g-202",
     "title": "Mohammad Reza 10000 R 1971 O",
     "year": "1971",
     "place": "Archive",
@@ -3085,7 +3936,7 @@
     "featured": false
   },
   {
-    "id": "g-159",
+    "id": "g-203",
     "title": "Mohammad Reza 10000 R 1971 R",
     "year": "1971",
     "place": "Archive",
@@ -3104,7 +3955,7 @@
     "featured": false
   },
   {
-    "id": "g-160",
+    "id": "g-204",
     "title": "Mohammad Reza Family 1966 Full",
     "year": "1966",
     "place": "Archive",
@@ -3123,7 +3974,7 @@
     "featured": false
   },
   {
-    "id": "g-161",
+    "id": "g-205",
     "title": "Mohammad Reza Family 1966",
     "year": "1966",
     "place": "Archive",
@@ -3142,7 +3993,7 @@
     "featured": false
   },
   {
-    "id": "g-162",
+    "id": "g-206",
     "title": "Mohammad Reza Pahlavi 1942",
     "year": "1942",
     "place": "Archive",
@@ -3161,7 +4012,7 @@
     "featured": false
   },
   {
-    "id": "g-163",
+    "id": "g-207",
     "title": "Mohammad Reza Pahlavi 1973 Portrait 4X5 Cropped",
     "year": "1973",
     "place": "Archive",
@@ -3180,7 +4031,7 @@
     "featured": false
   },
   {
-    "id": "g-164",
+    "id": "g-208",
     "title": "Mohammad Reza Pahlavi 1973",
     "year": "1973",
     "place": "Archive",
@@ -3199,7 +4050,7 @@
     "featured": false
   },
   {
-    "id": "g-165",
+    "id": "g-209",
     "title": "Mohammad Reza Pahlavi 2 Cropped",
     "year": "—",
     "place": "Archive",
@@ -3218,7 +4069,7 @@
     "featured": false
   },
   {
-    "id": "g-166",
+    "id": "g-210",
     "title": "Mohammad Reza Pahlavi 2",
     "year": "—",
     "place": "Archive",
@@ -3237,7 +4088,7 @@
     "featured": false
   },
   {
-    "id": "g-167",
+    "id": "g-211",
     "title": "Mohammad Reza Pahlavi And His Family",
     "year": "—",
     "place": "Archive",
@@ -3256,7 +4107,7 @@
     "featured": false
   },
   {
-    "id": "g-168",
+    "id": "g-212",
     "title": "Mohammad Reza Pahlavi Entering A Military School Tehran 1938",
     "year": "1938",
     "place": "Tehran",
@@ -3275,7 +4126,7 @@
     "featured": false
   },
   {
-    "id": "g-169",
+    "id": "g-213",
     "title": "Mohammad Reza Pahlavi In 1973",
     "year": "1973",
     "place": "Archive",
@@ -3294,7 +4145,7 @@
     "featured": false
   },
   {
-    "id": "g-170",
+    "id": "g-214",
     "title": "Mohammad Reza Pahlavi In France",
     "year": "—",
     "place": "France",
@@ -3313,7 +4164,7 @@
     "featured": false
   },
   {
-    "id": "g-171",
+    "id": "g-215",
     "title": "Mohammad Reza Pahlavi Shah Of Iran President Richard Nixon And Mrs Nixon Entering A State",
     "year": "—",
     "place": "Archive",
@@ -3332,7 +4183,7 @@
     "featured": false
   },
   {
-    "id": "g-172",
+    "id": "g-216",
     "title": "Mohammad Reza Pahlavi With Tie",
     "year": "—",
     "place": "Archive",
@@ -3351,7 +4202,7 @@
     "featured": false
   },
   {
-    "id": "g-173",
+    "id": "g-217",
     "title": "Mohammad Reza Pahlavi",
     "year": "—",
     "place": "Archive",
@@ -3370,7 +4221,7 @@
     "featured": false
   },
   {
-    "id": "g-174",
+    "id": "g-218",
     "title": "Mohammad Reza Shah And Crown Prince Reza 1979",
     "year": "1979",
     "place": "Archive",
@@ -3389,7 +4240,7 @@
     "featured": false
   },
   {
-    "id": "g-175",
+    "id": "g-219",
     "title": "Mohammad Reza Shah Declares Reza Pahlavi As Crown Prince 1960",
     "year": "1960",
     "place": "Archive",
@@ -3408,7 +4259,7 @@
     "featured": false
   },
   {
-    "id": "g-176",
+    "id": "g-220",
     "title": "Mohammad Reza Shah In 1947",
     "year": "1947",
     "place": "Archive",
@@ -3427,7 +4278,7 @@
     "featured": false
   },
   {
-    "id": "g-177",
+    "id": "g-221",
     "title": "Mohammad Reza Shah Pahlavi 1973 3X4 Cropped",
     "year": "1973",
     "place": "Archive",
@@ -3446,7 +4297,7 @@
     "featured": false
   },
   {
-    "id": "g-178",
+    "id": "g-222",
     "title": "Mohammad Reza Shah Pahlavi And Lyndon B Johnson Souvenir Poster",
     "year": "—",
     "place": "Archive",
@@ -3465,7 +4316,7 @@
     "featured": false
   },
   {
-    "id": "g-179",
+    "id": "g-223",
     "title": "Mohammad Reza Shah Portrait",
     "year": "—",
     "place": "Archive",
@@ -3484,7 +4335,7 @@
     "featured": false
   },
   {
-    "id": "g-180",
+    "id": "g-224",
     "title": "Mohammed Reza Pahlavi And His Wife",
     "year": "—",
     "place": "Archive",
@@ -3504,7 +4355,7 @@
     "featured": false
   },
   {
-    "id": "g-181",
+    "id": "g-225",
     "title": "Pahlavi Family 1971 Full",
     "year": "1971",
     "place": "Archive",
@@ -3523,7 +4374,7 @@
     "featured": false
   },
   {
-    "id": "g-182",
+    "id": "g-226",
     "title": "Pahlavi Family 1971",
     "year": "1971",
     "place": "Archive",
@@ -3542,7 +4393,7 @@
     "featured": false
   },
   {
-    "id": "g-183",
+    "id": "g-227",
     "title": "Portrait Of A Young Mohammad Reza Shah Pahlavi In Full Military Dress",
     "year": "—",
     "place": "Archive",
@@ -3561,7 +4412,7 @@
     "featured": false
   },
   {
-    "id": "g-184",
+    "id": "g-228",
     "title": "Portrait Of H I M Mohammad Reza Shah Pahlavi",
     "year": "—",
     "place": "Archive",
@@ -3580,7 +4431,7 @@
     "featured": false
   },
   {
-    "id": "g-185",
+    "id": "g-229",
     "title": "Portret Van Mohammed Reza Shah Pablevi Sjah Van Perzie 3701",
     "year": "—",
     "place": "Archive",
@@ -3599,7 +4450,7 @@
     "featured": false
   },
   {
-    "id": "g-186",
+    "id": "g-230",
     "title": "President John F Kennedy Bids Farewell To The Shah Of Iran Mohammad Reza Pahlavi 01",
     "year": "—",
     "place": "Washington, D.C.",
@@ -3618,7 +4469,7 @@
     "featured": false
   },
   {
-    "id": "g-187",
+    "id": "g-231",
     "title": "President John F Kennedy Bids Farewell To The Shah Of Iran Mohammad Reza Pahlavi 03",
     "year": "—",
     "place": "Washington, D.C.",
@@ -3637,7 +4488,7 @@
     "featured": false
   },
   {
-    "id": "g-188",
+    "id": "g-232",
     "title": "President Kekkonen And Shah Mohammad Reza Pahlavi 1970 10",
     "year": "1970",
     "place": "Archive",
@@ -3656,7 +4507,7 @@
     "featured": false
   },
   {
-    "id": "g-189",
+    "id": "g-233",
     "title": "President Richard Nixon And Mohammad Reza Pahlavi",
     "year": "—",
     "place": "Archive",
@@ -3675,7 +4526,7 @@
     "featured": false
   },
   {
-    "id": "g-190",
+    "id": "g-234",
     "title": "Rosalynn Carter And Jimmy Carter Host Welcoming Ceremony For The State Visit Of The Shah O",
     "year": "—",
     "place": "Archive",
@@ -3694,7 +4545,7 @@
     "featured": false
   },
   {
-    "id": "g-191",
+    "id": "g-235",
     "title": "Shah Mohammad Reza Pahlavi 1973",
     "year": "1973",
     "place": "Archive",
@@ -3713,7 +4564,7 @@
     "featured": false
   },
   {
-    "id": "g-192",
+    "id": "g-236",
     "title": "Shah Mohammad Reza Pahlavi Henry Boniet In Cuernavaca Mexico 1979",
     "year": "1979",
     "place": "Archive",
@@ -3732,7 +4583,7 @@
     "featured": false
   },
   {
-    "id": "g-193",
+    "id": "g-237",
     "title": "Shah Mohammed Reza Pahlavi In Tapiola Finland In 1970",
     "year": "1970",
     "place": "Finland",
@@ -3752,7 +4603,7 @@
     "featured": false
   },
   {
-    "id": "g-194",
+    "id": "g-238",
     "title": "Shah Of Iran And Shahbanou Of Iran",
     "year": "—",
     "place": "Archive",
@@ -3772,7 +4623,7 @@
     "featured": false
   },
   {
-    "id": "g-195",
+    "id": "g-239",
     "title": "Shah Of Iran With His Wife In Addis Ababa Jubilee Palace With Emperor Haile Selassie I",
     "year": "—",
     "place": "Archive",
@@ -3791,7 +4642,7 @@
     "featured": false
   },
   {
-    "id": "g-196",
+    "id": "g-240",
     "title": "Thanksgiving Ceremony For The Recovery Of Mohammad Reza Shah Pahlavi After An Assassinatio",
     "year": "—",
     "place": "Archive",
@@ -3810,7 +4661,7 @@
     "featured": false
   },
   {
-    "id": "g-197",
+    "id": "g-241",
     "title": "The Last Shah Of Iran",
     "year": "—",
     "place": "Archive",
@@ -3829,7 +4680,7 @@
     "featured": false
   },
   {
-    "id": "g-198",
+    "id": "g-242",
     "title": "The Shah Of Iran And President Nixon",
     "year": "1943",
     "place": "Archive",
@@ -3848,7 +4699,7 @@
     "featured": false
   },
   {
-    "id": "g-199",
+    "id": "g-243",
     "title": "The Shah Of Iran And Shahbanou Of Iran Present Jimmy Carter And Rosalynn Carter With A Tap",
     "year": "—",
     "place": "Archive",
@@ -3868,7 +4719,7 @@
     "featured": false
   },
   {
-    "id": "g-200",
+    "id": "g-244",
     "title": "The Shah Of Iran Jimmy Carter The Shahbanou Of Iran And Rosalynn Carter Participate In A F",
     "year": "—",
     "place": "Archive",
@@ -3888,7 +4739,7 @@
     "featured": false
   },
   {
-    "id": "g-201",
+    "id": "g-245",
     "title": "Tomb Of Mohammad Reza Pahlavi 2",
     "year": "—",
     "place": "Archive",
@@ -3907,7 +4758,7 @@
     "featured": false
   },
   {
-    "id": "g-202",
+    "id": "g-246",
     "title": "10 Pahlavi Gold Coin 2535",
     "year": "—",
     "place": "Archive",
@@ -3924,26 +4775,7 @@
     "featured": false
   },
   {
-    "id": "g-203",
-    "title": "1962 Soraya By Wolfgang Fischer 01",
-    "year": "1962",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, 1962. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya, 1962.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/1962-soraya-by-wolfgang-fischer-01.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-204",
+    "id": "g-247",
     "title": "1974 Shahanshah And Shanbanou Of Iran 28 September 1",
     "year": "1974",
     "place": "Archive",
@@ -3962,7 +4794,7 @@
     "featured": false
   },
   {
-    "id": "g-205",
+    "id": "g-248",
     "title": "1974 Shahanshah And Shanbanou Of Iran 28 September 2",
     "year": "1974",
     "place": "Archive",
@@ -3981,7 +4813,7 @@
     "featured": false
   },
   {
-    "id": "g-206",
+    "id": "g-249",
     "title": "1974 Shahanshah And Shanbanou Of Iran 28 September 3",
     "year": "1974",
     "place": "Archive",
@@ -4000,7 +4832,7 @@
     "featured": false
   },
   {
-    "id": "g-207",
+    "id": "g-250",
     "title": "1974 Shahanshah And Shanbanou Of Iran 28 September 4",
     "year": "1974",
     "place": "Archive",
@@ -4019,7 +4851,7 @@
     "featured": false
   },
   {
-    "id": "g-208",
+    "id": "g-251",
     "title": "1974 Shahanshah And Shanbanou Of Iran 28 September 5",
     "year": "1974",
     "place": "Archive",
@@ -4038,7 +4870,7 @@
     "featured": false
   },
   {
-    "id": "g-209",
+    "id": "g-252",
     "title": "5 Pahlavi Iranian Golden Coin",
     "year": "—",
     "place": "Archive",
@@ -4055,7 +4887,7 @@
     "featured": false
   },
   {
-    "id": "g-210",
+    "id": "g-253",
     "title": "Arrival Ceremony For Jimmy Carter And Rosalynn Carter In Tehran Iran",
     "year": "—",
     "place": "Tehran",
@@ -4072,7 +4904,7 @@
     "featured": false
   },
   {
-    "id": "g-211",
+    "id": "g-254",
     "title": "Arturo Illia Y Silvia Martorell Junto Al Shah Y La Reina Consorte De Irán",
     "year": "—",
     "place": "Archive",
@@ -4089,26 +4921,7 @@
     "featured": false
   },
   {
-    "id": "g-212",
-    "title": "Banquet À Téhéran Lors Du Mariage De Fawzia Fuad Et De Mohammad Reza Pahlavi 1",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Mohammad Reza Shah. From the rooms of the Pahlavi century.",
-    "cardCaption": "Mohammad Reza Shah.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/banquet-à-téhéran-lors-du-mariage-de-fawzia-fuad-et-de-mohammad-reza-pahlavi-1.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-213",
+    "id": "g-255",
     "title": "Bundesarchiv B 145 Bild F024827 0005 Schloß Brühl Staatsempfang Für Kaiser Von Iran",
     "year": "—",
     "place": "Europe",
@@ -4125,7 +4938,7 @@
     "featured": false
   },
   {
-    "id": "g-214",
+    "id": "g-256",
     "title": "Chronology Of The Pahlavi Dynasty",
     "year": "—",
     "place": "Archive",
@@ -4142,7 +4955,7 @@
     "featured": false
   },
   {
-    "id": "g-215",
+    "id": "g-257",
     "title": "Civil Flag Of Pahlavi Iran",
     "year": "—",
     "place": "Archive",
@@ -4159,7 +4972,7 @@
     "featured": false
   },
   {
-    "id": "g-216",
+    "id": "g-258",
     "title": "Coronationmohammadrezashahpahlavi",
     "year": "—",
     "place": "Archive",
@@ -4176,7 +4989,7 @@
     "featured": false
   },
   {
-    "id": "g-217",
+    "id": "g-259",
     "title": "Coronationshahanshahshahbanou",
     "year": "—",
     "place": "Archive",
@@ -4196,7 +5009,7 @@
     "featured": false
   },
   {
-    "id": "g-218",
+    "id": "g-260",
     "title": "Dinner In Honor Of President John F Kennedy And First Lady Jacqueline Kennedy At The Embas",
     "year": "—",
     "place": "Washington, D.C.",
@@ -4213,7 +5026,7 @@
     "featured": false
   },
   {
-    "id": "g-219",
+    "id": "g-261",
     "title": "Distingushing Flag Of Iran 1933 1964 Pahlavi Dynasty",
     "year": "1933",
     "place": "Archive",
@@ -4230,7 +5043,7 @@
     "featured": false
   },
   {
-    "id": "g-220",
+    "id": "g-262",
     "title": "Einde Van Het Feest Vertrek Koninklijke Gasten Sjah Van Perzie En Echtgenote Ver Bestandde",
     "year": "—",
     "place": "Archive",
@@ -4249,7 +5062,7 @@
     "featured": false
   },
   {
-    "id": "g-221",
+    "id": "g-263",
     "title": "Ettelaat E Haftegi Issue 1497 Page 03",
     "year": "—",
     "place": "Archive",
@@ -4266,7 +5079,7 @@
     "featured": false
   },
   {
-    "id": "g-222",
+    "id": "g-264",
     "title": "Ettelaat E Haftegi Issue 1501 Page 03",
     "year": "—",
     "place": "Archive",
@@ -4283,7 +5096,7 @@
     "featured": false
   },
   {
-    "id": "g-223",
+    "id": "g-265",
     "title": "Ettelaat Page 1 Crop",
     "year": "—",
     "place": "Archive",
@@ -4300,7 +5113,7 @@
     "featured": false
   },
   {
-    "id": "g-224",
+    "id": "g-266",
     "title": "Ettelaat Page 7 Crop",
     "year": "—",
     "place": "Archive",
@@ -4317,140 +5130,7 @@
     "featured": false
   },
   {
-    "id": "g-225",
-    "title": "Ex Keizerin Soraya In Noordwijk 5684",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/ex-keizerin-soraya-in-noordwijk-bestanddeelnr-910-5684.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-226",
-    "title": "Ex Keizerin Soraya In Noordwijk 5685",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/ex-keizerin-soraya-in-noordwijk-bestanddeelnr-910-5685.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-227",
-    "title": "Ex Keizerin Soraya In Noordwijk In Zee Zwemmend 5689",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/ex-keizerin-soraya-in-noordwijk-in-zee-zwemmend-bestanddeelnr-910-5689.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-228",
-    "title": "Ex Keizerin Soraya In Noordwijk Rit Te Paard Met Haar Broer Prins Byra 5",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/ex-keizerin-soraya-in-noordwijk-rit-te-paard-met-haar-broer-prins-byra-bestanddeelnr-910-5.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-229",
-    "title": "Ex Keizerin Soraya In Noordwijk Uit Zee Komend En Zich Afdrogend 5686",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/ex-keizerin-soraya-in-noordwijk-uit-zee-komend-en-zich-afdrogend-bestanddeelnr-910-5686.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-230",
-    "title": "Ex Keizerin Soraya In Noordwijk Uit Zee Komend Met Haar Broer Prins Byra",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/ex-keizerin-soraya-in-noordwijk-uit-zee-komend-met-haar-broer-prins-byra-bestanddeelnr-910.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-231",
-    "title": "Ex Keizerin Soraya In Noordwijk Vlnr Prins Byra Prinses Soraya En Haar Moeder Bestanddeeln",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/ex-keizerin-soraya-in-noordwijk-vlnr-prins-byra-prinses-soraya-en-haar-moeder-bestanddeeln.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-232",
+    "id": "g-267",
     "title": "Famille Pahlavi 1967",
     "year": "1967",
     "place": "Archive",
@@ -4467,7 +5147,7 @@
     "featured": false
   },
   {
-    "id": "g-233",
+    "id": "g-268",
     "title": "Farag Pahlavi Visite",
     "year": "—",
     "place": "Archive",
@@ -4484,94 +5164,7 @@
     "featured": false
   },
   {
-    "id": "g-234",
-    "title": "Fawzia Et Tadj Ol Molouk",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [],
-    "room": "state",
-    "caption": "Fawzia Et Tadj Ol Molouk. Held in the royal archive.",
-    "cardCaption": "Fawzia Et Tadj Ol Molouk.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/fawzia-et-tadj-ol-molouk.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-235",
-    "title": "Fawzia Fuad Of Egypt With Mohammad Reza Pahlavi And Their Daughter Shahnaz Pahlavi",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Mohammad Reza Shah. From the rooms of the Pahlavi century.",
-    "cardCaption": "Mohammad Reza Shah.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/fawzia-fuad-of-egypt-with-mohammad-reza-pahlavi-and-their-daughter-shahnaz-pahlavi.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-236",
-    "title": "Fawzia Of Egypt At Cairo Airport",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [],
-    "room": "state",
-    "caption": "Fawzia Of Egypt At Cairo Airport. Held in the royal archive.",
-    "cardCaption": "Fawzia Of Egypt At Cairo Airport.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/fawzia-of-egypt-at-cairo-airport.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-237",
-    "title": "Fawzia Official",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [],
-    "room": "state",
-    "caption": "Fawzia Official. Held in the royal archive.",
-    "cardCaption": "Fawzia Official.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/fawzia-official.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-238",
-    "title": "Fawzia Rezashah Nazli Mohammadrezapahlavi",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [],
-    "room": "state",
-    "caption": "Fawzia Rezashah Nazli Mohammadrezapahlavi. Held in the royal archive.",
-    "cardCaption": "Fawzia Rezashah Nazli Mohammadrezapahlavi.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/fawzia-rezashah-nazli-mohammadrezapahlavi.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-239",
+    "id": "g-269",
     "title": "Ford A4569 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4588,7 +5181,7 @@
     "featured": false
   },
   {
-    "id": "g-240",
+    "id": "g-270",
     "title": "Ford A4570 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4605,7 +5198,7 @@
     "featured": false
   },
   {
-    "id": "g-241",
+    "id": "g-271",
     "title": "Ford A4571 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4622,7 +5215,7 @@
     "featured": false
   },
   {
-    "id": "g-242",
+    "id": "g-272",
     "title": "Ford A4572 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4639,7 +5232,7 @@
     "featured": false
   },
   {
-    "id": "g-243",
+    "id": "g-273",
     "title": "Ford A4574 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4656,7 +5249,7 @@
     "featured": false
   },
   {
-    "id": "g-244",
+    "id": "g-274",
     "title": "Ford A4575 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4673,7 +5266,7 @@
     "featured": false
   },
   {
-    "id": "g-245",
+    "id": "g-275",
     "title": "Ford A4576 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4690,7 +5283,7 @@
     "featured": false
   },
   {
-    "id": "g-246",
+    "id": "g-276",
     "title": "Ford A4581 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4707,7 +5300,7 @@
     "featured": false
   },
   {
-    "id": "g-247",
+    "id": "g-277",
     "title": "Ford A4582 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4724,7 +5317,7 @@
     "featured": false
   },
   {
-    "id": "g-248",
+    "id": "g-278",
     "title": "Ford A4584 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4741,7 +5334,7 @@
     "featured": false
   },
   {
-    "id": "g-249",
+    "id": "g-279",
     "title": "Ford A4586 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4758,7 +5351,7 @@
     "featured": false
   },
   {
-    "id": "g-250",
+    "id": "g-280",
     "title": "Ford A4587 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4775,7 +5368,7 @@
     "featured": false
   },
   {
-    "id": "g-251",
+    "id": "g-281",
     "title": "Ford A4588 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4792,7 +5385,7 @@
     "featured": false
   },
   {
-    "id": "g-252",
+    "id": "g-282",
     "title": "Ford A4589 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4809,7 +5402,7 @@
     "featured": false
   },
   {
-    "id": "g-253",
+    "id": "g-283",
     "title": "Ford A4590 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4826,7 +5419,7 @@
     "featured": false
   },
   {
-    "id": "g-254",
+    "id": "g-284",
     "title": "Ford A4591 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4843,7 +5436,7 @@
     "featured": false
   },
   {
-    "id": "g-255",
+    "id": "g-285",
     "title": "Ford A4592 Nlgrf Photo Contact Sheet 1975 05 15 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4860,7 +5453,7 @@
     "featured": false
   },
   {
-    "id": "g-256",
+    "id": "g-286",
     "title": "Ford A4619 Nlgrf Photo Contact Sheet 1975 05 16 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4877,7 +5470,7 @@
     "featured": false
   },
   {
-    "id": "g-257",
+    "id": "g-287",
     "title": "Ford A4620 Nlgrf Photo Contact Sheet 1975 05 16 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4894,7 +5487,7 @@
     "featured": false
   },
   {
-    "id": "g-258",
+    "id": "g-288",
     "title": "Ford A4621 Nlgrf Photo Contact Sheet 1975 05 16 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4911,7 +5504,7 @@
     "featured": false
   },
   {
-    "id": "g-259",
+    "id": "g-289",
     "title": "Ford A4622 Nlgrf Photo Contact Sheet 1975 05 16 Gerald Ford Library",
     "year": "1975",
     "place": "Archive",
@@ -4928,7 +5521,7 @@
     "featured": false
   },
   {
-    "id": "g-260",
+    "id": "g-290",
     "title": "Governor Fuller Warren Speaking With General James Van Fleet And The Princess Of Iran Sora",
     "year": "—",
     "place": "Archive",
@@ -4945,7 +5538,7 @@
     "featured": false
   },
   {
-    "id": "g-261",
+    "id": "g-291",
     "title": "Imperial Family Visits A Factory In Tehran",
     "year": "—",
     "place": "Tehran",
@@ -4962,26 +5555,7 @@
     "featured": false
   },
   {
-    "id": "g-262",
-    "title": "Iran Over Volcano Queen Soraya",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/iran-over-volcano-queen-soraya.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-263",
+    "id": "g-292",
     "title": "Iran Pahlavi Flag",
     "year": "—",
     "place": "Archive",
@@ -4998,7 +5572,7 @@
     "featured": false
   },
   {
-    "id": "g-264",
+    "id": "g-293",
     "title": "Iran Pasargad 2500 Annivers",
     "year": "—",
     "place": "Archive",
@@ -5015,7 +5589,7 @@
     "featured": false
   },
   {
-    "id": "g-265",
+    "id": "g-294",
     "title": "Iran Pro Pahlavi March In New York City 1 March 1 2026",
     "year": "2026",
     "place": "Archive",
@@ -5032,7 +5606,7 @@
     "featured": false
   },
   {
-    "id": "g-266",
+    "id": "g-295",
     "title": "Iran Pro Pahlavi March In New York City 2 March 1 2026",
     "year": "2026",
     "place": "Archive",
@@ -5049,7 +5623,7 @@
     "featured": false
   },
   {
-    "id": "g-267",
+    "id": "g-296",
     "title": "Iran Pro Pahlavi March In New York City 3 March 1 2026",
     "year": "2026",
     "place": "Archive",
@@ -5066,7 +5640,7 @@
     "featured": false
   },
   {
-    "id": "g-268",
+    "id": "g-297",
     "title": "Iranian Imperial Family At Nowruz 01",
     "year": "—",
     "place": "Archive",
@@ -5083,7 +5657,7 @@
     "featured": false
   },
   {
-    "id": "g-269",
+    "id": "g-298",
     "title": "Iranian Imperial Family At Nowruz 02",
     "year": "—",
     "place": "Archive",
@@ -5100,7 +5674,7 @@
     "featured": false
   },
   {
-    "id": "g-270",
+    "id": "g-299",
     "title": "Iranian Imperial Family At Ramsar",
     "year": "—",
     "place": "Archive",
@@ -5117,7 +5691,7 @@
     "featured": false
   },
   {
-    "id": "g-271",
+    "id": "g-300",
     "title": "Iranian Imperial Family In 1971",
     "year": "1971",
     "place": "Archive",
@@ -5134,7 +5708,7 @@
     "featured": false
   },
   {
-    "id": "g-272",
+    "id": "g-301",
     "title": "Iranian Royal Family 1967",
     "year": "1967",
     "place": "Archive",
@@ -5151,7 +5725,7 @@
     "featured": false
   },
   {
-    "id": "g-273",
+    "id": "g-302",
     "title": "Iranian Royal Family After Alireza Pahlavi Birthday",
     "year": "—",
     "place": "Archive",
@@ -5168,7 +5742,7 @@
     "featured": false
   },
   {
-    "id": "g-274",
+    "id": "g-303",
     "title": "Kanunshah",
     "year": "—",
     "place": "Archive",
@@ -5185,7 +5759,7 @@
     "featured": false
   },
   {
-    "id": "g-275",
+    "id": "g-304",
     "title": "Kayhan 1971 10 18",
     "year": "1971",
     "place": "Archive",
@@ -5202,7 +5776,7 @@
     "featured": false
   },
   {
-    "id": "g-276",
+    "id": "g-305",
     "title": "Kayhan Bacheha",
     "year": "—",
     "place": "Archive",
@@ -5219,26 +5793,7 @@
     "featured": false
   },
   {
-    "id": "g-277",
-    "title": "King Farouks Sister Princess Fawzia Married Mohammad Reza Pahlavi Crown Prince Of Persia 3",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Mohammad Reza Shah. From the rooms of the Pahlavi century.",
-    "cardCaption": "Mohammad Reza Shah.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/king-farouks-sister-princess-fawzia-married-mohammad-reza-pahlavi-crown-prince-of-persia-3.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-278",
+    "id": "g-306",
     "title": "Kingdom Of Iran 100 Rials Banknote For 50Th Anniversary Of Pahlavi Dynasty Obverse",
     "year": "—",
     "place": "Archive",
@@ -5255,7 +5810,7 @@
     "featured": false
   },
   {
-    "id": "g-279",
+    "id": "g-307",
     "title": "Kingdom Of Iran 100 Rials Banknote For 50Th Anniversary Of Pahlavi Dynasty Reverse",
     "year": "—",
     "place": "Archive",
@@ -5272,7 +5827,7 @@
     "featured": false
   },
   {
-    "id": "g-280",
+    "id": "g-308",
     "title": "Leila Amirarjmand With Pahlavi Family",
     "year": "—",
     "place": "Archive",
@@ -5291,7 +5846,7 @@
     "featured": false
   },
   {
-    "id": "g-281",
+    "id": "g-309",
     "title": "Middle Persian Pahlavi Manuscript Matenadaran Museum Yerevan",
     "year": "—",
     "place": "Archive",
@@ -5308,7 +5863,7 @@
     "featured": false
   },
   {
-    "id": "g-282",
+    "id": "g-310",
     "title": "Mohammad Pahlavi Coronation Cropped Version",
     "year": "—",
     "place": "Archive",
@@ -5325,7 +5880,7 @@
     "featured": false
   },
   {
-    "id": "g-283",
+    "id": "g-311",
     "title": "Mohammad Pahlavi Coronation",
     "year": "—",
     "place": "Archive",
@@ -5342,26 +5897,7 @@
     "featured": false
   },
   {
-    "id": "g-284",
-    "title": "Mohammad Reza Pahlavi And Fawzia Fuad Of Egypt In Manzariyeh Ettela At Newspaper Of 25 Aug",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Mohammad Reza Shah. From the rooms of the Pahlavi century.",
-    "cardCaption": "Mohammad Reza Shah.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/mohammad-reza-pahlavi-and-fawzia-fuad-of-egypt-in-manzariyeh-ettela-at-newspaper-of-25-aug.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-285",
+    "id": "g-312",
     "title": "Mohammad Reza Shah Pahlavi And The Royal Family At Persian Senate Tehran 1975",
     "year": "1975",
     "place": "Tehran",
@@ -5380,26 +5916,7 @@
     "featured": false
   },
   {
-    "id": "g-286",
-    "title": "Mohammadreza Pahlavi And Soraya Esfandiary",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/mohammadreza-pahlavi-and-soraya-esfandiary.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-287",
+    "id": "g-313",
     "title": "Mohammadrezapahlavi1977",
     "year": "1977",
     "place": "Archive",
@@ -5416,7 +5933,7 @@
     "featured": false
   },
   {
-    "id": "g-288",
+    "id": "g-314",
     "title": "Mohammadrezashahoindira",
     "year": "—",
     "place": "Archive",
@@ -5433,7 +5950,7 @@
     "featured": false
   },
   {
-    "id": "g-289",
+    "id": "g-315",
     "title": "Mojahedinkilltahery1351K",
     "year": "—",
     "place": "Archive",
@@ -5450,26 +5967,7 @@
     "featured": false
   },
   {
-    "id": "g-290",
-    "title": "Museo Ferragamo Modello In Legno Per Calzature Su Misura Di Soraya Di Persia",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/museo-ferragamo-modello-in-legno-per-calzature-su-misura-di-soraya-di-persia.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-291",
+    "id": "g-316",
     "title": "Namzadi",
     "year": "—",
     "place": "Archive",
@@ -5486,7 +5984,7 @@
     "featured": false
   },
   {
-    "id": "g-292",
+    "id": "g-317",
     "title": "Obverse 10 Pahlavi Golden Coin 1976",
     "year": "1976",
     "place": "Archive",
@@ -5503,7 +6001,7 @@
     "featured": false
   },
   {
-    "id": "g-293",
+    "id": "g-318",
     "title": "Pahlavi Coronation",
     "year": "—",
     "place": "Archive",
@@ -5520,7 +6018,7 @@
     "featured": false
   },
   {
-    "id": "g-294",
+    "id": "g-319",
     "title": "Pahlavi Etesami Visit",
     "year": "—",
     "place": "Archive",
@@ -5537,7 +6035,7 @@
     "featured": false
   },
   {
-    "id": "g-295",
+    "id": "g-320",
     "title": "Pahlavi Family Coronation Cropped",
     "year": "—",
     "place": "Archive",
@@ -5554,7 +6052,7 @@
     "featured": false
   },
   {
-    "id": "g-296",
+    "id": "g-321",
     "title": "Pahlavi Family Portrait By Bimeh Melli Cropped",
     "year": "—",
     "place": "Archive",
@@ -5571,7 +6069,7 @@
     "featured": false
   },
   {
-    "id": "g-297",
+    "id": "g-322",
     "title": "Pahlavi Family Portrait By Bimeh Melli",
     "year": "—",
     "place": "Archive",
@@ -5588,7 +6086,7 @@
     "featured": false
   },
   {
-    "id": "g-298",
+    "id": "g-323",
     "title": "Pahlavi Family",
     "year": "—",
     "place": "Archive",
@@ -5605,7 +6103,7 @@
     "featured": false
   },
   {
-    "id": "g-299",
+    "id": "g-324",
     "title": "Pahlavi Gage Skidmore",
     "year": "—",
     "place": "Archive",
@@ -5622,7 +6120,7 @@
     "featured": false
   },
   {
-    "id": "g-300",
+    "id": "g-325",
     "title": "Pahlavi In Berlin April 2026",
     "year": "2026",
     "place": "Archive",
@@ -5639,7 +6137,7 @@
     "featured": false
   },
   {
-    "id": "g-301",
+    "id": "g-326",
     "title": "Pahlavi Meets Brezhnev In 1970",
     "year": "1970",
     "place": "Archive",
@@ -5656,7 +6154,7 @@
     "featured": false
   },
   {
-    "id": "g-302",
+    "id": "g-327",
     "title": "Pahlavicrown",
     "year": "—",
     "place": "Archive",
@@ -5673,7 +6171,7 @@
     "featured": false
   },
   {
-    "id": "g-303",
+    "id": "g-328",
     "title": "Pahlavis Meet Indira Gandhi In India 1970",
     "year": "1970",
     "place": "India",
@@ -5690,7 +6188,7 @@
     "featured": false
   },
   {
-    "id": "g-304",
+    "id": "g-329",
     "title": "Polychrome Mosaic Corner Tiles From Iran Pahlavi Dynasty Doris Duke Foundation For Islamic",
     "year": "—",
     "place": "Archive",
@@ -5707,7 +6205,7 @@
     "featured": false
   },
   {
-    "id": "g-305",
+    "id": "g-330",
     "title": "Portrait Officiel De La Famille Impériale D Iran 1978",
     "year": "1978",
     "place": "Archive",
@@ -5724,191 +6222,7 @@
     "featured": false
   },
   {
-    "id": "g-306",
-    "title": "Princess Fawzia Bint Fuad Of Egypt",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [],
-    "room": "state",
-    "caption": "Princess Fawzia Bint Fuad Of Egypt. Held in the royal archive.",
-    "cardCaption": "Princess Fawzia Bint Fuad Of Egypt.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/princess-fawzia-bint-fuad-of-egypt.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-307",
-    "title": "Princess Fawzia Fouad",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [],
-    "room": "state",
-    "caption": "Princess Fawzia Fouad. Held in the royal archive.",
-    "cardCaption": "Princess Fawzia Fouad.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/princess-fawzia-fouad.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-308",
-    "title": "Princess Fawzia Fuad Of Egypt By Armand 3X4 Cropped",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [],
-    "room": "state",
-    "caption": "Princess Fawzia Fuad Of Egypt By Armand 3X4 Cropped. Held in the royal archive.",
-    "cardCaption": "Princess Fawzia Fuad Of Egypt By Armand 3X4 Cropped.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/princess-fawzia-fuad-of-egypt-by-armand-3x4-cropped.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-309",
-    "title": "Princess Fawzia Fuad Of Egypt By Armand",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [],
-    "room": "state",
-    "caption": "Princess Fawzia Fuad Of Egypt By Armand. Held in the royal archive.",
-    "cardCaption": "Princess Fawzia Fuad Of Egypt By Armand.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/princess-fawzia-fuad-of-egypt-by-armand.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-310",
-    "title": "Princess Soraya And Mohammad Reza Pahlavi Pilgrimage Imam Husayn Shrine 1953",
-    "year": "1953",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, Mohammad Reza Shah, 1953. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya, Mohammad Reza Shah, 1953.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/princess-soraya-and-mohammad-reza-pahlavi-pilgrimage-imam-husayn-shrine-1953.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-311",
-    "title": "Prinses Soraya Autofabrikante Bij Wenen 0218",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/prinses-soraya-autofabrikante-bij-wenen-bestanddeelnr-912-0218.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-312",
-    "title": "Prinses Soraya In Madrid 9666",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/prinses-soraya-in-madrid-bestanddeelnr-917-9666.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-313",
-    "title": "Prinses Soraya In Spanje Aan Het Strand Te Bagur 3695",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/prinses-soraya-in-spanje-aan-het-strand-te-bagur-bestanddeelnr-919-3695.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-314",
-    "title": "Prinses Soraya In Spanje 3694",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/prinses-soraya-in-spanje-bestanddeelnr-919-3694.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-315",
-    "title": "Prinses Soraya Tweede Ex Vrouw Van De Laatste Sjah Van Iran Mohammad Reza Pahl Bestanddeel",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, Mohammad Reza Shah. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya, Mohammad Reza Shah.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/prinses-soraya-tweede-ex-vrouw-van-de-laatste-sjah-van-iran-mohammad-reza-pahl-bestanddeel.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-316",
+    "id": "g-331",
     "title": "Pro Pahlavi Protest In Perth 2026",
     "year": "2026",
     "place": "Archive",
@@ -5925,26 +6239,7 @@
     "featured": false
   },
   {
-    "id": "g-317",
-    "title": "Queen Shabanu Soraya Esfandiary Bakhtiari Tehran 1953",
-    "year": "1953",
-    "place": "Tehran",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, 1953. From the rooms of the Pahlavi century. Place: Tehran.",
-    "cardCaption": "Queen Soraya, 1953.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/queen-shabanu-soraya-esfandiary-bakhtiari-tehran-1953.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-318",
+    "id": "g-332",
     "title": "Recueil Portraits De La Princesse Ašraf Pahlawī Xxe Xxie S Btv1B8539289C",
     "year": "—",
     "place": "Archive",
@@ -5961,7 +6256,7 @@
     "featured": false
   },
   {
-    "id": "g-319",
+    "id": "g-333",
     "title": "Reportage Van De Keukenhof 8583",
     "year": "—",
     "place": "Europe",
@@ -5978,7 +6273,7 @@
     "featured": false
   },
   {
-    "id": "g-320",
+    "id": "g-334",
     "title": "Reverse 10 Pahlavi Golden Coin 1976",
     "year": "1976",
     "place": "Archive",
@@ -5995,7 +6290,7 @@
     "featured": false
   },
   {
-    "id": "g-321",
+    "id": "g-335",
     "title": "Reza Pahlevi En La Isla Victoria",
     "year": "—",
     "place": "Archive",
@@ -6012,7 +6307,7 @@
     "featured": false
   },
   {
-    "id": "g-322",
+    "id": "g-336",
     "title": "Rezashah001",
     "year": "—",
     "place": "Archive",
@@ -6031,7 +6326,7 @@
     "featured": false
   },
   {
-    "id": "g-323",
+    "id": "g-337",
     "title": "Rezashahbozorg1",
     "year": "—",
     "place": "Archive",
@@ -6050,7 +6345,7 @@
     "featured": false
   },
   {
-    "id": "g-324",
+    "id": "g-338",
     "title": "Roudaki Hall Opening Shah And R E Warren",
     "year": "—",
     "place": "Archive",
@@ -6067,7 +6362,7 @@
     "featured": false
   },
   {
-    "id": "g-325",
+    "id": "g-339",
     "title": "Serie Viering 25 Jarig Huwelijksfeest Juliana En Bernhard Koninklijke Gasten I Bestanddeel",
     "year": "—",
     "place": "Archive",
@@ -6084,7 +6379,7 @@
     "featured": false
   },
   {
-    "id": "g-326",
+    "id": "g-340",
     "title": "Serie Viering 25 Jarig Huwelijksfeest Juliana En Bernhard Statiefoto 020",
     "year": "—",
     "place": "Archive",
@@ -6101,7 +6396,7 @@
     "featured": false
   },
   {
-    "id": "g-327",
+    "id": "g-341",
     "title": "Shah Pahlavi Of Persia And King Baudouin Of Belgium During An Official State Dinner",
     "year": "—",
     "place": "Europe",
@@ -6118,7 +6413,7 @@
     "featured": false
   },
   {
-    "id": "g-328",
+    "id": "g-342",
     "title": "Shah S Exit From Iran 01",
     "year": "—",
     "place": "Archive",
@@ -6135,7 +6430,7 @@
     "featured": false
   },
   {
-    "id": "g-329",
+    "id": "g-343",
     "title": "Shahanshahcabinethoveydamajlis23",
     "year": "—",
     "place": "Archive",
@@ -6154,7 +6449,7 @@
     "featured": false
   },
   {
-    "id": "g-330",
+    "id": "g-344",
     "title": "Shahanshahiiran2500Yearspasargad1",
     "year": "—",
     "place": "Archive",
@@ -6173,7 +6468,7 @@
     "featured": false
   },
   {
-    "id": "g-331",
+    "id": "g-345",
     "title": "Shahanshahiiran2500Yearsshirazairport",
     "year": "—",
     "place": "Archive",
@@ -6192,7 +6487,7 @@
     "featured": false
   },
   {
-    "id": "g-332",
+    "id": "g-346",
     "title": "Shahanshahopenningmajlissena",
     "year": "—",
     "place": "Archive",
@@ -6211,7 +6506,7 @@
     "featured": false
   },
   {
-    "id": "g-333",
+    "id": "g-347",
     "title": "Shahanshahroyalfamily1",
     "year": "—",
     "place": "Archive",
@@ -6230,7 +6525,7 @@
     "featured": false
   },
   {
-    "id": "g-334",
+    "id": "g-348",
     "title": "Shahanshahroyalfamily2",
     "year": "—",
     "place": "Archive",
@@ -6249,7 +6544,7 @@
     "featured": false
   },
   {
-    "id": "g-335",
+    "id": "g-349",
     "title": "Shahanshahroyalfamily3",
     "year": "—",
     "place": "Archive",
@@ -6268,7 +6563,7 @@
     "featured": false
   },
   {
-    "id": "g-336",
+    "id": "g-350",
     "title": "Sjah Van Perzie Echtgenote En Prinses Beatrix 8397",
     "year": "—",
     "place": "Archive",
@@ -6287,7 +6582,7 @@
     "featured": false
   },
   {
-    "id": "g-337",
+    "id": "g-351",
     "title": "Sjah Van Perzie Echtgenote En Prinses Beatrix 8398",
     "year": "—",
     "place": "Archive",
@@ -6306,7 +6601,7 @@
     "featured": false
   },
   {
-    "id": "g-338",
+    "id": "g-352",
     "title": "Sjah Van Perzie Echtgenote En Prinses Beatrix 8400",
     "year": "—",
     "place": "Archive",
@@ -6325,7 +6620,7 @@
     "featured": false
   },
   {
-    "id": "g-339",
+    "id": "g-353",
     "title": "Sjah Van Perzie Echtgenote En Prinses Beatrix Erewacht 8402",
     "year": "—",
     "place": "Archive",
@@ -6344,7 +6639,7 @@
     "featured": false
   },
   {
-    "id": "g-340",
+    "id": "g-354",
     "title": "Sjah Van Perzie En Echtgenote 8395",
     "year": "—",
     "place": "Archive",
@@ -6363,254 +6658,7 @@
     "featured": false
   },
   {
-    "id": "g-341",
-    "title": "Soraya 2",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-2.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-342",
-    "title": "Soraya Esfandiary Bakhtiari 045 3X4 Cropped",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-esfandiary-bakhtiari-045-3x4-cropped.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-343",
-    "title": "Soraya Esfandiary Bakhtiari 045",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-esfandiary-bakhtiari-045.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-344",
-    "title": "Soraya Esfandiary Bakhtiari Blkwht",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-esfandiary-bakhtiari-blkwht.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-345",
-    "title": "Soraya Esfandiary Bakhtiari Cropped",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-esfandiary-bakhtiari-cropped.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-346",
-    "title": "Soraya Esfandiary Bakhtiari",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-esfandiary-bakhtiari.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-347",
-    "title": "Soraya In Rome 1959",
-    "year": "1959",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, 1959. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya, 1959.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-in-rome-1959.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-348",
-    "title": "Soraya Mutter Erde Fec",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-mutter-erde-fec.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-349",
-    "title": "Soraya Pahlavi 1956 Cropped Retouched",
-    "year": "1956",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, 1956. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya, 1956.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-pahlavi-1956-cropped-retouched.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-350",
-    "title": "Soraya Pahlavi 1956",
-    "year": "1956",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, 1956. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya, 1956.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya-pahlavi-1956.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-351",
-    "title": "Soraya1947",
-    "year": "1947",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, 1947. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya, 1947.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/soraya1947.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-352",
-    "title": "Sorayababy",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "family",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/sorayababy.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-353",
-    "title": "Sorayaesfandyari",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/sorayaesfandyari.jpg",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-354",
+    "id": "g-355",
     "title": "Souvenir Plates The Shah Royal Familiy",
     "year": "—",
     "place": "Archive",
@@ -6627,7 +6675,7 @@
     "featured": false
   },
   {
-    "id": "g-355",
+    "id": "g-356",
     "title": "Stamp Of Ajman State 16",
     "year": "—",
     "place": "Archive",
@@ -6644,7 +6692,7 @@
     "featured": false
   },
   {
-    "id": "g-356",
+    "id": "g-357",
     "title": "Szach Iranu W Polsce",
     "year": "—",
     "place": "Archive",
@@ -6661,7 +6709,7 @@
     "featured": false
   },
   {
-    "id": "g-357",
+    "id": "g-358",
     "title": "The Civil Flag Of Pahlavi Iran",
     "year": "—",
     "place": "Archive",
@@ -6671,26 +6719,6 @@
     "cardCaption": "The Civil Flag Of Pahlavi Iran.",
     "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
     "src": "/archive/other-family/the-civil-flag-of-pahlavi-iran.png",
-    "aspect": "landscape",
-    "folder": "other-family",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-358",
-    "title": "The Separation Of Soraya And Shah Mohammad Reza Pahlavi Announcement Distributed With Etel",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya, Mohammad Reza Shah. From the rooms of the Pahlavi century.",
-    "cardCaption": "Queen Soraya, Mohammad Reza Shah.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources · mypahlavi.com",
-    "src": "/archive/other-family/the-separation-of-soraya-and-shah-mohammad-reza-pahlavi-announcement-distributed-with-etel.jpg",
     "aspect": "landscape",
     "folder": "other-family",
     "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",

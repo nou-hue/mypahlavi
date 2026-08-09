@@ -89,10 +89,36 @@ export const familyMembers: FamilyMember[] = [
     generation: 2,
     parentIds: ["reza-shah", "tadj-ol-molouk"],
     summary:
-      "Second and last reigning Shah of the Pahlavi dynasty (1941–1979). Oversaw modernization programs including land reform, education expansion, and industrial growth.",
+      "Second and last reigning Shah of the Pahlavi dynasty (1941–1979). Three marriages: Fawzia (Fawzieh) of Egypt, Queen Soraya, and Shahbanu Farah.",
     portraitGradient: "from-[#2c2822] via-[#4a4238] to-[#12110f]",
     portraitSrc: portraitMap["mohammad-reza"],
     tags: ["Shah", "1941–1979"],
+  },
+  {
+    id: "fawzia",
+    name: "Princess Fawzia (Fawzieh)",
+    title: "First Queen consort",
+    years: "1921 – 2013",
+    generation: 2,
+    parentIds: [],
+    summary:
+      "Princess Fawzia Fuad of Egypt — known in Persian as Fawzieh (فوزیه) — first wife of Mohammad Reza Shah (1939–1948). Sister of King Farouk. Mother of Princess Shahnaz. Distinct from Queen Soraya and Shahbanu Farah.",
+    portraitGradient: "from-[#3a342e] via-[#564c44] to-[#1a1614]",
+    portraitSrc: portraitMap["fawzia"],
+    tags: ["Queen consort", "1939–1948", "Egypt"],
+  },
+  {
+    id: "soraya",
+    name: "Queen Soraya",
+    title: "Second Queen consort",
+    years: "1932 – 2001",
+    generation: 2,
+    parentIds: [],
+    summary:
+      "Soraya Esfandiary-Bakhtiary — second wife of Mohammad Reza Shah (1951–1958). The lady in emerald satin and diamond cascade. Not Fawzia (first) and not Farah (third).",
+    portraitGradient: "from-[#2f2a24] via-[#4e453c] to-[#141210]",
+    portraitSrc: portraitMap["soraya"],
+    tags: ["Queen consort", "1951–1958"],
   },
   {
     id: "ashraf",
@@ -128,10 +154,22 @@ export const familyMembers: FamilyMember[] = [
     generation: 2,
     parentIds: [],
     summary:
-      "Empress consort and cultural patron. Championed arts, architecture, museums, and education. Continues archival and cultural work in exile.",
+      "Third wife of Mohammad Reza Shah (married 1959); crowned Shahbanu in 1967. Cultural patron of arts, architecture, museums, and education. Mother of Reza, Farahnaz, Ali Reza, and Leila. Distinct from Fawzia (first) and Soraya (second).",
     portraitGradient: "from-[#35302a] via-[#524840] to-[#161412]",
     portraitSrc: portraitMap["farah"],
-    tags: ["Shahbanu", "Arts"],
+    tags: ["Shahbanu", "Arts", "1959–"],
+  },
+  {
+    id: "shahnaz",
+    name: "Princess Shahnaz",
+    title: "Princess of Iran",
+    years: "1940 –",
+    generation: 3,
+    parentIds: ["mohammad-reza", "fawzia"],
+    summary:
+      "Only child of Mohammad Reza Shah and Princess Fawzia (Fawzieh) of Egypt. The bridge between the first marriage and the later imperial household.",
+    portraitGradient: "from-[#38322c] via-[#554c42] to-[#181512]",
+    tags: ["Princess", "Fawzia line"],
   },
   {
     id: "reza",
@@ -217,169 +255,81 @@ Rights remain the gate. Many plates arrive from open historical collections. Enh
     author: "mypahlavi editorial",
     year: "2026",
     excerpt:
-      "Coronation, state visits, and the quiet labour of institutions that outlast any single reign.",
-    body: `Ceremony is often mistaken for ornament. In the Pahlavi century it was also a grammar — a way of telling a nation what modernity might look like when worn as cloth and timed as procession.
+      "Crowns, sashes, and the quiet grammar of state — how ritual photographs still speak.",
+    body: `Ceremony is a public language. It tells a room who is meant to be seen, and in what order.
 
 The coronation of Mohammad Reza Shah and Farah Pahlavi remains one of the archive's brightest rooms. Gold reads as gravity, not costume. The camera does not merely record power; it arranges it.
 
-Elsewhere the grammar softens: Finland in winter light, Washington handshakes, Mehrabad arrivals. Protocol becomes weather. The same faces move between rooms, and the dynasty becomes legible as a sequence of thresholds.
-
-This site is independent. It does not speak for any court. It speaks for careful looking.`,
-    tags: ["Coronation", "State", "Method"],
+Elsewhere the grammar softens: Finland in winter light, Washington handshakes, Mehrabad arrivals. Protocol becomes weather. The same faces move between rooms, and the dynasty becomes legible as a sequence of thresholds.`,
+    tags: ["Coronation", "State"],
   },
   {
     id: "l-03",
-    kind: "letter",
-    title: "A note left in the reading room",
-    author: "Archive host",
-    year: "—",
+    kind: "essay",
+    title: "Three queens, one dynasty",
+    author: "mypahlavi editorial",
+    year: "2026",
     excerpt:
-      "For visitors who come seeking spectacle and find, instead, a quieter kind of attention.",
-    body: `If you have come for noise, you may leave disappointed.
+      "Fawzia (Fawzieh), Soraya, Farah — three consorts, carefully named so the archive does not blur them.",
+    body: `The Pahlavi court knew three principal queens of Mohammad Reza Shah. Confusing them is a common error of the internet age; this archive will not make it.
 
-If you have come for a room — for type that breathes, for a portrait that holds, for a family tree that does not rush — then stay.
+Princess Fawzia Fuad of Egypt — Fawzieh (فوزیه) in Persian — married the young Crown Prince in 1939. Their marriage joined two royal houses and produced Princess Shahnaz. It ended in 1948. When you see the 1939 wedding banquet or the Armand studio portrait with the diamond tiara, you are looking at Fawzia.
 
-The Pahlavi story is large: reform and rupture, glamour and exile, love of country argued in different tongues. We do not flatten it. We stage it. Gallery rooms, lineage dossiers, letters, editions.
+Queen Soraya Esfandiary-Bakhtiary — the lady in emerald satin, blue-eyed in the 1950s studio light — was queen from 1951 to 1958. Diamond cascade, white feather fan: Soraya, not Farah.
 
-Patronage keeps the lights soft and the plates sharp. Shop objects fund digitization without turning the museum into a marketplace. Everything is designed to feel commissioned rather than sold.
+Farah Diba became Shahbanu in a later chapter: marriage in 1959, coronation in 1967, mother of the four children who close the dynasty’s public story. Cultural patronage, museums, architecture — her register is different, and the wall labels say so.
 
-Walk slowly. The archive will meet you halfway.`,
-    tags: ["Welcome", "Patronage"],
+We keep separate folders, separate person chips, separate sentences. Memory is precision.`,
+    tags: ["Fawzia", "Soraya", "Farah", "Lineage"],
   },
   {
     id: "l-04",
-    kind: "essay",
-    title: "Exile rearranges an archive",
-    author: "mypahlavi editorial",
+    kind: "letter",
+    title: "A note on looking carefully",
+    author: "Archive desk",
     year: "2026",
-    excerpt:
-      "After 1979, what was left behind and what was carried — and how memory travels in suitcases and foundations.",
-    body: `Exile does not end a dynasty's image life. It splits it.
+    excerpt: "What we ask of every visitor who opens a plate.",
+    body: `Look twice.
 
-Some photographs never left Iran. Others crossed borders in envelopes, museums, newspapers, and private hands. Funeral rites, foreign residences, the long work of speaking about home from elsewhere — these become rooms of their own.
+A green gown is not automatically Farah. A tiara is not a single name. Fawzieh is not Soraya; Soraya is not Farah.
 
-Farah Pahlavi's later portraits carry a different light: less ceremony, more endurance. Crown Prince Reza's public life continues the family as argument and hope rather than court calendar.
-
-We place exile beside coronation so that continuity and rupture can be seen in one house. Completeness is not our claim. Care is.`,
-    tags: ["Exile", "Memory"],
+If a plate is Fawzia, the label says Fawzia (Fawzieh). If it is Soraya, the label says Soraya. If it is Farah, the label says Farah. That is the least courtesy history is owed.`,
+    tags: ["Method"],
   },
   {
     id: "l-05",
-    kind: "book",
-    title: "Notes on reading the lineage",
-    author: "Archive reader",
-    year: "—",
-    excerpt:
-      "How to walk the family tree: generations, titles, and the difference between public duty and private life.",
-    body: `Begin with Reza Shah — founder of the dynasty in 1925, architect of a stern modern state.
+    kind: "essay",
+    title: "Thresholds of exile",
+    author: "mypahlavi editorial",
+    year: "2026",
+    excerpt: "Airports, foreign rooms, and the long work of memory after 1979.",
+    body: `Some photographs never left Iran. Others crossed borders in envelopes, museums, newspapers, and private hands. Funeral rites, foreign residences, the long work of speaking about home from elsewhere — these become rooms of their own.
 
-Move to the second generation: Mohammad Reza Shah; Princess Ashraf, diplomat and twin flame of influence; Princess Shams. Enter Farah Pahlavi as Shahbanu — patron of arts, museums, and a cultural ambition that still shapes Tehran's memory of itself.
-
-The third generation — Reza, Farahnaz, Ali Reza, Leila — asks for gentleness. Public titles sit beside private loss. The tree is a journey, not a spreadsheet. Portraits lead; dossiers open only when invited.
-
-Accuracy is a duty. Humility about incomplete sources is another.`,
-    tags: ["Lineage", "Guide"],
+Exile is not only departure. It is the archive’s second life: how a family remains legible when the palace is closed.`,
+    tags: ["Exile", "Memory"],
   },
   {
     id: "l-06",
-    kind: "essay",
-    title: "Farah, and the idea of a modern court of culture",
+    kind: "book",
+    title: "How to read a wall label",
     author: "mypahlavi editorial",
     year: "2026",
-    excerpt:
-      "How the Shahbanu's patronage of museums, architecture, and the arts still shapes what \"modern Iran\" can mean.",
-    body: `Farah Pahlavi understood that a court could be a cultural instrument.
+    excerpt: "Year, place, person, and the one sentence that keeps a plate honest.",
+    body: `A good wall label does four things: names the person correctly, places the year, allows uncertainty when the archive is unsure, and refuses gossip dressed as history.
 
-Museums, festivals, architecture, and the insistence that Iranian modernity need not discard beauty — these are part of her public signature. In photographs she is often composure itself: a vertical calm against the horizontal noise of state.
-
-When she appears beside Mohammad Reza Shah, the frame tightens. Partnership becomes visible without needing a slogan. That is why our home image chooses them together — a rare shared moment, held like an heirloom rather than a headline.
-
-This essay is not hagiography. It is an invitation to look at cultural ambition as seriously as we look at politics.`,
-    tags: ["Farah", "Culture", "Arts"],
-  },
-  {
-    id: "l-07",
-    kind: "letter",
-    title: "On the duties of a digital wing",
-    author: "Court correspondence (composite)",
-    year: "1950s / 2026",
-    excerpt:
-      "A composite reflection: ceremony as trust, and the labour of institutions that should outlast personality.",
-    body: `The old letters speak of schools, hospitals, roads — and of the fragile hope that institutions might become stronger than the personalities who open them.
-
-Our digital wing inherits that hope in a smaller key. We build rooms, not feeds. We attribute sources. We sell editions only as commissions that keep the archive alive.
-
-If ceremony was once a public language, then curation is one now: the way we frame a face, the words we place beneath it, the patience we ask of a visitor.
-
-Read slowly. Paper still matters, even when the paper is light.`,
-    tags: ["Institutions", "Method"],
-  },
-  {
-    id: "l-08",
-    kind: "essay",
-    title: "Frames, mats, and the ethics of display",
-    author: "mypahlavi editorial",
-    year: "2026",
-    excerpt:
-      "Why dark brown wood, a pale mat, and a thin border are not decoration — they are respect.",
-    body: `An unframed image on a bright website floats. A framed plate sits.
-
-We chose a dark brown frame — near walnut, near palace wood — with a pale mat and a thin inner line so each photograph is received as an object. Hard-to-see historical exposures are gently lifted for legibility; we do not repaint faces.
-
-Display is an ethic. The same ethic guides captions, lineage dossiers, and the refusal to turn mourning into merch. Editions exist; spectacle does not.
-
-If the frame feels heavy, good. Memory should have weight.`,
+Our digital wing inherits museum hope in a smaller key. We build rooms, not feeds. We attribute sources. We sell editions only as commissions that keep the archive alive.`,
     tags: ["Design", "Gallery"],
-  },
-];
-
-export const patronageTiers = [
-  {
-    id: "visitor",
-    name: "Visitor",
-    price: "Free",
-    description: "Enter the public rooms of the archive.",
-    perks: [
-      "Browse curated gallery sequences",
-      "Explore the family lineage",
-      "Read selected essays and letters",
-      "Shop archive editions",
-    ],
-  },
-  {
-    id: "patron",
-    name: "Patron",
-    price: "£12 / month",
-    description: "Quiet support for digitization and new rooms.",
-    perks: [
-      "Higher-resolution viewing",
-      "Early access to new exhibitions",
-      "Expanded reading-room texts",
-      "Digital certificate of patronage",
-    ],
-  },
-  {
-    id: "benefactor",
-    name: "Benefactor",
-    price: "£40 / month",
-    description: "Closer partnership with the archive's growth.",
-    perks: [
-      "Everything in Patron",
-      "Private preview of upcoming editions",
-      "Downloadable study plates (where rights allow)",
-      "Named thanks in annual archive note",
-    ],
   },
 ];
 
 export const rooms = [
   { id: "all", label: "All rooms" },
-  { id: "early", label: "Early dynasty" },
   { id: "coronation", label: "Coronation" },
-  { id: "family", label: "Family life" },
-  { id: "state", label: "State & ceremony" },
-  { id: "exile", label: "Exile years" },
-] as const;
+  { id: "family", label: "Family" },
+  { id: "state", label: "State" },
+  { id: "exile", label: "Exile" },
+  { id: "early", label: "Early court" },
+];
 
 export function getMember(id: string) {
   return familyMembers.find((m) => m.id === id);
@@ -388,3 +338,31 @@ export function getMember(id: string) {
 export function imagesForMember(id: string) {
   return galleryImages.filter((g) => g.personIds.includes(id));
 }
+
+export const siteNav = [
+  {
+    to: "/gallery",
+    label: "Gallery",
+    description: "Enter the public rooms of the archive.",
+  },
+  {
+    to: "/lineage",
+    label: "Lineage",
+    description: "An interactive family tree.",
+  },
+  {
+    to: "/library",
+    label: "Library",
+    description: "Essays, letters, and books.",
+  },
+  {
+    to: "/editions",
+    label: "Shop",
+    description: "Print-on-demand editions.",
+  },
+  {
+    to: "/patronage",
+    label: "Patronage",
+    description: "Quiet support for digitization and new rooms.",
+  },
+];
