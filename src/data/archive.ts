@@ -144,6 +144,7 @@ export const familyMembers: FamilyMember[] = [
     parentIds: ["mohammad-reza", "farah"],
     summary: "Second child of the Shah and Shahbanu Farah.",
     portraitGradient: "from-[#3a342c] via-[#5c5246] to-[#1a1814]",
+    portraitSrc: portraitMap["farahnaz"],
     tags: ["Princess"],
   },
   {
@@ -155,6 +156,7 @@ export const familyMembers: FamilyMember[] = [
     parentIds: ["mohammad-reza", "farah"],
     summary: "Second son of the late Shah and Shahbanu Farah.",
     portraitGradient: "from-[#2c2822] via-[#4a4238] to-[#12110f]",
+    portraitSrc: portraitMap["ali-reza"],
     tags: ["Prince"],
   },
   {
@@ -166,6 +168,7 @@ export const familyMembers: FamilyMember[] = [
     parentIds: ["mohammad-reza", "farah"],
     summary: "Youngest child of the Shah and Shahbanu Farah.",
     portraitGradient: "from-[#3d342c] via-[#5a5048] to-[#1a1612]",
+    portraitSrc: portraitMap["leila"],
     tags: ["Princess"],
   },
 ];
