@@ -20,7 +20,6 @@ function slugify(title: string, id: string) {
   return `${base || "edition"}-${id.slice(0, 8)}`;
 }
 
-/** "Abstract Night Sky … | distressed moon" → clean display name */
 function cleanTitle(title: string) {
   const primary = title.split("|")[0]?.trim() || title;
   return primary.replace(/\s{2,}/g, " ").trim();
@@ -28,10 +27,35 @@ function cleanTitle(title: string) {
 
 function guessCategory(title: string): ProductCategory {
   const t = title.toLowerCase();
-  if (/tee|t-shirt|shirt|hoodie|apparel|sweat/.test(t)) return "apparel";
-  if (/mug|tote|poster|print|canvas|frame|mat|pad/.test(t)) return "print";
-  if (/object|pin|sticker|candle/.test(t)) return "object";
-  return "print";
+  if (/tee|t-shirt|shirt|hoodie|apparel|sweat|long.?sleeve|crewneck/.test(t))
+    return "apparel";
+  if (
+    /mug|tote|card|folio|pin|sticker|candle|desk.?mat|mouse.?pad|object/.test(t)
+  )
+    return "object";
+  if (
+    /\bposter\b|giclée|giclee|canvas (print|wall)|wall art|fine art|art print|museum print/.test(
+      t,
+    )
+  )
+    return "print";
+  if (/\bprint\b/.test(t) && !/imprint|fingerprint|blueprint/.test(t))
+    return "print";
+  return "object";
+}
+
+/** Wall-art prints only are withheld. Apparel and objects remain. */
+export function isShopVisible(p: ShopProduct): boolean {
+  if (p.category === "print") return false;
+  const t = `${p.name} ${p.shortDescription} ${p.description} ${p.accentLabel}`.toLowerCase();
+  if (
+    /wall art|art print|museum print|giclée|giclee|fine art paper|canvas wall|poster print|coronation study|northern light print|state portrait print/.test(
+      t,
+    )
+  ) {
+    return false;
+  }
+  return true;
 }
 
 const gradients = [
@@ -79,6 +103,14 @@ export function mapPrintifyProduct(p: {
   const subtitle = p.title.includes("|")
     ? p.title.split("|").slice(1).join("|").trim()
     : "";
+  const category = guessCategory(p.title);
+
+  const accent =
+    category === "apparel"
+      ? "Apparel"
+      : category === "object"
+        ? "Object"
+        : "Edition";
 
   return {
     id: `pfy-${p.id}`,
@@ -87,15 +119,18 @@ export function mapPrintifyProduct(p: {
     shortDescription:
       subtitle.slice(0, 140) ||
       plain.slice(0, 140) ||
-      "Print-on-demand edition from the archive shop.",
+      "Limited edition from the archive.",
     description:
       plain.slice(0, 800) ||
-      "Produced on demand through Printify and shipped from their production network.",
-    category: guessCategory(p.title),
+      "Produced on demand and packed as a limited release.",
+    category,
     gradient: gradients[p.id.charCodeAt(0) % gradients.length]!,
-    accentLabel: "Edition",
-    materials: "As specified on product",
-    fulfilment: "Printify · print on demand",
+    accentLabel: accent,
+    materials:
+      category === "apparel"
+        ? "Premium textile · made to order"
+        : "Finished piece · made to order",
+    fulfilment: "Made to order",
     featured: true,
     imageSrc: image,
     printifyProductId: p.id,
@@ -112,15 +147,16 @@ export async function getLiveCatalog(): Promise<{
   message: string;
   error?: string;
 }> {
+  const editorial = shopProducts.filter(isShopVisible);
+
   if (!printifyConfigured()) {
     return {
       source: "editorial",
       connected: false,
       shopId: null,
       shopTitle: null,
-      products: shopProducts,
-      message:
-        "Printify not connected — showing editorial catalogue.",
+      products: editorial,
+      message: "",
     };
   }
 
@@ -132,7 +168,8 @@ export async function getLiveCatalog(): Promise<{
     const live = catalog.data
       .filter((p) => p.visible !== false)
       .map(mapPrintifyProduct)
-      .filter((p) => p.variants.length > 0);
+      .filter((p) => p.variants.length > 0)
+      .filter(isShopVisible);
 
     if (live.length === 0) {
       return {
@@ -140,8 +177,8 @@ export async function getLiveCatalog(): Promise<{
         connected: true,
         shopId,
         shopTitle: shop?.title ?? null,
-        products: shopProducts,
-        message: `Printify connected (“${shop?.title ?? shopId}”), but no published products yet.`,
+        products: editorial,
+        message: "",
       };
     }
 
@@ -151,7 +188,7 @@ export async function getLiveCatalog(): Promise<{
       shopId,
       shopTitle: shop?.title ?? null,
       products: live,
-      message: `Connected · ${live.length} product${live.length === 1 ? "" : "s"}`,
+      message: "",
     };
   } catch (err) {
     return {
@@ -159,9 +196,9 @@ export async function getLiveCatalog(): Promise<{
       connected: false,
       shopId: process.env.PRINTIFY_SHOP_ID?.trim() ?? null,
       shopTitle: null,
-      products: shopProducts,
-      message: "Printify error — showing editorial catalogue",
-      error: err instanceof Error ? err.message : "Printify error",
+      products: editorial,
+      message: "",
+      error: err instanceof Error ? err.message : undefined,
     };
   }
 }

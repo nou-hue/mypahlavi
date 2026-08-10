@@ -6,7 +6,7 @@ function blockSave(e: SyntheticEvent) {
   e.stopPropagation();
 }
 
-/** Editorial plate — thin border, view-protected */
+/** Editorial plate — thin border, view-protected, optional upright rotation */
 export function ArchiveImage({
   src,
   alt,
@@ -15,6 +15,7 @@ export function ArchiveImage({
   imgClassName,
   framed = true,
   fit = "cover",
+  rotate = 0,
 }: {
   src?: string;
   alt: string;
@@ -23,7 +24,11 @@ export function ArchiveImage({
   imgClassName?: string;
   framed?: boolean;
   fit?: "cover" | "contain";
+  /** Degrees clockwise — use when a plate was scanned inverted */
+  rotate?: number;
 }) {
+  const rotation = rotate % 360;
+
   const plate = (
     <div
       className={cn(
@@ -49,6 +54,11 @@ export function ArchiveImage({
               fit === "contain" ? "object-contain" : "object-cover",
               imgClassName,
             )}
+            style={
+              rotation
+                ? { transform: `rotate(${rotation}deg)`, transformOrigin: "center center" }
+                : undefined
+            }
           />
           <span
             aria-hidden

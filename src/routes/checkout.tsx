@@ -168,7 +168,7 @@ function CheckoutPage() {
           <h1 className="font-serif text-4xl tracking-tight">Shipping & payment</h1>
           <p className="text-sm leading-relaxed text-ink-muted">
             {shopStatus?.stripe
-              ? "Card payment via Stripe. Production through Printify after payment."
+              ? "Secure card payment. Made to order after payment."
               : "Preview mode — orders are recorded until Stripe keys are connected."}
           </p>
           {(search.cancelled === "1" || search.cancelled === true) && (
@@ -324,7 +324,7 @@ function CheckoutPage() {
             </button>
             <p className="mt-3 text-xs leading-relaxed text-ink-subtle">
               {shopStatus?.message ||
-                "Secure checkout. Printify produces each edition after payment."}
+                "Secure checkout. Each piece is made to order."}
             </p>
             <Link
               to="/editions"

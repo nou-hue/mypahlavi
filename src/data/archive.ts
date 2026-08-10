@@ -29,6 +29,9 @@ export type GalleryImage = {
   aspect: "portrait" | "landscape" | "square" | string;
   folder?: string;
   license?: string;
+  featured?: boolean;
+  /** Degrees clockwise to display upright (0 | 90 | 180 | 270) */
+  rotate?: number;
 };
 
 export type LibraryItem = {
@@ -102,131 +105,107 @@ export const familyMembers: FamilyMember[] = [
     generation: 2,
     parentIds: [],
     summary:
-      "Princess Fawzia Fuad of Egypt, sister of King Farouk, married Mohammad Reza in 1939. Their daughter is Princess Shahnaz. The marriage ended in 1948.",
-    portraitGradient: "from-[#3a342e] via-[#564c44] to-[#1a1614]",
+      "Egyptian princess and first wife of Mohammad Reza Shah. Their marriage joined two royal houses; their daughter is Princess Shahnaz.",
+    portraitGradient: "from-[#3a342c] via-[#5a5048] to-[#1a1612]",
     portraitSrc: portraitMap["fawzia"],
     tags: ["Queen", "1939–1948"],
   },
   {
     id: "soraya",
-    name: "Queen Soraya",
+    name: "Soraya Esfandiary-Bakhtiary",
     title: "Queen of Iran, 1951–1958",
     years: "1932 – 2001",
     generation: 2,
     parentIds: [],
     summary:
-      "Soraya Esfandiary-Bakhtiary married Mohammad Reza Shah in 1951. The marriage ended in 1958. Her public image remains one of the most photographed of the mid-century court.",
-    portraitGradient: "from-[#2f2a24] via-[#4e453c] to-[#141210]",
+      "Second wife of Mohammad Reza Shah. A defining face of the 1950s court — often mislabelled in later circulation.",
+    portraitGradient: "from-[#2a3228] via-[#3e4a3a] to-[#121610]",
     portraitSrc: portraitMap["soraya"],
     tags: ["Queen", "1951–1958"],
-  },
-  {
-    id: "ashraf",
-    name: "Princess Ashraf Pahlavi",
-    title: "Twin sister of the Shah",
-    years: "1919 – 2016",
-    generation: 2,
-    parentIds: ["reza-shah", "tadj-ol-molouk"],
-    summary:
-      "Diplomat and philanthropist. Represented Iran at the United Nations and founded the Foundation for Iranian Studies.",
-    portraitGradient: "from-[#3d3530] via-[#5a4e46] to-[#1a1614]",
-    portraitSrc: portraitMap["ashraf"],
-    tags: ["Princess", "Diplomat"],
-  },
-  {
-    id: "shams",
-    name: "Princess Shams Pahlavi",
-    title: "Elder sister of the Shah",
-    years: "1917 – 1996",
-    generation: 2,
-    parentIds: ["reza-shah", "tadj-ol-molouk"],
-    summary:
-      "Philanthropist and cultural patron; supported the Red Lion and Sun Society and educational projects.",
-    portraitGradient: "from-[#403830] via-[#5e5248] to-[#1c1814]",
-    portraitSrc: portraitMap["shams"],
-    tags: ["Princess"],
   },
   {
     id: "farah",
     name: "Farah Pahlavi",
     title: "Shahbanu of Iran",
-    years: "1938 –",
+    years: "b. 1938",
     generation: 2,
     parentIds: [],
     summary:
-      "Farah Diba married Mohammad Reza Shah in 1959 and was crowned Shahbanu in 1967. A major patron of arts, architecture, and education; mother of Reza, Farahnaz, Ali Reza, and Leila.",
-    portraitGradient: "from-[#35302a] via-[#524840] to-[#161412]",
+      "Third wife of Mohammad Reza Shah, crowned Empress in 1967. Patron of culture and mother of the four children of the late reign.",
+    portraitGradient: "from-[#3d342c] via-[#6b5a48] to-[#1a1612]",
     portraitSrc: portraitMap["farah"],
     tags: ["Shahbanu", "1959–"],
   },
   {
     id: "shahnaz",
     name: "Princess Shahnaz",
-    title: "Princess of Iran",
-    years: "1940 –",
+    title: "Daughter of Mohammad Reza Shah and Fawzia",
+    years: "b. 1940",
     generation: 3,
     parentIds: ["mohammad-reza", "fawzia"],
     summary:
-      "Only child of Mohammad Reza Shah and Princess Fawzia of Egypt.",
-    portraitGradient: "from-[#38322c] via-[#554c42] to-[#181512]",
+      "Only child of Mohammad Reza Shah and Princess Fawzia. A bridge between the Egyptian and Iranian courts of the early reign.",
+    portraitGradient: "from-[#2c2822] via-[#4a4238] to-[#12110f]",
     tags: ["Princess"],
   },
   {
     id: "reza",
     name: "Reza Pahlavi",
-    title: "Crown Prince",
-    years: "1960 –",
+    title: "Crown Prince · Head of the House",
+    years: "b. 1960",
     generation: 3,
     parentIds: ["mohammad-reza", "farah"],
     summary:
-      "Eldest son of Mohammad Reza Shah and Farah Pahlavi. Designated Crown Prince in 1967; lives in exile.",
-    portraitGradient: "from-[#2a2622] via-[#464038] to-[#12100e]",
+      "Eldest son of Mohammad Reza Shah and Farah Pahlavi. Heir to the Pahlavi line and a public voice for a free, democratic Iran.",
+    portraitGradient: "from-[#2a2620] via-[#4a4038] to-[#12100e]",
     portraitSrc: portraitMap["reza"],
     tags: ["Crown Prince"],
   },
   {
     id: "farahnaz",
     name: "Princess Farahnaz",
-    title: "Princess of Iran",
-    years: "1963 –",
+    title: "Daughter of Mohammad Reza Shah and Farah",
+    years: "b. 1963",
     generation: 3,
     parentIds: ["mohammad-reza", "farah"],
-    summary: "Daughter of Mohammad Reza Shah and Farah Pahlavi.",
-    portraitGradient: "from-[#38322c] via-[#554c42] to-[#181512]",
+    summary: "Second child of the Shah and Shahbanu Farah.",
+    portraitGradient: "from-[#3a342c] via-[#5c5246] to-[#1a1814]",
     tags: ["Princess"],
   },
   {
     id: "ali-reza",
-    name: "Prince Ali Reza",
-    title: "Prince of Iran",
+    name: "Prince Ali-Reza",
+    title: "Son of Mohammad Reza Shah and Farah",
     years: "1966 – 2011",
     generation: 3,
     parentIds: ["mohammad-reza", "farah"],
-    summary:
-      "Younger son of the Shah and Shahbanu. Studied ancient Iranian languages and history.",
-    portraitGradient: "from-[#302c28] via-[#4a443c] to-[#141210]",
+    summary: "Second son of the late Shah and Shahbanu Farah.",
+    portraitGradient: "from-[#2c2822] via-[#4a4238] to-[#12110f]",
     tags: ["Prince"],
   },
   {
     id: "leila",
     name: "Princess Leila",
-    title: "Princess of Iran",
+    title: "Daughter of Mohammad Reza Shah and Farah",
     years: "1970 – 2001",
     generation: 3,
     parentIds: ["mohammad-reza", "farah"],
-    summary: "Youngest daughter of Mohammad Reza Shah and Farah Pahlavi.",
-    portraitGradient: "from-[#3a342e] via-[#564c44] to-[#1a1614]",
+    summary: "Youngest child of the Shah and Shahbanu Farah.",
+    portraitGradient: "from-[#3d342c] via-[#5a5048] to-[#1a1612]",
     tags: ["Princess"],
   },
 ];
 
-export const galleryImages: GalleryImage[] = (galleryJson as GalleryImage[]).map(
-  (g) => ({
+export const galleryImages: GalleryImage[] = (galleryJson as GalleryImage[])
+  .map((g) => ({
     ...g,
     gradient: g.gradient || "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
     cardCaption: g.cardCaption || g.caption,
-  }),
-);
+  }))
+  .filter((g) => Boolean(g.src));
+
+/** Exclusive default hang — featured plates only, calm density */
+export const gallerySelection = galleryImages.filter((g) => g.featured);
 
 export const libraryItems: LibraryItem[] = [
   {
@@ -350,13 +329,15 @@ export const patronageTiers = [
   },
 ];
 
+/** Sparse room language — Selection is the exclusive default hang */
 export const rooms = [
-  { id: "all", label: "All" },
+  { id: "selection", label: "Selection" },
   { id: "coronation", label: "Coronation" },
   { id: "family", label: "Family" },
-  { id: "state", label: "State" },
-  { id: "exile", label: "Exile" },
   { id: "early", label: "Early court" },
+  { id: "exile", label: "Exile" },
+  { id: "state", label: "State" },
+  { id: "all", label: "Full archive" },
 ];
 
 export function getMember(id: string) {
@@ -366,11 +347,3 @@ export function getMember(id: string) {
 export function imagesForMember(id: string) {
   return galleryImages.filter((g) => g.personIds.includes(id));
 }
-
-export const siteNav = [
-  { to: "/gallery", label: "Gallery", description: "The photographic collection." },
-  { to: "/lineage", label: "Lineage", description: "Interactive family tree." },
-  { to: "/library", label: "Library", description: "Essays and letters." },
-  { to: "/editions", label: "Editions", description: "Limited prints and apparel." },
-  { to: "/patronage", label: "Patronage", description: "Support the archive." },
-];

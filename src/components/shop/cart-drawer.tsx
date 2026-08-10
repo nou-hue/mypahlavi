@@ -132,7 +132,7 @@ export function CartDrawer() {
               <span className="font-serif text-2xl">{formatGBP(subtotal)}</span>
             </div>
             <p className="mt-2 text-xs text-ink-subtle">
-              Shipping calculated at checkout. Printify produces each edition on demand.
+              Shipping calculated at checkout. Each piece is made to order.
             </p>
             <Link
               to="/checkout"
