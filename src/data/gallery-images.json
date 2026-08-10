@@ -1007,933 +1007,6 @@
     "featured": true
   },
   {
-    "id": "g-052",
-    "title": "Wedding of Mohammad Reza Pahlavi and Princess Fawzia.",
-    "year": "1939",
-    "place": "Tehran",
-    "personIds": [
-      "fawzia",
-      "mohammad-reza"
-    ],
-    "room": "early",
-    "caption": "Tehran, 1939. Crown Prince Mohammad Reza Pahlavi marries Princess Fawzia Fuad of Egypt, sister of King Farouk.",
-    "cardCaption": "The 1939 wedding of Mohammad Reza and Princess Fawzia of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/user-early-court-wedding-group.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "user-upload",
-    "featured": true
-  },
-  {
-    "id": "g-053",
-    "title": "Queen Soraya in emerald satin.",
-    "year": "1950s",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary in emerald satin and diamonds — formal portrait from the 1950s court.",
-    "cardCaption": "Queen Soraya in emerald satin.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/user-soraya-emerald-gown-tiara.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "user-upload",
-    "featured": true
-  },
-  {
-    "id": "g-054",
-    "title": "Queen Soraya.",
-    "year": "1950s",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary in a diamond cascade necklace and fur, 1950s.",
-    "cardCaption": "Queen Soraya, diamond portrait.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/user-soraya-diamond-cascade-portrait.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "user-upload",
-    "featured": true
-  },
-  {
-    "id": "g-055",
-    "title": "Wedding of Mohammad Reza Pahlavi and Princess Fawzia.",
-    "year": "1939",
-    "place": "Tehran",
-    "personIds": [
-      "fawzia",
-      "mohammad-reza"
-    ],
-    "room": "early",
-    "caption": "Tehran, 1939. Crown Prince Mohammad Reza Pahlavi marries Princess Fawzia Fuad of Egypt, sister of King Farouk.",
-    "cardCaption": "The 1939 wedding of Mohammad Reza and Princess Fawzia of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/modernegypt-wedding-of-mohammad-reza-pahlavi-fawzia-dhp13655-20-5-01.jpg",
-    "aspect": "landscape",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-056",
-    "title": "Wedding of Mohammad Reza Pahlavi and Princess Fawzia.",
-    "year": "1939",
-    "place": "Tehran",
-    "personIds": [
-      "fawzia",
-      "mohammad-reza"
-    ],
-    "room": "early",
-    "caption": "Tehran, 1939. Crown Prince Mohammad Reza Pahlavi marries Princess Fawzia Fuad of Egypt, sister of King Farouk.",
-    "cardCaption": "The 1939 wedding of Mohammad Reza and Princess Fawzia of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/banquet-à-téhéran-lors-du-mariage-de-fawzia-fuad-et-de-mohammad-reza-pahlavi-1.jpg",
-    "aspect": "landscape",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-057",
-    "title": "Fawzia with the early Pahlavi court.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "fawzia",
-      "tadj-ol-molouk"
-    ],
-    "room": "state",
-    "caption": "Princess Fawzia among the Pahlavi household in the years of the first marriage.",
-    "cardCaption": "Fawzia with the early court.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/fawzia-et-tadj-ol-molouk.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-058",
-    "title": "Fawzia, Mohammad Reza, and Princess Shahnaz.",
-    "year": "1940s",
-    "place": "Archive",
-    "personIds": [
-      "fawzia",
-      "shahnaz",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Princess Fawzia of Egypt with Mohammad Reza Shah and their daughter, Princess Shahnaz, 1940s.",
-    "cardCaption": "Fawzia with Mohammad Reza and Princess Shahnaz.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/fawzia-fuad-of-egypt-with-mohammad-reza-pahlavi-and-their-daughter-shahnaz-pahlavi.jpg",
-    "aspect": "landscape",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-059",
-    "title": "Princess Fawzia in Cairo.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "fawzia"
-    ],
-    "room": "state",
-    "caption": "Princess Fawzia Fuad of Egypt, photographed after her years as Queen of Iran.",
-    "cardCaption": "Princess Fawzia in Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/fawzia-of-egypt-at-cairo-airport.jpg",
-    "aspect": "square",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-060",
-    "title": "Princess Fawzia of Egypt.",
-    "year": "1940s",
-    "place": "Archive",
-    "personIds": [
-      "fawzia"
-    ],
-    "room": "state",
-    "caption": "Studio portrait of Princess Fawzia Fuad — Queen of Iran from 1939 to 1948.",
-    "cardCaption": "Princess Fawzia Fuad of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/fawzia-official.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-061",
-    "title": "Fawzia with the early Pahlavi court.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "fawzia",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Princess Fawzia among the Pahlavi household in the years of the first marriage.",
-    "cardCaption": "Fawzia with the early court.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/fawzia-rezashah-nazli-mohammadrezapahlavi.jpg",
-    "aspect": "landscape",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-062",
-    "title": "Wedding of Mohammad Reza Pahlavi and Princess Fawzia.",
-    "year": "1939",
-    "place": "Tehran",
-    "personIds": [
-      "fawzia",
-      "mohammad-reza"
-    ],
-    "room": "early",
-    "caption": "Tehran, 1939. Crown Prince Mohammad Reza Pahlavi marries Princess Fawzia Fuad of Egypt, sister of King Farouk.",
-    "cardCaption": "The 1939 wedding of Mohammad Reza and Princess Fawzia of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/king-farouks-sister-princess-fawzia-married-mohammad-reza-pahlavi-crown-prince-of-persia-3.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-063",
-    "title": "Princess Fawzia of Egypt.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "fawzia",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Princess Fawzia Fuad of Egypt, first wife of Mohammad Reza Shah.",
-    "cardCaption": "Princess Fawzia Fuad of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/mohammad-reza-pahlavi-and-fawzia-fuad-of-egypt-in-manzariyeh-ettela-at-newspaper-of-25-aug.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-064",
-    "title": "Princess Fawzia of Egypt.",
-    "year": "1940s",
-    "place": "Archive",
-    "personIds": [
-      "fawzia"
-    ],
-    "room": "state",
-    "caption": "Princess Fawzia Fuad of Egypt, first wife of Mohammad Reza Shah, 1940s.",
-    "cardCaption": "Princess Fawzia Fuad of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/princess-fawzia-bint-fuad-of-egypt.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-065",
-    "title": "Princess Fawzia of Egypt.",
-    "year": "1940s",
-    "place": "Archive",
-    "personIds": [
-      "fawzia"
-    ],
-    "room": "state",
-    "caption": "Princess Fawzia Fuad of Egypt, first wife of Mohammad Reza Shah, 1940s.",
-    "cardCaption": "Princess Fawzia Fuad of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/princess-fawzia-fouad.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-066",
-    "title": "Princess Fawzia of Egypt.",
-    "year": "1940s",
-    "place": "Archive",
-    "personIds": [
-      "fawzia"
-    ],
-    "room": "state",
-    "caption": "Studio portrait of Princess Fawzia Fuad — Queen of Iran from 1939 to 1948.",
-    "cardCaption": "Princess Fawzia Fuad of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/princess-fawzia-fuad-of-egypt-by-armand-3x4-cropped.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-067",
-    "title": "Princess Fawzia of Egypt.",
-    "year": "1940s",
-    "place": "Archive",
-    "personIds": [
-      "fawzia"
-    ],
-    "room": "state",
-    "caption": "Studio portrait of Princess Fawzia Fuad — Queen of Iran from 1939 to 1948.",
-    "cardCaption": "Princess Fawzia Fuad of Egypt.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/fawzia-fuad/princess-fawzia-fuad-of-egypt-by-armand.jpg",
-    "aspect": "portrait",
-    "folder": "fawzia-fuad",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-068",
-    "title": "Queen Soraya.",
-    "year": "1962",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1962, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya, 1962.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/1962-soraya-by-wolfgang-fischer-01.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-069",
-    "title": "Queen Soraya in Noordwijk.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Noordwijk.",
-    "cardCaption": "Queen Soraya, Noordwijk.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-bestanddeelnr-910-5684.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-070",
-    "title": "Queen Soraya in Noordwijk.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Noordwijk.",
-    "cardCaption": "Queen Soraya, Noordwijk.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-bestanddeelnr-910-5685.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-071",
-    "title": "Queen Soraya in Noordwijk.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Noordwijk.",
-    "cardCaption": "Queen Soraya, Noordwijk.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-in-zee-zwemmend-bestanddeelnr-910-5689.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-072",
-    "title": "Queen Soraya in Noordwijk.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Noordwijk.",
-    "cardCaption": "Queen Soraya, Noordwijk.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-rit-te-paard-met-haar-broer-prins-byra-bestanddeelnr-910-5.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-073",
-    "title": "Queen Soraya in Noordwijk.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Noordwijk.",
-    "cardCaption": "Queen Soraya, Noordwijk.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-uit-zee-komend-en-zich-afdrogend-bestanddeelnr-910-5686.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-074",
-    "title": "Queen Soraya in Noordwijk.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Noordwijk.",
-    "cardCaption": "Queen Soraya, Noordwijk.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-uit-zee-komend-met-haar-broer-prins-byra-bestanddeelnr-910.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-075",
-    "title": "Queen Soraya in Noordwijk.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Noordwijk.",
-    "cardCaption": "Queen Soraya, Noordwijk.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/ex-keizerin-soraya-in-noordwijk-vlnr-prins-byra-prinses-soraya-en-haar-moeder-bestanddeeln.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-076",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/iran-over-volcano-queen-soraya.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-077",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/mohammadreza-pahlavi-and-soraya-esfandiary.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-078",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/museo-ferragamo-modello-in-legno-per-calzature-su-misura-di-soraya-di-persia.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-079",
-    "title": "Soraya and Mohammad Reza on pilgrimage.",
-    "year": "1953",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya and Mohammad Reza Shah at the Imam Husayn shrine, 1953.",
-    "cardCaption": "Pilgrimage, 1953.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/princess-soraya-and-mohammad-reza-pahlavi-pilgrimage-imam-husayn-shrine-1953.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-080",
-    "title": "Queen Soraya in Vienna.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Vienna.",
-    "cardCaption": "Queen Soraya, Vienna.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/prinses-soraya-autofabrikante-bij-wenen-bestanddeelnr-912-0218.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-081",
-    "title": "Queen Soraya in Spain.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Spain.",
-    "cardCaption": "Queen Soraya, Spain.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/prinses-soraya-in-madrid-bestanddeelnr-917-9666.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-082",
-    "title": "Queen Soraya in Spain.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Spain.",
-    "cardCaption": "Queen Soraya, Spain.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/prinses-soraya-in-spanje-aan-het-strand-te-bagur-bestanddeelnr-919-3695.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-083",
-    "title": "Queen Soraya in Spain.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, photographed in Spain.",
-    "cardCaption": "Queen Soraya, Spain.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/prinses-soraya-in-spanje-bestanddeelnr-919-3694.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-084",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/prinses-soraya-tweede-ex-vrouw-van-de-laatste-sjah-van-iran-mohammad-reza-pahl-bestanddeel.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-085",
-    "title": "Queen Soraya.",
-    "year": "1953",
-    "place": "Tehran",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1953, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya, 1953.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/queen-shabanu-soraya-esfandiary-bakhtiari-tehran-1953.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-086",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-2.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-087",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari-045-3x4-cropped.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-088",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari-045.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-089",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari-blkwht.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-090",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari-cropped.jpg",
-    "aspect": "square",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-091",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-esfandiary-bakhtiari.jpg",
-    "aspect": "square",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-092",
-    "title": "Queen Soraya in Rome.",
-    "year": "1959",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1959, photographed in Rome.",
-    "cardCaption": "Queen Soraya, Rome.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-in-rome-1959.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-093",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-mutter-erde-fec.jpg",
-    "aspect": "landscape",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-094",
-    "title": "Queen Soraya.",
-    "year": "1956",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1956, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya, 1956.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-pahlavi-1956-cropped-retouched.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-095",
-    "title": "Queen Soraya.",
-    "year": "1956",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1956, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya, 1956.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya-pahlavi-1956.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-096",
-    "title": "Queen Soraya.",
-    "year": "1947",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, 1947, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya, 1947.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/soraya1947.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-097",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "family",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/sorayababy.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": true
-  },
-  {
-    "id": "g-098",
-    "title": "Queen Soraya.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya"
-    ],
-    "room": "state",
-    "caption": "Queen Soraya Esfandiary-Bakhtiary, consort of Mohammad Reza Shah from 1951 to 1958.",
-    "cardCaption": "Queen Soraya.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/sorayaesfandyari.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-099",
-    "title": "Announcement of the separation.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "soraya",
-      "mohammad-reza"
-    ],
-    "room": "state",
-    "caption": "Press plate announcing the separation of Queen Soraya and Mohammad Reza Shah, 1958.",
-    "cardCaption": "Separation announced, 1958.",
-    "sourceNote": "Historical archive",
-    "src": "/archive/soraya-esfandiary/the-separation-of-soraya-and-shah-mohammad-reza-pahlavi-announcement-distributed-with-etel.jpg",
-    "aspect": "portrait",
-    "folder": "soraya-esfandiary",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
     "id": "g-100",
     "title": "Ashraf Pahlavi 1350.",
     "year": "—",
@@ -8159,25 +7232,6 @@
     "featured": true
   },
   {
-    "id": "g-435",
-    "title": "Reza Shah Ehsanollahkhan Cartoon2.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "reza-shah"
-    ],
-    "room": "early",
-    "caption": "Reza Shah Pahlavi. From the rooms of the Pahlavi century.",
-    "cardCaption": "Reza Shah Pahlavi.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources.",
-    "src": "/archive/reza-shah/reza-shah-ehsanollahkhan-cartoon2.jpg",
-    "aspect": "portrait",
-    "folder": "reza-shah",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
     "id": "g-436",
     "title": "Reza Shah Identity Document.",
     "year": "—",
@@ -8232,7 +7286,7 @@
     "folder": "reza-shah",
     "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
     "license": "see source",
-    "featured": false
+    "featured": true
   },
   {
     "id": "g-439",
@@ -8346,7 +7400,7 @@
     "folder": "reza-shah",
     "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
     "license": "see source",
-    "featured": false
+    "featured": true
   },
   {
     "id": "g-445",
@@ -8362,25 +7416,6 @@
     "sourceNote": "Archival plate · Wikimedia Commons / open historical sources.",
     "src": "/archive/reza-shah/reza-shah.png",
     "aspect": "landscape",
-    "folder": "reza-shah",
-    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
-    "license": "see source",
-    "featured": false
-  },
-  {
-    "id": "g-446",
-    "title": "Signed Photograph Of Adolf Hitler And His Best Wishes For Reza Shah Pahlavi Sahebgharanie.",
-    "year": "—",
-    "place": "Archive",
-    "personIds": [
-      "reza-shah"
-    ],
-    "room": "early",
-    "caption": "Reza Shah Pahlavi. From the rooms of the Pahlavi century.",
-    "cardCaption": "Reza Shah Pahlavi.",
-    "sourceNote": "Archival plate · Wikimedia Commons / open historical sources.",
-    "src": "/archive/reza-shah/signed-photograph-of-adolf-hitler-and-his-best-wishes-for-reza-shah-pahlavi-sahebgharanie-.jpg",
-    "aspect": "portrait",
     "folder": "reza-shah",
     "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
     "license": "see source",
@@ -8404,5 +7439,158 @@
     "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
     "license": "see source",
     "featured": false
+  },
+  {
+    "id": "g-448",
+    "title": "Reza Shah Pahlavi, official portrait.",
+    "year": "1930s",
+    "place": "Tehran",
+    "personIds": [
+      "reza-shah"
+    ],
+    "room": "early",
+    "caption": "Colorized official portrait of Reza Shah Pahlavi in military dress — founder of the dynasty.",
+    "cardCaption": "Colorized official portrait of Reza Shah Pahlavi in military dress.",
+    "sourceNote": "Wikimedia Commons",
+    "src": "/archive/reza-shah/reza-shah-official-colorized-1.jpg",
+    "aspect": "portrait",
+    "folder": "reza-shah",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "commons",
+    "featured": true
+  },
+  {
+    "id": "g-449",
+    "title": "Reza Shah, classic studio portrait.",
+    "year": "1930s",
+    "place": "Tehran",
+    "personIds": [
+      "reza-shah"
+    ],
+    "room": "early",
+    "caption": "High-resolution studio plate of Reza Shah Pahlavi — the soldier who became Shahanshah.",
+    "cardCaption": "High-resolution studio plate of Reza Shah Pahlavi.",
+    "sourceNote": "Wikimedia Commons",
+    "src": "/archive/reza-shah/reza-shah-classic-portrait.jpg",
+    "aspect": "portrait",
+    "folder": "reza-shah",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "commons",
+    "featured": true
+  },
+  {
+    "id": "g-450",
+    "title": "Reza Shah, painted portrait after Woolf, 1938.",
+    "year": "1938",
+    "place": "Tehran",
+    "personIds": [
+      "reza-shah"
+    ],
+    "room": "early",
+    "caption": "Formal likeness of Reza Shah Pahlavi from the late reign — gravity in uniform and gaze.",
+    "cardCaption": "Formal likeness of Reza Shah Pahlavi from the late reign.",
+    "sourceNote": "Wikimedia Commons",
+    "src": "/archive/reza-shah/reza-shah-woolf-portrait-1938.jpg",
+    "aspect": "portrait",
+    "folder": "reza-shah",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "commons",
+    "featured": true
+  },
+  {
+    "id": "g-451",
+    "title": "Reza Khan as Sardar Sepah.",
+    "year": "1920s",
+    "place": "Tehran",
+    "personIds": [
+      "reza-shah"
+    ],
+    "room": "early",
+    "caption": "Reza Khan before the throne — commander of the army, soon founder of a dynasty.",
+    "cardCaption": "Reza Khan before the throne.",
+    "sourceNote": "Wikimedia Commons",
+    "src": "/archive/reza-shah/reza-khan-sardar-sepah-portrait.jpg",
+    "aspect": "portrait",
+    "folder": "reza-shah",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "commons",
+    "featured": true
+  },
+  {
+    "id": "g-452",
+    "title": "Sardar Sepah — Reza Shah as commander.",
+    "year": "1920s",
+    "place": "Tehran",
+    "personIds": [
+      "reza-shah"
+    ],
+    "room": "early",
+    "caption": "Full-length military presence of Reza Shah in the years that remade Iran’s state.",
+    "cardCaption": "Full-length military presence of Reza Shah in the years that remade Iran’s state.",
+    "sourceNote": "Wikimedia Commons",
+    "src": "/archive/reza-shah/reza-shah-sardar-sepah-btv.jpg",
+    "aspect": "portrait",
+    "folder": "reza-shah",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "commons",
+    "featured": true
+  },
+  {
+    "id": "g-453",
+    "title": "Reza Shah in profile.",
+    "year": "1930s",
+    "place": "Tehran",
+    "personIds": [
+      "reza-shah"
+    ],
+    "room": "early",
+    "caption": "Profile study of Reza Shah Pahlavi — a quieter plate of the first Pahlavi king.",
+    "cardCaption": "Profile study of Reza Shah Pahlavi.",
+    "sourceNote": "Wikimedia Commons",
+    "src": "/archive/reza-shah/reza-shah-profile-wide.jpg",
+    "aspect": "landscape",
+    "folder": "reza-shah",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "commons",
+    "featured": true
+  },
+  {
+    "id": "g-454",
+    "title": "Reza Shah, high-resolution archival plate.",
+    "year": "1930s",
+    "place": "Tehran",
+    "personIds": [
+      "reza-shah"
+    ],
+    "room": "early",
+    "caption": "Large-format archival image of Reza Shah Pahlavi for the early court chapter.",
+    "cardCaption": "Large-format archival image of Reza Shah Pahlavi for the early court chapter.",
+    "sourceNote": "Wikimedia Commons",
+    "src": "/archive/reza-shah/reza-shah-hires.jpg",
+    "aspect": "landscape",
+    "folder": "reza-shah",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "commons",
+    "featured": true
+  },
+  {
+    "id": "g-455",
+    "title": "Reza Shah with the Crown Prince.",
+    "year": "1930s",
+    "place": "Tehran",
+    "personIds": [
+      "reza-shah",
+      "mohammad-reza"
+    ],
+    "room": "family",
+    "caption": "Reza Shah Pahlavi with young Mohammad Reza — founder and heir in formal dress.",
+    "cardCaption": "Reza Shah Pahlavi with young Mohammad Reza.",
+    "sourceNote": "Wikimedia Commons",
+    "src": "/archive/reza-shah/reza-shah-with-son-formal.jpg",
+    "aspect": "portrait",
+    "folder": "reza-shah",
+    "gradient": "from-[#1a1612] via-[#3d342c] to-[#0e0c0a]",
+    "license": "commons",
+    "featured": true
   }
 ]

@@ -76,26 +76,6 @@ export const shopProducts: ShopProduct[] = [
     ],
   },
   {
-    id: "e-10",
-    slug: "soraya-emerald-print",
-    name: "Soraya in emerald",
-    shortDescription: "Queen Soraya, formal portrait of the 1950s court.",
-    description:
-      "Studio presence of Queen Soraya Esfandiary-Bakhtiary. A carefully framed edition for collectors of the mid-century court.",
-    category: "print",
-    gradient: "from-[#1a2218] via-[#2e3c2a] to-[#0c100c]",
-    accentLabel: "Print",
-    materials: "Heavy matte · pigment inks",
-    fulfilment: "Made to order",
-    featured: true,
-    imageSrc: "/archive/soraya-esfandiary/user-soraya-emerald-gown-tiara.jpg",
-    printifyProductId: null,
-    variants: [
-      { id: "a3", label: "A3", priceGBP: 52, sku: "PRINT-SOR-A3" },
-      { id: "a2", label: "A2", priceGBP: 78, sku: "PRINT-SOR-A2" },
-    ],
-  },
-  {
     id: "e-07",
     slug: "imperial-trio-print",
     name: "Imperial trio",
@@ -173,25 +153,6 @@ export const shopProducts: ShopProduct[] = [
       { id: "m", label: "M", priceGBP: 42, sku: "LS-PR-M" },
       { id: "l", label: "L", priceGBP: 42, sku: "LS-PR-L" },
       { id: "xl", label: "XL", priceGBP: 42, sku: "LS-PR-XL" },
-    ],
-  },
-  {
-    id: "e-05",
-    slug: "lineage-folio-cards",
-    name: "Lineage folio",
-    shortDescription: "Six sequenced cards with reverse captions.",
-    description:
-      "Six plates spanning early dynasty, coronation, family, and exile. Captions on the reverse.",
-    category: "object",
-    gradient: "from-[#2c2622] via-[#4c443c] to-[#161412]",
-    accentLabel: "Object",
-    materials: "Heavy postcard stock · set of 6",
-    fulfilment: "Made to order",
-    featured: true,
-    imageSrc: "/archive/fawzia-fuad/princess-fawzia-fuad-of-egypt-by-armand.jpg",
-    printifyProductId: null,
-    variants: [
-      { id: "set", label: "Set of 6", priceGBP: 24, sku: "CARD-LIN-6" },
     ],
   },
   {
