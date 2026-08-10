@@ -25,6 +25,13 @@ type CatalogResponse = {
   error?: string;
 };
 
+/** Archival prints paused until the collection is curated by hand. */
+function isPrintProduct(p: ShopProduct) {
+  if (p.category === "print") return true;
+  const t = `${p.name} ${p.shortDescription} ${p.accentLabel}`.toLowerCase();
+  return /\bprint\b|poster|giclée|giclee|canvas wall|fine art paper/.test(t);
+}
+
 function ShopPage() {
   const [cat, setCat] = useState("all");
   const openCart = useCartStore((s) => s.openCart);
@@ -58,12 +65,18 @@ function ShopPage() {
     };
   }, []);
 
-  const products = catalog?.products ?? shopProducts;
+  const products = useMemo(() => {
+    const raw = catalog?.products ?? shopProducts;
+    // No archival prints until curated — keep apparel / objects only
+    return raw.filter((p) => !isPrintProduct(p));
+  }, [catalog]);
 
   const items = useMemo(() => {
     if (cat === "all") return products;
     return products.filter((e) => e.category === cat);
   }, [cat, products]);
+
+  const categories = shopCategories.filter((c) => c.id !== "print");
 
   return (
     <LayoutShell>
@@ -77,22 +90,8 @@ function ShopPage() {
               Limited shop
             </h1>
             <p className="text-base leading-relaxed text-ink-muted">
-              Archival prints, apparel, and objects — produced on demand through
-              Printify. Small catalogue, quiet presentation.
+              A small atelier of objects — curated by hand, produced on demand.
             </p>
-            {catalog && (
-              <p
-                className={cn(
-                  "text-xs",
-                  catalog.connected && catalog.source === "printify"
-                    ? "text-ink-muted"
-                    : "text-ink-subtle",
-                )}
-              >
-                {catalog.message}
-                {catalog.error ? ` · ${catalog.error}` : ""}
-              </p>
-            )}
           </div>
           <button
             type="button"
@@ -104,31 +103,58 @@ function ShopPage() {
           </button>
         </header>
 
-        <div className="mb-10 flex flex-wrap gap-2">
-          {shopCategories.map((c) => (
-            <button
-              key={c.id}
-              type="button"
-              onClick={() => setCat(c.id)}
-              className={cn(
-                "h-9 px-3.5 font-sans text-[0.65rem] uppercase tracking-[0.14em]",
-                cat === c.id
-                  ? "bg-ink text-cream"
-                  : "border border-border text-ink-muted hover:border-ink/30",
-              )}
-            >
-              {c.label}
-            </button>
-          ))}
+        {/* Prints — intentionally closed */}
+        <div className="mb-14 border border-border bg-ground-elevated px-6 py-10 text-center sm:px-10 archive-rise">
+          <p className="font-sans text-[0.65rem] uppercase tracking-[0.28em] text-ink-subtle">
+            Archival prints
+          </p>
+          <h2 className="mt-3 font-serif text-2xl tracking-tight sm:text-3xl">
+            Coming soon
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink-muted">
+            Wall editions from the collection will open when each plate has been
+            chosen with care. Not a catalogue dump — a short list, later.
+          </p>
         </div>
+
+        {categories.length > 1 && products.length > 0 && (
+          <div className="mb-10 flex flex-wrap gap-2">
+            {categories.map((c) => (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => setCat(c.id)}
+                className={cn(
+                  "h-9 px-3.5 font-sans text-[0.65rem] uppercase tracking-[0.14em]",
+                  cat === c.id
+                    ? "bg-ink text-cream"
+                    : "border border-border text-ink-muted hover:border-ink/30",
+                )}
+              >
+                {c.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         {loading ? (
           <p className="font-sans text-sm text-ink-subtle">Loading editions…</p>
         ) : items.length === 0 ? (
-          <p className="font-sans text-sm text-ink-muted">
-            No products in this category yet. Publish items in your Printify shop,
-            then refresh.
-          </p>
+          <div className="border border-border px-6 py-14 text-center">
+            <p className="font-serif text-xl text-ink-soft">
+              Objects open next
+            </p>
+            <p className="mx-auto mt-3 max-w-sm text-sm text-ink-muted">
+              Apparel and small goods will appear here when released. Prints remain
+              closed until selected.
+            </p>
+            <Link
+              to="/"
+              className="mt-8 inline-flex h-11 items-center border border-border px-6 font-sans text-[0.68rem] uppercase tracking-[0.16em] hover:bg-ink hover:text-cream"
+            >
+              Return home
+            </Link>
+          </div>
         ) : (
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((item, i) => (
