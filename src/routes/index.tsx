@@ -62,21 +62,13 @@ function HomePage() {
           ))}
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-t from-deep/85 via-deep/25 to-deep/40"
+            className="absolute inset-0 bg-gradient-to-t from-deep/90 via-deep/30 to-deep/45"
           />
           <span aria-hidden className="absolute inset-0" />
         </div>
 
-        <div className="relative z-10 flex min-h-[100svh] flex-col justify-between px-5 pb-10 pt-[calc(1.25rem+var(--grok-banner-h,0px))] sm:px-8 sm:pb-12 sm:pt-[calc(1.5rem+var(--grok-banner-h,0px))]">
-          <div className="mx-auto flex w-full max-w-6xl items-start justify-between">
-            <p className="font-serif text-lg tracking-[0.08em] text-cream sm:text-xl">
-              {siteCopy.brand}
-            </p>
-            <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-cream/70">
-              Archive
-            </p>
-          </div>
-
+        {/* Brand lives in the fixed header; hero only carries meta + CTA */}
+        <div className="relative z-10 flex min-h-[100svh] flex-col justify-end px-5 pb-12 pt-[calc(5.5rem+var(--grok-banner-h,0px))] sm:px-8 sm:pb-14">
           <div className="mx-auto w-full max-w-6xl space-y-8 archive-rise">
             <p className="font-sans text-[0.68rem] uppercase tracking-[0.32em] text-cream/75">
               {active?.meta}
