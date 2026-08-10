@@ -3,19 +3,19 @@ import { Link } from "@tanstack/react-router";
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-ground">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-14 sm:px-8 md:flex-row md:items-start md:justify-between">
-        <div className="max-w-sm space-y-3">
-          <p className="font-serif text-xl tracking-[0.06em]">Pahlavi</p>
+      <div className="mx-auto flex max-w-[90rem] flex-col gap-12 px-10 py-16 sm:px-12 md:flex-row md:items-start md:justify-between">
+        <div className="max-w-sm space-y-4">
+          <p className="font-serif text-2xl tracking-[0.14em]">PAHLAVI</p>
           <p className="text-sm leading-relaxed text-ink-muted">
             An independent archive documenting the people, culture, images and
             modern history surrounding the Pahlavi era and its continuing legacy.
           </p>
-          <p className="pt-1 font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
+          <p className="font-sans text-[0.58rem] uppercase tracking-[0.22em] text-ink-subtle">
             Preserve · Document · Contextualise · Curate
           </p>
           <a
             href="mailto:hello@mypahlavi.com"
-            className="inline-block pt-2 text-sm text-ink-muted transition-colors hover:text-ink"
+            className="inline-block pt-1 text-sm text-ink-muted transition-colors hover:text-ink"
           >
             hello@mypahlavi.com
           </a>
@@ -37,20 +37,17 @@ export function SiteFooter() {
             Editions
           </Link>
           <Link to="/patronage" className="hover:text-ink">
-            Circle
+            The Circle
           </Link>
           <Link to="/about" className="hover:text-ink">
             About
           </Link>
-          <a href="mailto:hello@mypahlavi.com" className="hover:text-ink">
-            Contact
-          </a>
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl px-5 py-4 text-[0.62rem] text-ink-subtle sm:px-8 sm:justify-between">
-          <span>© mypahlavi.com</span>
-          <span className="hidden sm:inline">
+        <div className="mx-auto flex max-w-[90rem] items-center justify-between px-10 py-4 text-[0.58rem] text-ink-subtle sm:px-12">
+          <span>mypahlavi.com</span>
+          <span className="hidden opacity-70 sm:inline">
             Independent · Not an official family website
           </span>
         </div>

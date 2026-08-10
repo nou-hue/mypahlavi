@@ -1,21 +1,21 @@
 {
   "brand": "PAHLAVI",
-  "positioning": "An independent archive of Iran's modern history, culture and memory.",
+  "positioning": "An archive of modern Iran.",
   "tagline": "Images · Objects · Documents · People · Places",
-  "method": "We preserve. We document. We contextualise. We curate.",
+  "method": "Preserve · Document · Contextualise · Curate",
   "institutionLine": "A living collection of images, objects, documents and stories from the world of modern Iran.",
   "ctaPrimary": "Enter the archive",
   "ctaPrimaryHref": "/gallery",
   "heroSlides": [
     {
-      "src": "/archive/farah-pahlavi/user-farah-emerald-tiara-shah-uniform.jpg",
-      "meta": "TEHRAN — 1967",
-      "caption": "Farah Pahlavi in the emerald tiara with Mohammad Reza Shah."
-    },
-    {
       "src": "/archive/other-family/user-garden-laughter-with-baby.jpg",
       "meta": "TEHRAN — LATE 1960s",
       "caption": "Mohammad Reza Shah and Farah Pahlavi with their child."
+    },
+    {
+      "src": "/archive/farah-pahlavi/user-farah-emerald-tiara-shah-uniform.jpg",
+      "meta": "TEHRAN — 1967",
+      "caption": "Farah Pahlavi in the emerald tiara with Mohammad Reza Shah."
     },
     {
       "src": "/archive/farah-pahlavi/user-farah-persepolis-gold-dress.jpg",
@@ -40,31 +40,31 @@
       "href": "/lineage",
       "desc": "The house, the court, and the figures who held the century.",
       "src": "/archive/other-family/user-imperial-trio-reza-farah-shah.jpg",
-      "meta": "TEHRAN · 1970s"
+      "meta": "THE HOUSE / THE COURT / THE FIGURES"
     },
     {
       "id": "places",
       "label": "Places",
       "href": "/gallery",
-      "desc": "Tehran, the Caspian, Persepolis, Paris, Washington — rooms of a world.",
+      "desc": "Tehran, the Caspian, Persepolis, Paris, Washington.",
       "src": "/archive/farah-pahlavi/user-farah-persepolis-gold-dress.jpg",
-      "meta": "PERSEPOLIS · 1971"
+      "meta": "TEHRAN · PERSEPOLIS · THE WORLD"
     },
     {
       "id": "culture",
       "label": "Culture",
       "href": "/library",
-      "desc": "Fashion, art, cinema, design — the modern Iranian imagination.",
+      "desc": "Fashion, art, cinema, design.",
       "src": "/archive/farah-pahlavi/user-farah-red-velvet-atelier.jpg",
-      "meta": "PARIS · 1959"
+      "meta": "FASHION · ART · CINEMA"
     },
     {
       "id": "modernity",
       "label": "Modernity",
       "href": "/gallery",
-      "desc": "Architecture, industry, diplomacy, education — a country in transformation.",
+      "desc": "Architecture, industry, diplomacy, education.",
       "src": "/archive/other-family/user-before-the-map-of-iran.jpg",
-      "meta": "TEHRAN · 1960s"
+      "meta": "A COUNTRY IN TRANSFORMATION"
     },
     {
       "id": "memory",
@@ -72,15 +72,15 @@
       "href": "/vault",
       "desc": "Exile, diaspora, and the long afterlife of the archive.",
       "src": "/archive/reza-pahlavi/user-young-reza-on-throne.jpg",
-      "meta": "TEHRAN · 1970s"
+      "meta": "EXILE · DIASPORA · CONTINUITY"
     },
     {
       "id": "objects",
       "label": "Objects",
       "href": "/editions",
-      "desc": "Prints, publications, and cultural objects issued as Editions.",
+      "desc": "Prints, publications, and cultural objects.",
       "src": "/archive/farah-pahlavi/user-farah-coronation-crown-ermine.jpg",
-      "meta": "TEHRAN · 1967"
+      "meta": "EDITIONS · PUBLICATIONS"
     }
   ],
   "sections": [
@@ -88,13 +88,13 @@
       "id": "gallery",
       "href": "/gallery",
       "label": "The Gallery",
-      "desc": "Photography as primary document — year, place, precise captions."
+      "desc": "Photography as primary document."
     },
     {
       "id": "lineage",
       "href": "/lineage",
       "label": "The Century",
-      "desc": "A dynastic timeline of modern Iran, not only a genealogy."
+      "desc": "A dynastic timeline of modern Iran."
     },
     {
       "id": "library",
@@ -106,19 +106,27 @@
       "id": "vault",
       "href": "/vault",
       "label": "The Vault",
-      "desc": "Rare and unpublished material from the collection."
+      "desc": "Rare and unpublished material."
     },
     {
       "id": "editions",
       "href": "/editions",
       "label": "Editions",
-      "desc": "Limited cultural objects and archival publications."
+      "desc": "Limited cultural objects."
     },
     {
       "id": "circle",
       "href": "/patronage",
       "label": "The Circle",
-      "desc": "Private supporters who preserve the working archive."
+      "desc": "Private supporters of the archive."
     }
-  ]
+  ],
+  "stats": {
+    "label": "Currently in the archive",
+    "items": [
+      { "place": "Tehran, 1967", "detail": "14 photographs" },
+      { "place": "Documents", "detail": "3 essays & letters" },
+      { "place": "Vault", "detail": "Rooms opening by invitation" }
+    ]
+  }
 }

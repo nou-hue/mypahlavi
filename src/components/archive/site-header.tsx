@@ -12,8 +12,7 @@ const nav = [
   { to: "/library", label: "Library" },
   { to: "/vault", label: "Vault" },
   { to: "/editions", label: "Editions" },
-  { to: "/patronage", label: "Circle" },
-  { to: "/about", label: "About" },
+  { to: "/patronage", label: "The Circle" },
 ] as const;
 
 export function SiteHeader({ variant = "default" }: { variant?: "default" | "ghost" }) {
@@ -26,7 +25,6 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
 
   const isHome = pathname === "/";
   const wantsGhost = variant === "ghost" && isHome;
-  // Ghost only while still over the dark hero plate
   const isGhost = wantsGhost && !scrolled && !open;
 
   useEffect(() => {
@@ -62,105 +60,98 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
         isGhost ? "text-cream" : "text-ink",
       )}
     >
-      {/* Full-width surface so the rule spans the viewport */}
       <div
         className={cn(
           "border-b transition-[background-color,border-color,backdrop-filter] duration-300",
           isGhost
-            ? "border-cream/15 bg-gradient-to-b from-deep/55 via-deep/20 to-transparent"
-            : "border-border/80 bg-ground/95 backdrop-blur-md",
+            ? "border-cream/10 bg-gradient-to-b from-deep/50 via-deep/15 to-transparent"
+            : "border-border/70 bg-ground/95 backdrop-blur-md",
         )}
       >
-        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-5 sm:h-16 sm:px-8">
+        {/* ~76px vertical, 40–48px horizontal breathing room */}
+        <div className="mx-auto flex h-[4.75rem] max-w-[90rem] items-center justify-between gap-6 px-10 sm:h-[5.25rem] sm:px-12">
           <Link
             to="/"
-            className="shrink-0 font-serif text-lg tracking-[0.08em] sm:text-xl"
+            className="shrink-0 font-serif text-[1.35rem] tracking-[0.14em] sm:text-[1.5rem]"
             onClick={() => setOpen(false)}
+            aria-label="Pahlavi home"
           >
-            Pahlavi
+            PAHLAVI
           </Link>
 
-          {/* Desktop nav — lg and up */}
-          <nav
-            className="hidden min-w-0 flex-1 items-center justify-center gap-5 xl:gap-7 lg:flex"
-            aria-label="Primary"
-          >
-            {nav.map((item) => {
-              const active =
-                item.to === "/"
-                  ? pathname === "/"
-                  : pathname === item.to || pathname.startsWith(`${item.to}/`);
-              return (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className={cn(
-                    "whitespace-nowrap font-sans text-[0.62rem] uppercase tracking-[0.16em] transition-opacity",
-                    active ? "opacity-100" : "opacity-45 hover:opacity-100",
-                  )}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
+          <div className="hidden min-w-0 flex-1 items-center justify-end gap-8 lg:flex xl:gap-10">
+            <nav className="flex items-center gap-6 xl:gap-8" aria-label="Primary">
+              {nav.map((item) => {
+                const active =
+                  pathname === item.to || pathname.startsWith(`${item.to}/`);
+                return (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className={cn(
+                      "whitespace-nowrap font-sans text-[0.68rem] uppercase tracking-[0.18em] transition-opacity",
+                      active ? "opacity-100" : "opacity-40 hover:opacity-100",
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
 
-          {/* Desktop actions — same breakpoint as nav */}
-          <div className="hidden shrink-0 items-center gap-3 lg:flex">
-            {isGhost && (
-              <span className="hidden font-sans text-[0.58rem] uppercase tracking-[0.28em] text-cream/70 xl:inline">
-                Archive
-              </span>
-            )}
-            <button
-              type="button"
-              onClick={openCart}
-              className="relative inline-flex h-10 items-center justify-center px-1.5 opacity-70 transition-opacity hover:opacity-100"
-              aria-label={`Bag${cartCount ? `, ${cartCount} items` : ""}`}
-            >
-              <ShoppingBag className="size-4" />
-              {cartCount > 0 && (
-                <span
-                  className={cn(
-                    "absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[0.58rem] tabular-nums",
-                    isGhost ? "bg-cream text-deep" : "bg-ink text-cream",
-                  )}
-                >
-                  {cartCount}
-                </span>
+            <div className="flex items-center gap-4 border-l border-current/15 pl-6">
+              <button
+                type="button"
+                onClick={openCart}
+                className="relative inline-flex h-9 w-9 items-center justify-center opacity-50 transition-opacity hover:opacity-100"
+                aria-label={
+                  cartCount > 0 ? `Bag, ${cartCount} items` : "Bag"
+                }
+              >
+                <ShoppingBag className="size-[1.05rem]" strokeWidth={1.25} />
+                {cartCount > 0 && (
+                  <span
+                    className={cn(
+                      "absolute -right-0.5 -top-0.5 flex h-3.5 min-w-3.5 items-center justify-center rounded-full px-1 text-[0.55rem] tabular-nums leading-none",
+                      isGhost ? "bg-cream text-deep" : "bg-ink text-cream",
+                    )}
+                  >
+                    {cartCount}
+                  </span>
+                )}
+              </button>
+              {isPending ? (
+                <div className="h-7 w-7 animate-pulse rounded-full bg-current/10" />
+              ) : user ? (
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
+              ) : (
+                <SignedOut>
+                  <Link
+                    to="/login"
+                    className="font-sans text-[0.62rem] uppercase tracking-[0.16em] opacity-35 transition-opacity hover:opacity-80"
+                  >
+                    Sign in
+                  </Link>
+                </SignedOut>
               )}
-            </button>
-            {isPending ? (
-              <div className="h-8 w-8 animate-pulse rounded-full bg-current/10" />
-            ) : user ? (
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
-            ) : (
-              <SignedOut>
-                <Link
-                  to="/login"
-                  className="font-sans text-[0.62rem] uppercase tracking-[0.16em] opacity-50 transition-opacity hover:opacity-100"
-                >
-                  Sign in
-                </Link>
-              </SignedOut>
-            )}
+            </div>
           </div>
 
-          {/* Mobile / tablet — below lg */}
+          {/* Mobile / tablet */}
           <div className="flex shrink-0 items-center gap-0.5 lg:hidden">
             <button
               type="button"
               onClick={openCart}
-              className="relative inline-flex h-11 w-11 items-center justify-center"
-              aria-label={`Bag${cartCount ? `, ${cartCount} items` : ""}`}
+              className="relative inline-flex h-11 w-11 items-center justify-center opacity-70"
+              aria-label={cartCount > 0 ? `Bag, ${cartCount} items` : "Bag"}
             >
-              <ShoppingBag className="size-5" />
+              <ShoppingBag className="size-5" strokeWidth={1.25} />
               {cartCount > 0 && (
                 <span
                   className={cn(
-                    "absolute right-1 top-1 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[0.58rem]",
+                    "absolute right-1 top-1 flex h-3.5 min-w-3.5 items-center justify-center rounded-full px-1 text-[0.55rem]",
                     isGhost ? "bg-cream text-deep" : "bg-ink text-cream",
                   )}
                 >
@@ -175,23 +166,25 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
             >
-              {open ? <X className="size-5" /> : <Menu className="size-5" />}
+              {open ? <X className="size-5" strokeWidth={1.25} /> : <Menu className="size-5" strokeWidth={1.25} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile / tablet drawer */}
       {open && (
         <div
           className={cn(
-            "max-h-[calc(100svh-3.5rem)] overflow-y-auto border-b lg:hidden",
+            "max-h-[calc(100svh-5rem)] overflow-y-auto border-b lg:hidden",
             isGhost || wantsGhost
-              ? "border-cream/15 bg-deep text-cream"
+              ? "border-cream/10 bg-deep text-cream"
               : "border-border bg-ground text-ink",
           )}
         >
-          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-5 sm:px-8" aria-label="Mobile">
+          <nav
+            className="mx-auto flex max-w-[90rem] flex-col gap-0.5 px-10 py-6 sm:px-12"
+            aria-label="Mobile"
+          >
             {nav.map((item) => {
               const active =
                 pathname === item.to || pathname.startsWith(`${item.to}/`);
@@ -200,8 +193,8 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
                   key={item.to}
                   to={item.to}
                   className={cn(
-                    "py-3 font-sans text-sm uppercase tracking-[0.14em]",
-                    active ? "opacity-100" : "opacity-60",
+                    "py-3.5 font-sans text-[0.75rem] uppercase tracking-[0.16em]",
+                    active ? "opacity-100" : "opacity-55",
                   )}
                   onClick={() => setOpen(false)}
                 >
@@ -209,20 +202,17 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
                 </Link>
               );
             })}
-            <div className="my-2 h-px bg-current/10" />
-            <button
-              type="button"
-              className="py-3 text-left font-sans text-sm uppercase tracking-[0.14em] opacity-60"
-              onClick={() => {
-                setOpen(false);
-                openCart();
-              }}
+            <Link
+              to="/about"
+              className="py-3.5 font-sans text-[0.75rem] uppercase tracking-[0.16em] opacity-55"
+              onClick={() => setOpen(false)}
             >
-              Bag{cartCount > 0 ? ` (${cartCount})` : ""}
-            </button>
+              About
+            </Link>
+            <div className="my-3 h-px bg-current/10" />
             <Link
               to="/login"
-              className="py-3 font-sans text-sm uppercase tracking-[0.14em] opacity-50"
+              className="py-3.5 font-sans text-[0.75rem] uppercase tracking-[0.16em] opacity-40"
               onClick={() => setOpen(false)}
             >
               Sign in
