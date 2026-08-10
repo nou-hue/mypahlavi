@@ -73,17 +73,17 @@ function LineagePage() {
         <div className="space-y-16">
           {generations.map(([gen, members]) => (
             <section key={gen}>
-              <p className="mb-6 font-sans text-[0.68rem] uppercase tracking-[0.2em] text-ink-subtle">
+              <p className="mb-5 font-sans text-[0.68rem] uppercase tracking-[0.2em] text-ink-subtle sm:mb-6">
                 Generation {gen}
               </p>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
                 {members.map((m) => (
                   <button
                     key={m.id}
                     type="button"
                     onClick={() => selectPerson(m.id)}
                     className={cn(
-                      "group border border-border bg-ground p-4 text-left transition-colors",
+                      "group border border-border bg-ground p-3 text-left transition-colors sm:p-4",
                       selectedId === m.id
                         ? "border-accent/50"
                         : "hover:border-ink/25",
@@ -93,11 +93,11 @@ function LineagePage() {
                       src={m.portraitSrc}
                       alt={m.name}
                       gradient={m.portraitGradient}
-                      className="mb-4 aspect-[4/5] transition-transform duration-500 group-hover:scale-[1.01]"
+                      className="mb-3 aspect-[4/5] transition-transform duration-500 group-hover:scale-[1.01] sm:mb-4"
                     />
-                    <p className="font-serif text-xl leading-snug">{m.name}</p>
-                    <p className="mt-1 text-sm text-ink-muted">{m.title}</p>
-                    <p className="mt-2 font-sans text-[0.68rem] uppercase tracking-[0.12em] text-ink-subtle">
+                    <p className="font-serif text-lg leading-snug sm:text-xl">{m.name}</p>
+                    <p className="mt-1 text-xs text-ink-muted sm:text-sm">{m.title}</p>
+                    <p className="mt-1.5 font-sans text-[0.62rem] uppercase tracking-[0.12em] text-ink-subtle sm:mt-2 sm:text-[0.68rem]">
                       {m.years}
                     </p>
                   </button>
