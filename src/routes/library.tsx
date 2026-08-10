@@ -31,15 +31,15 @@ function LibraryPage() {
     <LayoutShell>
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
         <header className="mb-10 max-w-2xl space-y-4 archive-rise">
-          <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-            Library
+          <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
+            The Library
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Reading room
+            Private reading room
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
-            Generous type. Quiet margins. Letters, essays, and books for slow
-            reading — not a content feed.
+            Essays and documents for slow attention. Huge margins. Beautiful
+            type. Monographs translated into digital form — not a content feed.
           </p>
         </header>
 

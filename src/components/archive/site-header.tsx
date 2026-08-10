@@ -8,10 +8,11 @@ import { useCartStore } from "@/lib/cart-store";
 
 const nav = [
   { to: "/gallery", label: "Gallery" },
-  { to: "/lineage", label: "Lineage" },
+  { to: "/lineage", label: "Century" },
   { to: "/library", label: "Library" },
+  { to: "/vault", label: "Vault" },
   { to: "/editions", label: "Editions" },
-  { to: "/patronage", label: "Patronage" },
+  { to: "/patronage", label: "Circle" },
 ] as const;
 
 export function SiteHeader({ variant = "default" }: { variant?: "default" | "ghost" }) {
@@ -20,23 +21,32 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
   const { user, isPending } = useCurrentUserState();
   const openCart = useCartStore((s) => s.openCart);
   const cartCount = useCartStore((s) => s.count());
+  const isGhost = variant === "ghost" && pathname === "/";
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 pt-[var(--grok-banner-h,0px)] text-ink">
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 pt-[var(--grok-banner-h,0px)]",
+        isGhost ? "text-cream" : "text-ink",
+      )}
+    >
       <div
         className={cn(
-          "mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 border-b border-border/80 bg-ground/85 px-5 backdrop-blur-md sm:h-16 sm:px-8",
+          "mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-5 sm:h-16 sm:px-8",
+          isGhost
+            ? "border-b border-cream/10 bg-transparent"
+            : "border-b border-border/80 bg-ground/90 backdrop-blur-md",
         )}
       >
         <Link
           to="/"
-          className="font-serif text-lg tracking-tight sm:text-xl"
+          className="font-serif text-lg tracking-[0.06em] sm:text-xl"
           onClick={() => setOpen(false)}
         >
-          mypahlavi
+          Pahlavi
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {nav.map((item) => {
             const active = pathname.startsWith(item.to);
             return (
@@ -44,7 +54,7 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
                 key={item.to}
                 to={item.to}
                 className={cn(
-                  "font-sans text-[0.68rem] uppercase tracking-[0.16em] transition-opacity",
+                  "font-sans text-[0.62rem] uppercase tracking-[0.16em] transition-opacity",
                   active ? "opacity-100" : "opacity-40 hover:opacity-100",
                 )}
               >
@@ -58,18 +68,23 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
           <button
             type="button"
             onClick={openCart}
-            className="relative inline-flex h-10 items-center gap-2 px-2 font-sans text-[0.68rem] uppercase tracking-[0.14em] opacity-60 transition-opacity hover:opacity-100"
+            className="relative inline-flex h-10 items-center gap-2 px-2 font-sans text-[0.65rem] uppercase tracking-[0.14em] opacity-60 transition-opacity hover:opacity-100"
             aria-label={`Bag${cartCount ? `, ${cartCount} items` : ""}`}
           >
             <ShoppingBag className="size-4" />
             {cartCount > 0 && (
-              <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-ink px-1 text-[0.58rem] tabular-nums text-cream">
+              <span
+                className={cn(
+                  "absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[0.58rem] tabular-nums",
+                  isGhost ? "bg-cream text-deep" : "bg-ink text-cream",
+                )}
+              >
                 {cartCount}
               </span>
             )}
           </button>
           {isPending ? (
-            <div className="h-8 w-8 animate-pulse rounded-full bg-ink/10" />
+            <div className="h-8 w-8 animate-pulse rounded-full bg-current/10" />
           ) : user ? (
             <SignedIn>
               <UserButton />
@@ -78,7 +93,7 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
             <SignedOut>
               <Link
                 to="/login"
-                className="font-sans text-[0.68rem] uppercase tracking-[0.16em] opacity-45 transition-opacity hover:opacity-100"
+                className="font-sans text-[0.65rem] uppercase tracking-[0.16em] opacity-45 transition-opacity hover:opacity-100"
               >
                 Sign in
               </Link>
@@ -95,7 +110,12 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
           >
             <ShoppingBag className="size-5" />
             {cartCount > 0 && (
-              <span className="absolute right-1 top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-ink px-1 text-[0.58rem] text-cream">
+              <span
+                className={cn(
+                  "absolute right-1 top-1 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[0.58rem]",
+                  isGhost ? "bg-cream text-deep" : "bg-ink text-cream",
+                )}
+              >
                 {cartCount}
               </span>
             )}
@@ -112,7 +132,14 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
       </div>
 
       {open && (
-        <div className="border-b border-border bg-ground px-5 py-6 md:hidden">
+        <div
+          className={cn(
+            "border-b px-5 py-6 md:hidden",
+            isGhost
+              ? "border-cream/15 bg-deep text-cream"
+              : "border-border bg-ground text-ink",
+          )}
+        >
           <nav className="flex flex-col gap-4">
             {nav.map((item) => (
               <Link
@@ -124,6 +151,13 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/about"
+              className="font-sans text-sm uppercase tracking-[0.14em]"
+              onClick={() => setOpen(false)}
+            >
+              About
+            </Link>
             <button
               type="button"
               className="text-left font-sans text-sm uppercase tracking-[0.14em]"

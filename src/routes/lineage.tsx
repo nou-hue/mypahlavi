@@ -58,17 +58,47 @@ function LineagePage() {
     <LayoutShell>
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
         <header className="mb-12 max-w-2xl space-y-4 archive-rise">
-          <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-            Lineage
+          <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
+            The Century
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Family as a journey
+            Dynastic timeline
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
-            Sparse structure. Archival portraits as focal points. Select a person to
-            open a quiet dossier with biography and linked gallery material.
+            From Reza Shah to the contemporary house — an interactive history of
+            modern Iran, not merely a genealogy. Select a person for biography
+            and linked plates.
           </p>
         </header>
+
+        {/* The Century — timeline spine */}
+        <div className="mb-16 overflow-x-auto border-y border-border py-6 archive-rise">
+          <div className="flex min-w-max items-center gap-0 px-1">
+            {[
+              { y: "1925", l: "Dynasty" },
+              { y: "1930s", l: "Reza Shah" },
+              { y: "1941", l: "Succession" },
+              { y: "1960s", l: "Modernity" },
+              { y: "1979", l: "Revolution" },
+              { y: "Exile", l: "Memory" },
+              { y: "Present", l: "Continuity" },
+            ].map((n, i, arr) => (
+              <div key={n.y} className="flex items-center">
+                <div className="px-4 text-center sm:px-6">
+                  <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
+                    {n.y}
+                  </p>
+                  <p className="mt-1 font-serif text-sm tracking-tight sm:text-base">
+                    {n.l}
+                  </p>
+                </div>
+                {i < arr.length - 1 && (
+                  <div className="h-px w-6 bg-border sm:w-10" aria-hidden />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="space-y-16">
           {generations.map(([gen, members]) => (

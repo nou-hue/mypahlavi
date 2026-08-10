@@ -2,24 +2,26 @@
 @import "tw-animate-css";
 
 @theme {
-  /* Nou editorial — warm ivory, ink, single brass accent */
-  --color-ground: #f6f3ee;
-  --color-ground-elevated: #efeae3;
-  --color-parchment: #e8e2d8;
-  --color-ink: #141414;
-  --color-ink-soft: #2c2c2c;
-  --color-ink-muted: #5c5c5c;
-  --color-ink-subtle: #8a8a8a;
-  --color-deep: #0c0c0c;
-  --color-deep-soft: #161616;
-  --color-accent: #9a8664;
-  --color-accent-soft: #b5a078;
-  --color-frame: #1a1a1a;
-  --color-frame-mid: #2a2a2a;
-  --color-frame-edge: #0a0a0a;
-  --color-border: color-mix(in oklab, #141414 10%, transparent);
-  --color-border-strong: color-mix(in oklab, #141414 18%, transparent);
-  --color-cream: #faf8f5;
+  /* Archive of a lost modernity — ivory, bone, ink, deep wine, photographic grey */
+  --color-ground: #f3efe7;
+  --color-ground-elevated: #e9e2d6;
+  --color-parchment: #e0d7c9;
+  --color-ink: #100e0c;
+  --color-ink-soft: #26221e;
+  --color-ink-muted: #58524a;
+  --color-ink-subtle: #8a847a;
+  --color-deep: #0a0908;
+  --color-deep-soft: #141210;
+  --color-accent: #5a2830;
+  --color-accent-soft: #7a3c46;
+  --color-frame: #181614;
+  --color-frame-mid: #282420;
+  --color-frame-edge: #080706;
+  --color-border: color-mix(in oklab, #100e0c 10%, transparent);
+  --color-border-strong: color-mix(in oklab, #100e0c 18%, transparent);
+  --color-cream: #faf6f0;
+  --color-wine: #5a2830;
+  --color-photo-grey: #8a847a;
 
   --font-serif: "Cormorant Garamond", "Times New Roman", Georgia, serif;
   --font-sans: "DM Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -28,8 +30,8 @@
   --radius-md: 0px;
   --radius-lg: 0px;
 
-  --shadow-soft: 0 20px 60px color-mix(in oklab, #0c0c0c 8%, transparent);
-  --shadow-frame: 0 24px 64px color-mix(in oklab, #0c0c0c 12%, transparent);
+  --shadow-soft: 0 20px 60px color-mix(in oklab, #0a0908 7%, transparent);
+  --shadow-frame: 0 28px 80px color-mix(in oklab, #0a0908 14%, transparent);
 }
 
 @layer base {
@@ -49,7 +51,7 @@
   }
 
   ::selection {
-    background: color-mix(in oklab, var(--color-accent) 28%, transparent);
+    background: color-mix(in oklab, var(--color-accent) 20%, transparent);
     color: var(--color-ink);
   }
 
@@ -82,20 +84,19 @@
   }
 
   .archive-fade {
-    animation: archive-fade-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: archive-fade-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .archive-rise {
-    animation: archive-rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: archive-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
-  /* Modern editorial plate — thin dark edge, no heavy museum moulding */
   .archive-frame {
     position: relative;
     background: var(--color-cream);
     padding: 0;
     box-shadow: var(--shadow-soft);
-    border: 1px solid color-mix(in oklab, #141414 12%, transparent);
+    border: 1px solid color-mix(in oklab, #100e0c 11%, transparent);
   }
 
   .archive-frame-inner {
@@ -110,11 +111,14 @@
     border: none;
   }
 
-  /* Centered hero plate */
   .hero-plate {
     box-shadow: var(--shadow-frame);
-    border: 1px solid color-mix(in oklab, #141414 14%, transparent);
+    border: 1px solid color-mix(in oklab, #100e0c 12%, transparent);
     background: var(--color-deep);
+  }
+
+  .hero-crossfade {
+    transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
@@ -130,7 +134,7 @@
 @keyframes archive-rise {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -142,5 +146,8 @@
   .archive-fade,
   .archive-rise {
     animation: none;
+  }
+  .hero-crossfade {
+    transition: none;
   }
 }

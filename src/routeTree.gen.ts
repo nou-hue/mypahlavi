@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as EditionsRouteImport } from './routes/editions'
 import { Route as GalleryRouteImport } from './routes/gallery'
@@ -17,6 +18,7 @@ import { Route as LibraryRouteImport } from './routes/library'
 import { Route as LineageRouteImport } from './routes/lineage'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as PatronageRouteImport } from './routes/patronage'
+import { Route as VaultRouteImport } from './routes/vault'
 import { Route as EditionsProductIdRouteImport } from './routes/editions_.$productId'
 import { Route as OrderOrderIdRouteImport } from './routes/order.$orderId'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
@@ -30,6 +32,11 @@ import { Route as ApiShopPrintifyProductsRouteImport } from './routes/api/shop/p
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CheckoutRoute = CheckoutRouteImport.update({
@@ -65,6 +72,11 @@ const LoginRoute = LoginRouteImport.update({
 const PatronageRoute = PatronageRouteImport.update({
   id: '/patronage',
   path: '/patronage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VaultRoute = VaultRouteImport.update({
+  id: '/vault',
+  path: '/vault',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EditionsProductIdRoute = EditionsProductIdRouteImport.update({
@@ -115,6 +127,7 @@ const ApiShopPrintifyProductsRoute = ApiShopPrintifyProductsRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/checkout': typeof CheckoutRoute
   '/editions': typeof EditionsRoute
   '/gallery': typeof GalleryRoute
@@ -122,6 +135,7 @@ export interface FileRoutesByFullPath {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/vault': typeof VaultRoute
   '/editions/$productId': typeof EditionsProductIdRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -134,6 +148,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/checkout': typeof CheckoutRoute
   '/editions': typeof EditionsRoute
   '/gallery': typeof GalleryRoute
@@ -141,6 +156,7 @@ export interface FileRoutesByTo {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/vault': typeof VaultRoute
   '/editions/$productId': typeof EditionsProductIdRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -154,6 +170,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/checkout': typeof CheckoutRoute
   '/editions': typeof EditionsRoute
   '/gallery': typeof GalleryRoute
@@ -161,6 +178,7 @@ export interface FileRoutesById {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/vault': typeof VaultRoute
   '/editions_/$productId': typeof EditionsProductIdRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -175,6 +193,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/checkout'
     | '/editions'
     | '/gallery'
@@ -182,6 +201,7 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/vault'
     | '/editions/$productId'
     | '/order/$orderId'
     | '/api/auth/$'
@@ -194,6 +214,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/checkout'
     | '/editions'
     | '/gallery'
@@ -201,6 +222,7 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/vault'
     | '/editions/$productId'
     | '/order/$orderId'
     | '/api/auth/$'
@@ -213,6 +235,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/checkout'
     | '/editions'
     | '/gallery'
@@ -220,6 +243,7 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/vault'
     | '/editions_/$productId'
     | '/order/$orderId'
     | '/api/auth/$'
@@ -233,6 +257,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   CheckoutRoute: typeof CheckoutRoute
   EditionsRoute: typeof EditionsRoute
   GalleryRoute: typeof GalleryRoute
@@ -240,6 +265,7 @@ export interface RootRouteChildren {
   LineageRoute: typeof LineageRoute
   LoginRoute: typeof LoginRoute
   PatronageRoute: typeof PatronageRoute
+  VaultRoute: typeof VaultRoute
   EditionsProductIdRoute: typeof EditionsProductIdRoute
   OrderOrderIdRoute: typeof OrderOrderIdRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
@@ -258,6 +284,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/checkout': {
@@ -307,6 +340,13 @@ declare module '@tanstack/react-router' {
       path: '/patronage'
       fullPath: '/patronage'
       preLoaderRoute: typeof PatronageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vault': {
+      id: '/vault'
+      path: '/vault'
+      fullPath: '/vault'
+      preLoaderRoute: typeof VaultRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/editions_/$productId': {
@@ -377,6 +417,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   CheckoutRoute: CheckoutRoute,
   EditionsRoute: EditionsRoute,
   GalleryRoute: GalleryRoute,
@@ -384,6 +425,7 @@ const rootRouteChildren: RootRouteChildren = {
   LineageRoute: LineageRoute,
   LoginRoute: LoginRoute,
   PatronageRoute: PatronageRoute,
+  VaultRoute: VaultRoute,
   EditionsProductIdRoute: EditionsProductIdRoute,
   OrderOrderIdRoute: OrderOrderIdRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,

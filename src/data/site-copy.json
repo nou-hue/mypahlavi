@@ -1,45 +1,124 @@
 {
-  "heroSrc": "/archive/other-family/user-garden-laughter-with-baby.jpg",
-  "heroKicker": "mypahlavi.com",
-  "heroTitle": "Pahlavi",
-  "heroSub": "The last imperial family of Iran — photographed, written, and held with editorial care.",
-  "heroCaption": "Mohammad Reza Shah and Farah Pahlavi with their child, late 1960s.",
-  "poetryTitle": "For His Highness",
-  "poetrySubject": "Reza Pahlavi",
-  "poetryLines": [
-    "He stands where a century leans on a single name,",
-    "not as a ruin, but as a living measure of return.",
-    "",
-    "Son of a king who modernised a nation,",
-    "grandson of the man who forged a dynasty from dust and will—",
-    "he carries neither the crown’s weight nor its abandonment,",
-    "only the long duty of remaining.",
-    "",
-    "Exile is a country without borders;",
-    "he has walked it in full view of the world,",
-    "speaking of law when law was broken,",
-    "of choice when choice was taken,",
-    "of a future that does not ask permission to be free.",
-    "",
-    "There is no theatre in his patience.",
-    "It is the patience of someone who has watched history",
-    "arrive late, and still held the door.",
-    "",
-    "Iran is not a memory to him.",
-    "It is a pulse under the skin of every map,",
-    "a language that refuses to die in the mouth,",
-    "a people who know their own name",
-    "even when others try to rename them.",
-    "",
-    "If legacy is a river, he is not its end—",
-    "he is the place where it turns,",
-    "still cold, still clear,",
-    "still moving toward the sea of what might yet be.",
-    "",
-    "His Highness Reza Pahlavi:",
-    "not a portrait sealed behind glass,",
-    "but a continuity—",
-    "quiet, unbroken,",
-    "and still becoming."
+  "brand": "PAHLAVI",
+  "positioning": "An independent archive of Iran's modern history, culture and memory.",
+  "tagline": "Images · Objects · Documents · People · Places",
+  "method": "We preserve. We document. We contextualise. We curate.",
+  "institutionLine": "A living collection of images, objects, documents and stories from the world of modern Iran.",
+  "ctaPrimary": "Enter the archive",
+  "ctaPrimaryHref": "/gallery",
+  "heroSlides": [
+    {
+      "src": "/archive/farah-pahlavi/user-farah-emerald-tiara-shah-uniform.jpg",
+      "meta": "TEHRAN — 1967",
+      "caption": "Farah Pahlavi in the emerald tiara with Mohammad Reza Shah."
+    },
+    {
+      "src": "/archive/other-family/user-garden-laughter-with-baby.jpg",
+      "meta": "TEHRAN — LATE 1960s",
+      "caption": "Mohammad Reza Shah and Farah Pahlavi with their child."
+    },
+    {
+      "src": "/archive/farah-pahlavi/user-farah-persepolis-gold-dress.jpg",
+      "meta": "PERSEPOLIS — 1971",
+      "caption": "Farah Pahlavi at Persepolis in gold."
+    },
+    {
+      "src": "/archive/other-family/user-walking-leopard-hat-paris.jpg",
+      "meta": "EUROPE — 1960s",
+      "caption": "Farah and the Shah walking in the city."
+    },
+    {
+      "src": "/archive/reza-shah/reza-shah-woolf-portrait-1938.jpg",
+      "meta": "TEHRAN — 1938",
+      "caption": "Reza Shah Pahlavi."
+    }
+  ],
+  "doors": [
+    {
+      "id": "people",
+      "label": "People",
+      "href": "/lineage",
+      "desc": "The house, the court, and the figures who held the century.",
+      "src": "/archive/other-family/user-imperial-trio-reza-farah-shah.jpg",
+      "meta": "TEHRAN · 1970s"
+    },
+    {
+      "id": "places",
+      "label": "Places",
+      "href": "/gallery",
+      "desc": "Tehran, the Caspian, Persepolis, Paris, Washington — rooms of a world.",
+      "src": "/archive/farah-pahlavi/user-farah-persepolis-gold-dress.jpg",
+      "meta": "PERSEPOLIS · 1971"
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "href": "/library",
+      "desc": "Fashion, art, cinema, design — the modern Iranian imagination.",
+      "src": "/archive/farah-pahlavi/user-farah-red-velvet-atelier.jpg",
+      "meta": "PARIS · 1959"
+    },
+    {
+      "id": "modernity",
+      "label": "Modernity",
+      "href": "/gallery",
+      "desc": "Architecture, industry, diplomacy, education — a country in transformation.",
+      "src": "/archive/other-family/user-before-the-map-of-iran.jpg",
+      "meta": "TEHRAN · 1960s"
+    },
+    {
+      "id": "memory",
+      "label": "Memory",
+      "href": "/vault",
+      "desc": "Exile, diaspora, and the long afterlife of the archive.",
+      "src": "/archive/reza-pahlavi/user-young-reza-on-throne.jpg",
+      "meta": "TEHRAN · 1970s"
+    },
+    {
+      "id": "objects",
+      "label": "Objects",
+      "href": "/editions",
+      "desc": "Prints, publications, and cultural objects issued as Editions.",
+      "src": "/archive/farah-pahlavi/user-farah-coronation-crown-ermine.jpg",
+      "meta": "TEHRAN · 1967"
+    }
+  ],
+  "sections": [
+    {
+      "id": "gallery",
+      "href": "/gallery",
+      "label": "The Gallery",
+      "desc": "Photography as primary document — year, place, precise captions."
+    },
+    {
+      "id": "lineage",
+      "href": "/lineage",
+      "label": "The Century",
+      "desc": "A dynastic timeline of modern Iran, not only a genealogy."
+    },
+    {
+      "id": "library",
+      "href": "/library",
+      "label": "The Library",
+      "desc": "Essays and documents for slow attention."
+    },
+    {
+      "id": "vault",
+      "href": "/vault",
+      "label": "The Vault",
+      "desc": "Rare and unpublished material from the collection."
+    },
+    {
+      "id": "editions",
+      "href": "/editions",
+      "label": "Editions",
+      "desc": "Limited cultural objects and archival publications."
+    },
+    {
+      "id": "circle",
+      "href": "/patronage",
+      "label": "The Circle",
+      "desc": "Private supporters who preserve the working archive."
+    }
   ]
 }

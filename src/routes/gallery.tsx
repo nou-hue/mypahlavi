@@ -102,14 +102,15 @@ function GalleryPage() {
     <LayoutShell>
       <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
         <header className="mx-auto mb-16 max-w-lg space-y-4 text-center archive-rise">
-          <p className="font-sans text-[0.65rem] uppercase tracking-[0.28em] text-ink-subtle">
-            Gallery
+          <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
+            The Gallery
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Collection
+            Photographic archive
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
-            A quiet hang. Fewer plates, more air — chosen for presence, not volume.
+            Full plates with year, place, and precise captions. The interface
+            recedes — the photographs become the site.
           </p>
         </header>
 

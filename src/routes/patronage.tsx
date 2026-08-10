@@ -5,39 +5,40 @@ import { cn } from "@/lib/utils";
 import { SignedIn, SignedOut } from "@/lib/auth/gates";
 
 export const Route = createFileRoute("/patronage")({
-  component: PatronagePage,
+  component: CirclePage,
 });
 
-function PatronagePage() {
+function CirclePage() {
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
-        <header className="mb-12 max-w-2xl space-y-4 archive-rise">
-          <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-ink-subtle">
-            Patronage
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
+        <header className="mb-14 max-w-2xl space-y-5 archive-rise">
+          <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
+            The Circle
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Support the archive
+            For those who wish to preserve the archive
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
-            Subscriptions framed as quiet patronage — not loud membership
-            marketing. Funds digitization, higher-resolution access, and new rooms.
+            The Pahlavi Circle sustains digitisation, unpublished releases, and
+            the long work of an independent collection. Membership is quiet
+            patronage — not a subscription product.
           </p>
         </header>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-5 lg:grid-cols-3">
           {patronageTiers.map((tier, i) => (
             <div
               key={tier.id}
               className={cn(
                 "flex flex-col border p-6 sm:p-8 archive-fade",
                 tier.id === "patron"
-                  ? "border-accent/50 bg-ground-elevated"
+                  ? "border-accent/35 bg-ground-elevated"
                   : "border-border bg-ground",
               )}
               style={{ animationDelay: `${i * 60}ms` }}
             >
-              <p className="font-sans text-[0.68rem] uppercase tracking-[0.18em] text-ink-subtle">
+              <p className="font-sans text-[0.65rem] uppercase tracking-[0.18em] text-ink-subtle">
                 {tier.name}
               </p>
               <p className="mt-3 font-serif text-3xl tracking-tight">{tier.price}</p>
@@ -54,41 +55,29 @@ function PatronagePage() {
                   </li>
                 ))}
               </ul>
-              {tier.id === "visitor" ? (
+              <SignedOut>
                 <Link
-                  to="/gallery"
-                  className="mt-8 inline-flex h-11 items-center justify-center border border-border font-sans text-[0.72rem] uppercase tracking-[0.16em] hover:border-ink/40"
+                  to="/login"
+                  className="mt-8 inline-flex h-11 items-center justify-center bg-ink font-sans text-[0.68rem] uppercase tracking-[0.16em] text-cream hover:bg-deep"
                 >
-                  Enter freely
+                  Sign in to join
                 </Link>
-              ) : (
-                <>
-                  <SignedOut>
-                    <Link
-                      to="/login"
-                      className="mt-8 inline-flex h-11 items-center justify-center bg-ink font-sans text-[0.72rem] uppercase tracking-[0.16em] text-cream hover:bg-deep"
-                    >
-                      Sign in to support
-                    </Link>
-                  </SignedOut>
-                  <SignedIn>
-                    <button
-                      type="button"
-                      className="mt-8 h-11 bg-ink font-sans text-[0.72rem] uppercase tracking-[0.16em] text-cream hover:bg-deep"
-                    >
-                      Continue as patron
-                    </button>
-                  </SignedIn>
-                </>
-              )}
+              </SignedOut>
+              <SignedIn>
+                <button
+                  type="button"
+                  className="mt-8 h-11 bg-ink font-sans text-[0.68rem] uppercase tracking-[0.16em] text-cream hover:bg-deep"
+                >
+                  Continue as member
+                </button>
+              </SignedIn>
             </div>
           ))}
         </div>
 
-        <p className="mt-12 max-w-2xl text-sm leading-relaxed text-ink-subtle">
-          Payment processing (Stripe) can be connected at deploy time. This preview
-          demonstrates the patronage framing and access model without charging
-          cards.
+        <p className="mt-14 max-w-2xl text-sm leading-relaxed text-ink-subtle">
+          Circle membership funds conservation-scale work and early access to
+          Editions and Vault releases.
         </p>
       </div>
     </LayoutShell>
