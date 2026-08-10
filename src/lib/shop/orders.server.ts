@@ -82,10 +82,10 @@ function nowIso() {
 }
 
 function rowFromSnapshot(s: Snapshot): ShopOrderRecord {
-  const ts = s.created_at ?? nowIso();
+  const created = s.created_at ?? nowIso();
   return {
     id: s.id,
-    created_at: ts,
+    created_at: created,
     updated_at: nowIso(),
     email: s.email,
     status: s.status,
@@ -111,10 +111,11 @@ function saveMem(row: ShopOrderRecord) {
 }
 
 async function dbAvailable(): Promise<boolean> {
-  const url = process.env.DATABASE_URL?.trim();
-  if (!url) return false;
   try {
-    const { getSql } = await import("@/lib/db");
+    const { dbSource, getSql } = await import("@/lib/db");
+    // On Vercel we only treat real Neon/Postgres as durable storage.
+    // PGLite is preview-only and is not durable across serverless invocations.
+    if (dbSource !== "neon") return false;
     const sql = await getSql();
     await sql`select 1 as ok`;
     return true;
@@ -137,55 +138,17 @@ export function orderToStripeMetadata(row: ShopOrderRecord): Record<string, stri
     metadata: JSON.parse(row.metadata_json || "{}") as Record<string, unknown>,
     stripe_session_id: row.stripe_session_id,
     printify_order_id: row.printify_order_id,
-    error_message: row.error_message,
-    created_at: row.created_at,
   };
-  // Drop heavy image URLs to keep under Stripe limits
-  snap.lines = snap.lines.map((l) => ({
-    ...l,
-    imageSrc: l.imageSrc?.startsWith("http") ? undefined : l.imageSrc,
-  }));
   const raw = JSON.stringify(snap);
-  const meta: Record<string, string> = {
-    orderId: row.id,
-  };
   const chunk = 450;
   const parts = Math.ceil(raw.length / chunk);
-  if (parts > 40) {
-    // Fallback: minimal printify fulfilment payload only
-    const minimal = {
-      id: row.id,
-      email: row.email,
-      status: row.status,
-      subtotal_pence: row.subtotal_pence,
-      shipping_pence: row.shipping_pence,
-      total_pence: row.total_pence,
-      shipping: snap.shipping,
-      lines: snap.lines.map((l) => ({
-        key: l.key,
-        productId: l.productId,
-        slug: l.slug,
-        name: l.name.slice(0, 80),
-        variantId: l.variantId,
-        variantLabel: l.variantLabel.slice(0, 60),
-        unitPriceGBP: l.unitPriceGBP,
-        quantity: l.quantity,
-        sku: l.sku,
-        printifyProductId: l.printifyProductId,
-        printifyVariantId: l.printifyVariantId,
-      })),
-    };
-    const mraw = JSON.stringify(minimal);
-    for (let i = 0; i < Math.ceil(mraw.length / chunk); i++) {
-      meta[`o${i}`] = mraw.slice(i * chunk, (i + 1) * chunk);
-    }
-    meta.parts = String(Math.ceil(mraw.length / chunk));
-    return meta;
-  }
+  const meta: Record<string, string> = {
+    orderId: row.id,
+    parts: String(parts),
+  };
   for (let i = 0; i < parts; i++) {
     meta[`o${i}`] = raw.slice(i * chunk, (i + 1) * chunk);
   }
-  meta.parts = String(parts);
   return meta;
 }
 
@@ -317,7 +280,7 @@ export async function updateOrder(
           printify_order_id = ${next.printify_order_id},
           error_message = ${next.error_message},
           metadata_json = ${next.metadata_json},
-          updated_at = CURRENT_TIMESTAMP
+          updated_at = ${next.updated_at}
         where id = ${id}
       `;
     } catch (err) {
@@ -391,31 +354,53 @@ export function parseOrder(row: ShopOrderRecord) {
 }
 
 export async function databaseStatus() {
-  const url = Boolean(process.env.DATABASE_URL?.trim());
-  if (!url) {
+  const envKey =
+    (process.env.DATABASE_URL?.trim() && "DATABASE_URL") ||
+    (process.env.POSTGRES_URL?.trim() && "POSTGRES_URL") ||
+    (process.env.POSTGRES_PRISMA_URL?.trim() && "POSTGRES_PRISMA_URL") ||
+    (process.env.POSTGRES_URL_NON_POOLING?.trim() &&
+      "POSTGRES_URL_NON_POOLING") ||
+    (process.env.NEON_DATABASE_URL?.trim() && "NEON_DATABASE_URL") ||
+    null;
+
+  if (!envKey) {
     return {
       configured: false,
       ok: false,
       mode: "memory+stripe" as const,
+      provider: null as string | null,
       message:
-        "DATABASE_URL not set — orders use memory + Stripe metadata (works; add Neon for durable history)",
+        "No DATABASE_URL — add a Neon connection string on Vercel for durable order history",
     };
   }
   try {
     const ok = await dbAvailable();
+    const hostHint = (() => {
+      try {
+        const raw = process.env[envKey] ?? process.env.DATABASE_URL ?? "";
+        const u = new URL(raw.replace(/^postgres(ql)?:/i, "http:"));
+        return u.hostname;
+      } catch {
+        return "postgres";
+      }
+    })();
     return {
       configured: true,
       ok,
       mode: ok ? ("postgres" as const) : ("memory+stripe" as const),
+      provider: /neon\.tech/i.test(hostHint) ? "neon" : "postgres",
+      envKey,
+      host: hostHint,
       message: ok
-        ? "Postgres connected"
-        : "DATABASE_URL set but connection failed — using memory + Stripe",
+        ? `Neon/Postgres connected (${hostHint})`
+        : "Database URL set but connection failed — using memory + Stripe",
     };
   } catch (err) {
     return {
       configured: true,
       ok: false,
       mode: "memory+stripe" as const,
+      provider: null as string | null,
       message: err instanceof Error ? err.message : "DB error",
     };
   }

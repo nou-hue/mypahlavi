@@ -1,18 +1,32 @@
 /** Which database backend is active. */
 export type DbSource = "neon" | "pglite";
 
-// An empty/whitespace DATABASE_URL (an easy misconfig in deploy UIs) must mean
-// "unset" — otherwise production would silently run on the PGLite fallback.
-const rawDatabaseUrl =
-  typeof process !== "undefined" ? process.env.DATABASE_URL : undefined;
-const databaseUrl =
-  rawDatabaseUrl && rawDatabaseUrl.trim() ? rawDatabaseUrl : undefined;
+/**
+ * Resolve a Postgres connection string from common deploy env names.
+ * Prefer DATABASE_URL; accept Vercel Storage / Neon integration aliases.
+ */
+function resolveDatabaseUrl(): string | undefined {
+  if (typeof process === "undefined") return undefined;
+  const candidates = [
+    process.env.DATABASE_URL,
+    process.env.POSTGRES_URL,
+    process.env.POSTGRES_PRISMA_URL,
+    process.env.POSTGRES_URL_NON_POOLING,
+    process.env.NEON_DATABASE_URL,
+  ];
+  for (const raw of candidates) {
+    const v = raw?.trim();
+    if (v) return v;
+  }
+  return undefined;
+}
+
+const databaseUrl = resolveDatabaseUrl();
 
 /**
- * Active backend: real **Neon** when `DATABASE_URL` is set (deployed / configured
- * sandbox), otherwise a local embedded **PGLite** (Postgres compiled to WASM) so
- * the app has a working database even with nothing configured — the live preview
- * included. Swap in Neon later by just setting `DATABASE_URL`; no code changes.
+ * Active backend: real **Neon** when a connection string is set (deployed /
+ * configured), otherwise a local embedded **PGLite** so the live preview always
+ * has a working database.
  */
 export const dbSource: DbSource = databaseUrl ? "neon" : "pglite";
 
@@ -83,15 +97,50 @@ function toSql(run: Run): Sql {
   return sql;
 }
 
+function neonPoolConfig(connectionString: string) {
+  // Neon requires TLS. Prefer URL sslmode; always enable ssl for neon hosts.
+  const isNeon =
+    /neon\.tech/i.test(connectionString) ||
+    /@ep-/.test(connectionString);
+  const needsSsl =
+    isNeon ||
+    /sslmode=require/i.test(connectionString) ||
+    process.env.PGSSLMODE === "require";
+
+  return {
+    connectionString,
+    max: 5,
+    idleTimeoutMillis: 10_000,
+    connectionTimeoutMillis: 12_000,
+    ...(needsSsl
+      ? {
+          ssl: {
+            // Neon uses managed certs; rejectUnauthorized true works on modern
+            // Node when CA bundle is present; fall back open only for neon.
+            rejectUnauthorized: !isNeon,
+          },
+        }
+      : {}),
+  };
+}
+
 function createNeonSql(): Promise<Sql> {
   globalRef.__pgSqlPromise__ ??= (async () => {
-    // Regular Postgres driver: node-postgres (`pg`) — works directly with Neon's
-    // pooled endpoint. One pool per process; warm serverless instances reuse it.
+    if (!databaseUrl) throw new Error("DATABASE_URL is not set");
+    // Regular Postgres driver: node-postgres (`pg`) — works with Neon's pooled
+    // endpoint. One pool per process; warm serverless instances reuse it.
     const { Pool, types } = await import("pg");
     types.setTypeParser(OID_INT8, Number);
     types.setTypeParser(OID_DATE, identity);
     types.setTypeParser(OID_INTERVAL, identity);
-    const pool = new Pool({ connectionString: databaseUrl });
+    const pool = new Pool(neonPoolConfig(databaseUrl));
+    // Fail fast if the URL is wrong (status endpoint / first request).
+    const client = await pool.connect();
+    try {
+      await client.query("select 1 as ok");
+    } finally {
+      client.release();
+    }
     return toSql(async <T>(text: string, params: unknown[]) => {
       const res = await pool.query(text, params);
       return res.rows as T[];

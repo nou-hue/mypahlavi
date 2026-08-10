@@ -14,7 +14,21 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import pg from "pg";
 
-const databaseUrl = process.env.DATABASE_URL;
+function resolveDatabaseUrl() {
+  for (const key of [
+    "DATABASE_URL",
+    "POSTGRES_URL",
+    "POSTGRES_PRISMA_URL",
+    "POSTGRES_URL_NON_POOLING",
+    "NEON_DATABASE_URL",
+  ]) {
+    const v = process.env[key]?.trim();
+    if (v) return v;
+  }
+  return undefined;
+}
+
+const databaseUrl = resolveDatabaseUrl();
 if (!databaseUrl) {
   console.log(
     "[migrate] DATABASE_URL not set — skipping (the PGLite fallback migrates itself).",
@@ -25,7 +39,14 @@ if (!databaseUrl) {
 const migrationsDir = join(dirname(fileURLToPath(import.meta.url)), "..", "migrations");
 
 async function main() {
-  const pool = new pg.Pool({ connectionString: databaseUrl, max: 1 });
+  const isNeon = /neon\.tech/i.test(databaseUrl) || /@ep-/.test(databaseUrl);
+  const pool = new pg.Pool({
+    connectionString: databaseUrl,
+    max: 1,
+    ...(isNeon || /sslmode=require/i.test(databaseUrl)
+      ? { ssl: { rejectUnauthorized: !isNeon } }
+      : {}),
+  });
   const client = await pool.connect();
   try {
     await client.query(
