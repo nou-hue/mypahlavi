@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-ground">
       <div className="mx-auto flex max-w-[90rem] flex-col gap-12 px-10 py-16 sm:px-12 md:flex-row md:items-start md:justify-between">
         <div className="max-w-sm space-y-4">
-          <p className="font-serif text-2xl tracking-[0.14em]">PAHLAVI</p>
+          <p className="font-serif text-2xl tracking-[0.16em]">PAHLAVI</p>
           <p className="text-sm leading-relaxed text-ink-muted">
             An independent archive documenting the people, culture, images and
             modern history surrounding the Pahlavi era and its continuing legacy.
@@ -20,7 +20,7 @@ export function SiteFooter() {
             hello@mypahlavi.com
           </a>
         </div>
-        <div className="flex flex-wrap gap-x-7 gap-y-3 font-sans text-[0.62rem] uppercase tracking-[0.16em] text-ink-subtle">
+        <div className="flex flex-wrap gap-x-7 gap-y-3 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-subtle">
           <Link to="/gallery" className="hover:text-ink">
             Gallery
           </Link>
@@ -45,9 +45,11 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-[90rem] items-center justify-between px-10 py-4 text-[0.58rem] text-ink-subtle sm:px-12">
-          <span>mypahlavi.com</span>
-          <span className="hidden opacity-70 sm:inline">
+        <div className="mx-auto flex max-w-[90rem] items-center justify-between px-10 py-3.5 sm:px-12">
+          <span className="text-[0.55rem] tracking-[0.04em] text-ink-subtle/70">
+            mypahlavi.com
+          </span>
+          <span className="hidden text-[0.55rem] text-ink-subtle/60 sm:inline">
             Independent · Not an official family website
           </span>
         </div>

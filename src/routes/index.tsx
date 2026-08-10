@@ -30,6 +30,19 @@ type Section = {
   desc: string;
 };
 
+/** Varied editorial treatments — not a modular grid */
+const roomLayouts: Record<
+  string,
+  "full" | "wide-right" | "split" | "wide-left"
+> = {
+  people: "full",
+  places: "wide-right",
+  culture: "full",
+  modernity: "split",
+  memory: "full",
+  objects: "wide-left",
+};
+
 function HomePage() {
   const slides = (siteCopy.heroSlides ?? []) as Slide[];
   const doors = (siteCopy.doors ?? []) as Door[];
@@ -45,7 +58,7 @@ function HomePage() {
     if (reduced) return;
     const id = window.setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
-    }, 6000);
+    }, 7000);
     return () => window.clearInterval(id);
   }, [slides.length]);
 
@@ -53,7 +66,7 @@ function HomePage() {
 
   return (
     <LayoutShell ghostHeader>
-      {/* 01 HERO — keep the photograph */}
+      {/* 01 HERO — photograph unchanged */}
       <section className="relative min-h-[100svh] bg-deep text-cream">
         <div className="absolute inset-0 archive-view-only">
           {slides.map((slide, i) => (
@@ -68,25 +81,25 @@ function HomePage() {
               )}
             />
           ))}
-          {/* Stronger bottom authority for meta + CTA */}
+          {/* Subtle bottom 25% anchor — not a visible “gradient band” */}
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-t from-deep/95 via-deep/35 to-deep/30"
+            className="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,9,8,0.82)_0%,rgba(10,9,8,0.35)_28%,rgba(10,9,8,0.12)_48%,rgba(10,9,8,0.22)_100%)]"
           />
           <span aria-hidden className="absolute inset-0" />
         </div>
 
-        <div className="relative z-10 flex min-h-[100svh] flex-col justify-end px-10 pb-14 pt-[calc(7rem+var(--grok-banner-h,0px))] sm:px-12 sm:pb-16">
-          <div className="mx-auto w-full max-w-[90rem] space-y-7 archive-rise">
-            <p className="font-sans text-[0.72rem] uppercase tracking-[0.34em] text-cream/80">
+        <div className="relative z-10 flex min-h-[100svh] flex-col justify-end px-10 pb-16 pt-[calc(7.5rem+var(--grok-banner-h,0px))] sm:px-12 sm:pb-20">
+          <div className="mx-auto w-full max-w-[90rem] space-y-6 archive-rise">
+            <p className="font-sans text-[0.85rem] uppercase tracking-[0.32em] text-cream/90 sm:text-[0.9rem]">
               {active?.meta}
             </p>
             <Link
               to="/gallery"
-              className="inline-flex items-center gap-3 font-sans text-[0.75rem] uppercase tracking-[0.24em] text-cream transition-opacity hover:opacity-70"
+              className="inline-flex items-center gap-3 font-sans text-[0.85rem] uppercase tracking-[0.24em] text-cream transition-opacity hover:opacity-70 sm:text-[0.9rem]"
             >
               {siteCopy.ctaPrimary}
-              <span aria-hidden className="text-base leading-none">
+              <span aria-hidden className="text-lg leading-none">
                 →
               </span>
             </Link>
@@ -94,98 +107,40 @@ function HomePage() {
         </div>
       </section>
 
-      {/* 02 One-line archive statement — less explaining */}
+      {/* 02 Title page — huge whitespace, no extra copy */}
       <section className="bg-ground">
-        <div className="mx-auto max-w-2xl px-10 py-24 text-center sm:px-12 sm:py-32">
-          <p className="font-sans text-[0.62rem] uppercase tracking-[0.34em] text-ink-subtle">
+        <div className="mx-auto max-w-xl px-10 py-32 text-center sm:px-12 sm:py-40 md:py-48">
+          <p className="font-sans text-[0.68rem] uppercase tracking-[0.36em] text-ink-subtle">
             {siteCopy.brand}
           </p>
-          <h1 className="mt-8 font-serif text-4xl leading-tight tracking-tight text-ink sm:text-5xl">
+          <h1 className="mt-10 font-serif text-4xl leading-[1.15] tracking-tight text-ink sm:text-5xl md:text-[3.5rem]">
             {siteCopy.positioning}
           </h1>
-          <p className="mt-8 font-sans text-[0.68rem] uppercase tracking-[0.22em] text-ink-subtle">
+          <p className="mt-10 font-sans text-[0.72rem] uppercase tracking-[0.22em] text-ink-subtle">
             {siteCopy.tagline}
           </p>
         </div>
       </section>
 
-      {/* 03–05 Editorial rooms — not website cards */}
+      {/* 03 Six worlds — editorial rooms, varied rhythm */}
       <section className="bg-ground">
-        <div className="mx-auto max-w-[90rem]">
-          {doors.map((door, i) => {
-            const odd = i % 2 === 1;
+        <div className="mx-auto max-w-[90rem] space-y-0">
+          {doors.map((door) => {
+            const layout = roomLayouts[door.id] ?? "split";
             return (
-              <Link
-                key={door.id}
-                to={
-                  door.href as
-                    | "/gallery"
-                    | "/lineage"
-                    | "/library"
-                    | "/vault"
-                    | "/editions"
-                    | "/patronage"
-                }
-                className={cn(
-                  "group relative grid min-h-[70svh] overflow-hidden bg-deep md:min-h-[78svh]",
-                  odd ? "md:grid-cols-[1.1fr_0.9fr]" : "md:grid-cols-[0.9fr_1.1fr]",
-                )}
-              >
-                <div
-                  className={cn(
-                    "relative min-h-[42svh] md:min-h-full",
-                    odd ? "md:order-2" : "md:order-1",
-                  )}
-                >
-                  <img
-                    src={door.src}
-                    alt=""
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.025]"
-                    loading="lazy"
-                    draggable={false}
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-deep/10 transition-colors group-hover:bg-deep/0"
-                  />
-                </div>
-                <div
-                  className={cn(
-                    "relative flex flex-col justify-end bg-ground px-10 py-14 sm:px-12 sm:py-16 md:justify-center",
-                    odd ? "md:order-1 md:items-end md:text-right" : "md:order-2",
-                  )}
-                >
-                  <p className="font-sans text-[0.58rem] uppercase tracking-[0.22em] text-ink-subtle">
-                    {door.meta}
-                  </p>
-                  <p className="mt-4 font-serif text-5xl tracking-tight text-ink sm:text-6xl md:text-7xl">
-                    {door.label}
-                  </p>
-                  <p
-                    className={cn(
-                      "mt-5 max-w-sm text-base leading-relaxed text-ink-muted",
-                      odd && "md:ml-auto",
-                    )}
-                  >
-                    {door.desc}
-                  </p>
-                  <p className="mt-8 font-sans text-[0.62rem] uppercase tracking-[0.2em] text-ink-subtle transition-opacity group-hover:opacity-70">
-                    Enter →
-                  </p>
-                </div>
-              </Link>
+              <EditorialRoom key={door.id} door={door} layout={layout} />
             );
           })}
         </div>
       </section>
 
-      {/* Principles — confident, not defensive */}
+      {/* 04 Manifesto — large type, no paragraph */}
       <section className="border-y border-border bg-ground">
-        <div className="mx-auto flex max-w-[90rem] flex-wrap items-center justify-center gap-x-10 gap-y-4 px-10 py-16 sm:px-12 sm:py-20">
+        <div className="mx-auto grid max-w-[90rem] gap-10 px-10 py-24 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-14 sm:px-12 sm:py-32 lg:grid-cols-4">
           {["Preserve", "Document", "Contextualise", "Curate"].map((word) => (
             <p
               key={word}
-              className="font-sans text-[0.72rem] uppercase tracking-[0.28em] text-ink"
+              className="font-serif text-3xl tracking-tight text-ink sm:text-4xl md:text-[2.75rem]"
             >
               {word}
             </p>
@@ -193,10 +148,10 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Explore the archive — not “the institution” */}
+      {/* 05 Explore the archive — departments */}
       <section className="bg-ground">
-        <div className="mx-auto max-w-5xl px-10 py-20 sm:px-12 sm:py-28">
-          <p className="mb-12 font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
+        <div className="mx-auto max-w-5xl px-10 py-24 sm:px-12 sm:py-32">
+          <p className="mb-14 font-sans text-[0.68rem] uppercase tracking-[0.3em] text-ink-subtle">
             Explore the archive
           </p>
           <div className="grid gap-0 sm:grid-cols-2">
@@ -212,12 +167,12 @@ function HomePage() {
                     | "/editions"
                     | "/patronage"
                 }
-                className="group border-t border-border py-9 sm:border-r sm:px-8 sm:odd:pl-0 sm:even:border-r-0 sm:even:pr-0 last:border-b sm:[&:nth-last-child(-n+2)]:border-b"
+                className="group border-t border-border py-10 sm:border-r sm:px-10 sm:odd:pl-0 sm:even:border-r-0 sm:even:pr-0 last:border-b sm:[&:nth-last-child(-n+2)]:border-b"
               >
-                <p className="font-serif text-2xl tracking-tight transition-opacity group-hover:opacity-60 sm:text-3xl">
+                <p className="font-serif text-3xl tracking-tight transition-opacity group-hover:opacity-55 sm:text-4xl">
                   {s.label}
                 </p>
-                <p className="mt-2 max-w-sm text-sm leading-relaxed text-ink-muted">
+                <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-muted">
                   {s.desc}
                 </p>
               </Link>
@@ -226,18 +181,20 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Currently in the archive — feels alive */}
+      {/* 06 Currently in the archive — museum catalogue metadata */}
       {stats && (
-        <section className="border-t border-border bg-ground-elevated">
-          <div className="mx-auto max-w-[90rem] px-10 py-16 sm:px-12 sm:py-20">
-            <p className="mb-10 font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
-              {stats.label}
+        <section className="border-t border-border bg-ground">
+          <div className="mx-auto max-w-[90rem] px-10 py-20 sm:px-12 sm:py-28">
+            <p className="mb-12 font-sans text-[0.68rem] uppercase tracking-[0.3em] text-ink-subtle">
+              Currently in the archive
             </p>
-            <div className="grid gap-8 sm:grid-cols-3">
+            <div className="grid gap-10 border-t border-border pt-10 sm:grid-cols-3 sm:gap-12">
               {stats.items.map((item) => (
-                <div key={item.place} className="border-t border-border pt-5">
-                  <p className="font-serif text-xl tracking-tight">{item.place}</p>
-                  <p className="mt-2 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-subtle">
+                <div key={item.place} className="space-y-3">
+                  <p className="font-sans text-[0.7rem] uppercase tracking-[0.2em] text-ink">
+                    {item.place}
+                  </p>
+                  <p className="font-serif text-2xl tracking-tight text-ink-muted sm:text-3xl">
                     {item.detail}
                   </p>
                 </div>
@@ -247,5 +204,142 @@ function HomePage() {
         </section>
       )}
     </LayoutShell>
+  );
+}
+
+function EditorialRoom({
+  door,
+  layout,
+}: {
+  door: Door;
+  layout: "full" | "wide-right" | "split" | "wide-left";
+}) {
+  const href = door.href as
+    | "/gallery"
+    | "/lineage"
+    | "/library"
+    | "/vault"
+    | "/editions"
+    | "/patronage";
+
+  if (layout === "full") {
+    return (
+      <Link
+        to={href}
+        className="group relative block min-h-[85svh] overflow-hidden bg-deep"
+      >
+        <img
+          src={door.src}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-[1.02]"
+          loading="lazy"
+          draggable={false}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-t from-deep/85 via-deep/15 to-transparent"
+        />
+        <div className="absolute inset-x-0 bottom-0 px-10 py-12 sm:px-12 sm:py-16">
+          <p className="font-sans text-[0.62rem] uppercase tracking-[0.24em] text-cream/70">
+            {door.meta}
+          </p>
+          <p className="mt-3 font-serif text-6xl tracking-tight text-cream sm:text-7xl md:text-8xl">
+            {door.label}
+          </p>
+          <p className="mt-4 max-w-md text-base leading-relaxed text-cream/75 sm:text-lg">
+            {door.desc}
+          </p>
+          <p className="mt-6 font-sans text-[0.68rem] uppercase tracking-[0.22em] text-cream opacity-0 transition-opacity duration-300 group-hover:opacity-80">
+            Explore →
+          </p>
+        </div>
+      </Link>
+    );
+  }
+
+  if (layout === "wide-right" || layout === "wide-left") {
+    const imageRight = layout === "wide-right";
+    return (
+      <Link
+        to={href}
+        className={cn(
+          "group grid min-h-[72svh] overflow-hidden bg-ground md:min-h-[80svh]",
+          imageRight
+            ? "md:grid-cols-[minmax(0,0.35fr)_minmax(0,0.65fr)]"
+            : "md:grid-cols-[minmax(0,0.65fr)_minmax(0,0.35fr)]",
+        )}
+      >
+        <div
+          className={cn(
+            "relative flex flex-col justify-end px-10 py-14 sm:px-12 sm:py-16 md:justify-center",
+            imageRight ? "md:order-1" : "md:order-2 md:items-end md:text-right",
+          )}
+        >
+          <p className="font-sans text-[0.62rem] uppercase tracking-[0.24em] text-ink-subtle">
+            {door.meta}
+          </p>
+          <p className="mt-4 font-serif text-5xl tracking-tight text-ink sm:text-6xl md:text-7xl">
+            {door.label}
+          </p>
+          <p
+            className={cn(
+              "mt-4 max-w-xs text-base leading-relaxed text-ink-muted",
+              !imageRight && "md:ml-auto",
+            )}
+          >
+            {door.desc}
+          </p>
+          <p className="mt-6 font-sans text-[0.68rem] uppercase tracking-[0.22em] text-ink-subtle opacity-0 transition-opacity duration-300 group-hover:opacity-70">
+            Explore →
+          </p>
+        </div>
+        <div
+          className={cn(
+            "relative min-h-[48svh] overflow-hidden bg-deep md:min-h-full",
+            imageRight ? "md:order-2" : "md:order-1",
+          )}
+        >
+          <img
+            src={door.src}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-[1.02]"
+            loading="lazy"
+            draggable={false}
+          />
+        </div>
+      </Link>
+    );
+  }
+
+  // split 50/50
+  return (
+    <Link
+      to={href}
+      className="group grid min-h-[70svh] overflow-hidden bg-ground md:min-h-[78svh] md:grid-cols-2"
+    >
+      <div className="relative min-h-[48svh] overflow-hidden bg-deep md:min-h-full">
+        <img
+          src={door.src}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-[1.02]"
+          loading="lazy"
+          draggable={false}
+        />
+      </div>
+      <div className="flex flex-col justify-end px-10 py-14 sm:px-12 sm:py-16 md:justify-center">
+        <p className="font-sans text-[0.62rem] uppercase tracking-[0.24em] text-ink-subtle">
+          {door.meta}
+        </p>
+        <p className="mt-4 font-serif text-5xl tracking-tight text-ink sm:text-6xl md:text-7xl">
+          {door.label}
+        </p>
+        <p className="mt-4 max-w-sm text-base leading-relaxed text-ink-muted">
+          {door.desc}
+        </p>
+        <p className="mt-6 font-sans text-[0.68rem] uppercase tracking-[0.22em] text-ink-subtle opacity-0 transition-opacity duration-300 group-hover:opacity-70">
+          Explore →
+        </p>
+      </div>
+    </Link>
   );
 }

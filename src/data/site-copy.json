@@ -3,7 +3,6 @@
   "positioning": "An archive of modern Iran.",
   "tagline": "Images · Objects · Documents · People · Places",
   "method": "Preserve · Document · Contextualise · Curate",
-  "institutionLine": "A living collection of images, objects, documents and stories from the world of modern Iran.",
   "ctaPrimary": "Enter the archive",
   "ctaPrimaryHref": "/gallery",
   "heroSlides": [
@@ -124,9 +123,9 @@
   "stats": {
     "label": "Currently in the archive",
     "items": [
-      { "place": "Tehran, 1967", "detail": "14 photographs" },
-      { "place": "Documents", "detail": "3 essays & letters" },
-      { "place": "Vault", "detail": "Rooms opening by invitation" }
+      { "place": "TEHRAN / 1967", "detail": "14 photographs" },
+      { "place": "DOCUMENTS", "detail": "03 essays & letters" },
+      { "place": "VAULT", "detail": "Rooms opening by invitation" }
     ]
   }
 }

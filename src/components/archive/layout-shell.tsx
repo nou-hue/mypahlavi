@@ -16,10 +16,10 @@ export function LayoutShell({
   return (
     <div className={cn("min-h-screen bg-ground text-ink", className)}>
       <SiteHeader variant={ghostHeader ? "ghost" : "default"} />
-      {/* Match taller header: ~5.25rem on sm+ plus optional Grok banner */}
       <div
         className={cn(
-          !ghostHeader && "pt-[calc(4.75rem+var(--grok-banner-h,0px))] sm:pt-[calc(5.25rem+var(--grok-banner-h,0px))]",
+          !ghostHeader &&
+            "pt-[calc(5rem+var(--grok-banner-h,0px))] sm:pt-[calc(5.5rem+var(--grok-banner-h,0px))]",
         )}
       >
         {children}
