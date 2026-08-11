@@ -7,7 +7,6 @@ import {
   startingPrice,
   type ShopProduct,
 } from "@/data/shop";
-import { resolveEditionImage } from "@/data/edition-imagery";
 import { useCartStore } from "@/lib/cart-store";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +19,26 @@ type CatalogResponse = {
   products: ShopProduct[];
 };
 
+function ProductPlate({ product }: { product: ShopProduct }) {
+  return (
+    <div className="overflow-hidden border border-border/60 bg-cream">
+      {product.imageSrc ? (
+        <div className="flex aspect-[4/5] items-center justify-center p-6 sm:p-10 lg:min-h-[32rem] lg:aspect-auto">
+          <img
+            src={product.imageSrc}
+            alt={product.name}
+            className="max-h-[36rem] max-w-full object-contain"
+          />
+        </div>
+      ) : (
+        <div
+          className={cn("aspect-[4/5] w-full bg-gradient-to-br", product.gradient)}
+        />
+      )}
+    </div>
+  );
+}
+
 function ProductPage() {
   const { productId } = Route.useParams();
   const [products, setProducts] = useState<ShopProduct[] | null>(null);
@@ -31,8 +50,7 @@ function ProductPage() {
       .then((r) => r.json())
       .then((d: CatalogResponse) => {
         if (cancelled) return;
-        const list = d.products?.length ? d.products : [];
-        setProducts(list);
+        setProducts(d.products?.length ? d.products : []);
       })
       .catch(() => {
         if (!cancelled) setProducts([]);
@@ -91,8 +109,6 @@ function ProductDetail({
   const [variantId, setVariantId] = useState(product.variants[0]?.id ?? "");
   const [added, setAdded] = useState(false);
   const addItem = useCartStore((s) => s.addItem);
-  const plate = resolveEditionImage(product);
-  const isObject = plate.plate === "object" || plate.plate === "interior";
 
   const variant = useMemo(
     () =>
@@ -122,7 +138,6 @@ function ProductDetail({
     window.setTimeout(() => setAdded(false), 1600);
   }
 
-  // Trim long marketplace description for catalogue tone
   const description = product.description
     .replace(/printify/gi, "our atelier")
     .replace(/Product features[\s\S]*$/i, "")
@@ -141,35 +156,8 @@ function ProductDetail({
         </Link>
 
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16 xl:gap-20">
-          {/* Image dominates — gallery catalogue plate */}
-          <div
-            className={cn(
-              "overflow-hidden border border-border",
-              isObject ? "bg-cream" : "bg-ground-elevated",
-            )}
-          >
-            {plate.imageSrc || product.imageSrc ? (
-              <img
-                src={plate.imageSrc || product.imageSrc}
-                alt={product.name}
-                className={cn(
-                  "w-full",
-                  isObject
-                    ? "aspect-[4/3] object-contain p-8 sm:p-12"
-                    : "aspect-[3/4] object-cover lg:aspect-auto lg:min-h-[36rem]",
-                )}
-              />
-            ) : (
-              <div
-                className={cn(
-                  "aspect-[3/4] w-full bg-gradient-to-br",
-                  product.gradient,
-                )}
-              />
-            )}
-          </div>
+          <ProductPlate product={product} />
 
-          {/* Catalogue entry — quieter than the image */}
           <div className="flex flex-col lg:pt-2 archive-rise">
             <p className="font-sans text-[0.62rem] uppercase tracking-[0.2em] text-ink-subtle">
               {label}
@@ -245,52 +233,37 @@ function ProductDetail({
               Also in Editions
             </h2>
             <div className="mt-12 grid gap-12 sm:grid-cols-2">
-              {related.map((p) => {
-                const rPlate = resolveEditionImage(p);
-                const rObject =
-                  rPlate.plate === "object" || rPlate.plate === "interior";
-                return (
-                  <Link
-                    key={p.id}
-                    to="/editions/$productId"
-                    params={{ productId: p.slug }}
-                    className="group"
-                  >
-                    <div
-                      className={cn(
-                        "overflow-hidden border border-border",
-                        rObject ? "bg-cream" : "bg-ground-elevated",
-                      )}
-                    >
-                      {rPlate.imageSrc || p.imageSrc ? (
+              {related.map((p) => (
+                <Link
+                  key={p.id}
+                  to="/editions/$productId"
+                  params={{ productId: p.slug }}
+                  className="group"
+                >
+                  <div className="overflow-hidden border border-border/60 bg-cream">
+                    {p.imageSrc ? (
+                      <div className="flex aspect-[4/5] items-center justify-center p-5 sm:p-7">
                         <img
-                          src={rPlate.imageSrc || p.imageSrc}
+                          src={p.imageSrc}
                           alt={p.name}
-                          className={cn(
-                            "w-full transition-opacity group-hover:opacity-90",
-                            rObject
-                              ? "aspect-[4/3] object-contain p-6"
-                              : "aspect-[3/4] object-cover",
-                          )}
+                          className="max-h-full max-w-full object-contain transition-opacity group-hover:opacity-90"
                         />
-                      ) : (
-                        <div
-                          className={cn(
-                            "aspect-[3/4] bg-gradient-to-br",
-                            p.gradient,
-                          )}
-                        />
-                      )}
-                    </div>
-                    <p className="mt-4 font-serif text-xl tracking-tight">
-                      {p.name}
-                    </p>
-                    <p className="mt-1 font-sans text-[0.58rem] uppercase tracking-[0.14em] text-ink-subtle">
-                      from {formatGBP(startingPrice(p))}
-                    </p>
-                  </Link>
-                );
-              })}
+                      </div>
+                    ) : (
+                      <div
+                        className={cn(
+                          "aspect-[4/5] bg-gradient-to-br",
+                          p.gradient,
+                        )}
+                      />
+                    )}
+                  </div>
+                  <p className="mt-4 font-serif text-xl tracking-tight">{p.name}</p>
+                  <p className="mt-1 font-sans text-[0.58rem] uppercase tracking-[0.14em] text-ink-subtle">
+                    from {formatGBP(startingPrice(p))}
+                  </p>
+                </Link>
+              ))}
             </div>
           </section>
         )}

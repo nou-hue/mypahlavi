@@ -10,7 +10,6 @@ import {
   type ProductCategory,
   type ShopProduct,
 } from "@/data/shop";
-import { resolveEditionImage } from "@/data/edition-imagery";
 
 function slugify(title: string, id: string) {
   const base = title
@@ -114,13 +113,6 @@ export function mapPrintifyProduct(p: {
         : "Edition";
 
   const slug = slugify(name, p.id);
-  const editorial = resolveEditionImage({
-    id: p.id,
-    printifyProductId: p.id,
-    name,
-    slug,
-    imageSrc: image,
-  });
 
   // Prefer short editorial copy over long marketplace descriptions
   let short =
@@ -138,7 +130,6 @@ export function mapPrintifyProduct(p: {
   let description =
     plain.slice(0, 520) ||
     "Produced on demand and packed as a limited release.";
-  // Trim marketing filler from Printify marketplace copy
   description = description
     .replace(/Product features[\s\S]*$/i, "")
     .replace(/\s{2,}/g, " ")
@@ -164,7 +155,8 @@ export function mapPrintifyProduct(p: {
         : "Finished piece · made to order",
     fulfilment: "Made to order",
     featured: true,
-    imageSrc: editorial.imageSrc ?? image,
+    // Original Printify product image only — never substitute assets
+    imageSrc: image,
     printifyProductId: p.id,
     variants,
   };
@@ -179,10 +171,7 @@ export async function getLiveCatalog(): Promise<{
   message: string;
   error?: string;
 }> {
-  const editorial = shopProducts.filter(isShopVisible).map((p) => {
-    const img = resolveEditionImage(p);
-    return img.imageSrc ? { ...p, imageSrc: img.imageSrc } : p;
-  });
+  const editorial = shopProducts.filter(isShopVisible);
 
   if (!printifyConfigured()) {
     return {

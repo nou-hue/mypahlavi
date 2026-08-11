@@ -7,7 +7,6 @@ import {
   startingPrice,
   type ShopProduct,
 } from "@/data/shop";
-import { resolveEditionImage } from "@/data/edition-imagery";
 import { useCartStore } from "@/lib/cart-store";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +22,41 @@ type CatalogResponse = {
   message?: string;
 };
 
+/**
+ * Editions grid presentation — UI frame only.
+ * Product image bytes/URLs come from catalog data unchanged.
+ */
+function ProductPlate({
+  product,
+  className,
+}: {
+  product: ShopProduct;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn(
+        // Warm off-white presentation frame — website UI, not a new photo
+        "overflow-hidden border border-border/60 bg-cream",
+        className,
+      )}
+    >
+      {product.imageSrc ? (
+        <div className="flex aspect-[4/5] items-center justify-center p-5 sm:p-7">
+          <img
+            src={product.imageSrc}
+            alt={product.name}
+            className="max-h-full max-w-full object-contain transition-opacity duration-500 group-hover:opacity-95"
+            loading="lazy"
+          />
+        </div>
+      ) : (
+        <div className={cn("aspect-[4/5] bg-gradient-to-br", product.gradient)} />
+      )}
+    </div>
+  );
+}
+
 function EditionsPage() {
   const openCart = useCartStore((s) => s.openCart);
   const count = useCartStore((s) => s.count());
@@ -36,8 +70,6 @@ function EditionsPage() {
       .then((r) => r.json())
       .then((d: CatalogResponse) => {
         if (cancelled) return;
-        // Prefer live Printify catalogue; fall back to editorial objects so
-        // the museum-shop presentation remains reviewable offline/preview.
         const list = d.products?.length ? d.products : [];
         setProducts(list);
         setConnected(Boolean(d.connected && d.source === "printify"));
@@ -109,64 +141,37 @@ function EditionsPage() {
           </div>
         ) : (
           <div className="grid gap-x-12 gap-y-20 sm:grid-cols-2">
-            {products.map((item, i) => {
-              const plate = resolveEditionImage(item);
-              const isObject =
-                plate.plate === "object" || plate.plate === "interior";
-              return (
-                <article
-                  key={item.id}
-                  className="group flex flex-col archive-fade"
-                  style={{ animationDelay: `${i * 40}ms` }}
+            {products.map((item, i) => (
+              <article
+                key={item.id}
+                className="group flex flex-col archive-fade"
+                style={{ animationDelay: `${i * 40}ms` }}
+              >
+                <Link
+                  to="/editions/$productId"
+                  params={{ productId: item.slug }}
+                  className="block"
                 >
+                  <ProductPlate product={item} />
+                </Link>
+                <div className="mt-6 space-y-2">
+                  <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
+                    {item.accentLabel || "Edition"} · from{" "}
+                    {formatGBP(startingPrice(item))}
+                  </p>
                   <Link
                     to="/editions/$productId"
                     params={{ productId: item.slug }}
-                    className={cn(
-                      "relative block overflow-hidden border border-border",
-                      isObject ? "bg-cream" : "bg-ground-elevated",
-                    )}
+                    className="block font-serif text-2xl leading-snug tracking-tight transition-opacity hover:opacity-70"
                   >
-                    {plate.imageSrc || item.imageSrc ? (
-                      <img
-                        src={plate.imageSrc || item.imageSrc}
-                        alt={item.name}
-                        className={cn(
-                          "w-full transition-opacity duration-500 group-hover:opacity-95",
-                          isObject
-                            ? "aspect-[4/3] object-contain p-6 sm:p-8"
-                            : "aspect-[3/4] object-cover",
-                        )}
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div
-                        className={cn(
-                          "aspect-[3/4] bg-gradient-to-br",
-                          item.gradient,
-                        )}
-                      />
-                    )}
+                    {item.name}
                   </Link>
-                  <div className="mt-6 space-y-2">
-                    <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
-                      {item.accentLabel || "Edition"} · from{" "}
-                      {formatGBP(startingPrice(item))}
-                    </p>
-                    <Link
-                      to="/editions/$productId"
-                      params={{ productId: item.slug }}
-                      className="block font-serif text-2xl leading-snug tracking-tight transition-opacity hover:opacity-70"
-                    >
-                      {item.name}
-                    </Link>
-                    <p className="max-w-sm text-sm leading-relaxed text-ink-muted">
-                      {item.shortDescription}
-                    </p>
-                  </div>
-                </article>
-              );
-            })}
+                  <p className="max-w-sm text-sm leading-relaxed text-ink-muted">
+                    {item.shortDescription}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         )}
       </div>
