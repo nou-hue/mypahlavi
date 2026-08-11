@@ -29,7 +29,7 @@ function LibraryPage() {
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
+      <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10 sm:py-24">
         <header className="mb-12 max-w-2xl space-y-5 archive-rise">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             The Library
@@ -72,7 +72,7 @@ function LibraryPage() {
           ))}
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,18rem)_1fr]">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,15rem)_1fr] lg:gap-14">
           <aside className="space-y-2">
             {filtered.map((item) => (
               <button

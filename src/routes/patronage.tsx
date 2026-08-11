@@ -11,7 +11,7 @@ export const Route = createFileRoute("/patronage")({
 function CirclePage() {
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
+      <div className="mx-auto max-w-4xl px-6 py-16 sm:px-10 sm:py-24">
         <header className="mb-16 max-w-2xl space-y-5 archive-rise">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             The Circle
@@ -26,7 +26,7 @@ function CirclePage() {
           </p>
         </header>
 
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-3">
           {patronageTiers.map((tier, i) => (
             <div
               key={tier.id}

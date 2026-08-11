@@ -21,13 +21,13 @@ type CatalogResponse = {
 
 function ProductPlate({ product }: { product: ShopProduct }) {
   return (
-    <div className="overflow-hidden border border-border/60 bg-cream">
+    <div className="overflow-hidden border border-border/50 bg-cream">
       {product.imageSrc ? (
-        <div className="flex aspect-[4/5] items-center justify-center p-6 sm:p-10 lg:min-h-[32rem] lg:aspect-auto">
+        <div className="flex aspect-[4/5] items-center justify-center p-10 sm:p-14 lg:min-h-[28rem] lg:aspect-auto lg:p-16">
           <img
             src={product.imageSrc}
             alt={product.name}
-            className="max-h-[36rem] max-w-full object-contain"
+            className="max-h-[22rem] max-w-[75%] object-contain sm:max-h-[26rem]"
           />
         </div>
       ) : (
@@ -147,7 +147,7 @@ function ProductDetail({
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-[72rem] px-6 py-12 sm:px-10 sm:py-16 lg:px-12">
+      <div className="mx-auto max-w-5xl px-6 py-14 sm:px-10 sm:py-20">
         <Link
           to="/editions"
           className="mb-12 inline-flex items-center gap-2 font-sans text-[0.62rem] uppercase tracking-[0.16em] text-ink-subtle transition-colors hover:text-ink"
@@ -242,11 +242,11 @@ function ProductDetail({
                 >
                   <div className="overflow-hidden border border-border/60 bg-cream">
                     {p.imageSrc ? (
-                      <div className="flex aspect-[4/5] items-center justify-center p-5 sm:p-7">
+                      <div className="flex aspect-[4/5] items-center justify-center p-8 sm:p-10">
                         <img
                           src={p.imageSrc}
                           alt={p.name}
-                          className="max-h-full max-w-full object-contain transition-opacity group-hover:opacity-90"
+                          className="max-h-[65%] max-w-[65%] object-contain transition-opacity group-hover:opacity-90"
                         />
                       </div>
                     ) : (

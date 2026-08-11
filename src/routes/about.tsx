@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-3xl px-6 py-16 sm:px-10 sm:py-24">
+      <div className="mx-auto max-w-2xl px-6 py-20 sm:px-10 sm:py-28">
         <header className="mb-14 space-y-5 archive-rise">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             About

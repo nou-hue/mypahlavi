@@ -56,7 +56,7 @@ function LineagePage() {
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
+      <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10 sm:py-24">
         <header className="mb-14 max-w-2xl space-y-5 archive-rise">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             The Century
@@ -100,13 +100,13 @@ function LineagePage() {
           </div>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-20 sm:space-y-28">
           {generations.map(([gen, members]) => (
             <section key={gen}>
               <p className="mb-5 font-sans text-[0.68rem] uppercase tracking-[0.2em] text-ink-subtle sm:mb-6">
                 Generation {gen}
               </p>
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-3 md:gap-10">
                 {members.map((m) => (
                   <button
                     key={m.id}
@@ -123,9 +123,9 @@ function LineagePage() {
                       src={m.portraitSrc}
                       alt={m.name}
                       gradient={m.portraitGradient}
-                      className="mb-3 aspect-[4/5] transition-transform duration-500 group-hover:scale-[1.01] sm:mb-4"
+                      className="mb-3 aspect-[4/5] opacity-95 transition-opacity duration-500 group-hover:opacity-100 sm:mb-4"
                     />
-                    <p className="font-serif text-lg leading-snug sm:text-xl">{m.name}</p>
+                    <p className="font-serif text-base leading-snug sm:text-lg">{m.name}</p>
                     <p className="mt-1 text-xs text-ink-muted sm:text-sm">{m.title}</p>
                     <p className="mt-1.5 font-sans text-[0.62rem] uppercase tracking-[0.12em] text-ink-subtle sm:mt-2 sm:text-[0.68rem]">
                       {m.years}

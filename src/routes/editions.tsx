@@ -36,17 +36,18 @@ function ProductPlate({
   return (
     <div
       className={cn(
-        // Warm off-white presentation frame — website UI, not a new photo
-        "overflow-hidden border border-border/60 bg-cream",
+        // Catalogue plate — cream frame; original product image only
+        "overflow-hidden border border-border/50 bg-cream",
         className,
       )}
     >
       {product.imageSrc ? (
-        <div className="flex aspect-[4/5] items-center justify-center p-5 sm:p-7">
+        <div className="flex aspect-[4/5] items-center justify-center p-8 sm:p-10 md:p-12">
           <img
             src={product.imageSrc}
             alt={product.name}
-            className="max-h-full max-w-full object-contain transition-opacity duration-500 group-hover:opacity-95"
+            // Image occupies ~45–60% of plate via padding + object-contain
+            className="max-h-[70%] max-w-[70%] object-contain transition-opacity duration-500 group-hover:opacity-95"
             loading="lazy"
           />
         </div>
@@ -90,7 +91,7 @@ function EditionsPage() {
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-[72rem] px-6 py-16 sm:px-10 sm:py-24 lg:px-12">
+      <div className="mx-auto max-w-4xl px-6 py-20 sm:px-10 sm:py-28">
         <header className="mb-16 max-w-xl space-y-5 archive-rise sm:mb-20">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             Editions
@@ -140,7 +141,7 @@ function EditionsPage() {
             </Link>
           </div>
         ) : (
-          <div className="grid gap-x-12 gap-y-20 sm:grid-cols-2">
+          <div className="mx-auto grid max-w-3xl gap-x-12 gap-y-20 sm:grid-cols-2 sm:gap-y-24">
             {products.map((item, i) => (
               <article
                 key={item.id}
@@ -162,7 +163,7 @@ function EditionsPage() {
                   <Link
                     to="/editions/$productId"
                     params={{ productId: item.slug }}
-                    className="block font-serif text-2xl leading-snug tracking-tight transition-opacity hover:opacity-70"
+                    className="block font-serif text-xl leading-snug tracking-tight transition-opacity hover:opacity-70 sm:text-[1.35rem]"
                   >
                     {item.name}
                   </Link>

@@ -35,7 +35,7 @@ const rooms = [
 function VaultPage() {
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
+      <div className="mx-auto max-w-2xl px-6 py-20 sm:px-10 sm:py-32">
         <header className="mb-16 max-w-2xl space-y-5 archive-rise">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             The Vault
@@ -54,14 +54,14 @@ function VaultPage() {
           {rooms.map((room) => (
             <article
               key={room.id}
-              className="border-b border-border py-10 archive-fade"
+              className="border-b border-border py-12 sm:py-14 archive-fade"
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-12">
                 <div className="max-w-xl">
                   <p className="font-sans text-[0.58rem] uppercase tracking-[0.2em] text-ink-subtle">
                     {room.meta}
                   </p>
-                  <h2 className="mt-2 font-serif text-2xl tracking-tight">
+                  <h2 className="mt-2 font-serif text-xl tracking-tight sm:text-2xl">
                     {room.title}
                   </h2>
                   <p className="mt-3 text-sm leading-relaxed text-ink-muted">

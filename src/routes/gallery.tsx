@@ -100,7 +100,7 @@ function GalleryPage() {
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
+      <div className="mx-auto max-w-4xl px-6 py-20 sm:px-10 sm:py-28">
         <header className="mx-auto mb-16 max-w-xl space-y-5 text-center archive-rise sm:mb-20">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             The Gallery
@@ -108,9 +108,9 @@ function GalleryPage() {
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
             Photographic archive
           </h1>
-          <p className="text-base leading-relaxed text-ink-muted">
-            Plates sequenced as an exhibition hang — year, place, and precise
-            captions. The interface recedes; the photographs become the site.
+          <p className="text-sm leading-relaxed text-ink-muted">
+            Plates sequenced as a private exhibition hang — year, place, and
+            precise captions. Discover material; do not skim a feed.
           </p>
         </header>
 
@@ -142,7 +142,7 @@ function GalleryPage() {
         </div>
 
         {/* Exclusive grid: 1 col mobile, 2 col desktop, generous gaps, contain = upright full plate */}
-        <div className="grid gap-x-12 gap-y-20 sm:grid-cols-2 sm:gap-y-24">
+        <div className="grid gap-x-10 gap-y-16 sm:grid-cols-2 sm:gap-x-14 sm:gap-y-24 md:gap-y-28">
           {shown.map((img, i) => (
             <button
               key={img.id}
@@ -151,7 +151,10 @@ function GalleryPage() {
               className={cn(
                 "group text-left archive-fade",
                 // occasional full-width landscape for rhythm
-                img.aspect === "landscape" && i % 5 === 0 && "sm:col-span-2 sm:mx-auto sm:max-w-2xl",
+                img.aspect === "landscape" && i % 5 === 0 && "sm:col-span-2 sm:mx-auto sm:max-w-md md:max-w-lg",
+                // irregular hang — slight indent every few plates
+                i % 7 === 3 && "sm:mt-10",
+                i % 7 === 5 && "sm:translate-y-6",
               )}
               style={{ animationDelay: `${Math.min(i, 12) * 40}ms` }}
             >
