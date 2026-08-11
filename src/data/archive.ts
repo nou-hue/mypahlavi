@@ -35,6 +35,8 @@ export type GalleryImage = {
 
 export type LibraryItem = {
   id: string;
+  /** Permanent URL slug under /library/[slug] */
+  slug: string;
   kind: "letter" | "essay" | "book";
   title: string;
   author: string;
@@ -261,6 +263,7 @@ export const gallerySelection = galleryImages.filter((g) => g.featured);
 export const libraryItems: LibraryItem[] = [
   {
     id: "l-01",
+    slug: "the-private-frame",
     kind: "essay",
     title: "The private frame",
     author: "mypahlavi",
@@ -272,6 +275,7 @@ export const libraryItems: LibraryItem[] = [
   },
   {
     id: "l-02",
+    slug: "ceremony-as-a-public-language",
     kind: "essay",
     title: "Ceremony as a public language",
     author: "mypahlavi",
@@ -283,6 +287,7 @@ export const libraryItems: LibraryItem[] = [
   },
   {
     id: "l-03",
+    slug: "shahbanu",
     kind: "essay",
     title: "Shahbanu",
     author: "mypahlavi",
@@ -294,6 +299,7 @@ export const libraryItems: LibraryItem[] = [
   },
   {
     id: "l-04",
+    slug: "on-looking-carefully",
     kind: "letter",
     title: "On looking carefully",
     author: "Archive desk",
@@ -304,6 +310,7 @@ export const libraryItems: LibraryItem[] = [
   },
   {
     id: "l-05",
+    slug: "after-the-palace",
     kind: "essay",
     title: "After the palace",
     author: "mypahlavi",
@@ -314,6 +321,7 @@ export const libraryItems: LibraryItem[] = [
   },
   {
     id: "l-06",
+    slug: "how-a-caption-works",
     kind: "book",
     title: "How a caption works",
     author: "mypahlavi",
@@ -371,6 +379,12 @@ export const rooms = [
   { id: "state", label: "State" },
   { id: "all", label: "Full archive" },
 ];
+
+export function getLibraryItem(slugOrId: string) {
+  return libraryItems.find(
+    (i) => i.slug === slugOrId || i.id === slugOrId,
+  );
+}
 
 export function getMember(id: string) {
   return familyMembers.find((m) => m.id === id);

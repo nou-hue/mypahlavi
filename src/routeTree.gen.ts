@@ -20,6 +20,7 @@ import { Route as LoginRouteImport } from './routes/login'
 import { Route as PatronageRouteImport } from './routes/patronage'
 import { Route as VaultRouteImport } from './routes/vault'
 import { Route as EditionsProductIdRouteImport } from './routes/editions_.$productId'
+import { Route as LibrarySlugRouteImport } from './routes/library_.$slug'
 import { Route as OrderOrderIdRouteImport } from './routes/order.$orderId'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiShopCatalogRouteImport } from './routes/api/shop/catalog'
@@ -84,6 +85,11 @@ const EditionsProductIdRoute = EditionsProductIdRouteImport.update({
   path: '/editions/$productId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LibrarySlugRoute = LibrarySlugRouteImport.update({
+  id: '/library_/$slug',
+  path: '/library/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OrderOrderIdRoute = OrderOrderIdRouteImport.update({
   id: '/order/$orderId',
   path: '/order/$orderId',
@@ -137,6 +143,7 @@ export interface FileRoutesByFullPath {
   '/patronage': typeof PatronageRoute
   '/vault': typeof VaultRoute
   '/editions/$productId': typeof EditionsProductIdRoute
+  '/library/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
@@ -158,6 +165,7 @@ export interface FileRoutesByTo {
   '/patronage': typeof PatronageRoute
   '/vault': typeof VaultRoute
   '/editions/$productId': typeof EditionsProductIdRoute
+  '/library/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
@@ -180,6 +188,7 @@ export interface FileRoutesById {
   '/patronage': typeof PatronageRoute
   '/vault': typeof VaultRoute
   '/editions_/$productId': typeof EditionsProductIdRoute
+  '/library_/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
@@ -203,6 +212,7 @@ export interface FileRouteTypes {
     | '/patronage'
     | '/vault'
     | '/editions/$productId'
+    | '/library/$slug'
     | '/order/$orderId'
     | '/api/auth/$'
     | '/api/shop/catalog'
@@ -224,6 +234,7 @@ export interface FileRouteTypes {
     | '/patronage'
     | '/vault'
     | '/editions/$productId'
+    | '/library/$slug'
     | '/order/$orderId'
     | '/api/auth/$'
     | '/api/shop/catalog'
@@ -245,6 +256,7 @@ export interface FileRouteTypes {
     | '/patronage'
     | '/vault'
     | '/editions_/$productId'
+    | '/library_/$slug'
     | '/order/$orderId'
     | '/api/auth/$'
     | '/api/shop/catalog'
@@ -267,6 +279,7 @@ export interface RootRouteChildren {
   PatronageRoute: typeof PatronageRoute
   VaultRoute: typeof VaultRoute
   EditionsProductIdRoute: typeof EditionsProductIdRoute
+  LibrarySlugRoute: typeof LibrarySlugRoute
   OrderOrderIdRoute: typeof OrderOrderIdRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiShopCatalogRoute: typeof ApiShopCatalogRoute
@@ -356,6 +369,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EditionsProductIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/library_/$slug': {
+      id: '/library_/$slug'
+      path: '/library/$slug'
+      fullPath: '/library/$slug'
+      preLoaderRoute: typeof LibrarySlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/order/$orderId': {
       id: '/order/$orderId'
       path: '/order/$orderId'
@@ -427,6 +447,7 @@ const rootRouteChildren: RootRouteChildren = {
   PatronageRoute: PatronageRoute,
   VaultRoute: VaultRoute,
   EditionsProductIdRoute: EditionsProductIdRoute,
+  LibrarySlugRoute: LibrarySlugRoute,
   OrderOrderIdRoute: OrderOrderIdRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiShopCatalogRoute: ApiShopCatalogRoute,
