@@ -62,7 +62,12 @@ function LibraryPage() {
                   : "text-ink-subtle hover:text-ink",
               )}
             >
-              {k.label}
+              <span className="relative">
+                {k.label}
+                {kind === k.id && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-px bg-ink/40" />
+                )}
+              </span>
             </button>
           ))}
         </div>
