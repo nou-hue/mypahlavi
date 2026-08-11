@@ -7,6 +7,7 @@ import {
   startingPrice,
   type ShopProduct,
 } from "@/data/shop";
+import { resolveEditionImage } from "@/data/edition-imagery";
 import { useCartStore } from "@/lib/cart-store";
 import { cn } from "@/lib/utils";
 
@@ -35,8 +36,9 @@ function EditionsPage() {
       .then((r) => r.json())
       .then((d: CatalogResponse) => {
         if (cancelled) return;
-        const list =
-          d.source === "printify" && d.products?.length ? d.products : [];
+        // Prefer live Printify catalogue; fall back to editorial objects so
+        // the museum-shop presentation remains reviewable offline/preview.
+        const list = d.products?.length ? d.products : [];
         setProducts(list);
         setConnected(Boolean(d.connected && d.source === "printify"));
       })
@@ -56,34 +58,40 @@ function EditionsPage() {
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
-        <header className="mb-14 flex flex-col gap-6 archive-rise sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-lg space-y-4">
-            <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
-              Pahlavi Editions
-            </p>
-            <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-              Limited cultural objects
-            </h1>
-            <p className="text-base leading-relaxed text-ink-muted">
-              Archival prints, publications, and objects issued in numbered
-              editions. A collector's house — not merchandise.
-            </p>
+      <div className="mx-auto max-w-[72rem] px-6 py-16 sm:px-10 sm:py-24 lg:px-12">
+        <header className="mb-16 max-w-xl space-y-5 archive-rise sm:mb-20">
+          <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
+            Editions
+          </p>
+          <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
+            Limited cultural objects
+          </h1>
+          <p className="text-base leading-relaxed text-ink-muted">
+            A quiet extension of the archive — objects issued with the same
+            editorial care as the plates themselves. Museum shop, not merchandise
+            floor.
+          </p>
+          <div className="flex items-center gap-6 pt-2">
+            <button
+              type="button"
+              onClick={openCart}
+              className="inline-flex h-10 items-center gap-2 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-muted transition-colors hover:text-ink"
+            >
+              <ShoppingBag className="size-3.5" strokeWidth={1.25} />
+              Bag{count > 0 ? ` · ${String(count).padStart(2, "0")}` : ""}
+            </button>
+            {connected && (
+              <span className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
+                Made to order
+              </span>
+            )}
           </div>
-          <button
-            type="button"
-            onClick={openCart}
-            className="inline-flex h-11 shrink-0 items-center gap-2 border border-border px-5 font-sans text-[0.65rem] uppercase tracking-[0.16em] transition-colors hover:bg-ink hover:text-cream"
-          >
-            <ShoppingBag className="size-4" />
-            Bag{count > 0 ? ` (${count})` : ""}
-          </button>
         </header>
 
         {loading ? (
           <p className="font-sans text-sm text-ink-subtle">Loading…</p>
         ) : products.length === 0 ? (
-          <div className="border border-border px-6 py-20 text-center">
+          <div className="border-t border-border pt-16 text-center">
             <p className="font-serif text-2xl tracking-tight">
               {connected ? "Between releases" : "Editions forthcoming"}
             </p>
@@ -92,36 +100,6 @@ function EditionsPage() {
                 ? "The current collection is empty. New numbered works are in preparation."
                 : "The first numbered releases are being prepared — museum-grade prints, portfolios, and archival publications."}
             </p>
-            <div className="mx-auto mt-12 max-w-sm space-y-6 text-left">
-              <div className="border-t border-border pt-5">
-                <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
-                  Edition 001
-                </p>
-                <p className="mt-1 font-serif text-xl">Tehran / 1967</p>
-                <p className="mt-1 text-sm text-ink-muted">
-                  Archival photographic print · museum-grade paper · edition of
-                  25
-                </p>
-              </div>
-              <div className="border-t border-border pt-5">
-                <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
-                  Edition 002
-                </p>
-                <p className="mt-1 font-serif text-xl">The Tehran Book</p>
-                <p className="mt-1 text-sm text-ink-muted">
-                  Limited archival publication
-                </p>
-              </div>
-              <div className="border-t border-border pt-5">
-                <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
-                  Edition 003
-                </p>
-                <p className="mt-1 font-serif text-xl">The Archive Box</p>
-                <p className="mt-1 text-sm text-ink-muted">
-                  Photographs, documents and essays — physical collection
-                </p>
-              </div>
-            </div>
             <Link
               to="/gallery"
               className="mt-12 inline-flex h-11 items-center border border-border px-6 font-sans text-[0.65rem] uppercase tracking-[0.16em] hover:bg-ink hover:text-cream"
@@ -130,48 +108,65 @@ function EditionsPage() {
             </Link>
           </div>
         ) : (
-          <div className="grid gap-x-10 gap-y-16 sm:grid-cols-2">
-            {products.map((item, i) => (
-              <article
-                key={item.id}
-                className="group flex flex-col archive-fade"
-                style={{ animationDelay: `${i * 35}ms` }}
-              >
-                <Link
-                  to="/editions/$productId"
-                  params={{ productId: item.slug }}
-                  className="block overflow-hidden border border-border bg-deep"
+          <div className="grid gap-x-12 gap-y-20 sm:grid-cols-2">
+            {products.map((item, i) => {
+              const plate = resolveEditionImage(item);
+              const isObject =
+                plate.plate === "object" || plate.plate === "interior";
+              return (
+                <article
+                  key={item.id}
+                  className="group flex flex-col archive-fade"
+                  style={{ animationDelay: `${i * 40}ms` }}
                 >
-                  {item.imageSrc ? (
-                    <img
-                      src={item.imageSrc}
-                      alt={item.name}
-                      className="aspect-[3/4] w-full object-cover transition-opacity duration-300 group-hover:opacity-90"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div
-                      className={cn("aspect-[3/4] bg-gradient-to-br", item.gradient)}
-                    />
-                  )}
-                </Link>
-                <div className="mt-5 space-y-1.5">
-                  <p className="font-sans text-[0.58rem] uppercase tracking-[0.16em] text-ink-subtle">
-                    Edition · from {formatGBP(startingPrice(item))}
-                  </p>
                   <Link
                     to="/editions/$productId"
                     params={{ productId: item.slug }}
-                    className="font-serif text-2xl leading-snug tracking-tight hover:opacity-70"
+                    className={cn(
+                      "relative block overflow-hidden border border-border",
+                      isObject ? "bg-cream" : "bg-ground-elevated",
+                    )}
                   >
-                    {item.name}
+                    {plate.imageSrc || item.imageSrc ? (
+                      <img
+                        src={plate.imageSrc || item.imageSrc}
+                        alt={item.name}
+                        className={cn(
+                          "w-full transition-opacity duration-500 group-hover:opacity-95",
+                          isObject
+                            ? "aspect-[4/3] object-contain p-6 sm:p-8"
+                            : "aspect-[3/4] object-cover",
+                        )}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div
+                        className={cn(
+                          "aspect-[3/4] bg-gradient-to-br",
+                          item.gradient,
+                        )}
+                      />
+                    )}
                   </Link>
-                  <p className="max-w-sm text-sm leading-relaxed text-ink-muted">
-                    {item.shortDescription}
-                  </p>
-                </div>
-              </article>
-            ))}
+                  <div className="mt-6 space-y-2">
+                    <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
+                      {item.accentLabel || "Edition"} · from{" "}
+                      {formatGBP(startingPrice(item))}
+                    </p>
+                    <Link
+                      to="/editions/$productId"
+                      params={{ productId: item.slug }}
+                      className="block font-serif text-2xl leading-snug tracking-tight transition-opacity hover:opacity-70"
+                    >
+                      {item.name}
+                    </Link>
+                    <p className="max-w-sm text-sm leading-relaxed text-ink-muted">
+                      {item.shortDescription}
+                    </p>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         )}
       </div>

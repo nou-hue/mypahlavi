@@ -41,12 +41,12 @@ function VaultPage() {
             The Vault
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Material rarely seen
+            Rare and unpublished
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
-            A deeper layer of the archive. Some rooms open publicly as the
-            collection is prepared; others remain available to the Circle first.
-            Mystery is part of the institution — not a marketing device.
+            A quieter room of the archive — contact sheets, correspondence, film
+            stills, and material culture held for careful release. Some rooms open
+            publicly; others first to the Circle.
           </p>
         </header>
 
@@ -76,19 +76,16 @@ function VaultPage() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col gap-5 border border-border bg-ground-elevated px-6 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <div className="max-w-md">
-            <p className="font-serif text-xl tracking-tight">Circle access</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-              Members of the Circle receive early Vault releases and unpublished
-              photography as rooms open.
-            </p>
-          </div>
+        <div className="mt-20 border-t border-border pt-12">
+          <p className="font-serif text-xl tracking-tight">Support the working collection</p>
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-muted">
+            The Circle sustains digitisation and early Vault releases as rooms open.
+          </p>
           <Link
             to="/patronage"
-            className="inline-flex h-11 shrink-0 items-center justify-center bg-ink px-6 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-cream hover:bg-deep"
+            className="mt-6 inline-flex h-11 items-center font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-muted transition-colors hover:text-ink"
           >
-            Join the Circle
+            The Circle →
           </Link>
         </div>
       </div>

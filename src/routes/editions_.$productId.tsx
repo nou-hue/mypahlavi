@@ -7,6 +7,7 @@ import {
   startingPrice,
   type ShopProduct,
 } from "@/data/shop";
+import { resolveEditionImage } from "@/data/edition-imagery";
 import { useCartStore } from "@/lib/cart-store";
 import { cn } from "@/lib/utils";
 
@@ -30,9 +31,7 @@ function ProductPage() {
       .then((r) => r.json())
       .then((d: CatalogResponse) => {
         if (cancelled) return;
-        // Printify products only
-        const list =
-          d.source === "printify" && d.products?.length ? d.products : [];
+        const list = d.products?.length ? d.products : [];
         setProducts(list);
       })
       .catch(() => {
@@ -53,7 +52,7 @@ function ProductPage() {
   if (loading) {
     return (
       <LayoutShell>
-        <div className="mx-auto max-w-lg px-5 py-24 text-center text-sm text-ink-subtle">
+        <div className="mx-auto max-w-lg px-6 py-24 text-center text-sm text-ink-subtle">
           Loading…
         </div>
       </LayoutShell>
@@ -63,7 +62,7 @@ function ProductPage() {
   if (!product) {
     return (
       <LayoutShell>
-        <div className="mx-auto max-w-lg px-5 py-24 text-center">
+        <div className="mx-auto max-w-lg px-6 py-24 text-center">
           <h1 className="font-serif text-3xl">Not found</h1>
           <p className="mt-3 text-sm text-ink-muted">
             This edition is not available.
@@ -72,7 +71,7 @@ function ProductPage() {
             to="/editions"
             className="mt-8 inline-flex h-11 items-center border border-border px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] hover:bg-ink hover:text-cream"
           >
-            Back to shop
+            Back to Editions
           </Link>
         </div>
       </LayoutShell>
@@ -92,6 +91,8 @@ function ProductDetail({
   const [variantId, setVariantId] = useState(product.variants[0]?.id ?? "");
   const [added, setAdded] = useState(false);
   const addItem = useCartStore((s) => s.addItem);
+  const plate = resolveEditionImage(product);
+  const isObject = plate.plate === "object" || plate.plate === "interior";
 
   const variant = useMemo(
     () =>
@@ -99,15 +100,20 @@ function ProductDetail({
     [product, variantId],
   );
 
-  const related = all
-    .filter((p) => p.id !== product.id)
-    .slice(0, 2);
+  const related = all.filter((p) => p.id !== product.id).slice(0, 2);
 
   const materials = (product.materials || "")
     .replace(/printify/gi, "")
     .replace(/\s{2,}/g, " ")
     .replace(/^[·\s]+|[·\s]+$/g, "")
     .trim();
+
+  const label =
+    product.category === "apparel"
+      ? "Apparel"
+      : product.category === "print"
+        ? "Print"
+        : "Object";
 
   function handleAdd() {
     if (!variant) return;
@@ -116,23 +122,42 @@ function ProductDetail({
     window.setTimeout(() => setAdded(false), 1600);
   }
 
+  // Trim long marketplace description for catalogue tone
+  const description = product.description
+    .replace(/printify/gi, "our atelier")
+    .replace(/Product features[\s\S]*$/i, "")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+    .slice(0, 420);
+
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-5xl px-5 py-12 sm:px-8 sm:py-16">
+      <div className="mx-auto max-w-[72rem] px-6 py-12 sm:px-10 sm:py-16 lg:px-12">
         <Link
           to="/editions"
-          className="mb-10 inline-flex items-center gap-2 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-subtle hover:text-ink"
+          className="mb-12 inline-flex items-center gap-2 font-sans text-[0.62rem] uppercase tracking-[0.16em] text-ink-subtle transition-colors hover:text-ink"
         >
-          <ArrowLeft className="size-3.5" /> Editions
+          <ArrowLeft className="size-3.5" strokeWidth={1.25} /> Editions
         </Link>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="overflow-hidden border border-border bg-deep">
-            {product.imageSrc ? (
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16 xl:gap-20">
+          {/* Image dominates — gallery catalogue plate */}
+          <div
+            className={cn(
+              "overflow-hidden border border-border",
+              isObject ? "bg-cream" : "bg-ground-elevated",
+            )}
+          >
+            {plate.imageSrc || product.imageSrc ? (
               <img
-                src={product.imageSrc}
+                src={plate.imageSrc || product.imageSrc}
                 alt={product.name}
-                className="aspect-[3/4] w-full object-cover"
+                className={cn(
+                  "w-full",
+                  isObject
+                    ? "aspect-[4/3] object-contain p-8 sm:p-12"
+                    : "aspect-[3/4] object-cover lg:aspect-auto lg:min-h-[36rem]",
+                )}
               />
             ) : (
               <div
@@ -144,26 +169,28 @@ function ProductDetail({
             )}
           </div>
 
-          <div className="flex flex-col archive-rise">
-            <p className="font-sans text-[0.65rem] uppercase tracking-[0.18em] text-ink-subtle">
-              {product.category === "apparel" ? "Apparel" : "Object"}
+          {/* Catalogue entry — quieter than the image */}
+          <div className="flex flex-col lg:pt-2 archive-rise">
+            <p className="font-sans text-[0.62rem] uppercase tracking-[0.2em] text-ink-subtle">
+              {label}
             </p>
-            <h1 className="mt-2 font-serif text-4xl tracking-tight sm:text-5xl">
+            <h1 className="mt-3 font-serif text-3xl tracking-tight sm:text-4xl lg:text-[2.65rem] lg:leading-[1.15]">
               {product.name}
             </h1>
-            <p className="mt-4 font-serif text-2xl text-ink-soft">
+            <p className="mt-5 font-serif text-xl text-ink-soft sm:text-2xl">
               {variant
                 ? formatGBP(variant.priceGBP)
                 : `from ${formatGBP(startingPrice(product))}`}
             </p>
-            <p className="mt-5 text-base leading-relaxed text-ink-muted">
-              {product.description
-                .replace(/printify/gi, "our atelier")
-                .replace(/\s{2,}/g, " ")}
-            </p>
+
+            {description && (
+              <p className="mt-6 max-w-md text-[0.95rem] leading-[1.7] text-ink-muted">
+                {description}
+              </p>
+            )}
 
             <div className="mt-10 space-y-3">
-              <p className="font-sans text-[0.65rem] uppercase tracking-[0.14em] text-ink-subtle">
+              <p className="font-sans text-[0.58rem] uppercase tracking-[0.16em] text-ink-subtle">
                 Options
               </p>
               <div className="flex flex-wrap gap-2">
@@ -173,7 +200,7 @@ function ProductDetail({
                     type="button"
                     onClick={() => setVariantId(v.id)}
                     className={cn(
-                      "h-10 px-3.5 font-sans text-[0.65rem] uppercase tracking-[0.12em] transition-colors",
+                      "min-h-10 px-3.5 py-2 font-sans text-[0.62rem] uppercase tracking-[0.1em] transition-colors",
                       variantId === v.id
                         ? "bg-ink text-cream"
                         : "border border-border text-ink-muted hover:border-ink/30",
@@ -186,16 +213,16 @@ function ProductDetail({
             </div>
 
             {materials && !/printify/i.test(materials) && (
-              <p className="mt-8 border-t border-border pt-6 text-sm text-ink-muted">
+              <p className="mt-8 border-t border-border pt-6 font-sans text-[0.7rem] uppercase tracking-[0.12em] text-ink-subtle">
                 {materials}
               </p>
             )}
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8">
               <button
                 type="button"
                 onClick={handleAdd}
-                className="inline-flex h-12 min-w-[10rem] items-center justify-center gap-2 bg-ink px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] text-cream hover:opacity-90"
+                className="inline-flex h-12 min-w-[11rem] items-center justify-center gap-2 bg-ink px-7 font-sans text-[0.68rem] uppercase tracking-[0.16em] text-cream transition-opacity hover:opacity-90"
               >
                 {added ? (
                   <>
@@ -205,48 +232,65 @@ function ProductDetail({
                   "Add to bag"
                 )}
               </button>
-              <Link
-                to="/checkout"
-                search={{}}
-                className="inline-flex h-12 items-center border border-border px-6 font-sans text-[0.7rem] uppercase tracking-[0.16em] hover:border-ink/40"
-              >
-                Checkout
-              </Link>
             </div>
           </div>
         </div>
 
         {related.length > 0 && (
-          <section className="mt-24 border-t border-border pt-14">
-            <h2 className="font-serif text-2xl tracking-tight">Also here</h2>
-            <div className="mt-10 grid gap-10 sm:grid-cols-2">
-              {related.map((p) => (
-                <Link
-                  key={p.id}
-                  to="/editions/$productId"
-                  params={{ productId: p.slug }}
-                  className="group"
-                >
-                  {p.imageSrc ? (
-                    <img
-                      src={p.imageSrc}
-                      alt={p.name}
-                      className="aspect-[3/4] w-full border border-border object-cover transition-opacity group-hover:opacity-90"
-                    />
-                  ) : (
+          <section className="mt-28 border-t border-border pt-16">
+            <p className="font-sans text-[0.62rem] uppercase tracking-[0.22em] text-ink-subtle">
+              Continue exploring
+            </p>
+            <h2 className="mt-3 font-serif text-2xl tracking-tight sm:text-3xl">
+              Also in Editions
+            </h2>
+            <div className="mt-12 grid gap-12 sm:grid-cols-2">
+              {related.map((p) => {
+                const rPlate = resolveEditionImage(p);
+                const rObject =
+                  rPlate.plate === "object" || rPlate.plate === "interior";
+                return (
+                  <Link
+                    key={p.id}
+                    to="/editions/$productId"
+                    params={{ productId: p.slug }}
+                    className="group"
+                  >
                     <div
                       className={cn(
-                        "aspect-[3/4] border border-border bg-gradient-to-br",
-                        p.gradient,
+                        "overflow-hidden border border-border",
+                        rObject ? "bg-cream" : "bg-ground-elevated",
                       )}
-                    />
-                  )}
-                  <p className="mt-3 font-serif text-xl">{p.name}</p>
-                  <p className="text-xs text-ink-subtle">
-                    from {formatGBP(startingPrice(p))}
-                  </p>
-                </Link>
-              ))}
+                    >
+                      {rPlate.imageSrc || p.imageSrc ? (
+                        <img
+                          src={rPlate.imageSrc || p.imageSrc}
+                          alt={p.name}
+                          className={cn(
+                            "w-full transition-opacity group-hover:opacity-90",
+                            rObject
+                              ? "aspect-[4/3] object-contain p-6"
+                              : "aspect-[3/4] object-cover",
+                          )}
+                        />
+                      ) : (
+                        <div
+                          className={cn(
+                            "aspect-[3/4] bg-gradient-to-br",
+                            p.gradient,
+                          )}
+                        />
+                      )}
+                    </div>
+                    <p className="mt-4 font-serif text-xl tracking-tight">
+                      {p.name}
+                    </p>
+                    <p className="mt-1 font-sans text-[0.58rem] uppercase tracking-[0.14em] text-ink-subtle">
+                      from {formatGBP(startingPrice(p))}
+                    </p>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         )}

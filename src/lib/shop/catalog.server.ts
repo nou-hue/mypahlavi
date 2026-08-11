@@ -10,6 +10,7 @@ import {
   type ProductCategory,
   type ShopProduct,
 } from "@/data/shop";
+import { resolveEditionImage } from "@/data/edition-imagery";
 
 function slugify(title: string, id: string) {
   const base = title
@@ -112,17 +113,48 @@ export function mapPrintifyProduct(p: {
         ? "Object"
         : "Edition";
 
+  const slug = slugify(name, p.id);
+  const editorial = resolveEditionImage({
+    id: p.id,
+    printifyProductId: p.id,
+    name,
+    slug,
+    imageSrc: image,
+  });
+
+  // Prefer short editorial copy over long marketplace descriptions
+  let short =
+    subtitle.slice(0, 140) ||
+    plain.slice(0, 140) ||
+    "Limited edition from the archive.";
+  if (category === "apparel" && /hoodie/i.test(name)) {
+    short = "Midweight hoodie · restrained monochrome graphic · made to order.";
+  } else if (/desk mat|mouse pad/i.test(name)) {
+    short = "Premium desk mat · archival illustration · physical object.";
+  } else if (/canvas|lion/i.test(name)) {
+    short = "Framed matte canvas · collectible wall piece · made to order.";
+  }
+
+  let description =
+    plain.slice(0, 520) ||
+    "Produced on demand and packed as a limited release.";
+  // Trim marketing filler from Printify marketplace copy
+  description = description
+    .replace(/Product features[\s\S]*$/i, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  if (description.length < 40) {
+    description =
+      plain.slice(0, 400) ||
+      "Issued as a limited cultural object from the archive.";
+  }
+
   return {
     id: `pfy-${p.id}`,
-    slug: slugify(name, p.id),
+    slug,
     name,
-    shortDescription:
-      subtitle.slice(0, 140) ||
-      plain.slice(0, 140) ||
-      "Limited edition from the archive.",
-    description:
-      plain.slice(0, 800) ||
-      "Produced on demand and packed as a limited release.",
+    shortDescription: short,
+    description,
     category,
     gradient: gradients[p.id.charCodeAt(0) % gradients.length]!,
     accentLabel: accent,
@@ -132,7 +164,7 @@ export function mapPrintifyProduct(p: {
         : "Finished piece · made to order",
     fulfilment: "Made to order",
     featured: true,
-    imageSrc: image,
+    imageSrc: editorial.imageSrc ?? image,
     printifyProductId: p.id,
     variants,
   };
@@ -147,7 +179,10 @@ export async function getLiveCatalog(): Promise<{
   message: string;
   error?: string;
 }> {
-  const editorial = shopProducts.filter(isShopVisible);
+  const editorial = shopProducts.filter(isShopVisible).map((p) => {
+    const img = resolveEditionImage(p);
+    return img.imageSrc ? { ...p, imageSrc: img.imageSrc } : p;
+  });
 
   if (!printifyConfigured()) {
     return {

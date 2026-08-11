@@ -57,7 +57,7 @@ function LineagePage() {
   return (
     <LayoutShell>
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
-        <header className="mb-12 max-w-2xl space-y-4 archive-rise">
+        <header className="mb-14 max-w-2xl space-y-5 archive-rise">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             The Century
           </p>
@@ -65,14 +65,14 @@ function LineagePage() {
             Dynastic timeline
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
-            From Reza Shah to the contemporary house — an interactive history of
-            modern Iran, not merely a genealogy. Select a person for biography
-            and linked plates.
+            A documentary chronology of the Pahlavi era — dates, figures, and
+            context without promotional gloss. Select a person for biography and
+            linked plates.
           </p>
         </header>
 
         {/* The Century — timeline spine */}
-        <div className="mb-16 overflow-x-auto border-y border-border py-6 archive-rise">
+        <div className="mb-20 overflow-x-auto border-y border-border bg-ground-elevated/40 py-8 archive-rise">
           <div className="flex min-w-max items-center gap-0 px-1">
             {[
               { y: "1925", l: "Dynasty" },

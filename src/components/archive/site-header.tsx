@@ -69,23 +69,23 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
         className={cn(
           "border-b transition-[background-color,border-color,backdrop-filter] duration-300",
           isGhost
-            ? "border-cream/10 bg-gradient-to-b from-deep/55 via-deep/20 to-transparent"
+            ? "border-transparent bg-gradient-to-b from-deep/40 via-deep/10 to-transparent"
             : "border-border/70 bg-ground/95 backdrop-blur-md",
         )}
       >
         {/* ~86px desktop, 40–48px horizontal padding */}
-        <div className="mx-auto flex h-[5rem] max-w-[90rem] items-center justify-between gap-8 px-10 sm:h-[5.5rem] sm:px-12">
+        <div className="mx-auto flex h-[4.5rem] max-w-[90rem] items-center justify-between gap-6 px-8 sm:h-[5rem] sm:px-12">
           <Link
             to="/"
-            className="shrink-0 font-serif text-[1.25rem] tracking-[0.16em] sm:text-[1.4rem]"
+            className="shrink-0 font-serif text-[1.15rem] tracking-[0.2em] sm:text-[1.25rem]"
             onClick={() => setOpen(false)}
             aria-label="Pahlavi home"
           >
             PAHLAVI
           </Link>
 
-          <div className="hidden min-w-0 flex-1 items-center justify-end gap-8 lg:flex xl:gap-10">
-            <nav className="flex items-center gap-7 xl:gap-9" aria-label="Primary">
+          <div className="hidden min-w-0 flex-1 items-center justify-end gap-7 lg:flex xl:gap-9">
+            <nav className="flex items-center gap-6 xl:gap-8" aria-label="Primary">
               {nav.map((item) => {
                 const active =
                   pathname === item.to || pathname.startsWith(`${item.to}/`);
@@ -94,9 +94,8 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
                     key={item.to}
                     to={item.to}
                     className={cn(
-                      "whitespace-nowrap font-sans text-[0.7rem] uppercase tracking-[0.18em] transition-opacity",
-                      // ~65% default opacity — intentional, not barely visible
-                      active ? "opacity-100" : "opacity-[0.65] hover:opacity-100",
+                      "whitespace-nowrap font-sans text-[0.65rem] uppercase tracking-[0.2em] transition-opacity",
+                      active ? "opacity-100" : "opacity-[0.55] hover:opacity-100",
                     )}
                   >
                     {item.label}

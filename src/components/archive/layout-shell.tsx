@@ -19,7 +19,7 @@ export function LayoutShell({
       <div
         className={cn(
           !ghostHeader &&
-            "pt-[calc(5rem+var(--grok-banner-h,0px))] sm:pt-[calc(5.5rem+var(--grok-banner-h,0px))]",
+            "pt-[calc(4.5rem+var(--grok-banner-h,0px))] sm:pt-[calc(5rem+var(--grok-banner-h,0px))]",
         )}
       >
         {children}

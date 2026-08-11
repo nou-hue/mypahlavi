@@ -109,14 +109,18 @@ function HomePage() {
 
       {/* 02 Title page — huge whitespace, no extra copy */}
       <section className="bg-ground">
-        <div className="mx-auto max-w-xl px-10 py-32 text-center sm:px-12 sm:py-40 md:py-48">
-          <p className="font-sans text-[0.68rem] uppercase tracking-[0.36em] text-ink-subtle">
-            {siteCopy.brand}
+        <div className="mx-auto max-w-2xl px-10 py-28 text-center sm:px-12 sm:py-36 md:py-44">
+          <p className="font-sans text-[0.62rem] uppercase tracking-[0.36em] text-ink-subtle">
+            Independent archive
           </p>
-          <h1 className="mt-10 font-serif text-4xl leading-[1.15] tracking-tight text-ink sm:text-5xl md:text-[3.5rem]">
+          <h1 className="mt-8 font-serif text-4xl leading-[1.18] tracking-tight text-ink sm:text-5xl md:text-[3.35rem]">
             {siteCopy.positioning}
           </h1>
-          <p className="mt-10 font-sans text-[0.72rem] uppercase tracking-[0.22em] text-ink-subtle">
+          <p className="mx-auto mt-8 max-w-md text-sm leading-relaxed text-ink-muted">
+            Documenting the people, culture, images and modern history surrounding
+            the Pahlavi era and its continuing legacy.
+          </p>
+          <p className="mt-10 font-sans text-[0.68rem] uppercase tracking-[0.22em] text-ink-subtle">
             {siteCopy.tagline}
           </p>
         </div>
@@ -151,8 +155,11 @@ function HomePage() {
       {/* 05 Explore the archive — departments */}
       <section className="bg-ground">
         <div className="mx-auto max-w-5xl px-10 py-24 sm:px-12 sm:py-32">
-          <p className="mb-14 font-sans text-[0.68rem] uppercase tracking-[0.3em] text-ink-subtle">
-            Explore the archive
+          <p className="mb-4 font-sans text-[0.62rem] uppercase tracking-[0.3em] text-ink-subtle">
+            Enter
+          </p>
+          <p className="mb-14 font-serif text-2xl tracking-tight text-ink sm:text-3xl">
+            Rooms of the archive
           </p>
           <div className="grid gap-0 sm:grid-cols-2">
             {sections.map((s) => (
@@ -185,7 +192,7 @@ function HomePage() {
       {stats && (
         <section className="border-t border-border bg-ground">
           <div className="mx-auto max-w-[90rem] px-10 py-20 sm:px-12 sm:py-28">
-            <p className="mb-12 font-sans text-[0.68rem] uppercase tracking-[0.3em] text-ink-subtle">
+            <p className="mb-12 font-sans text-[0.62rem] uppercase tracking-[0.3em] text-ink-subtle">
               Currently in the archive
             </p>
             <div className="grid gap-10 border-t border-border pt-10 sm:grid-cols-3 sm:gap-12">

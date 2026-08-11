@@ -30,16 +30,16 @@ function LibraryPage() {
   return (
     <LayoutShell>
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
-        <header className="mb-10 max-w-2xl space-y-4 archive-rise">
+        <header className="mb-12 max-w-2xl space-y-5 archive-rise">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             The Library
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Private reading room
+            Reading room
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
-            Essays and documents for slow attention. Huge margins. Beautiful
-            type. Monographs translated into digital form — not a content feed.
+            Essays, letters, and publications for slow attention — museum
+            catalogue and independent journal, not a content feed.
           </p>
         </header>
 
@@ -56,10 +56,10 @@ function LibraryPage() {
                 if (first) setActiveId(first.id);
               }}
               className={cn(
-                "h-10 px-4 font-sans text-[0.68rem] uppercase tracking-[0.14em]",
+                "h-10 px-4 font-sans text-[0.65rem] uppercase tracking-[0.16em] transition-colors",
                 kind === k.id
-                  ? "bg-ink text-cream"
-                  : "border border-border text-ink-muted hover:border-ink/30",
+                  ? "text-ink"
+                  : "text-ink-subtle hover:text-ink",
               )}
             >
               {k.label}

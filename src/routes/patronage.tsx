@@ -12,17 +12,17 @@ function CirclePage() {
   return (
     <LayoutShell>
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <header className="mb-14 max-w-2xl space-y-5 archive-rise">
+        <header className="mb-16 max-w-2xl space-y-5 archive-rise">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
             The Circle
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            For those who wish to preserve the archive
+            Support the preservation of the archive
           </h1>
           <p className="text-base leading-relaxed text-ink-muted">
-            The Pahlavi Circle sustains digitisation, unpublished releases, and
-            the long work of an independent collection. Membership is quiet
-            patronage — not a subscription product.
+            Quiet patronage for digitisation, unpublished releases, and the long
+            work of an independent collection — closer to a private cultural
+            institution than a membership product.
           </p>
         </header>
 
@@ -33,7 +33,7 @@ function CirclePage() {
               className={cn(
                 "flex flex-col border p-6 sm:p-8 archive-fade",
                 tier.id === "patron"
-                  ? "border-accent/35 bg-ground-elevated"
+                  ? "border-border bg-ground-elevated"
                   : "border-border bg-ground",
               )}
               style={{ animationDelay: `${i * 60}ms` }}
