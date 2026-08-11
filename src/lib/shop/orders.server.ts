@@ -353,35 +353,59 @@ export function parseOrder(row: ShopOrderRecord) {
   };
 }
 
-export async function databaseStatus() {
-  const envKey =
-    (process.env.DATABASE_URL?.trim() && "DATABASE_URL") ||
-    (process.env.POSTGRES_URL?.trim() && "POSTGRES_URL") ||
-    (process.env.POSTGRES_PRISMA_URL?.trim() && "POSTGRES_PRISMA_URL") ||
-    (process.env.POSTGRES_URL_NON_POOLING?.trim() &&
-      "POSTGRES_URL_NON_POOLING") ||
-    (process.env.NEON_DATABASE_URL?.trim() && "NEON_DATABASE_URL") ||
-    null;
+function pickDatabaseEnv(): { key: string; url: string } | null {
+  const keys = [
+    "POSTGRES_URL_NON_POOLING",
+    "DATABASE_URL_UNPOOLED",
+    "POSTGRES_URL",
+    "DATABASE_URL",
+    "POSTGRES_PRISMA_URL",
+    "NEON_DATABASE_URL",
+  ] as const;
+  const scored: Array<{ key: string; url: string; score: number }> = [];
+  for (const key of keys) {
+    const url = process.env[key]?.trim();
+    if (!url) continue;
+    let host = "";
+    try {
+      host = new URL(url.replace(/^postgres(ql)?:/i, "http:")).hostname;
+    } catch {
+      host = "";
+    }
+    let score = 50;
+    if (!host) score = -1;
+    else if (["postgres", "localhost", "127.0.0.1", "db"].includes(host))
+      score = 1;
+    else if (/neon\.tech/i.test(host)) score = 100;
+    else if (host.includes("-pooler.")) score = 80;
+    scored.push({ key, url, score });
+  }
+  if (scored.length === 0) return null;
+  scored.sort((a, b) => b.score - a.score);
+  return { key: scored[0]!.key, url: scored[0]!.url };
+}
 
-  if (!envKey) {
+export async function databaseStatus() {
+  const picked = pickDatabaseEnv();
+
+  if (!picked) {
     return {
       configured: false,
       ok: false,
       mode: "memory+stripe" as const,
       provider: null as string | null,
       message:
-        "No DATABASE_URL — add a Neon connection string on Vercel for durable order history",
+        "No DATABASE_URL — connect Neon via Vercel Storage, or set POSTGRES_URL / DATABASE_URL",
     };
   }
+  const envKey = picked.key;
   try {
     const ok = await dbAvailable();
     const hostHint = (() => {
       try {
-        const raw = process.env[envKey] ?? process.env.DATABASE_URL ?? "";
-        const u = new URL(raw.replace(/^postgres(ql)?:/i, "http:"));
-        return u.hostname;
+        return new URL(picked.url.replace(/^postgres(ql)?:/i, "http:")).hostname;
       } catch {
-        return "postgres";
+        return "unknown";
       }
     })();
     return {
@@ -393,7 +417,7 @@ export async function databaseStatus() {
       host: hostHint,
       message: ok
         ? `Neon/Postgres connected (${hostHint})`
-        : "Database URL set but connection failed — using memory + Stripe",
+        : "Database URL set but connection failed — using memory + Stripe. In Vercel, open Storage → Neon and ensure the integration is linked to this project, then redeploy.",
     };
   } catch (err) {
     return {

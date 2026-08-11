@@ -3,22 +3,52 @@ export type DbSource = "neon" | "pglite";
 
 /**
  * Resolve a Postgres connection string from common deploy env names.
- * Prefer DATABASE_URL; accept Vercel Storage / Neon integration aliases.
+ * Supports the official Neon ↔ Vercel integration vars.
+ * Prefers real remote hosts (*.neon.tech) over placeholder local URLs
+ * like host "postgres" / "localhost" that often shadow the integration.
  */
+function hostOf(url: string): string {
+  try {
+    return new URL(url.replace(/^postgres(ql)?:/i, "http:")).hostname;
+  } catch {
+    return "";
+  }
+}
+
+function scoreDatabaseUrl(url: string): number {
+  const host = hostOf(url);
+  if (!host) return -1;
+  // Local / docker placeholders — only use if nothing better exists
+  if (
+    host === "postgres" ||
+    host === "localhost" ||
+    host === "127.0.0.1" ||
+    host === "db"
+  ) {
+    return 1;
+  }
+  if (/neon\.tech$/i.test(host) || host.includes("neon.tech")) return 100;
+  if (host.includes("-pooler.")) return 80;
+  return 50; // other remote Postgres
+}
+
 function resolveDatabaseUrl(): string | undefined {
   if (typeof process === "undefined") return undefined;
-  const candidates = [
-    process.env.DATABASE_URL,
-    process.env.POSTGRES_URL,
-    process.env.POSTGRES_PRISMA_URL,
-    process.env.POSTGRES_URL_NON_POOLING,
-    process.env.NEON_DATABASE_URL,
-  ];
-  for (const raw of candidates) {
-    const v = raw?.trim();
-    if (v) return v;
+  const candidates: Array<{ key: string; url: string }> = [];
+  for (const key of [
+    "POSTGRES_URL_NON_POOLING", // best for migrations / long queries
+    "DATABASE_URL_UNPOOLED",
+    "POSTGRES_URL",
+    "DATABASE_URL",
+    "POSTGRES_PRISMA_URL",
+    "NEON_DATABASE_URL",
+  ]) {
+    const v = process.env[key]?.trim();
+    if (v) candidates.push({ key, url: v });
   }
-  return undefined;
+  if (candidates.length === 0) return undefined;
+  candidates.sort((a, b) => scoreDatabaseUrl(b.url) - scoreDatabaseUrl(a.url));
+  return candidates[0]!.url;
 }
 
 const databaseUrl = resolveDatabaseUrl();
