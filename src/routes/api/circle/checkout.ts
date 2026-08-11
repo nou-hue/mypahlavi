@@ -99,6 +99,7 @@ export const Route = createFileRoute("/api/circle/checkout")({
                   name: `Pahlavi Circle · ${tier.name}`,
                   description: tier.description,
                   metadata: { tier_id: tier.id },
+                  tax_code: "txcd_10000000",
                 },
               },
               quantity: 1,
@@ -125,6 +126,9 @@ export const Route = createFileRoute("/api/circle/checkout")({
                 userId: user.id,
               },
             },
+            // Managed Payments accounts require tax codes; disable for patronage checkout
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            ...( { managed_payments: { enabled: false } } as any ),
           });
 
           await updateMembership(membership.id, {
