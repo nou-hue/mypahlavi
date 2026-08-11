@@ -24,6 +24,8 @@ import { Route as LibrarySlugRouteImport } from './routes/library_.$slug'
 import { Route as OrderOrderIdRouteImport } from './routes/order.$orderId'
 import { Route as VaultRoomRouteImport } from './routes/vault_.$room'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiCircleCheckoutRouteImport } from './routes/api/circle/checkout'
+import { Route as ApiCircleStatusRouteImport } from './routes/api/circle/status'
 import { Route as ApiShopCatalogRouteImport } from './routes/api/shop/catalog'
 import { Route as ApiShopCheckoutRouteImport } from './routes/api/shop/checkout'
 import { Route as ApiShopStatusRouteImport } from './routes/api/shop/status'
@@ -106,6 +108,16 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCircleCheckoutRoute = ApiCircleCheckoutRouteImport.update({
+  id: '/api/circle/checkout',
+  path: '/api/circle/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCircleStatusRoute = ApiCircleStatusRouteImport.update({
+  id: '/api/circle/status',
+  path: '/api/circle/status',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiShopCatalogRoute = ApiShopCatalogRouteImport.update({
   id: '/api/shop/catalog',
   path: '/api/shop/catalog',
@@ -153,6 +165,8 @@ export interface FileRoutesByFullPath {
   '/order/$orderId': typeof OrderOrderIdRoute
   '/vault/$room': typeof VaultRoomRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/circle/checkout': typeof ApiCircleCheckoutRoute
+  '/api/circle/status': typeof ApiCircleStatusRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
@@ -176,6 +190,8 @@ export interface FileRoutesByTo {
   '/order/$orderId': typeof OrderOrderIdRoute
   '/vault/$room': typeof VaultRoomRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/circle/checkout': typeof ApiCircleCheckoutRoute
+  '/api/circle/status': typeof ApiCircleStatusRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
@@ -200,6 +216,8 @@ export interface FileRoutesById {
   '/order/$orderId': typeof OrderOrderIdRoute
   '/vault_/$room': typeof VaultRoomRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/circle/checkout': typeof ApiCircleCheckoutRoute
+  '/api/circle/status': typeof ApiCircleStatusRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
@@ -225,6 +243,8 @@ export interface FileRouteTypes {
     | '/order/$orderId'
     | '/vault/$room'
     | '/api/auth/$'
+    | '/api/circle/checkout'
+    | '/api/circle/status'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
@@ -248,6 +268,8 @@ export interface FileRouteTypes {
     | '/order/$orderId'
     | '/vault/$room'
     | '/api/auth/$'
+    | '/api/circle/checkout'
+    | '/api/circle/status'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
@@ -271,6 +293,8 @@ export interface FileRouteTypes {
     | '/order/$orderId'
     | '/vault_/$room'
     | '/api/auth/$'
+    | '/api/circle/checkout'
+    | '/api/circle/status'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
@@ -295,6 +319,8 @@ export interface RootRouteChildren {
   OrderOrderIdRoute: typeof OrderOrderIdRoute
   VaultRoomRoute: typeof VaultRoomRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiCircleCheckoutRoute: typeof ApiCircleCheckoutRoute
+  ApiCircleStatusRoute: typeof ApiCircleStatusRoute
   ApiShopCatalogRoute: typeof ApiShopCatalogRoute
   ApiShopCheckoutRoute: typeof ApiShopCheckoutRoute
   ApiShopStatusRoute: typeof ApiShopStatusRoute
@@ -410,6 +436,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/circle/checkout': {
+      id: '/api/circle/checkout'
+      path: '/api/circle/checkout'
+      fullPath: '/api/circle/checkout'
+      preLoaderRoute: typeof ApiCircleCheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/circle/status': {
+      id: '/api/circle/status'
+      path: '/api/circle/status'
+      fullPath: '/api/circle/status'
+      preLoaderRoute: typeof ApiCircleStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/shop/catalog': {
       id: '/api/shop/catalog'
       path: '/api/shop/catalog'
@@ -471,6 +511,8 @@ const rootRouteChildren: RootRouteChildren = {
   OrderOrderIdRoute: OrderOrderIdRoute,
   VaultRoomRoute: VaultRoomRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiCircleCheckoutRoute: ApiCircleCheckoutRoute,
+  ApiCircleStatusRoute: ApiCircleStatusRoute,
   ApiShopCatalogRoute: ApiShopCatalogRoute,
   ApiShopCheckoutRoute: ApiShopCheckoutRoute,
   ApiShopStatusRoute: ApiShopStatusRoute,
