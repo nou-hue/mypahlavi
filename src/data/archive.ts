@@ -57,7 +57,13 @@ export { editions, shopProducts } from "@/data/shop";
 
 const portraitMap = portraitsJson as Record<string, string>;
 
-/** Public lineage — Farah as the Shahbanu of record; earlier marriages omitted from image hang */
+/**
+ * Public lineage — documentary chronology of the House.
+ * Farah as Shahbanu of record for Gen 2; Gen 3 includes Shahnaz (earlier marriage)
+ * and the four children of the late reign. Gen 4: daughters of Reza & Yasmine,
+ * with Iryana Leila on the separate Ali Reza branch.
+ * Portraits: authentic archival / official photography only — never fabricated.
+ */
 export const familyMembers: FamilyMember[] = [
   {
     id: "reza-shah",
@@ -87,7 +93,7 @@ export const familyMembers: FamilyMember[] = [
   },
   {
     id: "mohammad-reza",
-    name: "Mohammad Reza Shah",
+    name: "Mohammad Reza Shah Pahlavi",
     title: "Shahanshah of Iran",
     years: "1919 – 1980",
     generation: 2,
@@ -113,13 +119,13 @@ export const familyMembers: FamilyMember[] = [
   },
   {
     id: "shahnaz",
-    name: "Princess Shahnaz",
+    name: "Princess Shahnaz Pahlavi",
     title: "Daughter of Mohammad Reza Shah",
     years: "b. 1940",
     generation: 3,
     parentIds: ["mohammad-reza"],
     summary:
-      "Daughter of Mohammad Reza Shah from an earlier marriage; a presence of the early reign.",
+      "Eldest daughter of Mohammad Reza Shah, from his marriage to Princess Fawzia of Egypt. A presence of the early reign.",
     portraitGradient: "from-[#2c2822] via-[#4a4238] to-[#12110f]",
     portraitSrc: portraitMap["shahnaz"],
     tags: ["Princess"],
@@ -132,14 +138,14 @@ export const familyMembers: FamilyMember[] = [
     generation: 3,
     parentIds: ["mohammad-reza", "farah"],
     summary:
-      "Eldest son of Mohammad Reza Shah and Farah Pahlavi. Heir to the Pahlavi line and a public voice for a free, democratic Iran.",
+      "Eldest son of Mohammad Reza Shah and Farah Pahlavi. Heir to the Pahlavi line; father of Noor, Iman, and Farah.",
     portraitGradient: "from-[#2a2620] via-[#4a4038] to-[#12100e]",
     portraitSrc: portraitMap["reza"],
     tags: ["Crown Prince"],
   },
   {
     id: "farahnaz",
-    name: "Princess Farahnaz",
+    name: "Princess Farahnaz Pahlavi",
     title: "Daughter of Mohammad Reza Shah and Farah",
     years: "b. 1963",
     generation: 3,
@@ -151,19 +157,20 @@ export const familyMembers: FamilyMember[] = [
   },
   {
     id: "ali-reza",
-    name: "Prince Ali-Reza",
+    name: "Prince Ali Reza Pahlavi",
     title: "Son of Mohammad Reza Shah and Farah",
     years: "1966 – 2011",
     generation: 3,
     parentIds: ["mohammad-reza", "farah"],
-    summary: "Second son of the late Shah and Shahbanu Farah.",
+    summary:
+      "Second son of the late Shah and Shahbanu Farah. Father of Iryana Leila Pahlavi.",
     portraitGradient: "from-[#2c2822] via-[#4a4238] to-[#12110f]",
     portraitSrc: portraitMap["ali-reza"],
     tags: ["Prince"],
   },
   {
     id: "leila",
-    name: "Princess Leila",
+    name: "Princess Leila Pahlavi",
     title: "Daughter of Mohammad Reza Shah and Farah",
     years: "1970 – 2001",
     generation: 3,
@@ -172,6 +179,72 @@ export const familyMembers: FamilyMember[] = [
     portraitGradient: "from-[#3d342c] via-[#5a5048] to-[#1a1612]",
     portraitSrc: portraitMap["leila"],
     tags: ["Princess"],
+  },
+  {
+    id: "yasmine",
+    name: "Yasmine Pahlavi",
+    title: "Wife of Reza Pahlavi",
+    years: "b. 1968",
+    generation: 3,
+    parentIds: [],
+    summary:
+      "Married to Reza Pahlavi; mother of Noor, Iman, and Farah. Presented here for lineage clarity, not as a child of the late Shah.",
+    portraitGradient: "from-[#3a342c] via-[#5c5246] to-[#1a1814]",
+    // No free-licensed official portrait available — archival placeholder used
+    portraitSrc: portraitMap["yasmine"],
+    tags: ["Family"],
+  },
+  {
+    id: "noor",
+    name: "Noor Pahlavi",
+    title: "Daughter of Reza and Yasmine Pahlavi",
+    years: "b. 1992",
+    generation: 4,
+    parentIds: ["reza", "yasmine"],
+    summary:
+      "Eldest daughter of Reza Pahlavi and Yasmine Pahlavi. Part of the living generation of the house.",
+    portraitGradient: "from-[#2c2822] via-[#4a4238] to-[#12110f]",
+    portraitSrc: portraitMap["noor"],
+    tags: ["Living generation"],
+  },
+  {
+    id: "iman",
+    name: "Iman Pahlavi",
+    title: "Daughter of Reza and Yasmine Pahlavi",
+    years: "b. 1993",
+    generation: 4,
+    parentIds: ["reza", "yasmine"],
+    summary:
+      "Second daughter of Reza Pahlavi and Yasmine Pahlavi.",
+    portraitGradient: "from-[#3a342c] via-[#5c5246] to-[#1a1814]",
+    portraitSrc: portraitMap["iman"],
+    tags: ["Living generation"],
+  },
+  {
+    id: "farah-d",
+    name: "Farah Pahlavi",
+    title: "Daughter of Reza and Yasmine Pahlavi",
+    years: "b. 2004",
+    generation: 4,
+    parentIds: ["reza", "yasmine"],
+    summary:
+      "Youngest daughter of Reza Pahlavi and Yasmine Pahlavi. Shares a name with her grandmother, the Shahbanu.",
+    portraitGradient: "from-[#2a2620] via-[#4a4038] to-[#12100e]",
+    portraitSrc: portraitMap["farah-d"],
+    tags: ["Living generation"],
+  },
+  {
+    id: "iryana-leila",
+    name: "Iryana Leila Pahlavi",
+    title: "Daughter of Prince Ali Reza Pahlavi",
+    years: "b. 2011",
+    generation: 4,
+    parentIds: ["ali-reza"],
+    summary:
+      "Daughter of the late Prince Ali Reza Pahlavi. Represented on the Ali Reza branch — not a child of Reza and Yasmine.",
+    portraitGradient: "from-[#3d342c] via-[#5a5048] to-[#1a1612]",
+    portraitSrc: portraitMap["iryana-leila"],
+    tags: ["Ali Reza branch"],
   },
 ];
 
