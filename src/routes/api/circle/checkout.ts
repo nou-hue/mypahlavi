@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import {
   getCircleTier,
-  stripePriceEnvKey,
+  resolveStripePriceId,
 } from "@/data/circle";
 import {
   insertMembership,
@@ -86,7 +86,7 @@ export const Route = createFileRoute("/api/circle/checkout")({
 
         const origin = originFrom(request);
         const stripe = getStripe();
-        const priceEnv = process.env[stripePriceEnvKey(tier.id)]?.trim();
+        const priceEnv = resolveStripePriceId(tier.id);
 
         const lineItem = priceEnv
           ? { price: priceEnv, quantity: 1 }

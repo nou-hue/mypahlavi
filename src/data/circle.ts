@@ -62,7 +62,7 @@ export function getCircleTier(id: string) {
   return circleTiers.find((t) => t.id === id);
 }
 
-/** Env override for fixed Stripe Price IDs (optional). */
+/** Env override keys for fixed Stripe Price IDs. */
 export function stripePriceEnvKey(tierId: CircleTierId): string {
   const map: Record<CircleTierId, string> = {
     reader: "STRIPE_PRICE_CIRCLE_PATRON",
@@ -70,4 +70,20 @@ export function stripePriceEnvKey(tierId: CircleTierId): string {
     benefactor: "STRIPE_PRICE_CIRCLE_FOUNDING",
   };
   return map[tierId];
+}
+
+/**
+ * Default Price IDs for the Pahlavi Stripe test account (agent-provisioned).
+ * Env vars override these when set.
+ */
+export const defaultStripePriceIds: Record<CircleTierId, string> = {
+  reader: "price_1U3K4RQZp27R37st3swsekPD",
+  patron: "price_1U3K4RQZp27R37stX2YQyMTt",
+  benefactor: "price_1U3K4RQZp27R37st74spQMJK",
+};
+
+export function resolveStripePriceId(tierId: CircleTierId): string | undefined {
+  const fromEnv = process.env[stripePriceEnvKey(tierId)]?.trim();
+  if (fromEnv) return fromEnv;
+  return defaultStripePriceIds[tierId];
 }
