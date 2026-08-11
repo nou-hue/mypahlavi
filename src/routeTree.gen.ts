@@ -22,6 +22,7 @@ import { Route as VaultRouteImport } from './routes/vault'
 import { Route as EditionsProductIdRouteImport } from './routes/editions_.$productId'
 import { Route as LibrarySlugRouteImport } from './routes/library_.$slug'
 import { Route as OrderOrderIdRouteImport } from './routes/order.$orderId'
+import { Route as VaultRoomRouteImport } from './routes/vault_.$room'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiShopCatalogRouteImport } from './routes/api/shop/catalog'
 import { Route as ApiShopCheckoutRouteImport } from './routes/api/shop/checkout'
@@ -95,6 +96,11 @@ const OrderOrderIdRoute = OrderOrderIdRouteImport.update({
   path: '/order/$orderId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VaultRoomRoute = VaultRoomRouteImport.update({
+  id: '/vault_/$room',
+  path: '/vault/$room',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -145,6 +151,7 @@ export interface FileRoutesByFullPath {
   '/editions/$productId': typeof EditionsProductIdRoute
   '/library/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
+  '/vault/$room': typeof VaultRoomRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
@@ -167,6 +174,7 @@ export interface FileRoutesByTo {
   '/editions/$productId': typeof EditionsProductIdRoute
   '/library/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
+  '/vault/$room': typeof VaultRoomRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
@@ -190,6 +198,7 @@ export interface FileRoutesById {
   '/editions_/$productId': typeof EditionsProductIdRoute
   '/library_/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
+  '/vault_/$room': typeof VaultRoomRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
@@ -214,6 +223,7 @@ export interface FileRouteTypes {
     | '/editions/$productId'
     | '/library/$slug'
     | '/order/$orderId'
+    | '/vault/$room'
     | '/api/auth/$'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
@@ -236,6 +246,7 @@ export interface FileRouteTypes {
     | '/editions/$productId'
     | '/library/$slug'
     | '/order/$orderId'
+    | '/vault/$room'
     | '/api/auth/$'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
@@ -258,6 +269,7 @@ export interface FileRouteTypes {
     | '/editions_/$productId'
     | '/library_/$slug'
     | '/order/$orderId'
+    | '/vault_/$room'
     | '/api/auth/$'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
@@ -281,6 +293,7 @@ export interface RootRouteChildren {
   EditionsProductIdRoute: typeof EditionsProductIdRoute
   LibrarySlugRoute: typeof LibrarySlugRoute
   OrderOrderIdRoute: typeof OrderOrderIdRoute
+  VaultRoomRoute: typeof VaultRoomRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiShopCatalogRoute: typeof ApiShopCatalogRoute
   ApiShopCheckoutRoute: typeof ApiShopCheckoutRoute
@@ -383,6 +396,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OrderOrderIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/vault_/$room': {
+      id: '/vault_/$room'
+      path: '/vault/$room'
+      fullPath: '/vault/$room'
+      preLoaderRoute: typeof VaultRoomRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
@@ -449,6 +469,7 @@ const rootRouteChildren: RootRouteChildren = {
   EditionsProductIdRoute: EditionsProductIdRoute,
   LibrarySlugRoute: LibrarySlugRoute,
   OrderOrderIdRoute: OrderOrderIdRoute,
+  VaultRoomRoute: VaultRoomRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiShopCatalogRoute: ApiShopCatalogRoute,
   ApiShopCheckoutRoute: ApiShopCheckoutRoute,
