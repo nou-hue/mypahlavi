@@ -1,0 +1,10 @@
+# https://www.mypahlavi.com/robots.txt
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /login
+Disallow: /checkout
+Disallow: /order
+
+Sitemap: https://www.mypahlavi.com/sitemap.xml
