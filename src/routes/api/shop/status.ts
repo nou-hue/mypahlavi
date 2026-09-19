@@ -12,6 +12,7 @@ export const Route = createFileRoute("/api/shop/status")({
     handlers: {
       GET: async () => {
         const stripe = stripeConfigured();
+        const stripeWebhook = Boolean(process.env.STRIPE_WEBHOOK_SECRET?.trim());
         const hasToken = Boolean(process.env.PRINTIFY_API_TOKEN?.trim());
         const hasShopIdEnv = Boolean(process.env.PRINTIFY_SHOP_ID?.trim());
         const db = await databaseStatus();
@@ -68,8 +69,12 @@ export const Route = createFileRoute("/api/shop/status")({
           autoSelected,
           printifyError,
           database: db,
-          ready: stripe,
-          mode: stripe ? "live_checkout" : "demo",
+          stripeWebhook,
+          ready: Boolean(stripe && stripeWebhook && printify && db.ok),
+          mode:
+            stripe && stripeWebhook && printify && db.ok
+              ? "live_checkout"
+              : "demo",
           message,
         });
       },
