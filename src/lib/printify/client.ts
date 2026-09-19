@@ -211,13 +211,6 @@ export function splitName(fullName: string): { first: string; last: string } {
 
 /** Map UI country labels to ISO-ish codes Printify expects. */
 export function countryToCode(country: string): string {
-  const map: Record<string, string> = {
-    "United Kingdom": "GB",
-    "United States": "US",
-    Canada: "CA",
-    Australia: "AU",
-    "European Union": "DE",
-    "Rest of world": "GB",
-  };
-  return map[country] ?? (country.length === 2 ? country.toUpperCase() : "GB");
+  if (country === "United Kingdom" || country === "GB") return "GB";
+  throw new Error(`Unsupported delivery country: ${country}`);
 }
