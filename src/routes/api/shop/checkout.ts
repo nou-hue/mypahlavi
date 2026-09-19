@@ -84,6 +84,19 @@ export const Route = createFileRoute("/api/shop/checkout")({
               { status: 400 },
             );
           }
+          if (
+            stripeConfigured() &&
+            (!product.printifyProductId || !variant.printifyVariantId)
+          ) {
+            return Response.json(
+              {
+                error:
+                  "This edition is temporarily unavailable for automated fulfilment. No payment has been taken.",
+              },
+              { status: 503 },
+            );
+          }
+
           resolved.push({
             key: `${product.id}__${variant.id}`,
             productId: product.id,
