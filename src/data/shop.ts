@@ -213,11 +213,11 @@ export function startingPrice(product: ShopProduct) {
 }
 
 export function estimateShippingGBP(country: string) {
-  if (country === "United Kingdom") return 4.5;
-  if (country === "European Union") return 8.5;
-  if (country === "United States" || country === "Canada") return 12;
-  if (country === "Australia") return 14;
-  return 16;
+  // UK launch: delivery is absorbed into the retail price for a cleaner,
+  // luxury checkout. International selling stays closed until each
+  // provider/product shipping profile has been verified.
+  if (country === "United Kingdom") return 0;
+  throw new Error("International delivery is not enabled yet.");
 }
 
 export const editions = shopProducts.map((p) => ({
