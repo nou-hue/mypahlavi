@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { estimateShippingGBP } from "@/data/shop";
+import { printifyConfigured } from "@/lib/printify/client";
 import { resolveProductForCheckout } from "@/lib/shop/catalog.server";
 import {
   insertOrder,
@@ -16,7 +17,7 @@ const bodySchema = z.object({
   line2: z.string().optional(),
   city: z.string().min(1),
   postcode: z.string().min(2),
-  country: z.string().min(2),
+  country: z.literal("United Kingdom"),
   phone: z.string().optional(),
   notes: z.string().optional(),
   lines: z
@@ -61,6 +62,17 @@ export const Route = createFileRoute("/api/shop/checkout")({
         }
 
         const data = parsed.data;
+
+        if (stripeConfigured() && !printifyConfigured()) {
+          return Response.json(
+            {
+              error:
+                "The shop is temporarily unavailable for fulfilment. No payment has been taken.",
+            },
+            { status: 503 },
+          );
+        }
+
         const resolved = [];
         for (const line of data.lines) {
           const product = await resolveProductForCheckout({
