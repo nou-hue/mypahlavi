@@ -51,6 +51,7 @@ function CheckoutPage() {
   const [shopStatus, setShopStatus] = useState<{
     stripe: boolean;
     printify: boolean;
+    ready: boolean;
     message: string;
   } | null>(null);
 
@@ -61,6 +62,7 @@ function CheckoutPage() {
         setShopStatus({
           stripe: Boolean(d.stripe),
           printify: Boolean(d.printify),
+          ready: Boolean(d.ready),
           message: d.message ?? "",
         }),
       )
@@ -167,9 +169,9 @@ function CheckoutPage() {
           </p>
           <h1 className="font-serif text-4xl tracking-tight">Shipping & payment</h1>
           <p className="text-sm leading-relaxed text-ink-muted">
-            {shopStatus?.stripe
-              ? "Secure card payment. Made to order after payment."
-              : "Preview mode — orders are recorded until Stripe keys are connected."}
+            {shopStatus?.ready
+              ? "Secure card payment · made to order · UK delivery included."
+              : "Checkout is temporarily unavailable while fulfilment is checked."}
           </p>
           {(search.cancelled === "1" || search.cancelled === true) && (
             <p className="text-sm text-amber-800" role="status">
@@ -233,23 +235,15 @@ function CheckoutPage() {
                   onChange={(v) => update("postcode", v)}
                 />
               </div>
-              <label className="block space-y-2">
+              <div className="border border-border bg-ground px-4 py-3">
                 <span className="font-sans text-[0.65rem] uppercase tracking-[0.14em] text-ink-subtle">
-                  Country
+                  Delivery
                 </span>
-                <select
-                  value={form.country}
-                  onChange={(e) => update("country", e.target.value)}
-                  className="h-12 w-full border border-border bg-ground px-3 text-sm outline-none focus:border-accent"
-                >
-                  <option>United Kingdom</option>
-                  <option>European Union</option>
-                  <option>United States</option>
-                  <option>Canada</option>
-                  <option>Australia</option>
-                  <option>Rest of world</option>
-                </select>
-              </label>
+                <p className="mt-1 text-sm text-ink">United Kingdom · standard delivery included</p>
+                <p className="mt-1 text-xs leading-relaxed text-ink-subtle">
+                  International delivery will reopen after each production route is verified.
+                </p>
+              </div>
               <label className="block space-y-2">
                 <span className="font-sans text-[0.65rem] uppercase tracking-[0.14em] text-ink-subtle">
                   Notes
@@ -296,7 +290,7 @@ function CheckoutPage() {
 
             <div className="mt-4 space-y-2 text-sm">
               <Row label="Subtotal" value={formatGBP(subtotal)} />
-              <Row label="Shipping" value={formatGBP(shipping)} />
+              <Row label="UK delivery" value={shipping === 0 ? "Included" : formatGBP(shipping)} />
               <div className="flex items-center justify-between border-t border-border pt-3">
                 <span className="font-sans text-[0.65rem] uppercase tracking-[0.14em]">
                   Total
@@ -313,14 +307,14 @@ function CheckoutPage() {
 
             <button
               type="submit"
-              disabled={submitting}
+              disabled={submitting || shopStatus?.ready === false}
               className="mt-6 flex h-12 w-full items-center justify-center bg-ink font-sans text-[0.7rem] uppercase tracking-[0.16em] text-cream hover:opacity-90 disabled:opacity-60"
             >
               {submitting
                 ? "Redirecting…"
-                : shopStatus?.stripe
-                  ? "Pay with card"
-                  : "Place order"}
+                : shopStatus?.ready
+                  ? "Pay securely"
+                  : "Checkout unavailable"}
             </button>
             <p className="mt-3 text-xs leading-relaxed text-ink-subtle">
               {shopStatus?.message ||
