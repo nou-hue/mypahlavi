@@ -241,7 +241,7 @@ export async function updateOrder(
     metadata_json: string;
   }>,
 ) {
-  let current = await getOrderById(id);
+  const current = await getOrderById(id);
   if (!current) return null;
 
   const next: ShopOrderRecord = {
