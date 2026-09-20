@@ -33,7 +33,7 @@ export async function buildPinterestFeed() {
     "condition",
   ].join(",");
 
-  const rows = catalog.products.flatMap((product) =>
+  const rows = products.flatMap((product) =>
     product.variants.map((variant) => {
       const title =
         product.variants.length > 1
@@ -76,7 +76,7 @@ export async function buildGoogleFeed() {
     "product_type",
   ].join("\t");
 
-  const rows = catalog.products.flatMap((product) =>
+  const rows = products.flatMap((product) =>
     product.variants.map((variant) => {
       const title =
         product.variants.length > 1
