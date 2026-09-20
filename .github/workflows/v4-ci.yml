@@ -1,4 +1,5 @@
 name: MyPahlavi V4 CI
+# Independent validation because Vercel branch previews currently fail before build.
 
 on:
   pull_request:
