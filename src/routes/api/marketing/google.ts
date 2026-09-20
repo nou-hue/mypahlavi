@@ -6,6 +6,12 @@ export const Route = createFileRoute("/api/marketing/google")({
     handlers: {
       GET: async () => {
         const feed = await buildGoogleFeed();
+        if (!feed) {
+          return Response.json(
+            { ok: false, message: "Live commerce catalogue is unavailable." },
+            { status: 503, headers: { "Cache-Control": "no-store" } },
+          );
+        }
         return new Response(feed, {
           status: 200,
           headers: {
