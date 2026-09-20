@@ -1,203 +1,193 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
 import { LayoutShell } from "@/components/archive/layout-shell";
-import {
-  galleryImages,
-  libraryItems,
-  type GalleryImage,
-  type LibraryItem,
-} from "@/data/archive";
-import { libraryRelatedPlates } from "@/data/library-plates";
-import { cn } from "@/lib/utils";
+import { MuseumPlate } from "@/components/archive/museum-plate";
+import { editorialStories, sourcesForStory } from "@/data/editorial-v4";
+import { libraryItems } from "@/data/archive";
 
 export const Route = createFileRoute("/library")({
-  component: LibraryPage,
+  component: JournalPage,
 });
 
-const kinds = [
-  { id: "all", label: "All" },
-  { id: "letter", label: "Letters" },
-  { id: "essay", label: "Essays" },
-  { id: "book", label: "Books" },
-] as const;
-
-function platesFor(item: LibraryItem): GalleryImage[] {
-  const ids = libraryRelatedPlates[item.id] ?? [];
-  return ids
-    .map((id) => galleryImages.find((g) => g.id === id))
-    .filter(Boolean) as GalleryImage[];
-}
-
-function LibraryPage() {
-  const [kind, setKind] = useState<string>("all");
-
-  const filtered = useMemo(() => {
-    if (kind === "all") return libraryItems;
-    return libraryItems.filter((i) => i.kind === kind);
-  }, [kind]);
-
-  const featured = libraryItems[0];
-  const featuredImage = featured ? platesFor(featured)[0] : undefined;
+function JournalPage() {
+  const lead = editorialStories[0]!;
+  const rest = editorialStories.slice(1);
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-3xl px-6 py-16 sm:px-10 sm:py-24">
-        <header className="mb-16 max-w-md space-y-5 archive-rise sm:mb-20">
-          <p className="font-sans text-[0.58rem] uppercase tracking-[0.28em] text-ink-subtle">
-            The Library
-          </p>
-          <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Reading room
-          </h1>
-          <p className="text-sm leading-relaxed text-ink-muted">
-            Essays, letters, and publications for slow attention — museum
-            catalogue and independent journal, not a content feed.
-          </p>
-        </header>
-
-        {/* Featured — links to dedicated article */}
-        {featured && (
-          <section className="mb-20 border-t border-border pt-14 sm:mb-28 sm:pt-16">
-            <p className="mb-8 font-sans text-[0.52rem] uppercase tracking-[0.24em] text-ink-subtle">
-              Featured · {featured.kind} · {featured.year}
+      <main>
+        <section className="border-b border-border bg-ground">
+          <div className="mx-auto max-w-[90rem] px-6 py-20 sm:px-12 sm:py-28">
+            <p className="font-sans text-[0.6rem] uppercase tracking-[0.3em] text-ink-subtle">
+              The Journal / Issue 01
             </p>
-            <Link
-              to="/library/$slug"
-              params={{ slug: featured.slug }}
-              className="group block text-left"
-            >
-              <h2 className="font-serif text-3xl tracking-tight text-ink transition-opacity group-hover:opacity-70 sm:text-4xl">
-                {featured.title}
-              </h2>
-              <p className="mt-4 max-w-md text-sm leading-relaxed text-ink-muted">
-                {featured.excerpt}
+            <div className="mt-7 grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:items-end lg:gap-20">
+              <div>
+                <h1 className="text-balance font-serif text-5xl leading-[.98] tracking-[-0.035em] sm:text-6xl">
+                  History is more interesting when the evidence is allowed to disagree.
+                </h1>
+              </div>
+              <p className="max-w-xl text-base leading-8 text-ink-muted">
+                MyPahlavi publishes researched stories from photographs, architecture,
+                oral testimony and primary documents. Sources are visible. Institutional
+                perspective is labelled. Uncertainty stays in the record.
               </p>
+            </div>
+          </div>
+        </section>
 
-              {featuredImage?.src && (
-                <div className="mx-auto mt-10 max-w-[18rem] sm:mx-0 sm:max-w-[20rem] md:max-w-[22rem]">
-                  <div className="overflow-hidden border border-border/50 bg-cream">
-                    <img
-                      src={featuredImage.src}
-                      alt={featuredImage.title}
-                      className="aspect-[4/5] w-full object-cover"
-                      loading="lazy"
-                      draggable={false}
-                    />
+        <section className="bg-ground">
+          <div className="mx-auto max-w-[90rem] px-6 py-20 sm:px-12 sm:py-28">
+            <div className="grid gap-14 lg:grid-cols-[1.1fr_.9fr] lg:gap-20">
+              <MuseumPlate
+                src={lead.imageSrc}
+                alt={lead.imageAlt}
+                meta={lead.imageMeta}
+                caption="Context image from the existing archive. Date and provenance remain subject to catalogue verification."
+                contain={false}
+                imageClassName="aspect-[5/6]"
+              />
+              <article className="lg:pt-6">
+                <p className="font-sans text-[0.58rem] uppercase tracking-[0.24em] text-ink-subtle">
+                  {lead.format} · {lead.period} · {lead.readTime}
+                </p>
+                <h2 className="mt-6 font-serif text-4xl leading-[1.02] tracking-[-0.03em] sm:text-5xl">
+                  {lead.title}
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-ink-soft">
+                  {lead.standfirst}
+                </p>
+                <div className="mt-9 space-y-6">
+                  {lead.paragraphs.map((p) => (
+                    <p key={p} className="text-[0.96rem] leading-8 text-ink-muted">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+
+                <div className="mt-10 border-t border-border pt-7">
+                  <p className="mb-5 font-sans text-[0.55rem] uppercase tracking-[0.2em] text-ink-subtle">
+                    Sources & further reading
+                  </p>
+                  <div className="space-y-5">
+                    {sourcesForStory(lead).map((source) => (
+                      <a
+                        key={source.url}
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group block"
+                      >
+                        <p className="font-serif text-xl transition-opacity group-hover:opacity-60">
+                          {source.label}
+                        </p>
+                        <p className="mt-1 font-sans text-[0.54rem] uppercase tracking-[0.14em] text-ink-subtle">
+                          {source.institution}
+                        </p>
+                        <p className="mt-2 max-w-xl text-xs leading-6 text-ink-muted">
+                          {source.note}
+                        </p>
+                      </a>
+                    ))}
                   </div>
-                  <p className="mt-3 font-sans text-[0.55rem] uppercase tracking-[0.14em] text-ink-subtle">
-                    {featuredImage.year}
-                    {featuredImage.place && featuredImage.place !== "Archive"
-                      ? ` · ${featuredImage.place}`
-                      : ""}
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-[#111214] text-[#fffefa]">
+          <div className="mx-auto max-w-[90rem] px-6 py-20 sm:px-12 sm:py-28">
+            <div className="mb-12">
+              <p className="font-sans text-[0.58rem] uppercase tracking-[0.26em] text-white/45">
+                Issue 01 / dossiers
+              </p>
+            </div>
+            <div className="grid gap-16 lg:grid-cols-2">
+              {rest.map((story) => (
+                <article key={story.id} className="border-t border-white/15 pt-8">
+                  <p className="font-sans text-[0.55rem] uppercase tracking-[0.18em] text-white/45">
+                    {story.kicker} · {story.format} · {story.readTime}
+                  </p>
+                  <h2 className="mt-5 max-w-xl font-serif text-4xl leading-tight tracking-[-0.025em]">
+                    {story.title}
+                  </h2>
+                  <p className="mt-5 max-w-xl text-base leading-8 text-white/70">
+                    {story.standfirst}
+                  </p>
+                  <div className="mt-7 space-y-5">
+                    {story.paragraphs.map((p) => (
+                      <p key={p} className="max-w-xl text-sm leading-7 text-white/62">
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+                  <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+                    {sourcesForStory(story).map((source) => (
+                      <a
+                        key={source.url}
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="border-b border-white/20 pb-1 font-sans text-[0.54rem] uppercase tracking-[0.14em] text-white/55 hover:text-white"
+                      >
+                        {source.institution} ↗
+                      </a>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {libraryItems.length > 0 && (
+          <section className="bg-ground">
+            <div className="mx-auto max-w-[90rem] px-6 py-20 sm:px-12 sm:py-28">
+              <div className="grid gap-12 lg:grid-cols-[.55fr_1.45fr] lg:gap-20">
+                <div>
+                  <p className="font-sans text-[0.58rem] uppercase tracking-[0.26em] text-ink-subtle">
+                    Earlier reading room
+                  </p>
+                  <h2 className="mt-4 font-serif text-3xl tracking-[-0.02em]">
+                    Catalogue
+                  </h2>
+                  <p className="mt-4 max-w-sm text-sm leading-7 text-ink-muted">
+                    Existing essays and letters remain available while they are
+                    progressively re-edited to the V4 sourcing and caption standard.
                   </p>
                 </div>
-              )}
 
-              <p className="mt-8 font-sans text-[0.55rem] uppercase tracking-[0.16em] text-ink-subtle">
-                {featured.tags.join(" · ")}
-              </p>
-              <p className="mt-4 font-sans text-[0.58rem] uppercase tracking-[0.16em] text-ink-muted opacity-0 transition-opacity group-hover:opacity-100">
-                Open essay →
-              </p>
-            </Link>
+                <ol className="border-t border-border">
+                  {libraryItems.map((item, i) => (
+                    <li key={item.id} className="border-b border-border">
+                      <Link
+                        to="/library/$slug"
+                        params={{ slug: item.slug }}
+                        className="group grid gap-3 py-6 sm:grid-cols-[2.5rem_1fr_auto] sm:items-baseline sm:gap-7"
+                      >
+                        <span className="font-sans text-[0.55rem] tabular-nums text-ink-subtle">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span>
+                          <span className="font-serif text-xl tracking-tight transition-opacity group-hover:opacity-60">
+                            {item.title}
+                          </span>
+                          <span className="mt-1 block font-sans text-[0.52rem] uppercase tracking-[0.14em] text-ink-subtle">
+                            {item.kind}{item.tags[0] ? ` · ${item.tags[0]}` : ""}
+                          </span>
+                        </span>
+                        <span className="font-sans text-[0.55rem] tabular-nums text-ink-subtle">
+                          {item.year}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
           </section>
         )}
-
-        {/* Quiet filters */}
-        <div className="mb-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-10">
-          {kinds.map((k) => (
-            <button
-              key={k.id}
-              type="button"
-              onClick={() => setKind(k.id)}
-              className={cn(
-                "font-sans text-[0.6rem] uppercase tracking-[0.2em] transition-colors",
-                kind === k.id ? "text-ink" : "text-ink-subtle hover:text-ink",
-              )}
-            >
-              {k.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Catalogue index — each title navigates to its article page */}
-        <section className="mb-16 sm:mb-20">
-          <p className="mb-6 font-sans text-[0.52rem] uppercase tracking-[0.24em] text-ink-subtle">
-            Index
-          </p>
-          <ol className="border-t border-border">
-            {filtered.map((item, i) => (
-              <li key={item.id} className="border-b border-border">
-                <Link
-                  to="/library/$slug"
-                  params={{ slug: item.slug }}
-                  className="group flex w-full items-baseline gap-4 py-5 text-left opacity-80 transition-opacity hover:opacity-100 sm:gap-6"
-                >
-                  <span className="w-6 shrink-0 font-sans text-[0.58rem] tabular-nums tracking-[0.08em] text-ink-subtle">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="font-serif text-lg leading-snug tracking-tight sm:text-xl">
-                      {item.title}
-                    </span>
-                    <span className="mt-1 block font-sans text-[0.55rem] uppercase tracking-[0.14em] text-ink-subtle">
-                      {item.kind}
-                      {item.tags[0] ? ` · ${item.tags[0]}` : ""}
-                    </span>
-                  </span>
-                  <span className="shrink-0 font-sans text-[0.58rem] tabular-nums tracking-[0.08em] text-ink-subtle">
-                    {item.year}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ol>
-          {filtered.length === 0 && (
-            <p className="py-12 text-center font-serif text-lg text-ink-muted">
-              Nothing in this index yet.
-            </p>
-          )}
-        </section>
-
-        {/* From the archive */}
-        <section className="mt-8 border-t border-border pt-16 sm:pt-20">
-          <p className="mb-10 font-sans text-[0.52rem] uppercase tracking-[0.24em] text-ink-subtle">
-            From the archive
-          </p>
-          <div className="flex flex-wrap gap-8 sm:gap-10">
-            {galleryImages
-              .filter((g) => g.src)
-              .slice(0, 3)
-              .map((g) => (
-                <Link
-                  key={g.id}
-                  to="/gallery"
-                  search={{ id: g.id, room: g.room }}
-                  className="group w-[7.5rem] sm:w-[8.5rem]"
-                >
-                  <div className="overflow-hidden border border-border/50 bg-cream">
-                    <img
-                      src={g.src}
-                      alt={g.title}
-                      className="aspect-[4/5] w-full object-cover transition-opacity group-hover:opacity-90"
-                      loading="lazy"
-                      draggable={false}
-                    />
-                  </div>
-                  <p className="mt-2 font-sans text-[0.5rem] uppercase tracking-[0.12em] text-ink-subtle">
-                    {g.year}
-                  </p>
-                </Link>
-              ))}
-          </div>
-          <Link
-            to="/gallery"
-            className="mt-12 inline-flex font-sans text-[0.6rem] uppercase tracking-[0.18em] text-ink-muted transition-colors hover:text-ink"
-          >
-            Continue exploring the Gallery →
-          </Link>
-        </section>
-      </div>
+      </main>
     </LayoutShell>
   );
 }
