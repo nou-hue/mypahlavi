@@ -30,7 +30,7 @@ function guessCategory(title: string): ProductCategory {
   if (/tee|t-shirt|shirt|hoodie|apparel|sweat|long.?sleeve|crewneck/.test(t))
     return "apparel";
   if (
-    /mug|tote|card|folio|pin|sticker|candle|desk.?mat|mouse.?pad|object/.test(t)
+    /mug|tote|card|folio|pin|sticker|candle|desk.?mat|mouse.?pad|notebook|journal|photo book|object/.test(t)
   )
     return "object";
   if (
@@ -44,18 +44,26 @@ function guessCategory(title: string): ProductCategory {
   return "object";
 }
 
-/** Wall-art prints only are withheld. Apparel and objects remain. */
+/** V4 curation gate: original prints and considered desk/paper objects only. */
 export function isShopVisible(p: ShopProduct): boolean {
-  if (p.category === "print") return false;
   const t = `${p.name} ${p.shortDescription} ${p.description} ${p.accentLabel}`.toLowerCase();
+
+  if (p.category === "apparel") return false;
+  if (/hoodie|sweatshirt|crewneck|t-?shirt|tee\b|mug|sticker|candle|phone case|tumbler/.test(t)) {
+    return false;
+  }
+
+  if (p.category === "print") return true;
+
   if (
-    /wall art|art print|museum print|giclée|giclee|fine art paper|canvas wall|poster print|coronation study|northern light print|state portrait print/.test(
+    /desk.?mat|mouse.?pad|notebook|journal|photo book|folio|portfolio|tote|paper object|desk object/.test(
       t,
     )
   ) {
-    return false;
+    return true;
   }
-  return true;
+
+  return p.id.startsWith("v4-");
 }
 
 const gradients = [
@@ -122,9 +130,11 @@ export function mapPrintifyProduct(p: {
   if (category === "apparel" && /hoodie/i.test(name)) {
     short = "Midweight hoodie · restrained monochrome graphic · made to order.";
   } else if (/desk mat|mouse pad/i.test(name)) {
-    short = "Premium desk mat · archival illustration · physical object.";
-  } else if (/canvas|lion/i.test(name)) {
-    short = "Framed matte canvas · collectible wall piece · made to order.";
+    short = "Purpose-built desk artwork · full-surface print · made to order.";
+  } else if (/notebook|journal/i.test(name)) {
+    short = "Research-desk paper object · full-cover artwork · made to order.";
+  } else if (/poster|print|giclée|giclee/i.test(name)) {
+    short = "Original or rights-cleared archive edition · generous border · made to order.";
   }
 
   let description =
