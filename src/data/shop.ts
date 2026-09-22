@@ -5,7 +5,6 @@ export type ProductVariant = {
   label: string;
   priceGBP: number;
   sku: string;
-  /** Printify variant id (number) once product is published in your shop */
   printifyVariantId?: number | null;
 };
 
@@ -22,170 +21,111 @@ export type ShopProduct = {
   fulfilment: string;
   variants: ProductVariant[];
   featured?: boolean;
-  /** Optional product image (archive plate or mock) */
   imageSrc?: string;
-  /** Printify product id string once published in your shop */
   printifyProductId?: string | null;
 };
 
 /**
- * Editorial catalogue.
- * Connect Printify: create matching products in your Printify shop, then set
- * printifyProductId + each variant's printifyVariantId (or use /api/shop/printify/sync).
+ * V4 editorial catalogue.
+ * These are the art direction and product masters. A concept becomes purchasable
+ * only after its matching Printify product and variant ids have been connected.
  */
 export const shopProducts: ShopProduct[] = [
   {
-    id: "e-01",
-    slug: "coronation-study-print",
-    name: "Coronation study",
-    shortDescription: "Ceremonial plate on museum-weight matte paper.",
+    id: "v4-01",
+    slug: "tehran-grid-no-01",
+    name: "Tehran Grid No. 01",
+    shortDescription: "Original modernist city study with a wide archival margin.",
     description:
-      "Large-format archival print from the coronation sequence. Quiet margins, soft grading. Produced on demand and packed as a limited edition.",
+      "An original MyPahlavi composition built from abstract street grids, intersecting movement and restrained Persian-modernist colour. Designed first as a print rather than adapted from merchandise art.",
     category: "print",
-    gradient: "from-[#2a241e] via-[#4a3e34] to-[#14110e]",
-    accentLabel: "Print",
-    materials: "Museum-weight matte paper · pigment inks",
-    fulfilment: "Made to order",
+    gradient: "from-[#fffefa] via-[#efefeb] to-[#d8d8d3]",
+    accentLabel: "Archive Print",
+    materials: "Heavy matte art paper · pigment print · uncoated finish",
+    fulfilment: "Studio study · production mapping in progress",
     featured: true,
-    imageSrc: "/archive/farah-pahlavi/user-farah-coronation-crown-ermine.jpg",
+    imageSrc: "/editions/tehran-grid-01.svg",
     printifyProductId: null,
     variants: [
-      { id: "a3", label: "A3 (297 × 420 mm)", priceGBP: 48, sku: "PRINT-COR-A3" },
-      { id: "a2", label: "A2 (420 × 594 mm)", priceGBP: 72, sku: "PRINT-COR-A2" },
-      { id: "a1", label: "A1 (594 × 841 mm)", priceGBP: 110, sku: "PRINT-COR-A1" },
+      { id: "a3", label: "A3 · 297 × 420 mm", priceGBP: 42, sku: "MP-TG01-A3" },
+      { id: "a2", label: "A2 · 420 × 594 mm", priceGBP: 64, sku: "MP-TG01-A2" },
+      { id: "a1", label: "A1 · 594 × 841 mm", priceGBP: 92, sku: "MP-TG01-A1" },
     ],
   },
   {
-    id: "e-02",
-    slug: "garden-laughter-print",
-    name: "Garden light",
-    shortDescription: "Private moment — Shah, Farah, and child.",
+    id: "v4-02",
+    slug: "caspian-line-no-01",
+    name: "Caspian Line No. 01",
+    shortDescription: "An original northbound travel study: coast, horizon, movement.",
     description:
-      "A quieter domestic plate from the collection. Printed on fine-art paper with restrained contrast for contemplative display.",
+      "A graphic edition developed from the visual language of mid-century travel material without copying a historical poster. Mountain line, sea band and route geometry form a new image of northern Iran.",
     category: "print",
-    gradient: "from-[#1e1a16] via-[#3c342c] to-[#100e0c]",
-    accentLabel: "Print",
-    materials: "Fine art paper · giclée pigment",
-    fulfilment: "Made to order",
+    gradient: "from-[#fffefa] via-[#edf2f1] to-[#dfe7e6]",
+    accentLabel: "Archive Print",
+    materials: "Heavy matte art paper · pigment print · wide white border",
+    fulfilment: "Studio study · production mapping in progress",
     featured: true,
-    imageSrc: "/archive/other-family/user-garden-laughter-with-baby.jpg",
+    imageSrc: "/editions/caspian-line-01.svg",
     printifyProductId: null,
     variants: [
-      { id: "a3", label: "A3", priceGBP: 48, sku: "PRINT-GAR-A3" },
-      { id: "a2", label: "A2", priceGBP: 72, sku: "PRINT-GAR-A2" },
+      { id: "a3", label: "A3 · 297 × 420 mm", priceGBP: 42, sku: "MP-CL01-A3" },
+      { id: "a2", label: "A2 · 420 × 594 mm", priceGBP: 64, sku: "MP-CL01-A2" },
     ],
   },
   {
-    id: "e-07",
-    slug: "imperial-trio-print",
-    name: "Imperial trio",
-    shortDescription: "Crown Prince Reza with Farah and the Shah.",
+    id: "v4-03",
+    slug: "garden-plan-no-01",
+    name: "Garden Plan No. 01",
+    shortDescription: "Axial garden geometry translated into an original graphic study.",
     description:
-      "Formal family composition — succession made visible. Limited wall edition.",
+      "A new composition based on the ordering principles of Persian gardens: axis, water, enclosure and planted quadrants. It references a design logic rather than reproducing a historical motif.",
     category: "print",
-    gradient: "from-[#161412] via-[#2e2824] to-[#0a0908]",
-    accentLabel: "Print",
-    materials: "Heavy matte stock · pigment inks",
-    fulfilment: "Made to order",
-    imageSrc: "/archive/other-family/user-imperial-trio-reza-farah-shah.jpg",
+    gradient: "from-[#fffefa] via-[#f0f0ec] to-[#e3e3df]",
+    accentLabel: "Archive Print",
+    materials: "Heavy matte art paper · pigment print · wide white border",
+    fulfilment: "Studio study · production mapping in progress",
+    imageSrc: "/editions/garden-plan-01.svg",
     printifyProductId: null,
     variants: [
-      { id: "a3", label: "A3", priceGBP: 46, sku: "PRINT-TRI-A3" },
-      { id: "a2", label: "A2", priceGBP: 68, sku: "PRINT-TRI-A2" },
+      { id: "a3", label: "A3 · 297 × 420 mm", priceGBP: 42, sku: "MP-GP01-A3" },
+      { id: "a2", label: "A2 · 420 × 594 mm", priceGBP: 64, sku: "MP-GP01-A2" },
     ],
   },
   {
-    id: "e-03",
-    slug: "ivory-crest-tee",
-    name: "Ivory crest tee",
-    shortDescription: "Heavyweight cotton, restrained monochrome crest.",
+    id: "v4-04",
+    slug: "tehran-desk-study-no-01",
+    name: "Tehran Desk Study No. 01",
+    shortDescription: "Panoramic original artwork made specifically for the working desk.",
     description:
-      "Heavyweight cotton, soft hand, single crest in charcoal. Everyday wear without noise.",
-    category: "apparel",
-    gradient: "from-[#3a342c] via-[#5a5046] to-[#1c1814]",
-    accentLabel: "Apparel",
-    materials: "100% heavyweight cotton · DTG",
-    fulfilment: "Made to order",
-    featured: true,
-    printifyProductId: null,
-    variants: [
-      { id: "s", label: "S", priceGBP: 36, sku: "TEE-CR-S" },
-      { id: "m", label: "M", priceGBP: 36, sku: "TEE-CR-M" },
-      { id: "l", label: "L", priceGBP: 36, sku: "TEE-CR-L" },
-      { id: "xl", label: "XL", priceGBP: 36, sku: "TEE-CR-XL" },
-      { id: "2xl", label: "2XL", priceGBP: 38, sku: "TEE-CR-2XL" },
-    ],
-  },
-  {
-    id: "e-04",
-    slug: "charcoal-archive-hoodie",
-    name: "Archive hoodie",
-    shortDescription: "Minimal wordmark hoodie in deep charcoal.",
-    description:
-      "Soft midweight hoodie with a single typographic mark. Charcoal and ivory only.",
-    category: "apparel",
-    gradient: "from-[#24201c] via-[#3e3832] to-[#12100e]",
-    accentLabel: "Apparel",
-    materials: "Cotton-blend fleece · DTG",
-    fulfilment: "Made to order",
-    printifyProductId: null,
-    variants: [
-      { id: "s", label: "S", priceGBP: 58, sku: "HOOD-AR-S" },
-      { id: "m", label: "M", priceGBP: 58, sku: "HOOD-AR-M" },
-      { id: "l", label: "L", priceGBP: 58, sku: "HOOD-AR-L" },
-      { id: "xl", label: "XL", priceGBP: 58, sku: "HOOD-AR-XL" },
-    ],
-  },
-  {
-    id: "e-08",
-    slug: "parchment-longsleeve",
-    name: "Parchment long sleeve",
-    shortDescription: "Warm ivory long sleeve with micro crest.",
-    description: "Quiet daily layer. Cream ground, micro crest — no chest shout.",
-    category: "apparel",
-    gradient: "from-[#4a443c] via-[#6b6358] to-[#2a2622]",
-    accentLabel: "Apparel",
-    materials: "Cotton long sleeve · soft print",
-    fulfilment: "Made to order",
-    printifyProductId: null,
-    variants: [
-      { id: "s", label: "S", priceGBP: 42, sku: "LS-PR-S" },
-      { id: "m", label: "M", priceGBP: 42, sku: "LS-PR-M" },
-      { id: "l", label: "L", priceGBP: 42, sku: "LS-PR-L" },
-      { id: "xl", label: "XL", priceGBP: 42, sku: "LS-PR-XL" },
-    ],
-  },
-  {
-    id: "e-06",
-    slug: "museum-tote-parchment",
-    name: "Canvas tote",
-    shortDescription: "Natural canvas with single typographic mark.",
-    description: "Built for books. Natural canvas, one mark, reinforced handles.",
+      "A purpose-built panoramic composition rather than a poster stretched across a product. The wide format uses route lines, civic-grid rhythm and a restrained red mark to create a functional desk object.",
     category: "object",
-    gradient: "from-[#38322c] via-[#564c42] to-[#1a1612]",
-    accentLabel: "Object",
-    materials: "Natural canvas · durable print",
-    fulfilment: "Made to order",
+    gradient: "from-[#111214] via-[#222427] to-[#111214]",
+    accentLabel: "Desk Object",
+    materials: "Full-surface dye sublimation · non-slip rubber backing",
+    fulfilment: "Studio study · production mapping in progress",
+    featured: true,
+    imageSrc: "/editions/tehran-desk-01.svg",
     printifyProductId: null,
     variants: [
-      { id: "one", label: "One size", priceGBP: 28, sku: "TOTE-PAR-1" },
+      { id: "large", label: "31.5 × 15.5 in", priceGBP: 46, sku: "MP-TD01-L" },
     ],
   },
   {
-    id: "e-09",
-    slug: "archive-mug",
-    name: "Archive mug",
-    shortDescription: "Ceramic mug with micro wordmark.",
-    description: "Ivory ceramic, charcoal micro mark — for the desk beside open letters.",
+    id: "v4-05",
+    slug: "garden-plan-notebook",
+    name: "Garden Plan Notebook",
+    shortDescription: "A5 matte notebook with the Garden Plan study carried as a full cover.",
+    description:
+      "A paper object for reading rooms and research desks. The artwork is scaled for the cover format rather than treated as a small logo.",
     category: "object",
-    gradient: "from-[#3a342e] via-[#5a5046] to-[#1c1814]",
-    accentLabel: "Object",
-    materials: "Ceramic · dishwasher-safe print",
-    fulfilment: "Made to order",
+    gradient: "from-[#fffefa] via-[#efefeb] to-[#e5e5e5]",
+    accentLabel: "Paper Object",
+    materials: "A5 matte laminated cover · lined interior",
+    fulfilment: "Studio study · UK production mapping in progress",
+    imageSrc: "/editions/garden-plan-01.svg",
     printifyProductId: null,
     variants: [
-      { id: "11oz", label: "11 oz", priceGBP: 18, sku: "MUG-AR-11" },
-      { id: "15oz", label: "15 oz", priceGBP: 22, sku: "MUG-AR-15" },
+      { id: "a5", label: "A5", priceGBP: 24, sku: "MP-GPN-A5" },
     ],
   },
 ];
@@ -193,7 +133,6 @@ export const shopProducts: ShopProduct[] = [
 export const shopCategories = [
   { id: "all", label: "All" },
   { id: "print", label: "Prints" },
-  { id: "apparel", label: "Apparel" },
   { id: "object", label: "Objects" },
 ] as const;
 
@@ -213,9 +152,6 @@ export function startingPrice(product: ShopProduct) {
 }
 
 export function estimateShippingGBP(country: string) {
-  // UK launch: delivery is absorbed into the retail price for a cleaner,
-  // luxury checkout. International selling stays closed until each
-  // provider/product shipping profile has been verified.
   if (country === "United Kingdom") return 0;
   throw new Error("International delivery is not enabled yet.");
 }

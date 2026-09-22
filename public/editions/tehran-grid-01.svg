@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" role="img" aria-labelledby="t d">
+<title id="t">Tehran Grid No. 01</title><desc id="d">Original geometric artwork using an abstract urban grid and Persian-modernist proportions.</desc>
+<rect width="1200" height="1600" fill="#fffefa"/>
+<rect x="110" y="110" width="980" height="1380" fill="none" stroke="#111111" stroke-width="3"/>
+<g fill="none" stroke="#111111" stroke-width="10">
+<path d="M160 320H1040M160 520H1040M160 920H1040M160 1250H1040"/>
+<path d="M320 160V1440M560 160V1440M880 160V1440"/>
+</g>
+<rect x="570" y="530" width="300" height="380" fill="#821d26"/>
+<circle cx="320" cy="920" r="118" fill="#111111"/>
+<path d="M170 1230L540 930L690 1100L1030 720" fill="none" stroke="#821d26" stroke-width="26"/>
+<text x="160" y="1450" font-family="Arial, sans-serif" font-size="26" letter-spacing="9" fill="#111111">TEHRAN / STUDY 01</text>
+</svg>

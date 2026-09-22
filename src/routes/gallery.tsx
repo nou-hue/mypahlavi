@@ -103,14 +103,14 @@ function GalleryPage() {
       <div className="mx-auto max-w-4xl px-6 py-20 sm:px-10 sm:py-28">
         <header className="mx-auto mb-16 max-w-xl space-y-5 text-center archive-rise sm:mb-20">
           <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
-            The Gallery
+            The Archive
           </p>
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Photographic archive
+            Photographs as documents
           </h1>
           <p className="text-sm leading-relaxed text-ink-muted">
-            Plates sequenced as a private exhibition hang — year, place, and
-            precise captions. Discover material; do not skim a feed.
+            Catalogue plates are shown with their composition intact whenever possible.
+            Open an image for its date, place, caption and provenance note.
           </p>
         </header>
 
@@ -298,7 +298,7 @@ function Viewer({
 
         <figure className="flex w-full max-w-3xl flex-col items-center">
           <div
-            className="relative w-full overflow-hidden border border-border bg-deep"
+            className="relative w-full overflow-hidden border border-border bg-[#fffefa] p-4 sm:p-6"
             onContextMenu={blockSave}
           >
             {image.src ? (
@@ -341,6 +341,21 @@ function Viewer({
             <p className="text-sm leading-relaxed text-ink-muted sm:text-base">
               {image.caption}
             </p>
+            {image.sourceNote && (
+              <div className="mx-auto mt-5 max-w-sm border-t border-border pt-4">
+                <p className="font-sans text-[0.52rem] uppercase tracking-[0.16em] text-ink-subtle">
+                  Catalogue note
+                </p>
+                <p className="mt-2 text-xs leading-6 text-ink-muted">
+                  {image.sourceNote}
+                </p>
+                {image.license && (
+                  <p className="mt-2 font-sans text-[0.5rem] uppercase tracking-[0.12em] text-ink-subtle">
+                    Rights / licence · {image.license}
+                  </p>
+                )}
+              </div>
+            )}
             <div className="flex flex-wrap justify-center gap-2 pt-2">
               {image.personIds.map((id) => {
                 const m = getMember(id);

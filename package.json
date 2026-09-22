@@ -8,14 +8,15 @@
   },
   "scripts": {
     "dev": "vite dev --host 0.0.0.0 --port 8080",
-    "build": "vite build && npm run db:migrate",
+    "build": "npm run routes:generate && vite build && npm run db:migrate",
     "db:migrate": "node scripts/migrate.mjs",
-    "build:dev": "vite build --mode development",
+    "build:dev": "npm run routes:generate && vite build --mode development",
     "preview": "vite preview --host 0.0.0.0 --port 8080",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "npm run routes:generate && tsc --noEmit",
     "test": "node --test 'scripts/**/*.test.mjs'",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "routes:generate": "npx -y @tanstack/router-cli@1.167.24 generate"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",
