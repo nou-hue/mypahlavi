@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" role="img" aria-labelledby="t d">
+<title id="t">Caspian Line No. 01</title><desc id="d">Original abstract travel artwork referencing the Caspian coast, mountain horizon and modern transport graphics.</desc>
+<rect width="1200" height="1600" fill="#fffefa"/>
+<rect x="90" y="90" width="1020" height="1420" fill="none" stroke="#101214" stroke-width="3"/>
+<path d="M110 940C310 760 420 830 570 650C720 470 820 620 1090 400" fill="none" stroke="#101214" stroke-width="24"/>
+<path d="M110 1000C310 820 420 890 570 710C720 530 820 680 1090 460" fill="none" stroke="#2e6571" stroke-width="24"/>
+<rect x="110" y="1110" width="980" height="240" fill="#2e6571"/>
+<circle cx="870" cy="390" r="130" fill="#821d26"/>
+<text x="140" y="1430" font-family="Arial, sans-serif" font-size="28" letter-spacing="10" fill="#101214">CASPIAN / NORTHBOUND</text>
+</svg>

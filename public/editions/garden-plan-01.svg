@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" role="img" aria-labelledby="t d">
+<title id="t">Garden Plan No. 01</title><desc id="d">Original abstract composition based on axial garden planning, water channels and geometric planting beds.</desc>
+<rect width="1200" height="1600" fill="#fffefa"/>
+<g fill="none" stroke="#151515" stroke-width="5">
+<rect x="150" y="150" width="900" height="1250"/>
+<rect x="260" y="260" width="680" height="1030"/>
+<path d="M600 150V1400M150 775H1050"/>
+</g>
+<g fill="#821d26">
+<circle cx="370" cy="500" r="88"/><circle cx="830" cy="500" r="88"/><circle cx="370" cy="1050" r="88"/><circle cx="830" cy="1050" r="88"/>
+</g>
+<rect x="565" y="250" width="70" height="1050" fill="#446c72"/>
+<rect x="250" y="740" width="700" height="70" fill="#446c72"/>
+<text x="150" y="1480" font-family="Arial, sans-serif" font-size="27" letter-spacing="8" fill="#151515">GARDEN PLAN / STUDY 01</text>
+</svg>

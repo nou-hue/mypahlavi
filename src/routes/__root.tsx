@@ -8,7 +8,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { CreatedWithGrokBanner } from "@/components/created-with-grok-banner";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Pahlavi";
+const APP_NAME = "MyPahlavi";
 const SITE_URL = "https://www.mypahlavi.com";
 const ogImage = `${SITE_URL}/og.jpg`;
 
@@ -18,21 +18,20 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        title:
-          "Pahlavi — independent archive of Iran's modern history",
+        title: "MyPahlavi — archive & journal of modern Iranian history",
       },
       {
         name: "description",
         content:
-          "An independent archive documenting the people, culture, images and modern history surrounding the Pahlavi era and its continuing legacy.",
+          "A research-led archive and independent journal documenting twentieth-century Iran through photographs, objects, testimony, architecture and primary sources.",
       },
       { name: "apple-mobile-web-app-title", content: APP_NAME },
-      { name: "theme-color", content: "#F3EFE7" },
-      { property: "og:title", content: "Pahlavi — The Archive" },
+      { name: "theme-color", content: "#FFFEFA" },
+      { property: "og:title", content: "MyPahlavi — Archive & Journal" },
       {
         property: "og:description",
         content:
-          "Images · Objects · Documents · People · Places — the archive of a lost modernity.",
+          "Photographs · Objects · Testimony · Documents · Modern Iranian history.",
       },
       { property: "og:url", content: SITE_URL },
       { property: "og:image", content: ogImage },
@@ -42,11 +41,11 @@ export const Route = createRootRoute({
       { property: "og:site_name", content: APP_NAME },
       { property: "og:locale", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Pahlavi — The Archive" },
+      { name: "twitter:title", content: "MyPahlavi — Archive & Journal" },
       {
         name: "twitter:description",
         content:
-          "Images · Objects · Documents · People · Places — the archive of a lost modernity.",
+          "Photographs · Objects · Testimony · Documents · Modern Iranian history.",
       },
       { name: "twitter:image", content: ogImage },
     ],

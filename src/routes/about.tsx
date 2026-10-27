@@ -8,73 +8,95 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-2xl px-6 py-20 sm:px-10 sm:py-28">
-        <header className="mb-14 space-y-5 archive-rise">
-          <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
-            About
-          </p>
-          <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            An independent archive
-          </h1>
-          <p className="text-base leading-relaxed text-ink-muted">
-            Documenting the people, culture, images and modern history surrounding
-            the Pahlavi era and its continuing legacy.
-          </p>
+      <main className="mx-auto max-w-[90rem] px-6 py-20 sm:px-12 sm:py-28">
+        <header className="grid gap-10 border-b border-border pb-16 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
+          <div>
+            <p className="font-sans text-[0.6rem] uppercase tracking-[0.28em] text-ink-subtle">
+              About MyPahlavi
+            </p>
+          </div>
+          <div className="max-w-3xl">
+            <h1 className="text-balance font-serif text-5xl leading-[1] tracking-[-0.035em] sm:text-6xl">
+              A research-led archive, journal and Editions house.
+            </h1>
+            <p className="mt-7 max-w-2xl text-base leading-8 text-ink-muted">
+              MyPahlavi studies twentieth-century Iran through photographs, buildings,
+              objects, testimony and primary documents. It is independent and is not an
+              official family website.
+            </p>
+          </div>
         </header>
 
-        <article className="space-y-8 font-serif text-[1.05rem] leading-[1.8] text-ink-soft archive-rise">
-          <p>
-            mypahlavi.com is an independent cultural archive. It gathers photography,
-            lineage, writing, and limited editions with editorial care — treating
-            images as primary documents rather than decoration.
+        <section className="grid gap-12 py-20 lg:grid-cols-[.65fr_1.35fr] lg:gap-20">
+          <p className="font-sans text-[0.58rem] uppercase tracking-[0.24em] text-ink-subtle">
+            Editorial method
           </p>
-          <p>
-            The collection documents Iranian modern history: the court and the
-            household, architecture and fashion, diplomacy and education, exile and
-            diaspora. Material is curated for precision — year, place, person — and
-            for atmosphere without romance.
-          </p>
-          <p>
-            It is not an official family website. It is not a political campaign.
-            Where advocacy appears, it is labeled as such — never dressed as history.
-          </p>
-          <p className="border-l-2 border-border pl-5 text-ink-muted">
-            We preserve. We document. We contextualise. We curate. We do not need
-            to shout.
-          </p>
-          <p>
-            Editions — prints, apparel, and objects — exist as a natural extension
-            of the archive: cultural objects issued from the collection, not a
-            separate storefront.
-          </p>
-        </article>
-
-        <p className="mt-12 font-sans text-[0.62rem] uppercase tracking-[0.18em] text-ink-subtle">
-          Independent · Not an official family website
-        </p>
-
-        <div className="mt-16 grid gap-4 border-t border-border pt-12 sm:grid-cols-2">
-          <Link
-            to="/gallery"
-            className="group border border-border p-6 transition-colors hover:bg-ground-elevated"
-          >
-            <p className="font-serif text-xl tracking-tight">The Gallery</p>
-            <p className="mt-2 text-sm text-ink-muted">
-              Enter the photographic archive
+          <div className="max-w-3xl space-y-8 font-serif text-xl leading-[1.75] text-ink-soft">
+            <p>
+              The archive does not ask a photograph to carry more certainty than it
+              possesses. Dates, locations, attribution and rights status are treated
+              as catalogue information, not decoration.
             </p>
-          </Link>
-          <Link
-            to="/patronage"
-            className="group border border-border p-6 transition-colors hover:bg-ground-elevated"
-          >
-            <p className="font-serif text-xl tracking-tight">The Circle</p>
-            <p className="mt-2 text-sm text-ink-muted">
-              Support the working collection
+            <p>
+              Oral testimony is identified as recollection. Diplomatic and government
+              records are identified by the institution that produced them. Scholarly
+              interpretation is distinguished from primary evidence. Where sources
+              conflict, the disagreement remains visible.
             </p>
-          </Link>
-        </div>
+            <p>
+              The subject includes state-building, culture, architecture, education,
+              diplomacy, everyday life, political conflict, revolution, exile and
+              diaspora. Achievement and harm are not made mutually exclusive by the
+              design of the site.
+            </p>
+          </div>
+        </section>
 
-        <p className="mt-14 text-sm text-ink-subtle">
+        <section className="grid gap-12 border-t border-border py-20 lg:grid-cols-[.65fr_1.35fr] lg:gap-20">
+          <p className="font-sans text-[0.58rem] uppercase tracking-[0.24em] text-ink-subtle">
+            Image standard
+          </p>
+          <div className="grid max-w-3xl gap-8 sm:grid-cols-2">
+            {[
+              ["Provenance", "Source and rights status are recorded before an image is promoted editorially."],
+              ["Restoration", "Dust, tilt and tonal damage may be corrected. Missing historical detail is not invented."],
+              ["Presentation", "Important photographs keep their full composition inside a generous paper border whenever possible."],
+              ["Captions", "Uncertain dates, identifications and institutional perspective are labelled explicitly."],
+            ].map(([title, body]) => (
+              <div key={title} className="border-t border-border pt-5">
+                <h2 className="font-serif text-2xl tracking-tight">{title}</h2>
+                <p className="mt-3 text-sm leading-7 text-ink-muted">{body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-12 border-t border-border py-20 lg:grid-cols-[.65fr_1.35fr] lg:gap-20">
+          <p className="font-sans text-[0.58rem] uppercase tracking-[0.24em] text-ink-subtle">
+            Editions
+          </p>
+          <div className="max-w-3xl">
+            <p className="font-serif text-3xl leading-snug tracking-tight">
+              Research can become an object without becoming souvenir merchandise.
+            </p>
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-ink-muted">
+              Editions are developed from original artwork, rights-cleared archival
+              material and research themes. Prints, desk objects and paper goods are
+              designed for their final format and are released only after production
+              quality and mockups pass review.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-6">
+              <Link to="/library" className="border-b border-ink pb-1 font-sans text-[0.6rem] uppercase tracking-[0.18em]">
+                Read the Journal →
+              </Link>
+              <Link to="/editions" className="border-b border-ink pb-1 font-sans text-[0.6rem] uppercase tracking-[0.18em]">
+                View Editions →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <p className="border-t border-border pt-8 text-sm text-ink-subtle">
           Contact{" "}
           <a
             href="mailto:hello@mypahlavi.com"
@@ -83,7 +105,7 @@ function AboutPage() {
             hello@mypahlavi.com
           </a>
         </p>
-      </div>
+      </main>
     </LayoutShell>
   );
 }

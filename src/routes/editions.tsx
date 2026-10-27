@@ -4,11 +4,11 @@ import { ShoppingBag } from "lucide-react";
 import { LayoutShell } from "@/components/archive/layout-shell";
 import {
   formatGBP,
+  shopProducts,
   startingPrice,
   type ShopProduct,
 } from "@/data/shop";
 import { useCartStore } from "@/lib/cart-store";
-import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/editions")({
   component: EditionsPage,
@@ -22,38 +22,21 @@ type CatalogResponse = {
   message?: string;
 };
 
-/**
- * Editions grid presentation — UI frame only.
- * Product image bytes/URLs come from catalog data unchanged.
- */
-function ProductPlate({
-  product,
-  className,
-}: {
-  product: ShopProduct;
-  className?: string;
-}) {
+function ProductPlate({ product }: { product: ShopProduct }) {
   return (
-    <div
-      className={cn(
-        // Catalogue plate — cream frame; original product image only
-        "overflow-hidden border border-border/50 bg-cream",
-        className,
-      )}
-    >
-      {product.imageSrc ? (
-        <div className="flex aspect-[4/5] items-center justify-center p-8 sm:p-10 md:p-12">
+    <div className="border border-border bg-[#fffefa] p-5 shadow-soft sm:p-7">
+      <div className="flex aspect-[4/5] items-center justify-center overflow-hidden bg-[#f2f2ef]">
+        {product.imageSrc ? (
           <img
             src={product.imageSrc}
             alt={product.name}
-            // Image occupies ~45–60% of plate via padding + object-contain
-            className="max-h-[70%] max-w-[70%] object-contain transition-opacity duration-500 group-hover:opacity-95"
+            className="h-full w-full object-contain"
             loading="lazy"
           />
-        </div>
-      ) : (
-        <div className={cn("aspect-[4/5] bg-gradient-to-br", product.gradient)} />
-      )}
+        ) : (
+          <div className={"h-full w-full bg-gradient-to-br " + product.gradient} />
+        )}
+      </div>
     </div>
   );
 }
@@ -61,7 +44,7 @@ function ProductPlate({
 function EditionsPage() {
   const openCart = useCartStore((s) => s.openCart);
   const count = useCartStore((s) => s.count());
-  const [products, setProducts] = useState<ShopProduct[]>([]);
+  const [available, setAvailable] = useState<ShopProduct[]>([]);
   const [loading, setLoading] = useState(true);
   const [connected, setConnected] = useState(false);
 
@@ -71,13 +54,13 @@ function EditionsPage() {
       .then((r) => r.json())
       .then((d: CatalogResponse) => {
         if (cancelled) return;
-        const list = d.products?.length ? d.products : [];
-        setProducts(list);
-        setConnected(Boolean(d.connected && d.source === "printify"));
+        const list = (d.products ?? []).filter((p) => Boolean(p.printifyProductId));
+        setAvailable(list);
+        setConnected(Boolean(d.connected));
       })
       .catch(() => {
         if (!cancelled) {
-          setProducts([]);
+          setAvailable([]);
           setConnected(false);
         }
       })
@@ -91,91 +74,146 @@ function EditionsPage() {
 
   return (
     <LayoutShell>
-      <div className="mx-auto max-w-4xl px-6 py-20 sm:px-10 sm:py-28">
-        <header className="mb-16 max-w-xl space-y-5 archive-rise sm:mb-20">
-          <p className="font-sans text-[0.62rem] uppercase tracking-[0.28em] text-ink-subtle">
-            Editions
-          </p>
-          <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">
-            Limited cultural objects
-          </h1>
-          <p className="text-base leading-relaxed text-ink-muted">
-            A quiet extension of the archive — objects issued with the same
-            editorial care as the plates themselves. Museum shop, not merchandise
-            floor.
-          </p>
-          <div className="flex items-center gap-6 pt-2">
-            <button
-              type="button"
-              onClick={openCart}
-              className="inline-flex h-10 items-center gap-2 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-muted transition-colors hover:text-ink"
-            >
-              <ShoppingBag className="size-3.5" strokeWidth={1.25} />
-              Bag{count > 0 ? ` · ${String(count).padStart(2, "0")}` : ""}
-            </button>
-            {connected && (
-              <span className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
-                Made to order
-              </span>
-            )}
-          </div>
-        </header>
+      <main>
+        <section className="border-b border-border bg-ground">
+          <div className="mx-auto max-w-[90rem] px-6 py-20 sm:px-12 sm:py-28">
+            <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+              <div className="max-w-2xl archive-rise">
+                <p className="font-sans text-[0.6rem] uppercase tracking-[0.28em] text-ink-subtle">
+                  MyPahlavi Editions
+                </p>
+                <h1 className="mt-6 text-balance font-serif text-5xl leading-[1] tracking-[-0.035em] sm:text-6xl">
+                  Objects from the research.
+                </h1>
+                <p className="mt-7 max-w-xl text-base leading-8 text-ink-muted">
+                  Original graphic studies, archival editions where provenance permits,
+                  and useful objects designed for the reading desk. No generic souvenir
+                  catalogue.
+                </p>
+              </div>
 
-        {loading ? (
-          <p className="font-sans text-sm text-ink-subtle">Loading…</p>
-        ) : products.length === 0 ? (
-          <div className="border-t border-border pt-16 text-center">
-            <p className="font-serif text-2xl tracking-tight">
-              {connected ? "Between releases" : "Editions forthcoming"}
-            </p>
-            <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink-muted">
-              {connected
-                ? "The current collection is empty. New numbered works are in preparation."
-                : "The first numbered releases are being prepared — museum-grade prints, portfolios, and archival publications."}
-            </p>
-            <Link
-              to="/gallery"
-              className="mt-12 inline-flex h-11 items-center border border-border px-6 font-sans text-[0.65rem] uppercase tracking-[0.16em] hover:bg-ink hover:text-cream"
-            >
-              Explore the gallery
-            </Link>
-          </div>
-        ) : (
-          <div className="mx-auto grid max-w-3xl gap-x-12 gap-y-20 sm:grid-cols-2 sm:gap-y-24">
-            {products.map((item, i) => (
-              <article
-                key={item.id}
-                className="group flex flex-col archive-fade"
-                style={{ animationDelay: `${i * 40}ms` }}
+              <button
+                type="button"
+                onClick={openCart}
+                className="inline-flex h-10 items-center gap-2 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-ink-muted transition-colors hover:text-ink"
               >
-                <Link
-                  to="/editions/$productId"
-                  params={{ productId: item.slug }}
-                  className="block"
+                <ShoppingBag className="size-3.5" strokeWidth={1.25} />
+                Bag{count > 0 ? ` · ${String(count).padStart(2, "0")}` : ""}
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-ground">
+          <div className="mx-auto max-w-[90rem] px-6 py-20 sm:px-12 sm:py-28">
+            <div className="mb-14 grid gap-8 lg:grid-cols-[.7fr_1.3fr]">
+              <div>
+                <p className="font-sans text-[0.58rem] uppercase tracking-[0.26em] text-ink-subtle">
+                  Studio / V4
+                </p>
+                <h2 className="mt-4 font-serif text-3xl tracking-[-0.02em] sm:text-4xl">
+                  First studies
+                </h2>
+              </div>
+              <p className="max-w-2xl text-sm leading-7 text-ink-muted">
+                Every study begins as an artwork for a specific format. Prints keep a
+                deliberate white border; panoramic work is designed for the desk rather
+                than stretched from a poster; paper goods use full-cover compositions.
+                These masters become purchasable only after production and mockups pass review.
+              </p>
+            </div>
+
+            <div className="grid gap-x-9 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+              {shopProducts.map((item, i) => (
+                <article
+                  key={item.id}
+                  className="archive-fade"
+                  style={{ animationDelay: `${Math.min(i, 8) * 45}ms` }}
                 >
                   <ProductPlate product={item} />
-                </Link>
-                <div className="mt-6 space-y-2">
-                  <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
-                    {item.accentLabel || "Edition"} · from{" "}
-                    {formatGBP(startingPrice(item))}
-                  </p>
-                  <Link
-                    to="/editions/$productId"
-                    params={{ productId: item.slug }}
-                    className="block font-serif text-xl leading-snug tracking-tight transition-opacity hover:opacity-70 sm:text-[1.35rem]"
-                  >
-                    {item.name}
-                  </Link>
-                  <p className="max-w-sm text-sm leading-relaxed text-ink-muted">
-                    {item.shortDescription}
-                  </p>
-                </div>
-              </article>
-            ))}
+                  <div className="mt-5">
+                    <p className="font-sans text-[0.55rem] uppercase tracking-[0.18em] text-ink-subtle">
+                      {item.accentLabel} · study
+                    </p>
+                    <h3 className="mt-2 font-serif text-2xl leading-tight tracking-tight">
+                      {item.name}
+                    </h3>
+                    <p className="mt-3 max-w-sm text-sm leading-7 text-ink-muted">
+                      {item.shortDescription}
+                    </p>
+                    <p className="mt-4 font-sans text-[0.55rem] uppercase tracking-[0.14em] text-ink-subtle">
+                      Target retail · from {formatGBP(startingPrice(item))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        )}
-      </div>
+        </section>
+
+        <section className="border-t border-border bg-[#111214] text-[#fffefa]">
+          <div className="mx-auto max-w-[90rem] px-6 py-20 sm:px-12 sm:py-28">
+            <div className="mb-12 flex flex-wrap items-end justify-between gap-8">
+              <div>
+                <p className="font-sans text-[0.58rem] uppercase tracking-[0.26em] text-white/45">
+                  Available now
+                </p>
+                <h2 className="mt-4 font-serif text-4xl tracking-[-0.025em]">
+                  Production-approved objects
+                </h2>
+              </div>
+              {connected && (
+                <span className="font-sans text-[0.55rem] uppercase tracking-[0.16em] text-white/45">
+                  Printify connected · made to order
+                </span>
+              )}
+            </div>
+
+            {loading ? (
+              <p className="text-sm text-white/50">Checking the live catalogue…</p>
+            ) : available.length === 0 ? (
+              <div className="max-w-xl border-t border-white/15 pt-8">
+                <p className="font-serif text-2xl">The new collection is in production review.</p>
+                <p className="mt-4 text-sm leading-7 text-white/60">
+                  Nothing is being pushed live merely to fill the shop. The first V4 objects
+                  will appear here after the artwork, crop, mockup, material and price all pass.
+                </p>
+              </div>
+            ) : (
+              <div className="grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+                {available.map((item) => (
+                  <article key={item.id} className="group">
+                    <Link
+                      to="/editions/$productId"
+                      params={{ productId: item.slug }}
+                      className="block"
+                    >
+                      <div className="bg-[#fffefa] p-5">
+                        <div className="flex aspect-[4/5] items-center justify-center overflow-hidden bg-[#efefeb]">
+                          {item.imageSrc ? (
+                            <img
+                              src={item.imageSrc}
+                              alt={item.name}
+                              className="h-full w-full object-contain transition-opacity group-hover:opacity-90"
+                            />
+                          ) : null}
+                        </div>
+                      </div>
+                      <p className="mt-5 font-sans text-[0.55rem] uppercase tracking-[0.16em] text-white/45">
+                        {item.accentLabel} · from {formatGBP(startingPrice(item))}
+                      </p>
+                      <h3 className="mt-2 font-serif text-2xl">{item.name}</h3>
+                      <p className="mt-3 text-sm leading-7 text-white/60">
+                        {item.shortDescription}
+                      </p>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
     </LayoutShell>
   );
 }

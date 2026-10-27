@@ -7,12 +7,10 @@ import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { useCartStore } from "@/lib/cart-store";
 
 const nav = [
-  { to: "/gallery", label: "Gallery" },
+  { to: "/library", label: "Journal" },
+  { to: "/gallery", label: "Archive" },
   { to: "/lineage", label: "Century" },
-  { to: "/library", label: "Library" },
-  { to: "/vault", label: "Vault" },
   { to: "/editions", label: "Editions" },
-  { to: "/patronage", label: "The Circle" },
 ] as const;
 
 function bagLabel(count: number) {
@@ -79,9 +77,9 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
             to="/"
             className="shrink-0 font-serif text-[1.15rem] tracking-[0.2em] sm:text-[1.25rem]"
             onClick={() => setOpen(false)}
-            aria-label="Pahlavi home"
+            aria-label="MyPahlavi home"
           >
-            PAHLAVI
+            MYPAHLAVI
           </Link>
 
           <div className="hidden min-w-0 flex-1 items-center justify-end gap-7 lg:flex xl:gap-9">

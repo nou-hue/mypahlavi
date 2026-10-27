@@ -1,34 +1,34 @@
 {
-  "brand": "PAHLAVI",
-  "positioning": "An independent archive of Iranian modern history.",
-  "tagline": "Images \u00b7 Objects \u00b7 Documents \u00b7 People \u00b7 Places",
-  "method": "Preserve \u00b7 Document \u00b7 Contextualise \u00b7 Curate",
+  "brand": "MYPAHLAVI",
+  "positioning": "A research-led archive and independent journal of twentieth-century Iran.",
+  "tagline": "Photographs · Objects · Testimony · Documents · Architecture",
+  "method": "Research · Preserve · Contextualise · Publish",
   "ctaPrimary": "Enter the archive",
   "ctaPrimaryHref": "/gallery",
   "heroSlides": [
     {
       "src": "/archive/other-family/user-garden-laughter-with-baby.jpg",
-      "meta": "TEHRAN \u2014 LATE 1960s",
+      "meta": "TEHRAN — LATE 1960s",
       "caption": "Mohammad Reza Shah and Farah Pahlavi with their child."
     },
     {
       "src": "/archive/farah-pahlavi/user-farah-emerald-tiara-shah-uniform.jpg",
-      "meta": "TEHRAN \u2014 1967",
+      "meta": "TEHRAN — 1967",
       "caption": "Farah Pahlavi in the emerald tiara with Mohammad Reza Shah."
     },
     {
       "src": "/archive/farah-pahlavi/user-farah-persepolis-gold-dress.jpg",
-      "meta": "PERSEPOLIS \u2014 1971",
+      "meta": "PERSEPOLIS — 1971",
       "caption": "Farah Pahlavi at Persepolis in gold."
     },
     {
       "src": "/archive/other-family/user-walking-leopard-hat-paris.jpg",
-      "meta": "EUROPE \u2014 1960s",
+      "meta": "EUROPE — 1960s",
       "caption": "Farah and the Shah walking in the city."
     },
     {
       "src": "/archive/reza-shah/reza-shah-woolf-portrait-1938.jpg",
-      "meta": "TEHRAN \u2014 1938",
+      "meta": "TEHRAN — 1938",
       "caption": "Reza Shah Pahlavi."
     }
   ],
@@ -47,7 +47,7 @@
       "href": "/gallery",
       "desc": "Tehran, the Caspian, Persepolis, Paris, Washington.",
       "src": "/archive/farah-pahlavi/user-farah-persepolis-gold-dress.jpg",
-      "meta": "TEHRAN \u00b7 PERSEPOLIS \u00b7 THE WORLD"
+      "meta": "TEHRAN · PERSEPOLIS · THE WORLD"
     },
     {
       "id": "culture",
@@ -55,7 +55,7 @@
       "href": "/library",
       "desc": "Fashion, art, cinema, design.",
       "src": "/archive/farah-pahlavi/user-farah-red-velvet-atelier.jpg",
-      "meta": "FASHION \u00b7 ART \u00b7 CINEMA"
+      "meta": "FASHION · ART · CINEMA"
     },
     {
       "id": "modernity",
@@ -71,7 +71,7 @@
       "href": "/vault",
       "desc": "Exile, diaspora, and the afterlife of the photographic record.",
       "src": "/archive/reza-pahlavi/user-young-reza-on-throne.jpg",
-      "meta": "EXILE \u00b7 DIASPORA \u00b7 CONTINUITY"
+      "meta": "EXILE · DIASPORA · CONTINUITY"
     },
     {
       "id": "objects",
@@ -79,7 +79,7 @@
       "href": "/editions",
       "desc": "Editions and cultural objects issued from the collection.",
       "src": "/archive/farah-pahlavi/user-farah-coronation-crown-ermine.jpg",
-      "meta": "EDITIONS \u00b7 PUBLICATIONS"
+      "meta": "EDITIONS · PUBLICATIONS"
     }
   ],
   "sections": [
@@ -98,26 +98,14 @@
     {
       "id": "library",
       "href": "/library",
-      "label": "The Library",
-      "desc": "Essays and documents for slow attention."
-    },
-    {
-      "id": "vault",
-      "href": "/vault",
-      "label": "The Vault",
-      "desc": "Rare and unpublished material."
+      "label": "The Journal",
+      "desc": "Sourced stories, testimony and documents."
     },
     {
       "id": "editions",
       "href": "/editions",
       "label": "Editions",
       "desc": "Limited cultural objects."
-    },
-    {
-      "id": "circle",
-      "href": "/patronage",
-      "label": "The Circle",
-      "desc": "Private supporters of the archive."
     }
   ],
   "stats": {

@@ -2,26 +2,26 @@
 @import "tw-animate-css";
 
 @theme {
-  /* Archive of a lost modernity — ivory, bone, ink, deep wine, photographic grey */
-  --color-ground: #f3efe7;
-  --color-ground-elevated: #e9e2d6;
-  --color-parchment: #e0d7c9;
+  /* MyPahlavi V4 — cool ivory, archival grey, ink, restrained red */
+  --color-ground: #fffefa;
+  --color-ground-elevated: #f0f0ed;
+  --color-parchment: #e5e5e5;
   --color-ink: #100e0c;
   --color-ink-soft: #26221e;
-  --color-ink-muted: #58524a;
-  --color-ink-subtle: #8a847a;
+  --color-ink-muted: #575757;
+  --color-ink-subtle: #8a8a86;
   --color-deep: #0a0908;
   --color-deep-soft: #141210;
-  --color-accent: #5a2830;
-  --color-accent-soft: #7a3c46;
+  --color-accent: #821d26;
+  --color-accent-soft: #a33a43;
   --color-frame: #181614;
   --color-frame-mid: #282420;
   --color-frame-edge: #080706;
   --color-border: color-mix(in oklab, #100e0c 10%, transparent);
   --color-border-strong: color-mix(in oklab, #100e0c 18%, transparent);
-  --color-cream: #faf6f0;
-  --color-wine: #5a2830;
-  --color-photo-grey: #8a847a;
+  --color-cream: #fffefa;
+  --color-wine: #821d26;
+  --color-photo-grey: #8a8a86;
 
   --font-serif: "Cormorant Garamond", "Times New Roman", Georgia, serif;
   --font-sans: "DM Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -94,9 +94,9 @@
   .archive-frame {
     position: relative;
     background: var(--color-cream);
-    padding: 0;
+    padding: 14px;
     box-shadow: var(--shadow-soft);
-    border: 1px solid color-mix(in oklab, #100e0c 11%, transparent);
+    border: 1px solid color-mix(in oklab, #100e0c 10%, transparent);
   }
 
   .archive-frame-inner {
@@ -120,6 +120,44 @@
   .hero-crossfade {
     transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
+  .museum-plate {
+    margin: 0;
+  }
+
+  .museum-mat {
+    background: #fffefa;
+    border: 1px solid color-mix(in oklab, #111214 9%, transparent);
+    padding: clamp(14px, 2.2vw, 32px);
+    box-shadow: 0 22px 65px color-mix(in oklab, #111214 9%, transparent);
+  }
+
+  .museum-image-well {
+    overflow: hidden;
+    background: #111214;
+  }
+
+  .museum-caption {
+    display: grid;
+    gap: 5px;
+    padding-top: 12px;
+  }
+
+  .museum-meta {
+    font-family: var(--font-sans);
+    font-size: 0.56rem;
+    line-height: 1.4;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
+  }
+
+  .museum-caption-copy {
+    max-width: 44rem;
+    font-size: 0.72rem;
+    line-height: 1.55;
+    color: var(--color-ink-muted);
+  }
+
 }
 
 @keyframes archive-fade-in {

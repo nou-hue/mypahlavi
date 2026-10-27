@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 700" role="img" aria-labelledby="t d">
+<title id="t">Tehran Desk No. 01</title><desc id="d">Original panoramic abstract artwork designed specifically for a desk mat.</desc>
+<rect width="1800" height="700" fill="#111214"/>
+<g stroke="#e7e7e2" stroke-width="3" opacity=".8">
+<path d="M80 110H1720M80 230H1720M80 350H1720M80 470H1720M80 590H1720"/>
+<path d="M260 70V630M520 70V630M780 70V630M1040 70V630M1300 70V630M1560 70V630"/>
+</g>
+<path d="M80 540L380 280L620 420L870 160L1110 380L1410 210L1720 460" fill="none" stroke="#821d26" stroke-width="34"/>
+<circle cx="1300" cy="350" r="102" fill="#fffefa"/>
+<text x="90" y="650" font-family="Arial, sans-serif" font-size="24" letter-spacing="9" fill="#fffefa">TEHRAN / DESK STUDY 01</text>
+</svg>
