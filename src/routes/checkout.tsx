@@ -48,24 +48,12 @@ function CheckoutPage() {
   const [form, setForm] = useState<FormState>(emptyForm);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [shopStatus, setShopStatus] = useState<{
-    stripe: boolean;
-    printify: boolean;
-    ready: boolean;
-    message: string;
-  } | null>(null);
+  const [shopStatus, setShopStatus] = useState<{ ready: boolean } | null>(null);
 
   useEffect(() => {
     fetch("/api/shop/status")
       .then((r) => r.json())
-      .then((d) =>
-        setShopStatus({
-          stripe: Boolean(d.stripe),
-          printify: Boolean(d.printify),
-          ready: Boolean(d.ready),
-          message: d.message ?? "",
-        }),
-      )
+      .then((d) => setShopStatus({ ready: Boolean(d.ok) }))
       .catch(() => null);
   }, []);
 
@@ -317,8 +305,9 @@ function CheckoutPage() {
                   : "Checkout unavailable"}
             </button>
             <p className="mt-3 text-xs leading-relaxed text-ink-subtle">
-              {shopStatus?.message ||
-                "Secure checkout. Each piece is made to order."}
+              {shopStatus?.ready === false
+                ? "Checkout is temporarily unavailable. No payment has been taken."
+                : "Secure checkout. Each piece is made to order."}
             </p>
             <Link
               to="/editions"
