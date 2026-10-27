@@ -1,3 +1,4 @@
+import { randomBytes } from "node:crypto";
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { estimateShippingGBP } from "@/data/shop";
@@ -5,6 +6,7 @@ import { printifyConfigured } from "@/lib/printify/client";
 import { resolveProductForCheckout } from "@/lib/shop/catalog.server";
 import {
   insertOrder,
+  OrderPersistenceError,
   orderToStripeMetadata,
   updateOrder,
 } from "@/lib/shop/orders.server";
@@ -32,7 +34,8 @@ const bodySchema = z.object({
 });
 
 function orderId() {
-  return `MP-${Date.now().toString(36).toUpperCase()}${Math.random().toString(36).slice(2, 5).toUpperCase()}`;
+  // Unguessable suffix: the order id is the lookup key for the order page.
+  return `MP-${Date.now().toString(36).toUpperCase()}${randomBytes(6).toString("hex").toUpperCase()}`;
 }
 
 function originFrom(request: Request) {
@@ -179,7 +182,9 @@ export const Route = createFileRoute("/api/shop/checkout")({
             shipping,
             lines: resolved,
             metadata: { mode: "stripe" },
-          });
+          },
+          // Fail closed: no Stripe session unless the order is durably saved.
+          { requireDurable: true });
 
           const TAX_GENERAL = "txcd_99999999";
           const TAX_SHIPPING = "txcd_92010001";
@@ -262,10 +267,18 @@ export const Route = createFileRoute("/api/shop/checkout")({
           });
         } catch (err) {
           console.error("[checkout]", err);
+          if (err instanceof OrderPersistenceError) {
+            return Response.json(
+              {
+                error:
+                  "Checkout is temporarily unavailable. No payment has been taken.",
+              },
+              { status: 503 },
+            );
+          }
+          // Do not leak vendor error text to the browser.
           return Response.json(
-            {
-              error: err instanceof Error ? err.message : "Checkout failed",
-            },
+            { error: "Checkout failed. No payment has been taken." },
             { status: 500 },
           );
         }
