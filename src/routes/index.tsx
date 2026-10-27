@@ -22,7 +22,6 @@ function HomePage() {
               meta={lead.imageMeta}
               caption="Archival image presented as a document, not a decorative crop."
               className="archive-rise"
-              contain={false}
               imageClassName="aspect-[4/5] lg:aspect-[5/6]"
             />
 

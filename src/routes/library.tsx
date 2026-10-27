@@ -43,7 +43,6 @@ function JournalPage() {
                 alt={lead.imageAlt}
                 meta={lead.imageMeta}
                 caption="Context image from the existing archive. Date and provenance remain subject to catalogue verification."
-                contain={false}
                 imageClassName="aspect-[5/6]"
               />
               <article className="lg:pt-6">
