@@ -45,7 +45,11 @@ export const Route = createFileRoute("/api/shop/order/$orderId")({
           try {
             const stripe = getStripe();
             const session = await stripe.checkout.sessions.retrieve(sessionId);
-            if (session.payment_status === "paid") {
+            if (
+              session.payment_status === "paid" &&
+              (typeof session.amount_total !== "number" ||
+                session.amount_total === row.total_pence)
+            ) {
               await updateOrder(row.id, {
                 status: "paid",
                 stripe_session_id: session.id,
@@ -67,6 +71,12 @@ export const Route = createFileRoute("/api/shop/order/$orderId")({
         }
 
         if (!row) {
+          return Response.json({ error: "Not found" }, { status: 404 });
+        }
+
+        // The order page returns name/address/email, so a bare order id is not
+        // enough for a Stripe order: the caller must hold its Checkout session id.
+        if (row.stripe_session_id && sessionId !== row.stripe_session_id) {
           return Response.json({ error: "Not found" }, { status: 404 });
         }
 
