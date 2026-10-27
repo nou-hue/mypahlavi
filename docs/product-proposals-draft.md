@@ -29,6 +29,13 @@ Long-side pixels ÷ long-side inches = effective dpi (aim for ≥150, ideally 20
 - 34 of 54 gallery images are tagged `license: user-upload`; 20 are Wikimedia Commons / "see source". Commons files carry per-file licences (CC BY / CC BY-SA need attribution; some are US-govt public domain). Verify each before commercial merchandise.
 - Likenesses of living people (Farah Pahlavi, Reza Pahlavi, Farahnaz, Leila-line family) on **apparel/mugs/totes** raise personality-rights risk; prints of historical plates are lower risk. Proposals below use prints for portraits and original artwork for objects/apparel.
 
+## Curation context (read first)
+
+- **main** (`isShopVisible`) currently *withholds all prints* and shows apparel/objects.
+- **v4/editorial-rebuild** (PR #6) flips this: prints + desk/paper objects visible; apparel, mugs, stickers, candles, phone cases hidden.
+- V4 already lists five "studio study" entries (not yet mapped to Printify): Tehran Grid / Caspian Line / Garden Plan prints at **A3 £42 / A2 £64 / (A1 £92 for Tehran Grid)**, Tehran Desk Study desk mat **£46**, Garden Plan notebook A5 **£24**. Proposals #9–#12 below therefore only restate those; use the V4 prices unless the owner changes them.
+- Photo-print proposals (#1–#8) only make sense on V4's direction, and only after the rights check below (main hides prints today).
+
 ## Proposals
 
 | # | Title | Source asset | Printify product / size | Suggested GBP range | Rationale |
@@ -41,12 +48,12 @@ Long-side pixels ÷ long-side inches = effective dpi (aim for ≥150, ideally 20
 | 6 | Reza Shah — Woolf portrait, 1938 | `public/archive/reza-shah/reza-shah-woolf-portrait-1938.jpg` (1997×2400) | Matte poster A4, A3 (A3 ≈ 145 dpi) | A4 £26–32 · A3 £44–48 | Commons; resolution limits to A3. Entry-level print price point. |
 | 7 | Crown Prince Reza — cropped portrait | `public/archive/reza-pahlavi/portrait-of-crown-prince-of-iran-reza-pahlavi-cropped.jpg` (3525×4680) | Matte poster A3, A2 | A3 £46–50 · A2 £68–72 | Living subject — confirm owner intent/rights first. |
 | 8 | Lineage cards — Tadj ol-Molouk, Ali Reza (and set) | `public/archive/lineage-portraits/tadj-ol-molouk.jpg` (900×1238), `.../ali-reza.jpg` (800×1033) | Greeting card 5×7 in (single / set) | £4.50–6 each · set of 4 £16–20 | Only formats the low-res lineage art supports. Farahnaz / Leila / Shahnaz (≤800 px) need better scans first. New low-price entry point (nothing under £18 today). |
-| 9 | Tehran Grid No. 01 | `public/editions/tehran-grid-01.svg` (on `v4/editorial-rebuild`; 1200×1600 vector) | Matte poster A3, A2 (rasterise to 300 dpi first) | A3 £42–48 · A2 £62–70 | Original studio artwork — no third-party rights, resolution-independent. Price at parity with photo prints. |
-| 10 | Caspian Line No. 01 | `public/editions/caspian-line-01.svg` (V4) | Matte poster A3, A2 | A3 £42–48 · A2 £62–70 | As #9. |
-| 11 | Garden Plan No. 01 | `public/editions/garden-plan-01.svg` (V4) | Matte poster A3, A2 | A3 £42–48 · A2 £62–70 | As #9. |
-| 12 | Tehran Desk No. 01 | `public/editions/tehran-desk-01.svg` (V4; 1800×700 panoramic) | Desk mat (e.g. 31×15.5 in) | £26–34 | Designed for the format; accessory pricing between mug (£18–22) and tote (£28)/tee (£36). |
-| 13 | Tehran Grid — tote | `public/editions/tehran-grid-01.svg` (V4) | Cotton tote, one size | £28–32 | Matches existing tote £28; original art, no likeness. |
-| 14 | Caspian Line — mug | `public/editions/caspian-line-01.svg` (V4) | Ceramic mug 11 oz / 15 oz | £18–22 / £22–26 | Matches existing mug prices. |
+| 9 | Tehran Grid No. 01 | `public/editions/tehran-grid-01.svg` (on `v4/editorial-rebuild`; 1200×1600 vector) | Matte poster A3, A2 (rasterise to 300 dpi first) | A3 £42 · A2 £64 · A1 £92 (already set in V4) | Original studio artwork — no third-party rights, resolution-independent. Already in V4 catalogue. |
+| 10 | Caspian Line No. 01 | `public/editions/caspian-line-01.svg` (V4) | Matte poster A3, A2 | A3 £42 · A2 £64 (already set in V4) | As #9. |
+| 11 | Garden Plan No. 01 | `public/editions/garden-plan-01.svg` (V4) | Matte poster A3, A2 | A3 £42 · A2 £64 (already set in V4) | As #9. |
+| 12 | Tehran Desk No. 01 | `public/editions/tehran-desk-01.svg` (V4; 1800×700 panoramic) | Desk mat (e.g. 31×15.5 in) | £46 (already set in V4; £40–48 range) | Designed for the format; V4 prices it above tote (£28) and tee (£36), consistent with a full-surface dye-sub object. |
+| 13 | Tehran Grid — tote | `public/editions/tehran-grid-01.svg` (V4) | Cotton tote, one size | £28–32 | Matches existing tote £28; original art, no likeness. Allowed by V4 curation gate (tote). |
+| 14 | Caspian Line — mug | `public/editions/caspian-line-01.svg` (V4) | Ceramic mug 11 oz / 15 oz | £18–22 / £22–26 | Matches existing mug prices. **Hidden by V4 curation gate (mugs)** — only if the owner wants to relax it. |
 
 ## Recommended order of launch
 
