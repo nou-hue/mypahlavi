@@ -26,12 +26,12 @@ Every record has a `status`.
 
 | status | meaning | visible on site? |
 | --- | --- | --- |
-| `draft` | being written | no |
-| `review` | written, waiting for a second pair of eyes | no |
+| `draft` | being written, or held (open flag, rights hold) | never: not in any bundle, though still validated |
+| `review` | written and sourced, waiting for sign-off | previews and local builds only, under a "Draft" banner, **noindex**. Stripped from production bundles |
 | `published` | checked and ready | yes, indexed by search engines |
 | `placeholder` | layout demo only | yes, clearly labelled, **noindex** |
 
-Move a record `draft` → `review` → `published`. Drafts and reviews never appear, even in a preview, so unfinished or rights-pending material cannot leak.
+Move a record `draft` → `review` → `published`. Drafts never appear anywhere. Reviews appear on previews only. Nothing becomes `published` without a human setting `reviewedBy` and the status.
 
 If a **published** record is missing something required (a citation, a rights holder, a byline…), the record is **not shown** and `npm run content:check` fails with a message naming the file and field.
 
@@ -249,7 +249,7 @@ Tests only police placeholders: they must show no date or image and carry a `pla
 
 ## 12. Previews: what you will see
 
-Every pull request gets a Vercel Preview URL. A preview shows `published` and `placeholder` records only. Previews are isolated from production: a code guard (`src/lib/preview-guard.mjs`) removes production database and payment-provider secrets when `VERCEL_ENV=preview`, and keeps Stripe **test** keys only. Test purchases on a preview use Stripe's test cards and never charge money. A separate preview database can be supplied with `PREVIEW_DATABASE_URL` (set in Vercel for the Preview environment). Without it, shop and account features on a preview are simply unavailable. You never need to set any of this to edit content.
+Every pull request gets a Vercel Preview URL. A preview shows `published`, `placeholder` and `review` records (the last under a Draft banner and noindex); production shows `published` and `placeholder` only. Previews are isolated from production: a code guard (`src/lib/preview-guard.mjs`) removes production database and payment-provider secrets when `VERCEL_ENV=preview`, and keeps Stripe **test** keys only. Test purchases on a preview use Stripe's test cards and never charge money. A separate preview database can be supplied with `PREVIEW_DATABASE_URL` (set in Vercel for the Preview environment). Without it, shop and account features on a preview are simply unavailable. You never need to set any of this to edit content.
 
 ## 13. Quick checklist before setting `published`
 
@@ -261,3 +261,26 @@ Every pull request gets a Vercel Preview URL. A preview shows `published` and `p
 - [ ] A second person has read it (`reviewedBy`).
 - [ ] `npm run content:check` is clean.
 - [ ] The URL is added to `public/sitemap.xml`.
+
+
+## 13. Importing Content & SEO's files
+
+`npm run content:import -- --from <dir>` reads Content & SEO's folder (SPEC, MDX sections, `images.json`, `timeline.json`, `sources.json`, places, collections) and regenerates `content/archive/**` and `public/archive/plates/`. It copies the originals into `content/source/` (never `shop-links.json`: archive pages carry no shop links), self-hosts every image (960px plus a 500px variant; **no hotlinking**), and maps flags to statuses:
+
+- text carrying `[VERIFY`, `[CONFIRM` or `[UPGRADE` → `draft` (held);
+- images with rights `verify-before-use` → shown as a labelled frame, file not shipped; `hold` and `do-not-use` → `draft`;
+- everything else → `review`. The importer never sets `published`.
+
+Re-running the import is idempotent.
+
+## 14. Citations in prose
+
+Write `[@loc17]` or `[@loc17; @icj16]` straight after the claim. The remark plugin (`src/content/remark-archive-citations.mjs`) fails the import on an unknown source id; the page shows numbered superscripts linked to the Sources list.
+
+## 15. Gates that run on every build
+
+- **Rights gate** (`src/content/rights-gate.mjs`): an image shows only if its rights status is cleared (public-domain, cc, licensed, owned) and its file is self-hosted. `ArchiveFigure` always prints credit, licence and a source link, shown or not.
+- **Content gate** (`scripts/archive-content-gate.mjs`): removes draft records (and review records on production) from the bundle.
+- **Marker check**: `npm run content:check` fails if a non-draft record contains `[VERIFY`, `[CONFIRM` or `[UPGRADE`; a published record may not cite a review or draft record.
+- **Build scan** (`npm run build:scan`, after `vite build`): fails on those markers, Wikimedia hotlinks, or held images in the output.
+- **Host**: canonical and `og:url` come from `SITE_URL` in `src/lib/site-config.mjs` (default `https://www.mypahlavi.com`). Change it there only; the sitemap and robots lines follow.

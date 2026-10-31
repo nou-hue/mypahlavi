@@ -305,7 +305,9 @@ export function PlateFrame({
     ? (RIGHTS_LABEL[plate.rights.status] ?? "Rights not cleared")
     : plate.status === "placeholder"
       ? "Image to come"
-      : "Image not yet supplied";
+      : plate.rights.status === "pending"
+        ? "Rights check pending · image withheld"
+        : "Image not yet supplied";
 
   return (
     <div className={cn("museum-mat !p-2.5 sm:!p-4", className)}>
