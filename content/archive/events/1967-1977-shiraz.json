@@ -1,0 +1,19 @@
+{
+  "id": "1967-1977-shiraz",
+  "status": "review",
+  "title": "Shiraz Arts Festival",
+  "summary": "Annual international arts festival held in Shiraz and Persepolis, initiated by Farah Pahlavi.",
+  "date": {
+    "precision": "year",
+    "value": "1967",
+    "end": "1977"
+  },
+  "confidence": "to-verify",
+  "note": "Rests on a tertiary source and has not yet been independently confirmed.",
+  "cite": [
+    {
+      "sourceId": "wp-shiraz"
+    }
+  ],
+  "plateIds": []
+}

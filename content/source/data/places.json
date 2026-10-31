@@ -1,0 +1,165 @@
+{
+ "version": 1,
+ "places": [
+  {
+   "slug": "persepolis",
+   "name": "Persepolis",
+   "region": "Fars",
+   "summary": "Ceremonial capital of the Achaemenid Empire; inscribed by UNESCO in 1979.",
+   "facts": [
+    {
+     "t": "Inscribed on the UNESCO World Heritage List in 1979.",
+     "s": [
+      "unesco114"
+     ]
+    },
+    {
+     "t": "Site of the October 1971 celebrations of 2,500 years of the Iranian monarchy.",
+     "s": [
+      "loc19",
+      "wp-2500"
+     ]
+    }
+   ],
+   "images": [
+    "persepolis-apadana"
+   ],
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "editorial": [
+    "persepolis-capitals-and-1971"
+   ]
+  },
+  {
+   "slug": "golestan-palace",
+   "name": "Golestan Palace",
+   "region": "Tehran",
+   "summary": "Qajar-era royal complex in the historic core of Tehran.",
+   "facts": [
+    {
+     "t": "Originally built in the Safavid period; took its most characteristic form in the 19th century as the Qajar family's royal residence and seat of power.",
+     "s": [
+      "unesco1422"
+     ]
+    },
+    {
+     "t": "Inscribed on the World Heritage List on 23 June 2013.",
+     "s": [
+      "unesco1422"
+     ]
+    }
+   ],
+   "images": [
+    "golestan-palace"
+   ],
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "editorial": []
+  },
+  {
+   "slug": "trans-iranian-railway",
+   "name": "Trans-Iranian Railway",
+   "region": "Caspian Sea to Persian Gulf",
+   "summary": "1,394 km standard-gauge line opened fully in 1938.",
+   "facts": [
+    {
+     "t": "Connects the Caspian Sea in the north to the Persian Gulf in the south; opened fully in 1938.",
+     "s": [
+      "unesco1585"
+     ]
+    },
+    {
+     "t": "Inscribed on the World Heritage List on 25 July 2021.",
+     "s": [
+      "unesco1585"
+     ]
+    },
+    {
+     "t": "Built during Reza Shah's reign as part of the expansion of roads, railways and state factories.",
+     "s": [
+      "loc15"
+     ]
+    }
+   ],
+   "images": [
+    "veresk-bridge-1943",
+    "veresk-bridge-modern"
+   ],
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "editorial": []
+  },
+  {
+   "slug": "university-of-tehran",
+   "name": "University of Tehran",
+   "region": "Tehran",
+   "summary": "Iran's first European-style university, founded in the mid-1930s.",
+   "facts": [
+    {
+     "t": "LoC: established in 1935 as the country's first European-style university. Another source says inaugurated 1934.",
+     "s": [
+      "loc15",
+      "wp-uot"
+     ]
+    }
+   ],
+   "images": [
+    "university-of-tehran-gate"
+   ],
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "editorial": [
+    "how-this-archive-handles-contested-facts"
+   ],
+   "flag": "date contested"
+  },
+  {
+   "slug": "azadi-tower",
+   "name": "Azadi (Shahyad) Tower",
+   "region": "Tehran",
+   "summary": "Marble-clad monument completed in 1971, designed by Hossein Amanat.",
+   "facts": [
+    {
+     "t": "Completed in 1971; designed by Hossein Amanat; originally named Shahyad Tower.",
+     "s": [
+      "wp-azadi"
+     ]
+    }
+   ],
+   "images": [
+    "azadi-tower"
+   ],
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "editorial": [],
+   "flag": "tertiary source only"
+  },
+  {
+   "slug": "tehran-museum-of-contemporary-art",
+   "name": "Tehran Museum of Contemporary Art",
+   "region": "Tehran",
+   "summary": "Museum inaugurated in 1977 and designed by Kamran Diba.",
+   "facts": [
+    {
+     "t": "Inaugurated in 1977; designed by Kamran Diba with Nader Ardalan.",
+     "s": [
+      "wp-tmoca"
+     ]
+    }
+   ],
+   "images": [
+    "tmoca"
+   ],
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "editorial": [],
+   "flag": "tertiary source only"
+  }
+ ]
+}

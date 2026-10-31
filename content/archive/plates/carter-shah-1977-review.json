@@ -1,0 +1,45 @@
+{
+  "id": "carter-shah-1977-review",
+  "status": "review",
+  "title": "President Carter and the Shah review troops at a welcoming ceremony, 15 November 1977",
+  "caption": "President Carter and the Shah review troops at a welcoming ceremony, 15 November 1977.",
+  "image": {
+    "src": "/archive/plates/carter-shah-1977-review.jpg",
+    "alt": "President Carter and the Shah of Iran reviewing troops at a welcoming ceremony",
+    "width": 960,
+    "height": 657,
+    "variants": [
+      {
+        "src": "/archive/plates/carter-shah-1977-review-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1977-11-15"
+  },
+  "credit": {
+    "line": "Unknown author / Wikimedia Commons / Public domain (NARA-image-full, PD-USGov)",
+    "creator": "Unknown author",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AJimmy_Carter_and_Shah_of_Iran_inspect_the_troop_during_welcoming_ceremony_for_the_Shah._-_NARA_-_176850.tif"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Unknown author",
+    "licence": "Public domain",
+    "evidence": "NARA / White House photo: PD-USGov. Note the tif original is large. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "editorial-only",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc21",
+    "loc22"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title and date; NARA identifier 176850."
+}

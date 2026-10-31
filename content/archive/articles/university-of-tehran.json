@@ -1,0 +1,44 @@
+{
+  "slug": "university-of-tehran",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "University of Tehran",
+  "standfirst": "Iran's first European-style university, founded in the mid-1930s.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Tehran",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Tehran"
+    },
+    {
+      "label": "Evidence note",
+      "value": "Currently date contested."
+    }
+  ],
+  "plateIds": [
+    "university-of-tehran-gate"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "LoC: established in 1935 as the country's first European-style university. Another source says inaugurated 1934[@loc15; @wp-uot].",
+      "cite": [
+        {
+          "sourceId": "loc15"
+        },
+        {
+          "sourceId": "wp-uot"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "reza-shah-state-building",
+    "how-this-archive-handles-contested-facts"
+  ]
+}

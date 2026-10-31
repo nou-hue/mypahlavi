@@ -1,0 +1,45 @@
+{
+  "slug": "golestan-palace",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "Golestan Palace",
+  "standfirst": "Qajar-era royal complex in the historic core of Tehran.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Tehran",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Tehran"
+    }
+  ],
+  "plateIds": [
+    "golestan-palace"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Originally built in the Safavid period; took its most characteristic form in the 19th century as the Qajar family's royal residence and seat of power[@unesco1422].",
+      "cite": [
+        {
+          "sourceId": "unesco1422"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Inscribed on the World Heritage List on 23 June 2013[@unesco1422].",
+      "cite": [
+        {
+          "sourceId": "unesco1422"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "constitutional-revolution-to-pahlavi-accession"
+  ]
+}

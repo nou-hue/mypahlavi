@@ -1,0 +1,78 @@
+{
+  "slug": "reading-the-1953-record",
+  "status": "draft",
+  "template": "essay",
+  "kind": "editorial",
+  "title": "Reading the 1953 record: a guide to the sources",
+  "standfirst": "Which documents exist, who wrote them, and what each can and cannot tell us.",
+  "date": {
+    "precision": "unknown"
+  },
+  "seoTitle": "1953 Iran coup sources: a reading guide",
+  "metaDescription": "A guide to the main sources on the 1953 overthrow of Mossadeq: CIA histories, the Library of Congress study, the ICJ case and the State Department record.",
+  "readingMinutes": 5,
+  "facts": [],
+  "plateIds": [],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The documents"
+    },
+    {
+      "type": "paragraph",
+      "text": "The National Security Archive's 2013 briefing book publishes 21 CIA items, including Donald Wilber's March 1954 *Clandestine Services History*, a mid-1970s CIA history titled *The Battle for Iran*, and a 1998 history by the agency historian Scott Koch, \"Zendebad, Shah!\" [@nsa435]. Wilber was a principal planner of the operation; the Archive cautions that his account, like any historical document, must be read with attention to its author's perspective, purpose and audience, and that the CIA wrote such histories for future operatives and not for the public [@nsa435]. The Koch history was written by an in-house historian without a stake in the events, though it is heavily redacted [@nsa435].",
+      "cite": [
+        {
+          "sourceId": "nsa435"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What is missing"
+    },
+    {
+      "type": "paragraph",
+      "text": "CIA officials have stated that most of the records on the coup were lost or destroyed in the early 1960s [@nsa435]. The State Department's *Foreign Relations of the United States* volume on the period, published in 1989, did not mention the US role; the omission provoked criticism and led to a 1991 statute, and a retrospective volume was still unpublished when the Archive wrote in 2013 [@nsa435]. [VERIFY: whether the FRUS retrospective has since been published; check history.state.gov before publishing this paragraph.]",
+      "cite": [
+        {
+          "sourceId": "nsa435"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What historians dispute"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Archive lists \"who hatched the plot, who ultimately carried it out, who supported it inside Iran, and how did it succeed\" as questions still in dispute, and notes that recent scholarship in English, French and Persian reaches sometimes widely different views [@nsa435].",
+      "cite": [
+        {
+          "sourceId": "nsa435"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "The overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Library of Congress summary of the period is useful as a chronology: nationalisation on 15 March 1951, Mossadeq's appointment in April, the shah's appointment of Zahedi as prime minister on 13 August 1953 and the events of 19 August [@loc17]. For the international-law dimension, rely on the Court's own account of its 1952 judgment rather than on secondary summaries [@icj16].",
+      "cite": [
+        {
+          "sourceId": "loc17"
+        },
+        {
+          "sourceId": "icj16"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "oil-mossadeq-and-1953"
+  ],
+  "reviewNote": "Held as a draft: unverified markers in the text: [VERIFY: whether the FRUS retrospective has since been published; c…]"
+}

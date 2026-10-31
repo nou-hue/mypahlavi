@@ -1,0 +1,37 @@
+{
+  "id": "reza-shah-portrait-1938",
+  "status": "review",
+  "title": "Reza Shah Pahlavi, portrait by Samuel Johnson Woolf, 1938",
+  "caption": "Reza Shah Pahlavi, portrait by Samuel Johnson Woolf, 1938.",
+  "image": null,
+  "date": {
+    "precision": "year",
+    "value": "1938"
+  },
+  "credit": {
+    "line": "Samuel Johnson Woolf / Wikimedia Commons / Public domain (PD-art)",
+    "creator": "Samuel Johnson Woolf",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AReza_Shah_Pahlavi_portrait_%281938%29.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Samuel Johnson Woolf",
+    "licence": "Public domain",
+    "evidence": "PD-art (artist died 1948). Confirm the medium (drawing vs photograph) and the Getty record; a Getty-held copy does not by itself change status for a 2D work, but verify. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "B",
+    "ukSafe": "verify",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc15",
+    "wp-uot",
+    "wp-reza"
+  ],
+  "uncertainty": "Rights check pending: the licence needs confirming at the holding institution before the image is shown.",
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title; Getty Images listed as source.",
+  "holdReason": "PD-art (artist died 1948). Confirm the medium (drawing vs photograph) and the Getty record; a Getty-held copy does not by itself change status for a 2D work, but verify."
+}

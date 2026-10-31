@@ -1,0 +1,22 @@
+{
+  "id": "1967-coronation",
+  "status": "review",
+  "title": "Coronation of Mohammad Reza Shah",
+  "summary": "LoC: 'In October 1967' the shah celebrated his long-postponed coronation and placed the crown on his own head; the Majlis conferred the title Arya-Mehr.",
+  "date": {
+    "precision": "day",
+    "value": "1967-10-26"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc19"
+    },
+    {
+      "sourceId": "wp-mrp"
+    }
+  ],
+  "plateIds": [
+    "pahlavi-crown-1960s"
+  ]
+}

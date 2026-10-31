@@ -1,0 +1,18 @@
+{
+  "id": "1909-constitution-restored",
+  "status": "review",
+  "title": "Constitution restored",
+  "summary": "Constitutional forces marched on Tehran from Rasht and Esfahan, deposed Mohammad Ali Shah and re-established the constitution.",
+  "date": {
+    "precision": "month",
+    "value": "1909-07"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc13"
+    }
+  ],
+  "entrySlug": "constitutional-revolution-to-pahlavi-accession",
+  "plateIds": []
+}

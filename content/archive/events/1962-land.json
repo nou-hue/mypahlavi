@@ -1,0 +1,18 @@
+{
+  "id": "1962-land",
+  "status": "review",
+  "title": "Land distribution law approved",
+  "summary": "Approved by the cabinet under Prime Minister Ali Amini.",
+  "date": {
+    "precision": "month",
+    "value": "1962-01"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc18"
+    }
+  ],
+  "entrySlug": "white-revolution-and-reform",
+  "plateIds": []
+}

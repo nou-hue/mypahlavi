@@ -1,0 +1,18 @@
+{
+  "id": "1946-azerbaijan",
+  "status": "review",
+  "title": "Soviet withdrawal; Azarbaijan and Mahabad republics collapse",
+  "summary": "Soviet troops withdrew in 1946 under US, British and UN pressure; the autonomous Azarbaijan government and the Kurdish Republic of Mahabad collapsed after the army entered Azarbaijan in December 1946.",
+  "date": {
+    "precision": "year",
+    "value": "1946"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc16"
+    }
+  ],
+  "entrySlug": "occupation-and-accession",
+  "plateIds": []
+}

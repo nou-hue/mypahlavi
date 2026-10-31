@@ -1,0 +1,18 @@
+{
+  "id": "1978-qom",
+  "status": "review",
+  "title": "Ettelaat article; Qom protests",
+  "summary": "A government-inspired newspaper article about Khomeini provoked protests in Qom in which several demonstrators were killed; memorial protests spread in February.",
+  "date": {
+    "precision": "month",
+    "value": "1978-01"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc21"
+    }
+  ],
+  "entrySlug": "revolution-1977-1979",
+  "plateIds": []
+}

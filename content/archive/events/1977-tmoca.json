@@ -1,0 +1,20 @@
+{
+  "id": "1977-tmoca",
+  "status": "review",
+  "title": "Tehran Museum of Contemporary Art opens",
+  "summary": "Inaugurated by Farah Pahlavi; designed by Kamran Diba with Nader Ardalan.",
+  "date": {
+    "precision": "year",
+    "value": "1977"
+  },
+  "confidence": "to-verify",
+  "note": "Rests on a tertiary source and has not yet been independently confirmed.",
+  "cite": [
+    {
+      "sourceId": "wp-tmoca"
+    }
+  ],
+  "plateIds": [
+    "tmoca"
+  ]
+}

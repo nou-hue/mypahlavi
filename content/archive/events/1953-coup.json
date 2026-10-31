@@ -1,0 +1,21 @@
+{
+  "id": "1953-coup",
+  "status": "review",
+  "title": "Overthrow of Mossadeq",
+  "summary": "Pro-shah army units and street crowds defeated Mossadeq's forces on 19 August 1953, after an initial attempt had appeared to fail and the shah had left the country; the shah returned. A joint US-UK operation (CIA 'TPAJAX'/'Ajax') is documented; the exact balance of foreign and Iranian roles is disputed by historians.",
+  "date": {
+    "precision": "day",
+    "value": "1953-08-19"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc17"
+    },
+    {
+      "sourceId": "nsa435"
+    }
+  ],
+  "entrySlug": "oil-mossadeq-and-1953",
+  "plateIds": []
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "photographs",
+  "status": "review",
+  "title": "Photographs and objects",
+  "description": "Rights-cleared images only (status approved*). Each carries source, author, licence and attribution.",
+  "coverPlateId": "ahmad-shah-c1916",
+  "members": [
+    {
+      "kind": "plate",
+      "id": "ahmad-shah-c1916"
+    },
+    {
+      "kind": "plate",
+      "id": "veresk-bridge-1943"
+    },
+    {
+      "kind": "plate",
+      "id": "dar-ul-funun"
+    },
+    {
+      "kind": "plate",
+      "id": "carter-shah-1977-review"
+    },
+    {
+      "kind": "plate",
+      "id": "carter-hussein-shah-1977-12-31"
+    },
+    {
+      "kind": "plate",
+      "id": "truman-shah-1949"
+    },
+    {
+      "kind": "plate",
+      "id": "nixon-shah-1973"
+    },
+    {
+      "kind": "plate",
+      "id": "mossadegh-supreme-court-1951"
+    },
+    {
+      "kind": "plate",
+      "id": "mossadegh-acheson-1951"
+    },
+    {
+      "kind": "plate",
+      "id": "veresk-bridge-modern"
+    },
+    {
+      "kind": "plate",
+      "id": "wdl-first-majlis-1906"
+    },
+    {
+      "kind": "plate",
+      "id": "tehran-conference-1943"
+    },
+    {
+      "kind": "plate",
+      "id": "nixon-shah-1969"
+    },
+    {
+      "kind": "plate",
+      "id": "university-of-tehran-gate"
+    },
+    {
+      "kind": "plate",
+      "id": "azadi-tower"
+    },
+    {
+      "kind": "plate",
+      "id": "farah-diba-1962"
+    },
+    {
+      "kind": "plate",
+      "id": "rijksmuseum-gold-coin"
+    },
+    {
+      "kind": "plate",
+      "id": "golestan-palace"
+    },
+    {
+      "kind": "plate",
+      "id": "persepolis-apadana"
+    },
+    {
+      "kind": "plate",
+      "id": "shah-schiphol-1949"
+    },
+    {
+      "kind": "plate",
+      "id": "tmoca"
+    },
+    {
+      "kind": "plate",
+      "id": "pahlavi-crown-1960s"
+    },
+    {
+      "kind": "plate",
+      "id": "shah-departure-1959"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1907-anglo-russian",
+  "status": "review",
+  "title": "Anglo-Russian Agreement",
+  "summary": "Britain and Russia agreed to divide Iran into spheres of influence (Russian north, British south and east, neutral centre).",
+  "date": {
+    "precision": "year",
+    "value": "1907"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc13"
+    }
+  ],
+  "entrySlug": "constitutional-revolution-to-pahlavi-accession",
+  "plateIds": []
+}

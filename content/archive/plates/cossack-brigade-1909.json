@@ -1,0 +1,37 @@
+{
+  "id": "cossack-brigade-1909",
+  "status": "review",
+  "title": "Persian Cossack Brigade, April 1909",
+  "caption": "Persian Cossack Brigade, April 1909.",
+  "image": null,
+  "date": {
+    "precision": "month",
+    "value": "1909-04"
+  },
+  "credit": {
+    "line": "Unknown author / Wikimedia Commons / Public domain (PD-Iran)",
+    "creator": "Unknown author",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APersian_Cossack_Brigade.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Unknown author",
+    "licence": "Public domain",
+    "evidence": "PD-Iran tag; source a magazine page. 1909 age makes UK expiry very likely, but photographer is unrecorded and the source is secondary. Verify before use. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "B",
+    "ukSafe": "verify",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc13",
+    "loc14",
+    "loc15"
+  ],
+  "uncertainty": "Rights check pending: the licence needs confirming at the holding institution before the image is shown.",
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title/date.",
+  "holdReason": "PD-Iran tag; source a magazine page. 1909 age makes UK expiry very likely, but photographer is unrecorded and the source is secondary. Verify before use."
+}

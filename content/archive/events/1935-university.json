@@ -1,0 +1,25 @@
+{
+  "id": "1935-university",
+  "status": "review",
+  "title": "University of Tehran",
+  "summary": "LoC records the country's first European-style university as established in 1935. Other sources give 1934 for its inauguration.",
+  "date": {
+    "precision": "year",
+    "value": "1935"
+  },
+  "confidence": "disputed",
+  "perspective": "Accounts differ between the cited sources.",
+  "note": "Sources differ on this point. The entry above follows the cited sources; read them for the variance.",
+  "cite": [
+    {
+      "sourceId": "loc15"
+    },
+    {
+      "sourceId": "wp-uot"
+    }
+  ],
+  "entrySlug": "reza-shah-state-building",
+  "plateIds": [
+    "university-of-tehran-gate"
+  ]
+}

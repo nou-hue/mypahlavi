@@ -1,0 +1,21 @@
+{
+  "id": "1951-nationalisation",
+  "status": "review",
+  "title": "Majlis votes to nationalise the oil industry",
+  "summary": "Followed in April by Mohammad Mossadeq's appointment as prime minister; Britain imposed an embargo.",
+  "date": {
+    "precision": "day",
+    "value": "1951-03-15"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc17"
+    }
+  ],
+  "entrySlug": "oil-mossadeq-and-1953",
+  "plateIds": [
+    "mossadegh-acheson-1951",
+    "mossadegh-supreme-court-1951"
+  ]
+}

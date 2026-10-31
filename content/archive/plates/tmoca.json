@@ -1,0 +1,47 @@
+{
+  "id": "tmoca",
+  "status": "review",
+  "title": "Tehran Museum of Contemporary Art (photo 2017)",
+  "caption": "Tehran Museum of Contemporary Art (photo 2017).",
+  "image": {
+    "src": "/archive/plates/tmoca.jpg",
+    "alt": "Tehran Museum of Contemporary Art",
+    "width": 960,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/archive/plates/tmoca-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "2017-09-25"
+  },
+  "credit": {
+    "line": "Farid.R / Wikimedia Commons / CC BY-SA 4.0",
+    "creator": "Farid.R",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ATehran_Museum_of_Contemporary_Art-1.jpg"
+  },
+  "rights": {
+    "status": "cc",
+    "holder": "Farid.R",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "evidence": "CC BY-SA 4.0 (Farid.R). Editorial only. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A-CC",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc19",
+    "wp-mrp",
+    "wp-2500"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title."
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "azadi-tower",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "Azadi (Shahyad) Tower",
+  "standfirst": "Marble-clad monument completed in 1971, designed by Hossein Amanat.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Tehran",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Tehran"
+    },
+    {
+      "label": "Evidence note",
+      "value": "Currently tertiary source only."
+    }
+  ],
+  "plateIds": [
+    "azadi-tower"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Completed in 1971; designed by Hossein Amanat; originally named Shahyad Tower[@wp-azadi].",
+      "cite": [
+        {
+          "sourceId": "wp-azadi"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": []
+}

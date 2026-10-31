@@ -1,0 +1,18 @@
+{
+  "id": "1963-women-vote",
+  "status": "review",
+  "title": "Women's suffrage announced",
+  "summary": "The shah announced the extension of the vote to women.",
+  "date": {
+    "precision": "month",
+    "value": "1963-02"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc18"
+    }
+  ],
+  "entrySlug": "white-revolution-and-reform",
+  "plateIds": []
+}

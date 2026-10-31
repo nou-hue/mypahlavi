@@ -1,0 +1,71 @@
+{
+  "slug": "the-lion-and-sun",
+  "status": "draft",
+  "template": "essay",
+  "kind": "editorial",
+  "title": "The Lion and Sun: an emblem and its changing uses",
+  "standfirst": "A solar lion appears on coins, metalwork, tiles and flags. What do we know about where it comes from?",
+  "date": {
+    "precision": "unknown"
+  },
+  "seoTitle": "The Lion and Sun: history of an Iranian emblem",
+  "metaDescription": "A sourced introduction to the Persian Lion and Sun emblem: its astrological roots, its long use on objects, and its place on Iran's flag until 1979.",
+  "readingMinutes": 4,
+  "facts": [],
+  "plateIds": [],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The lion-and-sun motif combines a lion with the sun, and was a central element of Iran's national flag until 1979 [@wp-lionsun]. It appears widely on coins, metalwork, tiles and miniature paintings across Iran, Central Asia and India [@wp-lionsun].",
+      "cite": [
+        {
+          "sourceId": "wp-lionsun"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Where it comes from"
+    },
+    {
+      "type": "paragraph",
+      "text": "Writers connect the motif to the astrological association of the sun with the sign of Leo, an idea some trace to ancient West Asian traditions linking sun gods and lions [@wp-lionsun]. A version with the sun half-hidden behind a lion appears in a fourteenth-century manuscript of Albumasar's *Book of Nativities*, illustrated by Qanbar ʿAli Shirazi [@wp-lionsun]. Evidence for earlier forms is debated, and the motif became widely popular from the twelfth century [@wp-lionsun]. [VERIFY with a tier A source before publication.]",
+      "cite": [
+        {
+          "sourceId": "wp-lionsun"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "A shared symbol"
+    },
+    {
+      "type": "paragraph",
+      "text": "The scholar Afsaneh Najmabadi has argued that the emblem has had \"a unique success\" as a sign of modern Iranian identity because it draws on several traditions, among them Zoroastrian, Shia and Jewish symbolism [@wp-lionsun; @najmabadi2005]. [VERIFY quotation and page in Najmabadi before publication; second-hand at present.]",
+      "cite": [
+        {
+          "sourceId": "wp-lionsun"
+        },
+        {
+          "sourceId": "najmabadi2005"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Use today"
+    },
+    {
+      "type": "paragraph",
+      "text": "The emblem remains in use in different contexts. Because it is politically contested, this archive describes designs and sources and does not endorse any current use of the symbol."
+    },
+    {
+      "type": "paragraph",
+      "text": "*Shop link (outbound): the Lion and Sun framed canvas is a contemporary illustration; see its product page for the artwork's provenance.* [CONFIRM artwork provenance with Shops & Prints.]"
+    }
+  ],
+  "furtherReading": [],
+  "related": [],
+  "reviewNote": "Held as a draft: unverified markers in the text: [VERIFY with a tier A source before publication.…] [VERIFY quotation and page in Najmabadi before publication; second-…] [CONFIRM artwork provenance with Shops & Prints.…]; source status \"draft-needs-sources\"; Currently rests on a tertiary source only (tier C). Do NOT publish until at least two tier A/B sources are added, e.g. an Encyclopaedia Iranica entry and a scholarly work such as Najmabadi (2005), opened and cited by page."
+}

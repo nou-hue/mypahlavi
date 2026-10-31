@@ -1,0 +1,18 @@
+{
+  "id": "1941-abdication",
+  "status": "review",
+  "title": "Reza Shah abdicates",
+  "summary": "Reza Shah abdicated in favour of his son Mohammad Reza.",
+  "date": {
+    "precision": "day",
+    "value": "1941-09-16"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc16"
+    }
+  ],
+  "entrySlug": "occupation-and-accession",
+  "plateIds": []
+}

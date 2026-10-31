@@ -1,0 +1,36 @@
+{
+  "id": "abadan-1941",
+  "status": "review",
+  "title": "British troops at Abadan during the Anglo-Soviet occupation of Iran, 4 September 1941",
+  "caption": "British troops at Abadan during the Anglo-Soviet occupation of Iran, 4 September 1941.",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "1941-09-04"
+  },
+  "credit": {
+    "line": "Geoffrey Keating / Wikimedia Commons / Public domain (PD-Scan)",
+    "creator": "Geoffrey Keating",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AAbadan_invasion_of_Iran.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Geoffrey Keating",
+    "licence": "Public domain",
+    "evidence": "Imperial War Museums photograph (PD-Scan / UK government). Check IWM's current reuse terms before publishing. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "B",
+    "ukSafe": "verify",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc16",
+    "wp-anglosoviet"
+  ],
+  "uncertainty": "Rights check pending: the licence needs confirming at the holding institution before the image is shown.",
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title/description; IWM ref E 5323. Confirm caption against the IWM catalogue entry.",
+  "holdReason": "Imperial War Museums photograph (PD-Scan / UK government). Check IWM's current reuse terms before publishing."
+}

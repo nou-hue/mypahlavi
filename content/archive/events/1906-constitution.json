@@ -1,0 +1,20 @@
+{
+  "id": "1906-constitution",
+  "status": "review",
+  "title": "Constitution signed",
+  "summary": "Muzaffar ad Din Shah signed the constitution on 30 December 1906, providing for an elected Majlis; he died five days later. Supplementary Fundamental Laws followed in 1907.",
+  "date": {
+    "precision": "day",
+    "value": "1906-12-30"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc13"
+    }
+  ],
+  "entrySlug": "constitutional-revolution-to-pahlavi-accession",
+  "plateIds": [
+    "wdl-first-majlis-1906"
+  ]
+}

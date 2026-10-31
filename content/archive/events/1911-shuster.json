@@ -1,0 +1,18 @@
+{
+  "id": "1911-shuster",
+  "status": "review",
+  "title": "Majlis closed after Russian ultimatum",
+  "summary": "After the Majlis refused a Russian ultimatum demanding the dismissal of treasurer-general Morgan Shuster, Bakhtiari chiefs surrounded the Majlis and forced acceptance; the constitution was again suspended.",
+  "date": {
+    "precision": "day",
+    "value": "1911-12-20"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc13"
+    }
+  ],
+  "entrySlug": "constitutional-revolution-to-pahlavi-accession",
+  "plateIds": []
+}

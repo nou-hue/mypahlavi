@@ -1,0 +1,20 @@
+{
+  "id": "1978-rex",
+  "status": "review",
+  "title": "Rex Cinema fire, Abadan",
+  "summary": "More than 400 people died. LoC notes that evidence after the revolution suggested deliberate arson by religiously inclined students, while the opposition cultivated the belief that SAVAK was responsible.",
+  "date": {
+    "precision": "month",
+    "value": "1978-08"
+  },
+  "confidence": "disputed",
+  "perspective": "Accounts differ between the cited sources.",
+  "note": "Sources differ on this point. The entry above follows the cited sources; read them for the variance.",
+  "cite": [
+    {
+      "sourceId": "loc21"
+    }
+  ],
+  "entrySlug": "revolution-1977-1979",
+  "plateIds": []
+}

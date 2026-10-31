@@ -1,0 +1,37 @@
+{
+  "slug": "history-sections",
+  "status": "review",
+  "title": "History in eight parts",
+  "description": "The narrative from the Constitutional Revolution to 1980.",
+  "coverPlateId": "wdl-first-majlis-1906",
+  "members": [
+    {
+      "kind": "entry",
+      "id": "constitutional-revolution-to-pahlavi-accession"
+    },
+    {
+      "kind": "entry",
+      "id": "reza-shah-state-building"
+    },
+    {
+      "kind": "entry",
+      "id": "occupation-and-accession"
+    },
+    {
+      "kind": "entry",
+      "id": "oil-mossadeq-and-1953"
+    },
+    {
+      "kind": "entry",
+      "id": "white-revolution-and-reform"
+    },
+    {
+      "kind": "entry",
+      "id": "revolution-1977-1979"
+    },
+    {
+      "kind": "entry",
+      "id": "exile-and-aftermath"
+    }
+  ]
+}

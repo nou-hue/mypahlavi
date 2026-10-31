@@ -1,0 +1,19 @@
+{
+  "id": "1927-civil-code",
+  "status": "review",
+  "title": "Civil code enacted",
+  "summary": "The civil code drafted under Justice Minister Ali Akbar Davar was enacted between 1927 and 1932 as part of a secular codification of law.",
+  "date": {
+    "precision": "year",
+    "value": "1927",
+    "end": "1932"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc15"
+    }
+  ],
+  "entrySlug": "reza-shah-state-building",
+  "plateIds": []
+}

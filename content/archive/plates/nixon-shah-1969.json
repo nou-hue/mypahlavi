@@ -1,0 +1,46 @@
+{
+  "id": "nixon-shah-1969",
+  "status": "review",
+  "title": "The Shah of Iran and President Nixon, 21 October 1969",
+  "caption": "The Shah of Iran and President Nixon, 21 October 1969.",
+  "image": {
+    "src": "/archive/plates/nixon-shah-1969.jpg",
+    "alt": "The Shah of Iran and President Nixon, 21 October 1969",
+    "width": 960,
+    "height": 1424,
+    "variants": [
+      {
+        "src": "/archive/plates/nixon-shah-1969-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1969-10-21"
+  },
+  "credit": {
+    "line": "Robert LeRoy Knudsen / Wikimedia Commons / Public domain (PD-USGov)",
+    "creator": "Robert LeRoy Knudsen",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AThe_Shah_of_Iran_and_President_Nixon_-_NARA_-_194301.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Robert LeRoy Knudsen",
+    "licence": "Public domain",
+    "evidence": "PD-USGov. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "editorial-only",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc19",
+    "wp-mrp",
+    "wp-2500"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title/date; NARA 194301."
+}

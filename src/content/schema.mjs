@@ -115,7 +115,7 @@ export const rightsSchema = z
     restrictions: z.string().optional(),
     /** Content & SEO rights tier (A, A-CC, B, C, X) and UK-safety flag; product use needs tier A and ukSafe true/likely. */
     tier: z.enum(["A", "A-CC", "B", "C", "X"]).optional(),
-    ukSafe: z.union([z.boolean(), z.enum(["likely", "editorial-only", "verify"])]).optional(),
+    ukSafe: z.enum(["true", "likely", "editorial-only", "verify", "false"]).optional(),
     checkedBy: z.string().optional(),
     checkedOn: isoDay.optional(),
   })
@@ -145,6 +145,10 @@ export const plateSchema = z
         alt: text,
         width: z.number().int().positive().optional(),
         height: z.number().int().positive().optional(),
+        /** Smaller self-hosted copies for srcset. */
+        variants: z
+          .array(z.object({ src: z.string().regex(/^\/[^\s]+\.(jpe?g|png|webp|avif)$/i), width: z.number().int().positive() }).strict())
+          .optional(),
       })
       .strict()
       .nullable(),
@@ -212,8 +216,6 @@ export const articleSchema = z
     metaDescription: z.string().optional(),
     readingMinutes: z.number().int().positive().optional(),
     related: z.array(slug).default([]), // other entry slugs
-    /** Shop product slugs this piece links to. Shown only while the product has no unresolved blockers. */
-    products: z.array(z.string()).default([]),
     /** Why a draft is held (internal). */
     reviewNote: z.string().optional(),
     body: z.array(blockSchema).default([]),

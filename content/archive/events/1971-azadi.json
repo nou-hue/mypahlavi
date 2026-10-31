@@ -1,0 +1,20 @@
+{
+  "id": "1971-azadi",
+  "status": "review",
+  "title": "Shahyad (Azadi) Tower completed",
+  "summary": "Designed by Hossein Amanat; commissioned to mark the celebrations; renamed Azadi Tower after 1979.",
+  "date": {
+    "precision": "year",
+    "value": "1971"
+  },
+  "confidence": "to-verify",
+  "note": "Rests on a tertiary source and has not yet been independently confirmed.",
+  "cite": [
+    {
+      "sourceId": "wp-azadi"
+    }
+  ],
+  "plateIds": [
+    "azadi-tower"
+  ]
+}

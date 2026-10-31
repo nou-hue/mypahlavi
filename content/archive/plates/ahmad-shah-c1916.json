@@ -1,0 +1,48 @@
+{
+  "id": "ahmad-shah-c1916",
+  "status": "review",
+  "title": "Ahmad Shah Qajar, last Qajar ruler, about 1916",
+  "caption": "Ahmad Shah Qajar, last Qajar ruler, about 1916.",
+  "image": {
+    "src": "/archive/plates/ahmad-shah-c1916.jpg",
+    "alt": "Portrait photograph of Ahmad Shah Qajar, about 1916",
+    "width": 960,
+    "height": 1371,
+    "variants": [
+      {
+        "src": "/archive/plates/ahmad-shah-c1916-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "year",
+    "value": "1916",
+    "circa": true
+  },
+  "credit": {
+    "line": "Bain News Service / Wikimedia Commons / Public domain (PD-Bain)",
+    "creator": "Bain News Service",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AAhmadShahQajar2.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Bain News Service",
+    "licence": "Public domain",
+    "evidence": "Bain collection: LoC states no known restrictions. Confirm the LoC call number on the Commons page. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "likely",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc13",
+    "loc14",
+    "loc15"
+  ],
+  "useFor": [
+    "editorial",
+    "product"
+  ],
+  "captionBasis": "Commons description; LoC Prints & Photographs (Bain News Service)."
+}

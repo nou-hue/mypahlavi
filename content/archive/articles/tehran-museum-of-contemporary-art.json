@@ -1,0 +1,38 @@
+{
+  "slug": "tehran-museum-of-contemporary-art",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "Tehran Museum of Contemporary Art",
+  "standfirst": "Museum inaugurated in 1977 and designed by Kamran Diba.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Tehran",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Tehran"
+    },
+    {
+      "label": "Evidence note",
+      "value": "Currently tertiary source only."
+    }
+  ],
+  "plateIds": [
+    "tmoca"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Inaugurated in 1977; designed by Kamran Diba with Nader Ardalan[@wp-tmoca].",
+      "cite": [
+        {
+          "sourceId": "wp-tmoca"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": []
+}

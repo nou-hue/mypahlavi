@@ -1,0 +1,47 @@
+{
+  "id": "shah-schiphol-1949",
+  "status": "review",
+  "title": "The Shah of Iran at Schiphol with his sister, 31 December 1949. Nationaal Archief / Anefo",
+  "caption": "The Shah of Iran at Schiphol with his sister, 31 December 1949. Nationaal Archief / Anefo.",
+  "image": {
+    "src": "/archive/plates/shah-schiphol-1949.jpg",
+    "alt": "The Shah of Iran at Schiphol airport with his sister, 31 December 1949",
+    "width": 960,
+    "height": 804,
+    "variants": [
+      {
+        "src": "/archive/plates/shah-schiphol-1949-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1949-12-31"
+  },
+  "credit": {
+    "line": "Winterbergen / Anefo / Wikimedia Commons / CC0 (credit given as courtesy)",
+    "creator": "Winterbergen / Anefo",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASjah_van_Perzi%C3%AB_op_Schiphol_met_zuster%2C_Bestanddeelnr_903-7733.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Winterbergen / Anefo",
+    "licence": "CC0",
+    "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "evidence": "CC0. Note: 'sister' per Anefo record; identify her from the record before naming. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc16",
+    "wp-anglosoviet"
+  ],
+  "useFor": [
+    "editorial",
+    "product"
+  ],
+  "captionBasis": "Commons description (Anefo 903-7733)."
+}

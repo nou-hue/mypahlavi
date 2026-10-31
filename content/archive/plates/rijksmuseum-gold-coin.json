@@ -1,0 +1,49 @@
+{
+  "id": "rijksmuseum-gold-coin",
+  "status": "review",
+  "title": "Gold coin with a portrait of Mohammad Reza Pahlavi. Rijksmuseum object NG-776",
+  "caption": "Gold coin with a portrait of Mohammad Reza Pahlavi. Rijksmuseum object NG-776.",
+  "image": {
+    "src": "/archive/plates/rijksmuseum-gold-coin.jpg",
+    "alt": "Gold coin showing the Shah of Iran, in the Rijksmuseum collection",
+    "width": 960,
+    "height": 477,
+    "variants": [
+      {
+        "src": "/archive/plates/rijksmuseum-gold-coin-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "year",
+    "value": "1950",
+    "end": "1981"
+  },
+  "credit": {
+    "line": "Rijksmuseum (object NG-776) / Wikimedia Commons / CC0 (credit given as courtesy)",
+    "creator": "Rijksmuseum (object NG-776)",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMohammed_Reza_Pahlavi%2C_sjah_van_Perzi%C3%AB%2C_NG-776.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Rijksmuseum (object NG-776)",
+    "licence": "CC0",
+    "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "evidence": "CC0 (Rijksmuseum). Strongest candidate for object-led pages and product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc19",
+    "wp-mrp",
+    "wp-2500"
+  ],
+  "useFor": [
+    "editorial",
+    "product"
+  ],
+  "captionBasis": "Commons description (Rijksmuseum object NG-776, Dutch)."
+}

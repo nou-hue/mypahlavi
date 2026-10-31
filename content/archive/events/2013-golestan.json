@@ -1,0 +1,20 @@
+{
+  "id": "2013-golestan",
+  "status": "review",
+  "title": "Golestan Palace inscribed by UNESCO",
+  "summary": "The Qajar-era palace complex in Tehran became a World Heritage Site.",
+  "date": {
+    "precision": "day",
+    "value": "2013-06-23"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "unesco1422"
+    }
+  ],
+  "entrySlug": "constitutional-revolution-to-pahlavi-accession",
+  "plateIds": [
+    "golestan-palace"
+  ]
+}

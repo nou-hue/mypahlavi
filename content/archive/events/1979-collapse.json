@@ -1,0 +1,18 @@
+{
+  "id": "1979-collapse",
+  "status": "review",
+  "title": "Armed forces declare neutrality; monarchy collapses",
+  "summary": "On 11 February twenty-two senior commanders declared neutrality; by the late afternoon of 12 February Bakhtiar was in hiding and the Pahlavi monarchy had collapsed (LoC).",
+  "date": {
+    "precision": "day",
+    "value": "1979-02-11"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc22"
+    }
+  ],
+  "entrySlug": "revolution-1977-1979",
+  "plateIds": []
+}

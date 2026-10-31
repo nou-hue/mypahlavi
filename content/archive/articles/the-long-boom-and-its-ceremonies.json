@@ -1,0 +1,162 @@
+{
+  "slug": "the-long-boom-and-its-ceremonies",
+  "status": "draft",
+  "template": "essay",
+  "kind": "section",
+  "order": 6,
+  "period": "1964–1976",
+  "title": "The long boom and its ceremonies",
+  "standfirst": "Economic growth, a coronation, the 1971 celebrations, new institutions and a narrowing political space.",
+  "date": {
+    "precision": "year",
+    "value": "1964",
+    "end": "1976"
+  },
+  "seoTitle": "Iran 1964–1976: growth, ceremony, one-party rule",
+  "metaDescription": "Sourced overview of the Hoveyda years: growth, the 1967 coronation, the 1971 Persepolis celebrations, culture and political controls.",
+  "facts": [
+    {
+      "label": "Period",
+      "value": "1964–1976"
+    }
+  ],
+  "plateIds": [
+    "nixon-shah-1969",
+    "nixon-shah-1973",
+    "rijksmuseum-gold-coin",
+    "pahlavi-crown-1960s",
+    "persepolis-apadana",
+    "azadi-tower",
+    "tmoca"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "Growth and control"
+    },
+    {
+      "type": "paragraph",
+      "text": "After Prime Minister Mansur was assassinated on 21 January 1965, Amir Abbas Hoveyda took office and served for twelve years, the longest term of any modern Iranian prime minister [@loc19]. The Library of Congress describes a period of impressive economic growth and relative political stability, helped by the land distribution programme, expanding jobs and moderate inflation between 1964 and 1973 [@loc19]. It also records that elections in 1967 and 1971 were carefully controlled and open only to the Mardom Party and, later, the Pan-Iranist Party, and that only 10 per cent of eligible voters in Tehran voted in the 1968 municipal elections [@loc19].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "nixon-shah-1973"
+    },
+    {
+      "type": "heading",
+      "text": "Succession and coronation"
+    },
+    {
+      "type": "paragraph",
+      "text": "A constituent assembly in September 1967 provided for the queen to act as regent if the crown prince had not come of age [@loc19]. In October 1967 the shah celebrated his long-postponed coronation and, like his father, placed the crown on his own head; the Majlis conferred the title Arya-Mehr, \"Light of the Aryans\" [@loc19]. The coronation took place on 26 October 1967 [@wp-mrp]. The Library of Congress adds that this glorification of the monarchy was not universally popular [@loc19].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        },
+        {
+          "sourceId": "wp-mrp"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "rijksmuseum-gold-coin"
+    },
+    {
+      "type": "heading",
+      "text": "Persepolis, 1971"
+    },
+    {
+      "type": "paragraph",
+      "text": "Celebrations in 1971 marked what was presented as 2,500 years of uninterrupted monarchy and the twenty-fifth centennial of Cyrus the Great's founding of the empire [@loc19]. They opened on 12 October 1971 at the tomb of Cyrus at Pasargadae and centred on Persepolis [@wp-2500]. The Library of Congress notes that the ceremonies drew adverse domestic comment, that honoured guests were foreign heads of state, and that Khomeini issued a declaration condemning the celebrations [@loc19]. UNESCO inscribed Persepolis on the World Heritage List in 1979 [@unesco114]. See the editorial piece on the 1971 celebrations.",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        },
+        {
+          "sourceId": "wp-2500"
+        },
+        {
+          "sourceId": "unesco114"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "pahlavi-crown-1960s"
+    },
+    {
+      "type": "heading",
+      "text": "Institutions and objects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Azadi Tower, called the Shahyad Tower until 1979, was designed by Hossein Amanat and completed in 1971 [@wp-azadi]. The Shiraz Arts Festival was held from 1967 to 1977 on the initiative of Farah Pahlavi [@wp-shiraz]. The Tehran Museum of Contemporary Art, designed by Kamran Diba, was inaugurated in 1977 [@wp-tmoca]. The Iranian crown jewels, last used by the Pahlavi dynasty, are housed in the Treasury of National Jewels in Tehran; ownership of the imperial treasury was transferred to the state in 1937 [@wp-jewels]. [UPGRADE NEEDED: the last four sentences rest on tertiary sources; replace with Iranica, museum or archive citations before publication.]",
+      "cite": [
+        {
+          "sourceId": "wp-azadi"
+        },
+        {
+          "sourceId": "wp-shiraz"
+        },
+        {
+          "sourceId": "wp-tmoca"
+        },
+        {
+          "sourceId": "wp-jewels"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "persepolis-apadana"
+    },
+    {
+      "type": "heading",
+      "text": "Foreign policy"
+    },
+    {
+      "type": "paragraph",
+      "text": "The shah supported regional co-operation, improved relations with the Soviet Union, and expanded Iran's armed forces; in 1972 Nixon allowed him to buy any conventional weapon in the US arsenal [@loc19]. Iran and Iraq signed the Algiers Agreement in 1975 [@loc19].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "azadi-tower"
+    },
+    {
+      "type": "heading",
+      "text": "Opposition and repression"
+    },
+    {
+      "type": "paragraph",
+      "text": "After the 1963 riots there was little overt opposition, but new groups committed to armed struggle formed; the Fadayan attacked a gendarmerie post at Siahkal in February 1971, and 341 guerrilla members died between 1971 and 1979 in confrontations, executions or custody [@loc20]. In 1975 a one-party state was established under the Rastakhiz party, which the Library of Congress says further alienated the educated classes [@loc21]. Organisations such as Amnesty International drew attention to the treatment of political prisoners [@loc21].",
+      "cite": [
+        {
+          "sourceId": "loc20"
+        },
+        {
+          "sourceId": "loc21"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "tmoca"
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "revolution-1977-1979"
+  ],
+  "reviewNote": "Held as a draft: unverified markers in the text: [UPGRADE NEEDED: the last four sentences rest on tertiary sources; r…]"
+}

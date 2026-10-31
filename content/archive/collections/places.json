@@ -1,0 +1,33 @@
+{
+  "slug": "places",
+  "status": "review",
+  "title": "Places",
+  "description": "Six sites with sourced fact cards.",
+  "coverPlateId": "persepolis-apadana",
+  "members": [
+    {
+      "kind": "entry",
+      "id": "persepolis"
+    },
+    {
+      "kind": "entry",
+      "id": "golestan-palace"
+    },
+    {
+      "kind": "entry",
+      "id": "trans-iranian-railway"
+    },
+    {
+      "kind": "entry",
+      "id": "university-of-tehran"
+    },
+    {
+      "kind": "entry",
+      "id": "azadi-tower"
+    },
+    {
+      "kind": "entry",
+      "id": "tehran-museum-of-contemporary-art"
+    }
+  ]
+}

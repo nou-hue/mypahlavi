@@ -1,0 +1,20 @@
+{
+  "id": "1921-coup",
+  "status": "review",
+  "title": "Reza Khan and Sayyid Zia march into Tehran",
+  "summary": "Cossack officer Reza Khan, with journalist Sayyid Zia ad Din Tabatabai, seized power.",
+  "date": {
+    "precision": "month",
+    "value": "1921-02"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc14"
+    }
+  ],
+  "entrySlug": "constitutional-revolution-to-pahlavi-accession",
+  "plateIds": [
+    "ahmad-shah-c1916"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "persepolis",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "Persepolis",
+  "standfirst": "Ceremonial capital of the Achaemenid Empire; inscribed by UNESCO in 1979.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Fars",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Fars"
+    }
+  ],
+  "plateIds": [
+    "persepolis-apadana"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Inscribed on the UNESCO World Heritage List in 1979[@unesco114].",
+      "cite": [
+        {
+          "sourceId": "unesco114"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Site of the October 1971 celebrations of 2,500 years of the Iranian monarchy[@loc19; @wp-2500].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        },
+        {
+          "sourceId": "wp-2500"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": []
+}

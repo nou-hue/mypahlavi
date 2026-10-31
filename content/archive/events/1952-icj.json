@@ -1,0 +1,18 @@
+{
+  "id": "1952-icj",
+  "status": "review",
+  "title": "ICJ judgment: no jurisdiction",
+  "summary": "The International Court of Justice decided it had no jurisdiction in the Anglo-Iranian Oil Co. case brought by the UK.",
+  "date": {
+    "precision": "day",
+    "value": "1952-07-22"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "icj16"
+    }
+  ],
+  "entrySlug": "oil-mossadeq-and-1953",
+  "plateIds": []
+}

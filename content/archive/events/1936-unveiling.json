@@ -1,0 +1,21 @@
+{
+  "id": "1936-unveiling",
+  "status": "review",
+  "title": "Ban on the veil",
+  "summary": "A decree of 8 January 1936 banned veils (headscarf and chador) and was enforced forcefully; LoC records that the veil was 'forcibly abolished' in 1936.",
+  "date": {
+    "precision": "day",
+    "value": "1936-01-08"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc15"
+    },
+    {
+      "sourceId": "wp-reza"
+    }
+  ],
+  "entrySlug": "reza-shah-state-building",
+  "plateIds": []
+}

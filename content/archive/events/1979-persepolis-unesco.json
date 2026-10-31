@@ -1,0 +1,18 @@
+{
+  "id": "1979-persepolis-unesco",
+  "status": "review",
+  "title": "Persepolis inscribed on the World Heritage List",
+  "summary": "UNESCO inscribed Persepolis in 1979.",
+  "date": {
+    "precision": "year",
+    "value": "1979"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "unesco114"
+    }
+  ],
+  "entrySlug": "exile-and-aftermath",
+  "plateIds": []
+}

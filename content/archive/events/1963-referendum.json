@@ -1,0 +1,18 @@
+{
+  "id": "1963-referendum",
+  "status": "review",
+  "title": "White Revolution referendum",
+  "summary": "Six measures put to a national referendum; the government announced a 99 per cent majority.",
+  "date": {
+    "precision": "month",
+    "value": "1963-01"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc18"
+    }
+  ],
+  "entrySlug": "white-revolution-and-reform",
+  "plateIds": []
+}

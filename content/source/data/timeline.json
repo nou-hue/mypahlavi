@@ -1,0 +1,862 @@
+{
+ "version": 1,
+ "generated": "2026-10-31",
+ "events": [
+  {
+   "id": "1906-constitution",
+   "date": "1906-12-30",
+   "datePrecision": "day",
+   "title": "Constitution signed",
+   "summary": "Muzaffar ad Din Shah signed the constitution on 30 December 1906, providing for an elected Majlis; he died five days later. Supplementary Fundamental Laws followed in 1907.",
+   "sources": [
+    "loc13"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "note": null,
+   "images": [
+    "wdl-first-majlis-1906"
+   ]
+  },
+  {
+   "id": "1907-anglo-russian",
+   "date": "1907",
+   "datePrecision": "year",
+   "title": "Anglo-Russian Agreement",
+   "summary": "Britain and Russia agreed to divide Iran into spheres of influence (Russian north, British south and east, neutral centre).",
+   "sources": [
+    "loc13"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1908-majlis-bombarded",
+   "date": "1908-06",
+   "datePrecision": "month",
+   "title": "Majlis bombarded",
+   "summary": "Mohammad Ali Shah used the Russian-officered Persian Cossacks Brigade to bomb the Majlis building and close the assembly.",
+   "sources": [
+    "loc13"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "note": null,
+   "images": [
+    "cossack-brigade-1909"
+   ]
+  },
+  {
+   "id": "1909-constitution-restored",
+   "date": "1909-07",
+   "datePrecision": "month",
+   "title": "Constitution restored",
+   "summary": "Constitutional forces marched on Tehran from Rasht and Esfahan, deposed Mohammad Ali Shah and re-established the constitution.",
+   "sources": [
+    "loc13"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1911-shuster",
+   "date": "1911-12-20",
+   "datePrecision": "day",
+   "title": "Majlis closed after Russian ultimatum",
+   "summary": "After the Majlis refused a Russian ultimatum demanding the dismissal of treasurer-general Morgan Shuster, Bakhtiari chiefs surrounded the Majlis and forced acceptance; the constitution was again suspended.",
+   "sources": [
+    "loc13"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1919-anglo-persian",
+   "date": "1919",
+   "datePrecision": "year",
+   "title": "Anglo-Persian Agreement",
+   "summary": "Lord Curzon's proposed agreement (loan and British advisers) was widely viewed as a British protectorate; the Majlis refused to approve it.",
+   "sources": [
+    "loc14"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1921-coup",
+   "date": "1921-02",
+   "datePrecision": "month",
+   "title": "Reza Khan and Sayyid Zia march into Tehran",
+   "summary": "Cossack officer Reza Khan, with journalist Sayyid Zia ad Din Tabatabai, seized power.",
+   "sources": [
+    "loc14"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "note": null,
+   "images": [
+    "ahmad-shah-c1916"
+   ]
+  },
+  {
+   "id": "1925-qajar-deposed",
+   "date": "1925-10",
+   "datePrecision": "month",
+   "title": "Qajar dynasty deposed",
+   "summary": "A Majlis dominated by Reza Khan's supporters deposed the Qajars; in December it conferred the crown on Reza Khan and his heirs.",
+   "sources": [
+    "loc15"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession",
+    "reza-shah-state-building"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1926-coronation",
+   "date": "1926-04",
+   "datePrecision": "month",
+   "title": "Reza Shah crowned",
+   "summary": "Reza Khan was crowned Reza Shah Pahlavi in April 1926.",
+   "sources": [
+    "loc15"
+   ],
+   "confidence": "high",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "note": "A Commons file gives 25 April 1926 for the ceremony; that specific day is NOT yet confirmed by a tier A/B source.",
+   "images": [
+    "coronation-reza-shah-1926"
+   ]
+  },
+  {
+   "id": "1927-civil-code",
+   "date": "1927/1932",
+   "datePrecision": "range",
+   "title": "Civil code enacted",
+   "summary": "The civil code drafted under Justice Minister Ali Akbar Davar was enacted between 1927 and 1932 as part of a secular codification of law.",
+   "sources": [
+    "loc15"
+   ],
+   "confidence": "high",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1928-capitulations",
+   "date": "1928",
+   "datePrecision": "year",
+   "title": "Capitulations abolished",
+   "summary": "Reza Shah abolished the capitulations under which Europeans were subject to their own consular courts.",
+   "sources": [
+    "loc15"
+   ],
+   "confidence": "high",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1935-university",
+   "date": "1935",
+   "datePrecision": "year",
+   "title": "University of Tehran",
+   "summary": "LoC records the country's first European-style university as established in 1935. Other sources give 1934 for its inauguration.",
+   "sources": [
+    "loc15",
+    "wp-uot"
+   ],
+   "confidence": "contested",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "note": "1934 vs 1935. Say 'established in the mid-1930s' unless a primary source (e.g. the founding law) is cited.",
+   "images": [
+    "university-of-tehran-gate"
+   ]
+  },
+  {
+   "id": "1936-mashhad",
+   "date": "1936",
+   "datePrecision": "year",
+   "title": "Imam Reza shrine confrontation, Mashhad",
+   "summary": "Troops entered the Imam Reza shrine where worshippers had gathered to protest the reforms; dozens were killed and many injured.",
+   "sources": [
+    "loc15"
+   ],
+   "confidence": "high",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1936-unveiling",
+   "date": "1936-01-08",
+   "datePrecision": "day",
+   "title": "Ban on the veil",
+   "summary": "A decree of 8 January 1936 banned veils (headscarf and chador) and was enforced forcefully; LoC records that the veil was 'forcibly abolished' in 1936.",
+   "sources": [
+    "loc15",
+    "wp-reza"
+   ],
+   "confidence": "high",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "note": "Day-level date from Wikipedia only; year from LoC.",
+   "images": []
+  },
+  {
+   "id": "1938-railway",
+   "date": "1938",
+   "datePrecision": "year",
+   "title": "Trans-Iranian Railway fully opened",
+   "summary": "The 1,394 km line linking the Caspian Sea with the Persian Gulf opened fully in 1938 (UNESCO World Heritage Site since 2021).",
+   "sources": [
+    "unesco1585",
+    "loc15"
+   ],
+   "confidence": "high",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "note": null,
+   "images": [
+    "veresk-bridge-1943",
+    "veresk-bridge-modern"
+   ]
+  },
+  {
+   "id": "1941-invasion",
+   "date": "1941-08-25",
+   "datePrecision": "day",
+   "title": "Anglo-Soviet invasion",
+   "summary": "Britain and the Soviet Union invaded Iran. Most sources give 25 August 1941; LoC gives 26 August.",
+   "sources": [
+    "loc16",
+    "wp-anglosoviet"
+   ],
+   "confidence": "contested",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "note": "Date discrepancy: say 'late August 1941' or '25 August' with the LoC variance noted.",
+   "images": [
+    "abadan-1941",
+    "tabriz-soviet-1941"
+   ]
+  },
+  {
+   "id": "1941-abdication",
+   "date": "1941-09-16",
+   "datePrecision": "day",
+   "title": "Reza Shah abdicates",
+   "summary": "Reza Shah abdicated in favour of his son Mohammad Reza.",
+   "sources": [
+    "loc16"
+   ],
+   "confidence": "high",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1942-tripartite",
+   "date": "1942-01",
+   "datePrecision": "month",
+   "title": "Tripartite Treaty of Alliance",
+   "summary": "Iran, Britain and the USSR signed a treaty: Allied powers to respect Iran's independence and withdraw within six months of the end of hostilities.",
+   "sources": [
+    "loc16"
+   ],
+   "confidence": "high",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1943-tehran-conference",
+   "date": "1943-11",
+   "datePrecision": "month",
+   "title": "Tehran Conference",
+   "summary": "Roosevelt, Churchill and Stalin reaffirmed commitment to Iran's independence and territorial integrity.",
+   "sources": [
+    "loc16"
+   ],
+   "confidence": "high",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "note": null,
+   "images": [
+    "tehran-conference-1943"
+   ]
+  },
+  {
+   "id": "1944-reza-death",
+   "date": "1944-07",
+   "datePrecision": "month",
+   "title": "Reza Shah dies in Johannesburg",
+   "summary": "LoC: died in July 1944 in Johannesburg. Day (26 July) per Wikipedia.",
+   "sources": [
+    "loc16",
+    "wp-reza"
+   ],
+   "confidence": "high",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1946-azerbaijan",
+   "date": "1946",
+   "datePrecision": "year",
+   "title": "Soviet withdrawal; Azarbaijan and Mahabad republics collapse",
+   "summary": "Soviet troops withdrew in 1946 under US, British and UN pressure; the autonomous Azarbaijan government and the Kurdish Republic of Mahabad collapsed after the army entered Azarbaijan in December 1946.",
+   "sources": [
+    "loc16"
+   ],
+   "confidence": "high",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1951-nationalisation",
+   "date": "1951-03-15",
+   "datePrecision": "day",
+   "title": "Majlis votes to nationalise the oil industry",
+   "summary": "Followed in April by Mohammad Mossadeq's appointment as prime minister; Britain imposed an embargo.",
+   "sources": [
+    "loc17"
+   ],
+   "confidence": "high",
+   "sections": [
+    "oil-mossadeq-and-1953"
+   ],
+   "note": null,
+   "images": [
+    "mossadegh-acheson-1951",
+    "mossadegh-supreme-court-1951"
+   ]
+  },
+  {
+   "id": "1952-icj",
+   "date": "1952-07-22",
+   "datePrecision": "day",
+   "title": "ICJ judgment: no jurisdiction",
+   "summary": "The International Court of Justice decided it had no jurisdiction in the Anglo-Iranian Oil Co. case brought by the UK.",
+   "sources": [
+    "icj16"
+   ],
+   "confidence": "high",
+   "sections": [
+    "oil-mossadeq-and-1953"
+   ],
+   "note": "LoC loc17 says the court 'found in Iran's favor'. That is not what the ICJ's own overview says. Do not repeat the LoC wording.",
+   "images": []
+  },
+  {
+   "id": "1953-coup",
+   "date": "1953-08-19",
+   "datePrecision": "day",
+   "title": "Overthrow of Mossadeq",
+   "summary": "Pro-shah army units and street crowds defeated Mossadeq's forces on 19 August 1953, after an initial attempt had appeared to fail and the shah had left the country; the shah returned. A joint US-UK operation (CIA 'TPAJAX'/'Ajax') is documented; the exact balance of foreign and Iranian roles is disputed by historians.",
+   "sources": [
+    "loc17",
+    "nsa435"
+   ],
+   "confidence": "high",
+   "sections": [
+    "oil-mossadeq-and-1953"
+   ],
+   "note": "Sequence (13 Aug dismissal of Mossadeq; shah leaves; 19 Aug) per loc17; roles contested per NSA.",
+   "images": []
+  },
+  {
+   "id": "1959-farah",
+   "date": "1959",
+   "datePrecision": "year",
+   "title": "Marriage to Farah Diba",
+   "summary": "LoC: the shah remarried in 1959; the crown prince Reza was born in 1960.",
+   "sources": [
+    "loc19",
+    "wp-mrp"
+   ],
+   "confidence": "high",
+   "sections": [
+    "white-revolution-and-reform"
+   ],
+   "note": null,
+   "images": [
+    "farah-diba-1962",
+    "shah-departure-1959"
+   ]
+  },
+  {
+   "id": "1962-land",
+   "date": "1962-01",
+   "datePrecision": "month",
+   "title": "Land distribution law approved",
+   "summary": "Approved by the cabinet under Prime Minister Ali Amini.",
+   "sources": [
+    "loc18"
+   ],
+   "confidence": "high",
+   "sections": [
+    "white-revolution-and-reform"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1963-referendum",
+   "date": "1963-01",
+   "datePrecision": "month",
+   "title": "White Revolution referendum",
+   "summary": "Six measures put to a national referendum; the government announced a 99 per cent majority.",
+   "sources": [
+    "loc18"
+   ],
+   "confidence": "high",
+   "sections": [
+    "white-revolution-and-reform"
+   ],
+   "note": "Official figure; the referendum was not an independent poll.",
+   "images": []
+  },
+  {
+   "id": "1963-women-vote",
+   "date": "1963-02",
+   "datePrecision": "month",
+   "title": "Women's suffrage announced",
+   "summary": "The shah announced the extension of the vote to women.",
+   "sources": [
+    "loc18"
+   ],
+   "confidence": "high",
+   "sections": [
+    "white-revolution-and-reform"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1963-june",
+   "date": "1963-06",
+   "datePrecision": "month",
+   "title": "Khomeini arrested; three days of riots",
+   "summary": "After a speech attacking the shah, Ayatollah Khomeini was arrested in Qom; three days of violent riots followed and were severely suppressed.",
+   "sources": [
+    "loc18"
+   ],
+   "confidence": "high",
+   "sections": [
+    "white-revolution-and-reform"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1964-exile",
+   "date": "1964-11",
+   "datePrecision": "month",
+   "title": "Khomeini exiled",
+   "summary": "Arrested after a sermon against the Status of Forces bill and sent to Turkey; from October 1965 he lived in An Najaf, Iraq.",
+   "sources": [
+    "loc19"
+   ],
+   "confidence": "high",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1965-mansur",
+   "date": "1965-01-21",
+   "datePrecision": "day",
+   "title": "Prime Minister Mansur assassinated",
+   "summary": "Hasan Ali Mansur was assassinated; Amir Abbas Hoveyda became prime minister and served for twelve years.",
+   "sources": [
+    "loc19"
+   ],
+   "confidence": "high",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1967-coronation",
+   "date": "1967-10-26",
+   "datePrecision": "day",
+   "title": "Coronation of Mohammad Reza Shah",
+   "summary": "LoC: 'In October 1967' the shah celebrated his long-postponed coronation and placed the crown on his own head; the Majlis conferred the title Arya-Mehr.",
+   "sources": [
+    "loc19",
+    "wp-mrp"
+   ],
+   "confidence": "high",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": "Day (26 Oct) from Wikipedia; month and year from LoC.",
+   "images": [
+    "pahlavi-crown-1960s"
+   ]
+  },
+  {
+   "id": "1967-1977-shiraz",
+   "date": "1967/1977",
+   "datePrecision": "range",
+   "title": "Shiraz Arts Festival",
+   "summary": "Annual international arts festival held in Shiraz and Persepolis, initiated by Farah Pahlavi.",
+   "sources": [
+    "wp-shiraz"
+   ],
+   "confidence": "medium",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": "Single tertiary source. Upgrade to an Iranica or festival-archive citation before publication.",
+   "images": []
+  },
+  {
+   "id": "1971-azadi",
+   "date": "1971",
+   "datePrecision": "year",
+   "title": "Shahyad (Azadi) Tower completed",
+   "summary": "Designed by Hossein Amanat; commissioned to mark the celebrations; renamed Azadi Tower after 1979.",
+   "sources": [
+    "wp-azadi"
+   ],
+   "confidence": "medium",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": "Tertiary only; verify with Iranica or the architect's own record.",
+   "images": [
+    "azadi-tower"
+   ]
+  },
+  {
+   "id": "1971-siahkal",
+   "date": "1971-02",
+   "datePrecision": "month",
+   "title": "Siahkal attack",
+   "summary": "The Fadayan launched the first major guerrilla action against the state with an attack on a gendarmerie post at Siahkal.",
+   "sources": [
+    "loc20"
+   ],
+   "confidence": "high",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1971-celebrations",
+   "date": "1971-10-12",
+   "datePrecision": "day",
+   "title": "2,500-year celebrations at Persepolis",
+   "summary": "Festivities marking 2,500 years of the Iranian empire began on 12 October 1971. LoC records adverse domestic comment and Khomeini's declaration condemning them.",
+   "sources": [
+    "loc19",
+    "wp-2500"
+   ],
+   "confidence": "high",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": null,
+   "images": [
+    "persepolis-apadana",
+    "tent-city-1971-HOLD"
+   ]
+  },
+  {
+   "id": "1972-nixon",
+   "date": "1972",
+   "datePrecision": "year",
+   "title": "Nixon's visit; arms purchase policy",
+   "summary": "During his 1972 visit Nixon allowed the shah to buy any conventional US weapon in the quantities he judged necessary.",
+   "sources": [
+    "loc19"
+   ],
+   "confidence": "high",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": null,
+   "images": [
+    "nixon-shah-1969",
+    "nixon-shah-1973"
+   ]
+  },
+  {
+   "id": "1975-rastakhiz",
+   "date": "1975",
+   "datePrecision": "year",
+   "title": "One-party state; calendar change; Algiers Agreement",
+   "summary": "The Rastakhiz party created a one-party state; the Majlis changed the calendar to begin with Cyrus's reign; Iran and Iraq signed the Algiers Agreement.",
+   "sources": [
+    "loc19",
+    "loc21"
+   ],
+   "confidence": "high",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1977-tmoca",
+   "date": "1977",
+   "datePrecision": "year",
+   "title": "Tehran Museum of Contemporary Art opens",
+   "summary": "Inaugurated by Farah Pahlavi; designed by Kamran Diba with Nader Ardalan.",
+   "sources": [
+    "wp-tmoca"
+   ],
+   "confidence": "medium",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "note": "Tertiary only; upgrade to museum or Iranica source.",
+   "images": [
+    "tmoca"
+   ]
+  },
+  {
+   "id": "1977-liberalisation",
+   "date": "1977-07",
+   "datePrecision": "month",
+   "title": "Hoveyda replaced by Amuzegar; limited liberalisation",
+   "summary": "After Carter took office the shah released some political prisoners and replaced Hoveyda after twelve years.",
+   "sources": [
+    "loc21"
+   ],
+   "confidence": "high",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "note": null,
+   "images": [
+    "carter-shah-1977-review",
+    "carter-hussein-shah-1977-12-31"
+   ]
+  },
+  {
+   "id": "1978-qom",
+   "date": "1978-01",
+   "datePrecision": "month",
+   "title": "Ettelaat article; Qom protests",
+   "summary": "A government-inspired newspaper article about Khomeini provoked protests in Qom in which several demonstrators were killed; memorial protests spread in February.",
+   "sources": [
+    "loc21"
+   ],
+   "confidence": "high",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1978-rex",
+   "date": "1978-08",
+   "datePrecision": "month",
+   "title": "Rex Cinema fire, Abadan",
+   "summary": "More than 400 people died. LoC notes that evidence after the revolution suggested deliberate arson by religiously inclined students, while the opposition cultivated the belief that SAVAK was responsible.",
+   "sources": [
+    "loc21"
+   ],
+   "confidence": "contested",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "note": "Responsibility remains disputed in public memory; attribute precisely.",
+   "images": []
+  },
+  {
+   "id": "1978-jaleh",
+   "date": "1978-09-08",
+   "datePrecision": "day",
+   "title": "Jaleh Square shooting ('Black Friday')",
+   "summary": "Troops fired on demonstrators after martial law was declared in Tehran and eleven other cities. LoC: 'certainly many more' died than the official figure of eighty-seven.",
+   "sources": [
+    "loc21"
+   ],
+   "confidence": "contested",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "note": "Casualty figures contested; state official figure and LoC caveat only.",
+   "images": []
+  },
+  {
+   "id": "1978-azhari",
+   "date": "1978-11-05",
+   "datePrecision": "day",
+   "title": "Military government under General Azhari",
+   "summary": "The shah replaced Sharif-Emami with General Gholam-Reza Azhari after violent demonstrations in Tehran.",
+   "sources": [
+    "loc21"
+   ],
+   "confidence": "high",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1979-persepolis-unesco",
+   "date": "1979",
+   "datePrecision": "year",
+   "title": "Persepolis inscribed on the World Heritage List",
+   "summary": "UNESCO inscribed Persepolis in 1979.",
+   "sources": [
+    "unesco114"
+   ],
+   "confidence": "high",
+   "sections": [
+    "exile-and-aftermath"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1979-departure",
+   "date": "1979-01-16",
+   "datePrecision": "day",
+   "title": "The shah leaves Iran",
+   "summary": "Announced as a 'short holiday'; celebrations broke out as his aircraft took off.",
+   "sources": [
+    "loc21"
+   ],
+   "confidence": "high",
+   "sections": [
+    "revolution-1977-1979",
+    "exile-and-aftermath"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1979-khomeini-return",
+   "date": "1979-02-01",
+   "datePrecision": "day",
+   "title": "Khomeini returns to Tehran",
+   "summary": "Received by millions; named Mehdi Bazargan prime minister of a provisional government on 5 February.",
+   "sources": [
+    "loc22"
+   ],
+   "confidence": "high",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "note": null,
+   "images": [
+    "khomeini-ghotbzadeh-1978-HOLD"
+   ]
+  },
+  {
+   "id": "1979-collapse",
+   "date": "1979-02-11",
+   "datePrecision": "day",
+   "title": "Armed forces declare neutrality; monarchy collapses",
+   "summary": "On 11 February twenty-two senior commanders declared neutrality; by the late afternoon of 12 February Bakhtiar was in hiding and the Pahlavi monarchy had collapsed (LoC).",
+   "sources": [
+    "loc22"
+   ],
+   "confidence": "high",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "note": null,
+   "images": []
+  },
+  {
+   "id": "1980-death",
+   "date": "1980-07-27",
+   "datePrecision": "day",
+   "title": "Mohammad Reza Pahlavi dies in Cairo",
+   "summary": "Died in exile in Egypt at age 60; state funeral held in Cairo on 30 July.",
+   "sources": [
+    "upi1980",
+    "brit-mrp"
+   ],
+   "confidence": "high",
+   "sections": [
+    "exile-and-aftermath"
+   ],
+   "note": "Funeral date and burial at Al-Rifa'i Mosque: Wikipedia only (not in tier A/B sources yet).",
+   "images": []
+  },
+  {
+   "id": "2013-golestan",
+   "date": "2013-06-23",
+   "datePrecision": "day",
+   "title": "Golestan Palace inscribed by UNESCO",
+   "summary": "The Qajar-era palace complex in Tehran became a World Heritage Site.",
+   "sources": [
+    "unesco1422"
+   ],
+   "confidence": "high",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "note": null,
+   "images": [
+    "golestan-palace"
+   ]
+  }
+ ]
+}

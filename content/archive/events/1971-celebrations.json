@@ -1,0 +1,22 @@
+{
+  "id": "1971-celebrations",
+  "status": "review",
+  "title": "2,500-year celebrations at Persepolis",
+  "summary": "Festivities marking 2,500 years of the Iranian empire began on 12 October 1971. LoC records adverse domestic comment and Khomeini's declaration condemning them.",
+  "date": {
+    "precision": "day",
+    "value": "1971-10-12"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc19"
+    },
+    {
+      "sourceId": "wp-2500"
+    }
+  ],
+  "plateIds": [
+    "persepolis-apadana"
+  ]
+}

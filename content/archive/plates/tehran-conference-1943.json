@@ -1,0 +1,46 @@
+{
+  "id": "tehran-conference-1943",
+  "status": "review",
+  "title": "Joseph Stalin, Franklin D. Roosevelt and Winston Churchill at the Tehran Conference, 29 November 1943. Frankli",
+  "caption": "Joseph Stalin, Franklin D. Roosevelt and Winston Churchill at the Tehran Conference, 29 November 1943. Franklin D. Roosevelt Library.",
+  "image": {
+    "src": "/archive/plates/tehran-conference-1943.jpg",
+    "alt": "Stalin, Roosevelt and Churchill seated together at the Tehran Conference, 29 November 1943",
+    "width": 960,
+    "height": 775,
+    "variants": [
+      {
+        "src": "/archive/plates/tehran-conference-1943-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1943-11-29"
+  },
+  "credit": {
+    "line": "U.S. Government (Franklin D. Roosevelt Presidential Library) / Wikimedia Commons / Public domain (PD-USGov)",
+    "creator": "U.S. Government (Franklin D. Roosevelt Presidential Library)",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ATehran_Conference_1943.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "U.S. Government (Franklin D. Roosevelt Presidential Library)",
+    "licence": "Public domain",
+    "evidence": "PD-USGov. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "likely",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc16",
+    "wp-anglosoviet"
+  ],
+  "useFor": [
+    "editorial",
+    "product"
+  ],
+  "captionBasis": "Commons description."
+}

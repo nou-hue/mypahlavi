@@ -1,0 +1,37 @@
+{
+  "id": "coronation-reza-shah-1926",
+  "status": "review",
+  "title": "Coronation of Reza Shah Pahlavi, 1926",
+  "caption": "Coronation of Reza Shah Pahlavi, 1926.",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "1926-04-25"
+  },
+  "credit": {
+    "line": "Tehran Pariroz / Wikimedia Commons / Public domain (PD-Iran)",
+    "creator": "Tehran Pariroz",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ACoronation_of_Reza_Shah.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Tehran Pariroz",
+    "licence": "Public domain",
+    "evidence": "Tagged PD-Iran only. Age (1926) makes it very probably out of copyright in the UK as an anonymous work if truly anonymous, but the provenance is weak. Seek the original publication (archive/ book) before use. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "B",
+    "ukSafe": "verify",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc15",
+    "wp-uot",
+    "wp-reza"
+  ],
+  "uncertainty": "Rights check pending: the licence needs confirming at the holding institution before the image is shown.",
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title only. Source is a Facebook page; photographer unknown.",
+  "holdReason": "Tagged PD-Iran only. Age (1926) makes it very probably out of copyright in the UK as an anonymous work if truly anonymous, but the provenance is weak. Seek the original publication (archive/ book) before use."
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "persepolis-capitals-and-1971",
+  "status": "draft",
+  "template": "essay",
+  "kind": "editorial",
+  "title": "Persepolis: the animal capitals and the 1971 celebrations",
+  "standfirst": "Two centuries of ruins, one very public party, and a design motif that returns on objects.",
+  "date": {
+    "precision": "unknown"
+  },
+  "seoTitle": "Persepolis capitals and the 1971 celebrations",
+  "metaDescription": "What the double-animal column capitals of Persepolis are, and how the site was used for the 1971 celebrations of 2,500 years of Iranian monarchy.",
+  "readingMinutes": 5,
+  "facts": [],
+  "plateIds": [
+    "persepolis-apadana"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The capitals"
+    },
+    {
+      "type": "paragraph",
+      "text": "The distinctive Achaemenid \"Persepolitan\" column has a base, a fluted shaft and a double-animal capital, mostly bulls, carved back to back; the animals project from the column and function as brackets for the roof timbers [@wp-column]. Lions, man-headed bulls and griffins also occur [@wp-column]. [UPGRADE: cite Schmidt, *Persepolis I* (OIP 68, 1953) by page after opening it; the Wikipedia citation is a pointer only [@schmidt1953].]",
+      "cite": [
+        {
+          "sourceId": "wp-column"
+        },
+        {
+          "sourceId": "schmidt1953"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "The site"
+    },
+    {
+      "type": "paragraph",
+      "text": "UNESCO inscribed Persepolis on its World Heritage List in 1979 [@unesco114].",
+      "cite": [
+        {
+          "sourceId": "unesco114"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "1971"
+    },
+    {
+      "type": "paragraph",
+      "text": "In October 1971 celebrations were held at Persepolis to mark what was presented as 2,500 years of monarchy and the twenty-fifth centennial of Cyrus's empire; they opened on 12 October [@loc19; @wp-2500]. The Library of Congress records that the ceremonies drew adverse domestic comment, that honoured guests were foreign heads of state, and that Khomeini condemned them in a widely circulated declaration [@loc19].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        },
+        {
+          "sourceId": "wp-2500"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Pictures"
+    },
+    {
+      "type": "paragraph",
+      "text": "The only freely licensed picture we have verified for this piece is a modern photograph of the Apadana columns (CC BY-SA 4.0, Bernard Gagnon). Contemporary photographs of the 1971 \"Tent City\" are on hold pending a rights check (see RIGHTS-AUDIT.md)."
+    }
+  ],
+  "furtherReading": [],
+  "related": [],
+  "reviewNote": "Held as a draft: unverified markers in the text: [UPGRADE: cite Schmidt, *Persepolis I* (OIP 68, 1953) by page after …]; The 'kneeling capital' artwork on the three products has NOT been identified. This piece covers the general subject only. Before linking to the products, Shops & Prints must supply the original source of the engraving (museum, date, engraver). If the source is not a Persepolis capital, retitle or remove the product links."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1942-tripartite",
+  "status": "review",
+  "title": "Tripartite Treaty of Alliance",
+  "summary": "Iran, Britain and the USSR signed a treaty: Allied powers to respect Iran's independence and withdraw within six months of the end of hostilities.",
+  "date": {
+    "precision": "month",
+    "value": "1942-01"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc16"
+    }
+  ],
+  "entrySlug": "occupation-and-accession",
+  "plateIds": []
+}

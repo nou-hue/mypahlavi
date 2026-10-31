@@ -1,0 +1,46 @@
+{
+  "id": "mossadegh-supreme-court-1951",
+  "status": "review",
+  "title": "Prime Minister Mohammad Mossadegh on the steps of the U.S. Supreme Court Building, Washington, 5 November 1951",
+  "caption": "Prime Minister Mohammad Mossadegh on the steps of the U.S. Supreme Court Building, Washington, 5 November 1951.",
+  "image": {
+    "src": "/archive/plates/mossadegh-supreme-court-1951.jpg",
+    "alt": "Prime Minister Mohammad Mossadegh on the steps of the Supreme Court Building in Washington, November 1951",
+    "width": 800,
+    "height": 593,
+    "variants": [
+      {
+        "src": "/archive/plates/mossadegh-supreme-court-1951-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1951-11-05"
+  },
+  "credit": {
+    "line": "U.S. Department of State (Truman Library record 66-8015) / Wikimedia Commons / Public domain (PD-USGov-DOS)",
+    "creator": "U.S. Department of State (Truman Library record 66-8015)",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APrime_Minister_Mohammed_Mossadegh_of_Iran_on_the_steps_of_the_Supreme_Court_Building.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "U.S. Department of State (Truman Library record 66-8015)",
+    "licence": "Public domain",
+    "evidence": "Commons: PD-USGov-DOS; Truman Library record. Confirm the department-of-state attribution at trumanlibrary.gov before publication. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "editorial-only",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc17",
+    "icj16",
+    "nsa435"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title/description; Truman Library record 66-8015."
+}
