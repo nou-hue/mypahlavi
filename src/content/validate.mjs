@@ -1,4 +1,5 @@
-import { KINDS, DISPLAYABLE_RIGHTS } from "./schema.mjs";
+import { KINDS, DISPLAYABLE_RIGHTS, UNVERIFIED_MARKER } from "./schema.mjs";
+import { citedIds } from "./citations.mjs";
 
 /**
  * Turn raw JSON files into a validated dataset.
@@ -17,6 +18,8 @@ export function buildDataset(files) {
   const pathOf = new Map();
 
   for (const [path, json] of Object.entries(files)) {
+    // A record the production gate stripped from the bundle (see scripts/archive-content-gate.mjs).
+    if (json === null) continue;
     const parts = path.split("/");
     const file = parts.at(-1);
     const dir = parts.at(-2);
@@ -134,6 +137,72 @@ export function buildDataset(files) {
     }
   }
 
+  /* ---- generic, record-wide rules ---- */
+  const RANK = { draft: 0, review: 1 };
+  const allRecords = Object.keys(data).flatMap((kind) => data[kind].map((rec) => [kind, rec]));
+  const refsOf = (kind, rec) => {
+    const out = [];
+    const cites = (cs) => (cs ?? []).forEach((c) => out.push(["sources", c.sourceId]));
+    if (kind === "plates") rec.sourceIds.forEach((id) => out.push(["sources", id]));
+    if (kind === "articles") {
+      rec.plateIds.forEach((id) => out.push(["plates", id]));
+      rec.related.forEach((id) => out.push(["articles", id]));
+      cites(rec.furtherReading);
+      for (const b of rec.body) {
+        if (b.type === "plate") out.push(["plates", b.plateId]);
+        cites(b.type === "quote" ? [b.cite] : b.cite);
+      }
+    }
+    if (kind === "events") {
+      cites(rec.cite);
+      rec.plateIds.forEach((id) => out.push(["plates", id]));
+      if (rec.entrySlug) out.push(["articles", rec.entrySlug]);
+    }
+    if (kind === "collections") {
+      if (rec.coverPlateId) out.push(["plates", rec.coverPlateId]);
+      const map = { entry: "articles", plate: "plates", event: "events" };
+      rec.members.forEach((m) => out.push([map[m.kind], m.id]));
+    }
+    return out;
+  };
+  for (const [kind, rec] of allRecords) {
+    const own = RANK[rec.status] ?? 2; // draft 0, review 1, published/placeholder 2
+    if (own === 0) continue;
+    // 1. A shipped record may not lean on a draft, and a published one may not lean on a record that is still in review.
+    for (const [rk, rid] of refsOf(kind, rec)) {
+      const target = get(rk, rid);
+      if (!target) continue; // reported elsewhere
+      const t = RANK[target.status] ?? 2;
+      if (t < own && !(own === 1 && t === 1)) {
+        fail(kind, rec, `refers to ${rk.slice(0, -1)} "${rid}" which is "${target.status}"; set it to at least "${rec.status}" first, or remove the reference`);
+      }
+    }
+    // 2. Nothing shipped may carry an unverified marker.
+    const strings = JSON.stringify(rec);
+    const mk = UNVERIFIED_MARKER.exec(strings);
+    if (mk) fail(kind, rec, `contains the unverified marker "${strings.slice(mk.index, mk.index + 40)}…" — resolve it, or set status to "draft"`);
+  }
+  // 3. Inline citation tokens must be listed in the block's cite array, and a published claim
+  //    cannot rest on tier C (tertiary pointer) sources alone.
+  const tierC = (id) => get("sources", id)?.tier === "C";
+  for (const a of data.articles) {
+    for (const [i, b] of a.body.entries()) {
+      if (b.type === "quote" || b.type === "heading" || b.type === "plate") continue;
+      const texts = b.type === "list" ? b.items : [b.text];
+      const inline = texts.flatMap((t) => citedIds(t));
+      const listed = new Set((b.cite ?? []).map((c) => c.sourceId));
+      for (const id of inline) if (!listed.has(id)) fail("articles", a, `body[${i}]: [@${id}] appears in the text but not in the block's cite list`);
+      if (a.status === "published" && listed.size > 0 && [...listed].every(tierC)) {
+        fail("articles", a, `body[${i}]: a published claim cannot rest on tier C sources alone — add a tier A or B source`);
+      }
+    }
+  }
+  for (const e of data.events) {
+    if (e.status === "published" && e.cite.length > 0 && e.cite.every((c) => tierC(c.sourceId))) {
+      fail("events", e, "a published event cannot rest on tier C sources alone — add a tier A or B source");
+    }
+  }
+
   return bad;
   };
 
@@ -147,4 +216,5 @@ export function buildDataset(files) {
   return { data, errors };
 }
 
-export const isVisible = (rec) => rec.status === "published" || rec.status === "placeholder";
+/** What the site can show. `review` records exist only in non-production bundles. */
+export const isVisible = (rec) => ["published", "placeholder", "review"].includes(rec.status);

@@ -7,9 +7,9 @@ import {
 import { AuthProvider } from "@/lib/auth/provider";
 import { CreatedWithGrokBanner } from "@/components/created-with-grok-banner";
 import appCss from "../styles.css?url";
+import { SITE_URL } from "@/lib/site-config.mjs";
 
 const APP_NAME = "MyPahlavi";
-const SITE_URL = "https://www.mypahlavi.com";
 const ogImage = `${SITE_URL}/og.jpg`;
 
 export const Route = createRootRoute({

@@ -1,10 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LayoutShell } from "@/components/archive/layout-shell";
 import { MuseumPlate } from "@/components/archive/museum-plate";
+import { absoluteUrl } from "@/lib/site-config.mjs";
 import { editorialStories, sourcesForStory } from "@/data/editorial-v4";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ links: [{ rel: "canonical", href: "https://www.mypahlavi.com" }] }),
+  head: () => ({
+    links: [{ rel: "canonical", href: absoluteUrl() }],
+    meta: [{ property: "og:url", content: absoluteUrl() }],
+  }),
   component: HomePage,
 });
 

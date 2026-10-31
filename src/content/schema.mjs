@@ -11,6 +11,18 @@ import { DATE_PRECISIONS, checkDateValue } from "./dates.mjs";
  * ------------------------------------------------------------------ */
 
 export const STATUSES = ["placeholder", "draft", "review", "published"];
+/**
+ * Who sees what:
+ *  - published / placeholder: everywhere (placeholders are labelled and noindex).
+ *  - review: preview deployments and local builds only, with a "Draft" banner and
+ *    noindex. Production builds strip these records from the bundle.
+ *  - draft: never shipped. Used for anything still carrying an unverified marker,
+ *    a withheld image, or a source problem. Validated, but not bundled.
+ */
+export const PREVIEW_ONLY_STATUSES = ["review"];
+
+/** Markers Content & SEO leaves where a claim still needs checking. */
+export const UNVERIFIED_MARKER = /\[(?:VERIFY|CONFIRM|UPGRADE)\b/;
 export const TEMPLATES = ["essay", "photograph", "object", "place", "document"];
 export const SOURCE_TYPES = [
   "primary", // letters, memoranda, official records, contemporaneous documents
@@ -83,6 +95,11 @@ export const sourceSchema = z
     /** Whose voice is this? e.g. "U.S. government", "participant recollection". */
     perspective: z.string().optional(),
     note: z.string().optional(),
+    /** A = primary/official/peer-reviewed, B = reputable news or encyclopaedia, C = tertiary pointer (never sufficient alone). */
+    tier: z.enum(["A", "B", "C"]).optional(),
+    edition: z.string().optional(),
+    /** Reuse terms of the source text itself, e.g. "US government work, public domain". */
+    rights: z.string().optional(),
   })
   .strict();
 
@@ -96,6 +113,9 @@ export const rightsSchema = z
     /** How you know: permission letter reference, catalogue statement, URL … */
     evidence: z.string().optional(),
     restrictions: z.string().optional(),
+    /** Content & SEO rights tier (A, A-CC, B, C, X) and UK-safety flag; product use needs tier A and ukSafe true/likely. */
+    tier: z.enum(["A", "A-CC", "B", "C", "X"]).optional(),
+    ukSafe: z.union([z.boolean(), z.enum(["likely", "editorial-only", "verify"])]).optional(),
     checkedBy: z.string().optional(),
     checkedOn: isoDay.optional(),
   })
@@ -135,6 +155,12 @@ export const plateSchema = z
     sourceIds: z.array(slug).default([]),
     /** Anything uncertain about the attribution, date or identification. */
     uncertainty: z.string().optional(),
+    /** Where the image may be used. Product use is gated separately (see rights.tier / rights.ukSafe). */
+    useFor: z.array(z.enum(["editorial", "product"])).optional(),
+    /** Where the caption comes from, so a reader can check it. */
+    captionBasis: z.string().optional(),
+    /** Why a plate is held or withheld (internal; never shown as a claim). */
+    holdReason: z.string().optional(),
     placeholderNote: z.string().optional(),
   })
   .strict();
@@ -151,6 +177,7 @@ const blockSchema = z.discriminatedUnion("type", [
       cite: citationSchema, // a quotation always names its source
     })
     .strict(),
+  z.object({ type: z.literal("list"), items: z.array(text).min(1), cite: z.array(citationSchema).optional() }).strict(),
   z.object({ type: z.literal("plate"), plateId: slug, caption: z.string().optional() }).strict(),
   z
     .object({
@@ -177,6 +204,18 @@ export const articleSchema = z
     /** Label / value rows shown in the "At a glance" panel (dimensions, maker, holder …). */
     facts: z.array(z.object({ label: text, value: text }).strict()).default([]),
     plateIds: z.array(slug).default([]), // first = lead image
+    /** Imported long-form pieces. `section` = numbered history section; `editorial` = note on method or motif. */
+    kind: z.enum(["section", "editorial", "place"]).optional(),
+    order: z.number().int().positive().optional(),
+    period: z.string().optional(),
+    seoTitle: z.string().optional(), // without the brand; " | mypahlavi" is appended
+    metaDescription: z.string().optional(),
+    readingMinutes: z.number().int().positive().optional(),
+    related: z.array(slug).default([]), // other entry slugs
+    /** Shop product slugs this piece links to. Shown only while the product has no unresolved blockers. */
+    products: z.array(z.string()).default([]),
+    /** Why a draft is held (internal). */
+    reviewNote: z.string().optional(),
     body: z.array(blockSchema).default([]),
     /** Sources that informed the entry without being cited in a specific block. */
     furtherReading: z.array(citationSchema).default([]),
@@ -199,6 +238,9 @@ export const eventSchema = z
     perspective: z.string().optional(),
     cite: z.array(citationSchema).default([]),
     entrySlug: slug.optional(), // read more
+    /** Reader-facing explanation shown under a "Sources differ" tag. */
+    note: z.string().optional(),
+    plateIds: z.array(slug).default([]),
     placeholderNote: z.string().optional(),
   })
   .strict();

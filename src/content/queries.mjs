@@ -1,5 +1,6 @@
 import { isVisible } from "./validate.mjs";
 import { sortKey, decadeOf } from "./dates.mjs";
+import { citedIds } from "./citations.mjs";
 
 /**
  * Read-side helpers over a validated dataset. Pure functions: no I/O, so
@@ -79,14 +80,22 @@ export function createArchive(data) {
       }
       return indexOf.get(k);
     };
+    // `inline`: source id -> note number, for [@id] tokens in the text (no locator).
+    // `numbered[i]`: note numbers for cites in block i that are NOT marked inline (shown at the block's end).
+    const inline = new Map();
     const numbered = article.body.map((b) => {
+      const text = b.type === "list" ? b.items.join(" ") : (b.text ?? "");
+      for (const id of citedIds(text)) {
+        if (sourceMap.has(id)) inline.set(id, numberFor({ sourceId: id }));
+      }
+      const marked = new Set(citedIds(text));
       const cs = b.type === "quote" ? [b.cite] : (b.cite ?? []);
-      return cs.filter((c) => sourceMap.has(c.sourceId)).map(numberFor);
+      return cs.filter((c) => sourceMap.has(c.sourceId) && !marked.has(c.sourceId)).map(numberFor);
     });
     const reading = article.furtherReading
       .filter((c) => sourceMap.has(c.sourceId))
       .map((c) => ({ source: sourceMap.get(c.sourceId), locator: c.locator }));
-    return { numbered, notes, reading };
+    return { numbered, inline, notes, reading };
   }
 
   /** Everything that cites a given source, for the Sources index. */

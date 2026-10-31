@@ -38,6 +38,7 @@ export interface Archive {
   };
   citationsFor(article: ArchiveEntry): {
     numbered: number[][];
+    inline: Map<string, number>;
     notes: { n: number; source: ArchiveSource | undefined; locator?: string; sourceId: string }[];
     reading: { source: ArchiveSource | undefined; locator?: string }[];
   };
