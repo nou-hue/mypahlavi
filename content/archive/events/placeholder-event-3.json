@@ -1,0 +1,18 @@
+{
+  "id": "placeholder-event-3",
+  "status": "placeholder",
+  "title": "[Timeline event 3 to come]",
+  "summary": "[One sentence describing what happened, only as far as the sources establish it.]",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "[Place to come]",
+  "confidence": "to-verify",
+  "cite": [
+    {
+      "sourceId": "placeholder-source",
+      "locator": "[page]"
+    }
+  ],
+  "placeholderNote": "PLACEHOLDER — shows the layout only. Contains no historical claims. Delete when real content is added."
+}

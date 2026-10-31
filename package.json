@@ -8,9 +8,10 @@
   },
   "scripts": {
     "dev": "vite dev --host 0.0.0.0 --port 8080",
-    "build": "npm run routes:generate && vite build && npm run db:migrate",
+    "build": "npm run content:check && npm run routes:generate && vite build && npm run db:migrate",
     "db:migrate": "node scripts/migrate.mjs",
-    "build:dev": "npm run routes:generate && vite build --mode development",
+    "build:dev": "npm run content:check && npm run routes:generate && vite build --mode development",
+    "content:check": "node scripts/content-check.mjs",
     "preview": "vite preview --host 0.0.0.0 --port 8080",
     "typecheck": "npm run routes:generate && tsc --noEmit",
     "test": "node --test 'scripts/**/*.test.mjs'",

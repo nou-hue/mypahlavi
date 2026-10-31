@@ -1,0 +1,44 @@
+{
+  "slug": "placeholder-collection",
+  "status": "placeholder",
+  "title": "[Collection title to come]",
+  "subtitle": "[A short line describing the thread that connects the items]",
+  "description": "[Two or three sentences saying what this collection is, how it was assembled and what it deliberately leaves out.]",
+  "curatorNote": "[Optional note from the curator on selection and gaps in the record.]",
+  "coverPlateId": "placeholder-plate-photograph",
+  "members": [
+    {
+      "kind": "entry",
+      "id": "placeholder-essay"
+    },
+    {
+      "kind": "entry",
+      "id": "placeholder-photograph"
+    },
+    {
+      "kind": "entry",
+      "id": "placeholder-object"
+    },
+    {
+      "kind": "entry",
+      "id": "placeholder-document"
+    },
+    {
+      "kind": "plate",
+      "id": "placeholder-plate-photograph"
+    },
+    {
+      "kind": "plate",
+      "id": "placeholder-plate-object"
+    },
+    {
+      "kind": "event",
+      "id": "placeholder-event-1"
+    },
+    {
+      "kind": "event",
+      "id": "placeholder-event-2"
+    }
+  ],
+  "placeholderNote": "PLACEHOLDER — shows the layout only. Contains no historical claims. Delete when real content is added."
+}

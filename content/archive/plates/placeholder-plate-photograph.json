@@ -1,0 +1,22 @@
+{
+  "id": "placeholder-plate-photograph",
+  "status": "placeholder",
+  "title": "[Plate title to come — photograph]",
+  "caption": "Image not yet supplied. A plate is shown only once its credit and rights are cleared.",
+  "image": null,
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "[Place to come]",
+  "credit": {
+    "line": "[Credit line to come]"
+  },
+  "rights": {
+    "status": "unknown"
+  },
+  "sourceIds": [
+    "placeholder-source"
+  ],
+  "uncertainty": "[Note any uncertainty about date, place or identification]",
+  "placeholderNote": "PLACEHOLDER — shows the layout only. Contains no historical claims. Delete when real content is added."
+}

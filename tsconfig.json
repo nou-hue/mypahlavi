@@ -23,7 +23,8 @@
         "./src/*"
       ]
     },
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowJs": true
   },
   "include": [
     "src",
