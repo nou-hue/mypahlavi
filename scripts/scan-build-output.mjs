@@ -42,7 +42,12 @@ for (const d of dirs) {
     const m = UNVERIFIED_MARKER.exec(t);
     if (m) problems.push(`${rel}: unverified marker "${t.slice(m.index, m.index + 40)}…"`);
     if (HOTLINK.test(t)) problems.push(`${rel}: hotlinked Wikimedia image host`);
-    for (const id of held) if (t.includes(`"${id}"`) || t.includes(`/archive/plates/${id}`)) problems.push(`${rel}: held image "${id}"`);
+    // The record itself (its id as a property value) or its image file. The bundler's glob map still
+    // lists the file path of a gated record, mapped to null; that is not content and is ignored.
+    for (const id of held) {
+      if (t.includes(`id:"${id}"`) || t.includes(`"id":"${id}"`) || new RegExp(`/archive/plates/${id}[-.](?!json)`).test(t) || new RegExp(`/archive/plates/${id}\\.(?:jpe?g|png|webp)`).test(t))
+        problems.push(`${rel}: held image "${id}"`);
+    }
   }
 }
 if (problems.length) {
