@@ -8,11 +8,18 @@ import {
 } from "@/lib/shop/orders.server";
 import { fulfillOrderWithPrintify } from "@/lib/shop/fulfill.server";
 import { getStripe, stripeConfigured } from "@/lib/stripe/client";
+import { rateLimit } from "@/lib/security/rate-limit.server";
 
 export const Route = createFileRoute("/api/shop/order/$orderId")({
   server: {
     handlers: {
       GET: async ({ params, request }) => {
+        // Order lookups return personal data: throttle enumeration attempts.
+        const limited = rateLimit(request, "shop-order", { limit: 60, windowMs: 10 * 60_000 });
+        if (limited) return limited;
+        if (!/^[A-Za-z0-9_-]{6,64}$/.test(params.orderId)) {
+          return Response.json({ error: "Not found" }, { status: 404 });
+        }
         const url = new URL(request.url);
         const sessionId = url.searchParams.get("session_id");
         let row = await getOrderById(params.orderId);
@@ -70,7 +77,16 @@ export const Route = createFileRoute("/api/shop/order/$orderId")({
           return Response.json({ error: "Not found" }, { status: 404 });
         }
 
-        return Response.json(parseOrder(row));
+        // Authorisation: an order that went through Stripe is only returned to
+        // the holder of its checkout session id (carried in the success URL).
+        // Demo orders (no Stripe) rely on the unguessable order id alone.
+        if (row.stripe_session_id && sessionId !== row.stripe_session_id) {
+          return Response.json({ error: "Not found" }, { status: 404 });
+        }
+
+        return Response.json(parseOrder(row), {
+          headers: { "Cache-Control": "private, no-store" },
+        });
       },
     },
   },

@@ -7,6 +7,7 @@ import {
   updateMembership,
 } from "@/lib/circle/memberships.server";
 import { getSessionUser } from "@/lib/auth/verify.server";
+import { rateLimit } from "@/lib/security/rate-limit.server";
 import {
   getStripe,
   stripeConfigured,
@@ -26,6 +27,8 @@ export const Route = createFileRoute("/api/circle/status")({
   server: {
     handlers: {
       GET: async ({ request }) => {
+        const limited = rateLimit(request, "circle-status", { limit: 120, windowMs: 10 * 60_000 });
+        if (limited) return limited;
         const url = new URL(request.url);
         const sessionId = url.searchParams.get("session_id") ?? undefined;
         const bearer =
