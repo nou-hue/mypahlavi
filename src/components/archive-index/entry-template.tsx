@@ -2,11 +2,13 @@ import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { archive, type ArchiveEntry, type ArchiveSource } from "@/content/load";
 import { cn } from "@/lib/utils";
+import { splitCitations } from "@/content/citations.mjs";
+import { ArchiveFigure as PlateFigure } from "./archive-figure";
 import {
   DateLabel,
   PlaceholderBanner,
   PlaceholderMark,
-  PlateFigure,
+  ReviewBanner,
   SectionHeading,
   TEMPLATE_LABEL,
 } from "./ui";
@@ -70,6 +72,44 @@ function Cites({ numbers }: { numbers: number[] }) {
   );
 }
 
+/** Inline markup used in imported prose: *em*, **strong**, [text](https://…). Nothing else is interpreted. */
+const INLINE = /\*\*(.+?)\*\*|\*(.+?)\*|\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
+
+function Markup({ text }: { text: string }) {
+  const out: ReactNode[] = [];
+  let last = 0;
+  let k = 0;
+  for (const m of text.matchAll(INLINE)) {
+    if (m.index! > last) out.push(text.slice(last, m.index));
+    if (m[1] !== undefined) out.push(<strong key={k++}>{m[1]}</strong>);
+    else if (m[2] !== undefined) out.push(<em key={k++}>{m[2]}</em>);
+    else
+      out.push(
+        <a key={k++} href={m[4]} target="_blank" rel="noreferrer noopener" className="underline decoration-ink/30 underline-offset-4 hover:decoration-ink">
+          {m[3]}
+        </a>,
+      );
+    last = m.index! + m[0].length;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return <>{out.map((n, i) => (typeof n === "string" ? n.replace(/\u2217/g, "*") : n))}</>;
+}
+
+/** Prose with [@id] tokens rendered as numbered superscripts linked to the Sources list. */
+function RichText({ text, inline }: { text: string; inline: Map<string, number> }) {
+  return (
+    <>
+      {(splitCitations(text) as { text?: string; cite?: string[] }[]).map((part, i) =>
+        part.cite ? (
+          <Cites key={i} numbers={part.cite.map((id) => inline.get(id)).filter((n): n is number => n !== undefined)} />
+        ) : (
+          <Markup key={i} text={part.text ?? ""} />
+        ),
+      )}
+    </>
+  );
+}
+
 function Facts({ facts, inline = false }: { facts: ArchiveEntry["facts"]; inline?: boolean }) {
   if (facts.length === 0) return null;
   return (
@@ -91,7 +131,7 @@ function Facts({ facts, inline = false }: { facts: ArchiveEntry["facts"]; inline
 }
 
 function Body({ entry }: { entry: ArchiveEntry }) {
-  const { numbered } = archive.citationsFor(entry);
+  const { numbered, inline } = archive.citationsFor(entry);
   return (
     <div className="max-w-[36rem] space-y-6 font-serif text-[1.1rem] leading-[1.85] text-ink-soft">
       {entry.body.map((b, i) => {
@@ -105,9 +145,20 @@ function Body({ entry }: { entry: ArchiveEntry }) {
           case "paragraph":
             return (
               <p key={i}>
-                {b.text}
+                <RichText text={b.text} inline={inline} />
                 <Cites numbers={numbered[i] ?? []} />
               </p>
+            );
+          case "list":
+            return (
+              <ul key={i} className="list-disc space-y-2 pl-6 marker:text-ink-subtle">
+                {b.items.map((item, j) => (
+                  <li key={j}>
+                    <RichText text={item} inline={inline} />
+                  </li>
+                ))}
+                <Cites numbers={numbered[i] ?? []} />
+              </ul>
             );
           case "quote":
             return (
@@ -133,7 +184,7 @@ function Body({ entry }: { entry: ArchiveEntry }) {
                 <p className="mb-1.5 text-[0.56rem] uppercase tracking-[0.2em] text-ink-subtle">
                   {b.tone === "perspective" ? "Whose account" : b.tone === "caveat" ? "A caution" : "Context"}
                 </p>
-                {b.text}
+                <RichText text={b.text} inline={inline} />
                 <Cites numbers={numbered[i] ?? []} />
               </aside>
             );
@@ -192,9 +243,19 @@ function Header({ entry }: { entry: ArchiveEntry }) {
   return (
     <header className="archive-rise">
       <p className="flex flex-wrap items-center gap-x-4 gap-y-2 font-sans text-[0.58rem] uppercase tracking-[0.24em] text-ink-subtle">
-        <span>{TEMPLATE_LABEL[entry.template]}</span>
-        <span aria-hidden>·</span>
-        <DateLabel date={entry.date} />
+        <span>{entry.kind === "editorial" ? "Note on method" : entry.kind === "section" ? `History · Part ${entry.order}` : TEMPLATE_LABEL[entry.template]}</span>
+        {entry.date.precision !== "unknown" ? (
+          <>
+            <span aria-hidden>·</span>
+            <DateLabel date={entry.date} />
+          </>
+        ) : null}
+        {entry.readingMinutes ? (
+          <>
+            <span aria-hidden>·</span>
+            <span>{entry.readingMinutes} min read</span>
+          </>
+        ) : null}
         {entry.place ? (
           <>
             <span aria-hidden>·</span>
@@ -336,6 +397,7 @@ export function EntryTemplate({ entry }: { entry: ArchiveEntry }) {
   return (
     <article>
       {entry.status === "placeholder" ? <PlaceholderBanner /> : null}
+      {entry.status === "review" ? <ReviewBanner /> : null}
       <div className="mx-auto max-w-[90rem] px-6 py-14 sm:px-12 sm:py-20">
         <nav aria-label="Breadcrumb" className="mb-12 font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
           <Link to="/archive" className="hover:text-ink">Archive</Link>

@@ -8,6 +8,7 @@ import type { Archive } from "./types";
  * reported to the server log. `npm run content:check` makes the same
  * checks fatal, and runs as part of `npm run build`.
  */
+// Records the production gate stripped (drafts always; records in review on production) arrive as null.
 const files = import.meta.glob("/content/archive/**/*.json", {
   eager: true,
   import: "default",

@@ -26,15 +26,16 @@ export const Route = createFileRoute("/archive/")({
 });
 
 const published = (list: { status: string }[]) => list.filter((r) => r.status === "published").length;
+const inReview = (list: { status: string }[]) => list.filter((r) => r.status === "review").length;
 
 function ArchiveHub() {
   const { counts } = archive;
   const ways = [
-    { to: "/archive/entries", label: "Entries", n: counts.entries, p: published(archive.articles), copy: "Essays, photographs, objects, places and documents, each with its sources." },
-    { to: "/archive/collections", label: "Collections", n: counts.collections, p: published(archive.collections), copy: "Curated groups of entries, plates and events around a single thread." },
-    { to: "/archive/timeline", label: "Timeline", n: counts.events, p: published(archive.events), copy: "Events in order, with dates shown as precisely as the evidence allows." },
-    { to: "/archive/plates", label: "Plates", n: counts.plates, p: published(archive.plates), copy: "Images with credit lines, rights status and provenance." },
-    { to: "/archive/sources", label: "Sources", n: counts.sources, p: published(archive.sources), copy: "The bibliography behind everything published here." },
+    { to: "/archive/entries", label: "Entries", n: counts.entries, p: published(archive.articles), r: inReview(archive.articles), copy: "Essays, photographs, objects, places and documents, each with its sources." },
+    { to: "/archive/collections", label: "Collections", n: counts.collections, p: published(archive.collections), r: inReview(archive.collections), copy: "Curated groups of entries, plates and events around a single thread." },
+    { to: "/archive/timeline", label: "Timeline", n: counts.events, p: published(archive.events), r: inReview(archive.events), copy: "Events in order, with dates shown as precisely as the evidence allows." },
+    { to: "/archive/plates", label: "Plates", n: counts.plates, p: published(archive.plates), r: inReview(archive.plates), copy: "Images with credit lines, rights status and provenance." },
+    { to: "/archive/sources", label: "Sources", n: counts.sources, p: published(archive.sources), r: inReview(archive.sources), copy: "The bibliography behind everything published here." },
   ] as const;
 
   const collections = archive.collections.slice(0, 3);
@@ -70,7 +71,7 @@ function ArchiveHub() {
                       <span className="mt-4 block text-sm leading-6 text-ink-muted">{w.copy}</span>
                     </span>
                     <span className="font-sans text-[0.56rem] uppercase tracking-[0.18em] text-ink-subtle">
-                      {w.p} published{w.n - w.p > 0 ? ` · ${w.n - w.p} placeholder` : ""}
+                      {w.p} published{w.r > 0 ? ` · ${w.r} in review` : ""}{w.n - w.p - w.r > 0 ? ` · ${w.n - w.p - w.r} placeholder` : ""}
                       <span aria-hidden className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
                     </span>
                   </Link>

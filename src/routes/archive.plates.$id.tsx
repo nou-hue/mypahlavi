@@ -66,7 +66,23 @@ function PlatePage() {
     ...(plate.credit.accession ? ([["Accession", plate.credit.accession]] as [string, string][]) : []),
     ["Rights", RIGHTS_LABEL[plate.rights.status] ?? plate.rights.status],
     ...(plate.rights.holder ? ([["Rights holder", plate.rights.holder]] as [string, string][]) : []),
-    ...(plate.rights.licence ? ([["Licence", plate.rights.licence]] as [string, string][]) : []),
+    ...(plate.rights.licence
+      ? ([[
+          "Licence",
+          plate.rights.licenceUrl ? (
+            <a key="l" href={plate.rights.licenceUrl} target="_blank" rel="noreferrer noopener" className="underline underline-offset-4">
+              {plate.rights.licence}
+            </a>
+          ) : (
+            plate.rights.licence
+          ),
+        ]] as [string, React.ReactNode][])
+      : []),
+    ["Source", plate.credit.sourceUrl ? (
+      <a key="s" href={plate.credit.sourceUrl} target="_blank" rel="noreferrer noopener" className="underline underline-offset-4">
+        View the source record
+      </a>
+    ) : "Not recorded"],
     ...(plate.rights.restrictions ? ([["Restrictions", plate.rights.restrictions]] as [string, string][]) : []),
   ];
 

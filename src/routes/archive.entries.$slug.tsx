@@ -3,6 +3,7 @@ import { LayoutShell } from "@/components/archive/layout-shell";
 import { EntryTemplate } from "@/components/archive-index/entry-template";
 import { EmptyState, archiveHead } from "@/components/archive-index/ui";
 import { archive } from "@/content/load";
+import { entryJsonLd } from "@/content/jsonld.mjs";
 
 export const Route = createFileRoute("/archive/entries/$slug")({
   head: ({ params }) => {
@@ -10,7 +11,9 @@ export const Route = createFileRoute("/archive/entries/$slug")({
     return archiveHead({
       path: `/archive/entries/${params.slug}`,
       title: e?.title ?? "Entry not found",
-      description: e?.standfirst ?? "An entry in the MyPahlavi archive.",
+      fullTitle: e?.seoTitle ? `${e.seoTitle} | mypahlavi` : undefined,
+      description: e?.metaDescription ?? e?.standfirst ?? "An entry in the MyPahlavi archive.",
+      jsonLd: e ? entryJsonLd(e, `/archive/entries/${params.slug}`) : undefined,
       noindex: !e || e.status !== "published",
     });
   },

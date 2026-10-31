@@ -46,4 +46,5 @@ export interface Archive {
   entriesByTemplate(template?: string): ArchiveEntry[];
   counts: { entries: number; plates: number; events: number; collections: number; sources: number };
   onlyPlaceholders: boolean;
+  hasReview: boolean;
 }

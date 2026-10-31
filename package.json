@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite dev --host 0.0.0.0 --port 8080",
-    "build": "npm run content:check && npm run routes:generate && vite build && npm run db:migrate",
+    "build": "npm run content:check && npm run sitemap && npm run routes:generate && vite build && npm run build:scan && npm run db:migrate",
     "db:migrate": "node scripts/migrate.mjs",
     "build:dev": "npm run content:check && npm run routes:generate && vite build --mode development",
     "content:check": "node scripts/content-check.mjs",
@@ -17,7 +17,10 @@
     "test": "node --test 'scripts/**/*.test.mjs'",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "routes:generate": "npx -y @tanstack/router-cli@1.167.24 generate"
+    "routes:generate": "npx -y @tanstack/router-cli@1.167.24 generate",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "build:scan": "node scripts/scan-build-output.mjs",
+    "content:import": "node scripts/import-archive-content.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",

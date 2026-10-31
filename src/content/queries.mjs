@@ -140,6 +140,8 @@ export function createArchive(data) {
       sources: sources.length,
     },
     /** True while everything visible is a placeholder — drives the "being catalogued" framing. */
+    /** True when any visible record is still in review (preview builds only). */
+    hasReview: [...articles, ...plates, ...events, ...collections, ...sources].some((r) => r.status === "review"),
     onlyPlaceholders: [...articles, ...plates, ...events, ...collections].every((r) => r.status === "placeholder"),
   };
 }

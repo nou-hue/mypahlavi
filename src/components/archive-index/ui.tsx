@@ -1,8 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { absoluteUrl } from "@/lib/site-config.mjs";
 import { formatDate, isoOf } from "@/content/dates.mjs";
-import { DISPLAYABLE_RIGHTS } from "@/content/schema.mjs";
+import { canShowImage } from "@/content/rights-gate.mjs";
+import { archive } from "@/content/load";
 import type { ArchiveCollection, ArchiveEntry, ArchiveEvent, ArchivePlate } from "@/content/load";
 
 /* ------------------------------------------------------------------ */
@@ -43,16 +45,32 @@ export const ARCHIVE_NAV = [
 ] as const;
 
 /** Route head for archive pages. Placeholder pages are kept out of search engines. */
-export function archiveHead(opts: { title: string; description: string; path: string; noindex?: boolean }) {
-  return {
-    links: opts.noindex ? [] : [{ rel: "canonical", href: `https://www.mypahlavi.com${opts.path}` }],
-    meta: [
-      { title: `${opts.title} — MyPahlavi archive` },
+export function archiveHead(opts: {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  /** Full <title>, used instead of "<title> — MyPahlavi archive" (e.g. seoTitle + " | mypahlavi"). */
+  fullTitle?: string;
+  jsonLd?: Record<string, unknown>[];
+}) {
+  const title = opts.fullTitle ?? `${opts.title} — MyPahlavi archive`;
+  const url = absoluteUrl(opts.path);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const meta: any[] = [
+      { title },
       { name: "description", content: opts.description },
-      { property: "og:title", content: `${opts.title} — MyPahlavi archive` },
+      { property: "og:title", content: title },
       { property: "og:description", content: opts.description },
+      { property: "og:url", content: url },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: opts.description },
       ...(opts.noindex ? [{ name: "robots", content: "noindex, nofollow" }] : []),
-    ],
+      ...(opts.noindex ? [] : (opts.jsonLd ?? []).map((j) => ({ "script:ld+json": j }))),
+  ];
+  return {
+    links: opts.noindex ? [] : [{ rel: "canonical", href: url }],
+    meta,
   };
 }
 
@@ -62,6 +80,7 @@ export function archiveHead(opts: { title: string; description: string; path: st
 
 export function ArchiveSubnav({ active }: { active: (typeof ARCHIVE_NAV)[number]["to"] }) {
   return (
+    <>
     <nav
       aria-label="Archive sections"
       className="border-b border-border bg-ground"
@@ -88,6 +107,8 @@ export function ArchiveSubnav({ active }: { active: (typeof ARCHIVE_NAV)[number]
         })}
       </ul>
     </nav>
+    {archive.hasReview ? <ReviewBanner /> : null}
+    </>
   );
 }
 
@@ -177,6 +198,19 @@ export function PlaceholderBanner({ children }: { children?: ReactNode }) {
   );
 }
 
+/** Banner for pages built from records still awaiting editorial sign-off. Shown on previews only. */
+export function ReviewBanner({ children }: { children?: ReactNode }) {
+  return (
+    <div role="note" className="border-b border-accent/20 bg-accent/[0.04]">
+      <p className="mx-auto max-w-[90rem] px-6 py-3 font-sans text-[0.66rem] leading-relaxed tracking-[0.04em] text-accent sm:px-12">
+        <strong className="font-medium uppercase tracking-[0.16em]">Draft</strong>
+        <span className="mx-3 opacity-40" aria-hidden>·</span>
+        {children ?? "Preview only. This text is sourced but has not yet been signed off, and is hidden from search engines and from the live site."}
+      </p>
+    </div>
+  );
+}
+
 export function EmptyState({
   title,
   children,
@@ -225,9 +259,7 @@ export function DateLabel({ date, className }: { date: Parameters<typeof formatD
 /* Plates (rights-aware)                                               */
 /* ------------------------------------------------------------------ */
 
-export function plateIsShowable(p: ArchivePlate) {
-  return Boolean(p.image && DISPLAYABLE_RIGHTS.includes(p.rights.status));
-}
+export const plateIsShowable = canShowImage;
 
 /** The image if it is cleared; otherwise an honest, quiet frame saying why not. */
 export function PlateFrame({
@@ -249,6 +281,14 @@ export function PlateFrame({
         <div className="museum-image-well archive-view-only" style={ratio}>
           <img
             src={plate.image.src}
+            srcSet={
+              plate.image.variants?.length && plate.image.width
+                ? [...plate.image.variants.map((v) => `${v.src} ${v.width}w`), `${plate.image.src} ${plate.image.width}w`].join(", ")
+                : undefined
+            }
+            sizes="(min-width: 1024px) 40rem, 92vw"
+            width={plate.image.width}
+            height={plate.image.height}
             alt={plate.image.alt}
             loading="lazy"
             decoding="async"
@@ -290,22 +330,6 @@ export function CreditLine({ plate }: { plate: ArchivePlate }) {
     <p className="font-sans text-[0.56rem] uppercase tracking-[0.14em] text-ink-subtle">
       {plate.credit.line}
     </p>
-  );
-}
-
-export function PlateFigure({ plate, className }: { plate: ArchivePlate; className?: string }) {
-  return (
-    <figure className={cn("museum-plate", className)}>
-      <PlateFrame plate={plate} />
-      <figcaption className="museum-caption">
-        <span className="museum-meta">
-          <DateLabel date={plate.date} />
-          {plate.place ? ` · ${plate.place}` : ""}
-        </span>
-        {plate.caption ? <span className="museum-caption-copy">{plate.caption}</span> : null}
-        <span className="museum-meta">{plate.credit.line}</span>
-      </figcaption>
-    </figure>
   );
 }
 
@@ -419,6 +443,15 @@ export function EventItem({ event, showDate = true }: { event: ArchiveEvent; sho
           {event.status === "placeholder" ? <PlaceholderMark /> : null}
         </div>
         {event.summary ? <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-muted">{event.summary}</p> : null}
+        {event.note ? (
+          <details className="group mt-3 max-w-2xl text-sm leading-7 text-ink-muted">
+            <summary className="cursor-pointer font-sans text-[0.56rem] uppercase tracking-[0.16em] text-accent marker:content-none">
+              {event.confidence === "disputed" ? "Sources differ" : "Evidence note"}
+              <span aria-hidden className="ml-2 inline-block transition-transform group-open:rotate-90">›</span>
+            </summary>
+            <p className="mt-2">{event.note}</p>
+          </details>
+        ) : null}
         <p className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1 font-sans text-[0.56rem] uppercase tracking-[0.16em]">
           <span className={CONFIDENCE_STYLE[event.confidence]}>{CONFIDENCE_LABEL[event.confidence]}</span>
           {event.perspective ? <span className="text-ink-subtle">Account: {event.perspective}</span> : null}
