@@ -4,7 +4,7 @@
   "template": "place",
   "kind": "place",
   "title": "University of Tehran",
-  "standfirst": "Iran's first European-style university, founded in the mid-1930s.",
+  "standfirst": "Iran's first university, inaugurated on 4 February 1935 under a law introduced in 1934.",
   "date": {
     "precision": "unknown"
   },
@@ -16,7 +16,7 @@
     },
     {
       "label": "Evidence note",
-      "value": "Currently date contested."
+      "value": "Currently 1934 law, 1935 opening."
     }
   ],
   "plateIds": [
@@ -25,13 +25,19 @@
   "body": [
     {
       "type": "paragraph",
-      "text": "LoC: established in 1935 as the country's first European-style university. Another source says inaugurated 1934[@loc15; @wp-uot].",
+      "text": "A law establishing the university was introduced in the Majlis on 13 March 1934; the university was inaugurated on 4 February 1935[@iranica-higher-education].",
+      "cite": [
+        {
+          "sourceId": "iranica-higher-education"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The Library of Congress gives 1935 for its establishment as the first European-style university[@loc15].",
       "cite": [
         {
           "sourceId": "loc15"
-        },
-        {
-          "sourceId": "wp-uot"
         }
       ]
     }

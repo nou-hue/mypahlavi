@@ -18,7 +18,7 @@
     "status": "pending",
     "holder": "iichs.ir (unknown photographer)",
     "licence": "Public domain",
-    "evidence": "HOLD: PD-Iran only; source iichs.ir (not the creator); photographer unknown. 1979 is inside the UK window. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "evidence": "HOLD: PD-Iran only; source iichs.ir (not the creator); photographer unknown. 1979 is inside the UK window. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
     "tier": "C",
     "ukSafe": "false",
     "checkedBy": "Content & SEO (automated Commons API check)",
@@ -27,5 +27,7 @@
   "sourceIds": [],
   "useFor": [],
   "captionBasis": "—",
-  "holdReason": "HOLD: PD-Iran only; source iichs.ir (not the creator); photographer unknown. 1979 is inside the UK window."
+  "holdReason": "HOLD: PD-Iran only; source iichs.ir (not the creator); photographer unknown. 1979 is inside the UK window. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
 }

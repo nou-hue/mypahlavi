@@ -1,6 +1,6 @@
 {
   "id": "coronation-reza-shah-1926",
-  "status": "review",
+  "status": "draft",
   "title": "Coronation of Reza Shah Pahlavi, 1926",
   "caption": "Coronation of Reza Shah Pahlavi, 1926.",
   "image": null,
@@ -17,21 +17,16 @@
     "status": "pending",
     "holder": "Tehran Pariroz",
     "licence": "Public domain",
-    "evidence": "Tagged PD-Iran only. Age (1926) makes it very probably out of copyright in the UK as an anonymous work if truly anonymous, but the provenance is weak. Seek the original publication (archive/ book) before use. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
-    "tier": "B",
+    "evidence": "HOLD (Content & SEO, 2026-10-31): Source is a Facebook page (\"Tehran Pariroz\") and the ceremony date on the file is not backed by a tier A/B source. Only the PD-Iran tag supports it, and that does not establish UK status. Release path: original publication or archive record (photographer, date, first publication). Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
     "ukSafe": "verify",
     "checkedBy": "Content & SEO (automated Commons API check)",
     "checkedOn": "2026-10-31"
   },
-  "sourceIds": [
-    "loc15",
-    "wp-uot",
-    "wp-reza"
-  ],
-  "uncertainty": "Rights check pending: the licence needs confirming at the holding institution before the image is shown.",
-  "useFor": [
-    "editorial"
-  ],
+  "sourceIds": [],
+  "useFor": [],
   "captionBasis": "Commons title only. Source is a Facebook page; photographer unknown.",
-  "holdReason": "Tagged PD-Iran only. Age (1926) makes it very probably out of copyright in the UK as an anonymous work if truly anonymous, but the provenance is weak. Seek the original publication (archive/ book) before use."
+  "holdReason": "HOLD (Content & SEO, 2026-10-31): Source is a Facebook page (\"Tehran Pariroz\") and the ceremony date on the file is not backed by a tier A/B source. Only the PD-Iran tag supports it, and that does not establish UK status. Release path: original publication or archive record (photographer, date, first publication).",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
 }

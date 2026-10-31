@@ -21,8 +21,6 @@
     }
   ],
   "plateIds": [
-    "abadan-1941",
-    "tabriz-soviet-1941",
     "tehran-conference-1943",
     "shah-schiphol-1949"
   ],
@@ -45,7 +43,7 @@
     },
     {
       "type": "plate",
-      "plateId": "tabriz-soviet-1941"
+      "plateId": "shah-schiphol-1949"
     },
     {
       "type": "heading",
@@ -61,10 +59,6 @@
       ]
     },
     {
-      "type": "plate",
-      "plateId": "tehran-conference-1943"
-    },
-    {
       "type": "heading",
       "text": "The supply route"
     },
@@ -76,10 +70,6 @@
           "sourceId": "loc16"
         }
       ]
-    },
-    {
-      "type": "plate",
-      "plateId": "shah-schiphol-1949"
     },
     {
       "type": "heading",

@@ -1,6 +1,6 @@
 {
   "id": "nixon-shah-1973",
-  "status": "review",
+  "status": "published",
   "title": "President Nixon and the Shah of Iran in the Oval Office, 24 July 1973 (photo: Robert L. Knudsen)",
   "caption": "President Nixon and the Shah of Iran in the Oval Office, 24 July 1973 (photo: Robert L. Knudsen).",
   "image": {
@@ -28,19 +28,18 @@
     "status": "public-domain",
     "holder": "Robert LeRoy Knudsen",
     "licence": "Public domain",
-    "evidence": "PD-USGov. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "evidence": "Public domain. Wikimedia Commons file page (NARA-Author, NARA-cooperation, NARA-image-full, PD-USGov); checked on 2026-10-31.",
     "tier": "A",
     "ukSafe": "editorial-only",
     "checkedBy": "Content & SEO (automated Commons API check)",
-    "checkedOn": "2026-10-31"
+    "checkedOn": "2026-10-31",
+    "restrictions": "Editorial use only."
   },
   "sourceIds": [
     "loc19",
-    "wp-mrp",
-    "wp-2500"
+    "iranica-crown-jewels"
   ],
   "useFor": [
     "editorial"
-  ],
-  "captionBasis": "Commons title/date; NARA."
+  ]
 }

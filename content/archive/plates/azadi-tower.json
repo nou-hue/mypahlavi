@@ -1,6 +1,6 @@
 {
   "id": "azadi-tower",
-  "status": "review",
+  "status": "published",
   "title": "Azadi Tower, Tehran (photo 2016). Completed in 1971 as the Shahyad Tower",
   "caption": "Azadi Tower, Tehran (photo 2016). Completed in 1971 as the Shahyad Tower.",
   "image": {
@@ -29,19 +29,19 @@
     "holder": "Bernard Gagnon",
     "licence": "CC BY-SA 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "evidence": "CC BY-SA 4.0 (Bernard Gagnon). Editorial only. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "evidence": "CC BY-SA 4.0. Wikimedia Commons file page (Location); checked on 2026-10-31.",
     "tier": "A-CC",
     "ukSafe": "true",
     "checkedBy": "Content & SEO (automated Commons API check)",
-    "checkedOn": "2026-10-31"
+    "checkedOn": "2026-10-31",
+    "restrictions": "Editorial use only."
   },
   "sourceIds": [
-    "loc19",
-    "wp-mrp",
-    "wp-2500"
+    "loc20",
+    "loc21",
+    "hemmati2015"
   ],
   "useFor": [
     "editorial"
-  ],
-  "captionBasis": "Commons title."
+  ]
 }

@@ -16,15 +16,20 @@ const read = (dir) => {
   return existsSync(d) ? readdirSync(d).filter((f) => f.endsWith(".json")).map((f) => JSON.parse(readFileSync(join(d, f), "utf8"))) : [];
 };
 const pub = (l) => l.filter((r) => r.status === "published");
+const [articles, plates, sources, events, collections] = ["articles", "plates", "sources", "events", "collections"].map((d) => pub(read(d)));
+// A hub page is listed only when it has something published to show.
 const archive = [
-  ["/archive", null],
-  ["/archive/entries", null], ["/archive/collections", null], ["/archive/timeline", null], ["/archive/plates", null], ["/archive/sources", null],
-  ...pub(read("articles")).map((a) => [`/archive/entries/${a.slug}`, a.updated]),
-  ...pub(read("collections")).map((c) => [`/archive/collections/${c.slug}`, c.updated]),
-  ...pub(read("plates")).map((p) => [`/archive/plates/${p.id}`, p.credit?.checkedOn ?? p.rights?.checkedOn]),
+  ...(articles.length ? [["/archive", null], ["/archive/entries", null]] : []),
+  ...(collections.length ? [["/archive/collections", null]] : []),
+  ...(events.length ? [["/archive/timeline", null]] : []),
+  ...(plates.length ? [["/archive/plates", null]] : []),
+  ...(sources.length ? [["/archive/sources", null]] : []),
+  ...articles.map((a) => [`/archive/entries/${a.slug}`, a.updated ?? a.reviewedOn]),
+  ...collections.map((c) => [`/archive/collections/${c.slug}`, c.updated]),
+  ...plates.map((p) => [`/archive/plates/${p.id}`, p.reviewedOn ?? p.credit?.checkedOn ?? p.rights?.checkedOn]),
 ];
 // Only list the archive hub pages once something is published there.
-const anyPublished = archive.length > 6;
+const anyPublished = archive.length > 0;
 const entries = [
   ...STATIC.map(([p, f, pr]) => ({ p, f, pr })),
   ...(anyPublished ? archive.map(([p, lastmod]) => ({ p, f: "monthly", pr: "0.6", lastmod })) : []),

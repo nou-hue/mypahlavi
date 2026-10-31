@@ -14,6 +14,8 @@ export const Route = createFileRoute("/archive/collections/")({
   head: () =>
     archiveHead({
       path: "/archive/collections",
+      // Thin until something is published here.
+      noindex: !archive.collections.some((r) => r.status === "published"),
       title: "Collections",
       description: "Curated groups of entries, plates and events, each with a note on how it was assembled.",
     }),

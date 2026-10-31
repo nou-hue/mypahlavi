@@ -165,6 +165,9 @@ export const plateSchema = z
     captionBasis: z.string().optional(),
     /** Why a plate is held or withheld (internal; never shown as a claim). */
     holdReason: z.string().optional(),
+    /** Editorial review of the image record (who, and the ISO day). */
+    reviewedBy: z.string().optional(),
+    reviewedOn: isoDay.optional(),
     placeholderNote: z.string().optional(),
   })
   .strict();
@@ -204,6 +207,8 @@ export const articleSchema = z
     place: z.string().optional(),
     byline: z.string().optional(),
     reviewedBy: z.string().optional(),
+    /** Date of the editorial review (ISO day), set with reviewedBy. */
+    reviewedOn: isoDay.optional(),
     updated: isoDay.optional(),
     /** Label / value rows shown in the "At a glance" panel (dimensions, maker, holder …). */
     facts: z.array(z.object({ label: text, value: text }).strict()).default([]),

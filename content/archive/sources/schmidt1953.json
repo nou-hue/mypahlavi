@@ -1,6 +1,6 @@
 {
   "id": "schmidt1953",
-  "status": "draft",
+  "status": "published",
   "type": "secondary",
   "title": "Persepolis I: Structures, Reliefs, Inscriptions (Oriental Institute Publications 68)",
   "creator": "Erich F. Schmidt",
@@ -10,6 +10,7 @@
     "value": "1953"
   },
   "url": "https://isac.uchicago.edu/research/publications/oip",
-  "note": "Recommended primary-scholarship citation for Persepolis capitals. NOT yet read: confirm page numbers before citing for a specific claim. Listed as a pointer; not yet opened by the researcher.",
+  "accessed": "2026-10-31",
+  "note": "Cited for the description of the Persepolis capitals (pp. 68, 80, 81 and 137).",
   "tier": "A"
 }

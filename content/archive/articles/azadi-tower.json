@@ -4,7 +4,7 @@
   "template": "place",
   "kind": "place",
   "title": "Azadi (Shahyad) Tower",
-  "standfirst": "Marble-clad monument completed in 1971, designed by Hossein Amanat.",
+  "standfirst": "Marble-clad monument inaugurated in October 1971, designed by Hossein Amanat.",
   "date": {
     "precision": "unknown"
   },
@@ -16,7 +16,7 @@
     },
     {
       "label": "Evidence note",
-      "value": "Currently tertiary source only."
+      "value": "Currently inauguration day differs by source."
     }
   ],
   "plateIds": [
@@ -25,14 +25,25 @@
   "body": [
     {
       "type": "paragraph",
-      "text": "Completed in 1971; designed by Hossein Amanat; originally named Shahyad Tower[@wp-azadi].",
+      "text": "Designed by Hossein Amanat, whose entry was chosen in a national competition announced in September 1966; originally the Shahyad Aryamehr Monument, renamed Azadi after 1979[@hemmati2015].",
       "cite": [
         {
-          "sourceId": "wp-azadi"
+          "sourceId": "hemmati2015"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Inaugurated at sunset on 16 October 1971 as part of the celebrations (one thesis, citing the contemporary press; other accounts may give 17 October)[@hemmati2015].",
+      "cite": [
+        {
+          "sourceId": "hemmati2015"
         }
       ]
     }
   ],
   "furtherReading": [],
-  "related": []
+  "related": [
+    "the-long-boom-and-its-ceremonies"
+  ]
 }

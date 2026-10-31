@@ -1,6 +1,6 @@
 {
   "id": "nsa435",
-  "status": "review",
+  "status": "published",
   "type": "archive-record",
   "title": "CIA Confirms Role in 1953 Iran Coup (National Security Archive Electronic Briefing Book No. 435)",
   "creator": "National Security Archive, George Washington University (ed. Malcolm Byrne)",
@@ -10,6 +10,5 @@
   },
   "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB435/",
   "accessed": "2026-10-31",
-  "note": "Posts declassified CIA documents incl. 'The Battle for Iran' (mid-1970s) and Wilber's 1954 Clandestine Services History. NSA states the release 'includes what is believed to be the CIA's first formal acknowledgement' of its role.",
   "tier": "A"
 }

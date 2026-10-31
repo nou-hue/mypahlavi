@@ -14,9 +14,13 @@
  *   - Parses each MDX body with unified + remark-parse + remarkArchiveCitations
  *     (an unknown [@id] aborts the import).
  *   - Maps everything onto the archive schema (src/content/schema.mjs).
- *   - Status: "review" (preview-only) when clean; "draft" (never shipped) when the
- *     text still carries [VERIFY], [CONFIRM] or [UPGRADE], the source says it is
- *     blocked, or an image is on hold. Promotion to "published" is a human decision.
+ *   - Status: a piece whose frontmatter says `status: reviewed` (with reviewedBy and
+ *     reviewedOn) becomes "published"; the plates and sources it needs are promoted with
+ *     it. Everything else that is clean is "review" (preview-only). "draft" (never shipped)
+ *     when the text still carries [VERIFY], [CONFIRM] or [UPGRADE], the source says it is
+ *     blocked, or an image is on hold or do-not-use.
+ *   - Shop links are never imported: `products` is ignored and any paragraph that is a
+ *     shop-link note is dropped.
  *
  * Deterministic: re-running overwrites the generated records. Hand edits belong in
  * content/source/ (or, once published, directly in content/archive/ — then stop importing).
@@ -88,6 +92,7 @@ function periodToDate(period) {
   if (/^\d{4}$/.test(period ?? "")) return { precision: "year", value: period };
   return { precision: "unknown" };
 }
+const isoDate = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : String(d));
 const clean = (o) => JSON.parse(JSON.stringify(o, (k, v) => (v === undefined ? undefined : v)));
 
 /* ------------------------------ sources ------------------------------ */
@@ -159,6 +164,8 @@ for (const i of imgRaw) {
       useFor: i.useFor,
       captionBasis: i.captionBasis,
       holdReason: shown ? undefined : i.rightsNote,
+      reviewedBy: i.reviewedBy,
+      reviewedOn: i.reviewedOn,
     }),
     raw: i,
     alt: i.alt,
@@ -187,6 +194,7 @@ function inline(node) {
       return "";
   }
 }
+const droppedShop = [];
 const cites = (text) => citedIds(text).map((sourceId) => ({ sourceId }));
 const unescape = (t) => t.replace(/\\\*/g, "\u2217"); // keep a literal asterisk out of emphasis parsing
 
@@ -199,6 +207,7 @@ function toBlocks(markdown, label) {
     if (n.type === "heading") blocks.push({ type: "heading", text: n.children.map(inline).join("").trim() });
     else if (n.type === "paragraph") {
       const text = unescape(n.children.map(inline).join("").trim());
+      if (/^\\?\*?\s*shop link\b/i.test(text) || /\/shop\b/.test(text)) { droppedShop.push(label); continue; }
       const c = cites(text);
       blocks.push(clean({ type: "paragraph", text, cite: c.length ? c : undefined }));
     } else if (n.type === "list") {
@@ -228,7 +237,7 @@ function holdReasons(fm, body) {
   const marks = [...new Set((fm.reviewNote ? [] : []).concat(body.match(/\[(?:VERIFY|CONFIRM|UPGRADE)[^\]]{0,60}/g) ?? []))];
   if (marks.length) why.push(`unverified markers in the text: ${marks.map((x) => x + "…]").join(" ")}`);
   if (/needs-sources|blocked/.test(fm.status ?? "")) why.push(`source status "${fm.status}"`);
-  if (fm.reviewNote) why.push(fm.reviewNote);
+  if (fm.reviewNote && fm.status !== "reviewed") why.push(fm.reviewNote);
   return why;
 }
 
@@ -260,10 +269,14 @@ for (const path of [...mdxFiles("content/sections"), ...mdxFiles("content/editor
   const why = holdReasons(fm, body);
   const imgs = liveImageIds(fm.images);
   const blocks = toBlocks(body, path);
-  const status = why.length ? "draft" : "review";
+  const reviewed = fm.status === "reviewed" && fm.reviewedBy && fm.reviewedOn;
+  const status = why.length ? "draft" : reviewed ? "published" : "review";
   const rec = clean({
     slug: fm.slug,
     status,
+    byline: reviewed ? "Content & SEO" : undefined,
+    reviewedBy: reviewed ? fm.reviewedBy : undefined,
+    reviewedOn: reviewed ? isoDate(fm.reviewedOn) : undefined,
     template: "essay",
     kind: isSection ? "section" : "editorial",
     order: isSection ? fm.order : undefined,
@@ -331,7 +344,7 @@ for (const e of readJson("data/timeline.json").events) {
   const note = e.confidence === "contested"
     ? "Sources differ on this point. The entry above follows the cited sources; read them for the variance."
     : e.confidence === "medium"
-      ? "Rests on a tertiary source and has not yet been independently confirmed."
+      ? "The evidence for this point is thinner than for others; read the cited sources."
       : undefined;
   events.set(e.id, clean({
     id: e.id,
@@ -348,17 +361,82 @@ for (const e of readJson("data/timeline.json").events) {
   }));
 }
 
+/* Reviewed editorial decisions that override the day-level date in the drafts. */
+const azadi = events.get("1971-azadi");
+if (azadi) {
+  // Accounts differ by a day (16 or 17 October 1971), so the timeline says "October 1971".
+  azadi.date = { precision: "month", value: "1971-10" };
+  azadi.note = "Accounts differ on the exact day of the inauguration, so only the month is given.";
+}
+
 /* plate -> sources: link each plate to the sources of the sections/events that use it */
 for (const [id, p] of plates) {
   const used = new Set();
+  // The sources of the paragraph the picture sits beside (the next cited block, else the previous one),
+  // not the whole entry's bibliography.
   for (const a of articles.values()) if (a.rec.plateIds.includes(id) || a.rec.body.some((b) => b.plateId === id)) {
-    for (const c of citedIdsOfArticle(a.rec)) used.add(c);
+    const at = a.rec.body.findIndex((b) => b.plateId === id);
+    const cited = (b) => (b?.cite ?? []).map((c) => c.sourceId);
+    const near = at < 0
+      ? a.rec.body.find((b) => b.cite?.length)
+      : a.rec.body.slice(at + 1).find((b) => b.cite?.length) ?? a.rec.body.slice(0, at).reverse().find((b) => b.cite?.length);
+    for (const c of cited(near)) used.add(c);
   }
   for (const e of events.values()) if (e.plateIds.includes(id)) e.cite.forEach((c) => used.add(c.sourceId));
-  p.rec.sourceIds = [...used].slice(0, 3);
+  // Prefer tier A and B sources: a tier C pointer (e.g. an encyclopedia page) should not be what backs a picture.
+  const rank = (sid) => (sources.get(sid)?.tier === "C" ? 1 : 0);
+  p.rec.sourceIds = [...used].sort((a, b) => rank(a) - rank(b)).slice(0, 3);
 }
 function citedIdsOfArticle(rec) {
   return rec.body.flatMap((b) => (b.cite ?? []).map((c) => c.sourceId));
+}
+
+/* ------------------------------ promotion ------------------------------ */
+// A published record may only lean on published records, so what a reviewed piece needs is
+// promoted with it: the plates it shows (only cleared ones; drafts were already dropped) and the
+// sources those cite. Plates released in the review (reviewedBy + reviewedOn) are promoted too.
+// Nothing else is promoted: pieces still in review stay in review.
+const promote = (rec) => { if (rec.status === "review") rec.status = "published"; };
+const PUBLISHED_SOURCE_NOTES = {
+  // Reader-facing wording; the researcher's working notes stay in content/source/.
+  schmidt1953: "Cited for the description of the Persepolis capitals (pp. 68, 80, 81 and 137).",
+  najmabadi2005: "Cited from the author's Introduction as posted online in 2005. Print page numbers are not available, so citations carry no page locator.",
+};
+{
+  const need = { plates: new Set(), sources: new Set() };
+  for (const a of articles.values()) {
+    if (a.rec.status !== "published") continue;
+    for (const id of [...a.rec.plateIds, ...a.rec.body.filter((b) => b.plateId).map((b) => b.plateId)]) need.plates.add(id);
+    for (const sid of citedIdsOfArticle(a.rec)) need.sources.add(sid);
+  }
+  const fromArticles = new Set(need.sources);
+  for (const [id, p] of plates) if (p.rec.reviewedBy && p.rec.reviewedOn && p.rec.image) need.plates.add(id);
+  for (const id of need.plates) {
+    const p = plates.get(id);
+    if (!p || p.rec.status === "draft") continue;
+    promote(p.rec);
+    // Published records are bundled into public JavaScript: keep the working notes out of them.
+    const r = p.raw;
+    delete p.rec.captionBasis;
+    delete p.rec.holdReason;
+    p.rec.rights.evidence = `${r.license}. Wikimedia Commons file page${r.licenseTemplates?.length ? ` (${r.licenseTemplates.filter((t) => t !== "Information").join(", ")})` : ""}; checked on ${r.verifiedOn}.`;
+    if (!(r.useFor ?? []).includes("product")) p.rec.rights.restrictions = "Editorial use only.";
+    // Back a promoted plate with sources the reviewed pieces already cite, when it has any.
+    const shared = p.rec.sourceIds.filter((sid) => fromArticles.has(sid));
+    if (shared.length) p.rec.sourceIds = shared;
+    p.rec.sourceIds.forEach((sid) => need.sources.add(sid));
+  }
+  for (const sid of need.sources) {
+    const so = sources.get(sid);
+    if (!so || so.status === "draft") continue;
+    promote(so);
+    // Working notes ("cross-check before publishing", "contradicts …") are not reader copy.
+    if (PUBLISHED_SOURCE_NOTES[sid]) so.note = PUBLISHED_SOURCE_NOTES[sid];
+    else delete so.note;
+    if (so.type === "primary" && !so.perspective) so.perspective = so.creator ? `The issuing body's own account (${so.creator}).` : undefined;
+  }
+  // A published entry links only to published entries.
+  for (const a of articles.values()) if (a.rec.status === "published") a.rec.related = a.rec.related.filter((slug) => articles.get(slug)?.rec.status === "published");
 }
 
 /* ----------------------------- collections ---------------------------- */
@@ -452,6 +530,10 @@ for (const [dir, list] of Object.entries(kinds)) {
 }
 const held = (list, key) => list.filter((r) => r.status === "draft").map((r) => r[key]);
 console.log(`imported: ${sources.size} sources, ${plates.size} plates, ${articles.size} entries, ${events.size} events, ${collections.size} collections`);
+if (droppedShop.length) console.log(`shop-link notes dropped from: ${droppedShop.join(", ")}`);
+console.log(`published → entries: ${[...articles.values()].filter((a) => a.rec.status === "published").map((a) => a.rec.slug).join(", ") || "-"}`);
+console.log(`            plates: ${[...plates.values()].filter((p) => p.rec.status === "published").map((p) => p.rec.id).join(", ") || "-"}`);
+console.log(`            sources: ${[...sources.values()].filter((x) => x.status === "published").map((x) => x.id).join(", ") || "-"}`);
 console.log(`held as draft → sources: ${held(kinds.sources, "id").join(", ") || "-"}`);
 console.log(`                 plates: ${held(kinds.plates, "id").join(", ") || "-"}`);
 console.log(`                 entries: ${held(kinds.articles, "slug").join(", ") || "-"}`);

@@ -22,7 +22,6 @@
   ],
   "plateIds": [
     "reza-shah-portrait-1938",
-    "coronation-reza-shah-1926",
     "veresk-bridge-1943",
     "veresk-bridge-modern",
     "university-of-tehran-gate",
@@ -44,7 +43,7 @@
     },
     {
       "type": "plate",
-      "plateId": "coronation-reza-shah-1926"
+      "plateId": "veresk-bridge-1943"
     },
     {
       "type": "heading",
@@ -52,19 +51,19 @@
     },
     {
       "type": "paragraph",
-      "text": "Many of the measures were designed to reduce the power of the religious hierarchy [@loc15]. Educational reform ended the clerics' near monopoly on schooling, and a codification of laws created a body of secular law applied by a secular judiciary; clerics were excluded from judgeships and the task of notarising documents passed to state-licensed notaries [@loc15]. The civil code, the work of Justice Minister Ali Akbar Davar, was enacted between 1927 and 1932 [@loc15]. In 1928 the capitulations, under which Europeans were tried in their own consular courts, were abolished [@loc15]. A system of secular primary and secondary schools was created and, in 1935 according to the Library of Congress, the country's first European-style university was established in Tehran [@loc15]. (Some sources give 1934 for the University of Tehran's inauguration; see the fact-check log [@wp-uot].)",
+      "text": "Many of the measures were designed to reduce the power of the religious hierarchy [@loc15]. Educational reform ended the clerics' near monopoly on schooling, and a codification of laws created a body of secular law applied by a secular judiciary; clerics were excluded from judgeships and the task of notarising documents passed to state-licensed notaries [@loc15]. The civil code, the work of Justice Minister Ali Akbar Davar, was enacted between 1927 and 1932 [@loc15]. In 1928 the capitulations, under which Europeans were tried in their own consular courts, were abolished [@loc15]. A system of secular primary and secondary schools was created and the country's first European-style university was established in Tehran [@loc15]. A law establishing the University of Tehran was introduced in the Majlis on 13 March 1934, and the university was inaugurated on 4 February 1935 [@iranica-higher-education]. Accounts that give 1934 for its inauguration appear to be dating the law rather than the opening.",
       "cite": [
         {
           "sourceId": "loc15"
         },
         {
-          "sourceId": "wp-uot"
+          "sourceId": "iranica-higher-education"
         }
       ]
     },
     {
       "type": "plate",
-      "plateId": "veresk-bridge-1943"
+      "plateId": "veresk-bridge-modern"
     },
     {
       "type": "heading",
@@ -84,7 +83,7 @@
     },
     {
       "type": "plate",
-      "plateId": "veresk-bridge-modern"
+      "plateId": "university-of-tehran-gate"
     },
     {
       "type": "heading",
@@ -104,7 +103,7 @@
     },
     {
       "type": "plate",
-      "plateId": "university-of-tehran-gate"
+      "plateId": "dar-ul-funun"
     },
     {
       "type": "heading",
@@ -118,10 +117,6 @@
           "sourceId": "loc15"
         }
       ]
-    },
-    {
-      "type": "plate",
-      "plateId": "dar-ul-funun"
     }
   ],
   "furtherReading": [],

@@ -50,9 +50,7 @@
     "constitutional-revolution-to-pahlavi-accession"
    ],
    "note": null,
-   "images": [
-    "cossack-brigade-1909"
-   ]
+   "images": []
   },
   {
    "id": "1909-constitution-restored",
@@ -151,9 +149,7 @@
     "reza-shah-state-building"
    ],
    "note": "A Commons file gives 25 April 1926 for the ceremony; that specific day is NOT yet confirmed by a tier A/B source.",
-   "images": [
-    "coronation-reza-shah-1926"
-   ]
+   "images": []
   },
   {
    "id": "1927-civil-code",
@@ -189,19 +185,19 @@
   },
   {
    "id": "1935-university",
-   "date": "1935",
-   "datePrecision": "year",
-   "title": "University of Tehran",
-   "summary": "LoC records the country's first European-style university as established in 1935. Other sources give 1934 for its inauguration.",
+   "date": "1935-02-04",
+   "datePrecision": "day",
+   "title": "University of Tehran inaugurated",
+   "summary": "A law establishing the university was introduced in the Majlis on 13 March 1934; Tehran University was inaugurated on 4 February 1935. The Library of Congress gives 1935 for its establishment.",
    "sources": [
-    "loc15",
-    "wp-uot"
+    "iranica-higher-education",
+    "loc15"
    ],
-   "confidence": "contested",
+   "confidence": "high",
    "sections": [
     "reza-shah-state-building"
    ],
-   "note": "1934 vs 1935. Say 'established in the mid-1930s' unless a primary source (e.g. the founding law) is cited.",
+   "note": "Resolved: 1934 is the year the founding law was introduced, 1935 the year of the inauguration. Sources that give 1934 for the inauguration appear to be dating the law (inference; not stated in the sources).",
    "images": [
     "university-of-tehran-gate"
    ]
@@ -274,10 +270,7 @@
     "occupation-and-accession"
    ],
    "note": "Date discrepancy: say 'late August 1941' or '25 August' with the LoC variance noted.",
-   "images": [
-    "abadan-1941",
-    "tabriz-soviet-1941"
-   ]
+   "images": []
   },
   {
    "id": "1941-abdication",
@@ -538,13 +531,13 @@
    "summary": "LoC: 'In October 1967' the shah celebrated his long-postponed coronation and placed the crown on his own head; the Majlis conferred the title Arya-Mehr.",
    "sources": [
     "loc19",
-    "wp-mrp"
+    "iranica-crown-jewels"
    ],
    "confidence": "high",
    "sections": [
     "the-long-boom-and-its-ceremonies"
    ],
-   "note": "Day (26 Oct) from Wikipedia; month and year from LoC.",
+   "note": "Day (26 October 1967, 4 Aban 1346) from Iranica (Jellicoe); month and year agree with LoC.",
    "images": [
     "pahlavi-crown-1960s"
    ]
@@ -554,31 +547,31 @@
    "date": "1967/1977",
    "datePrecision": "range",
    "title": "Shiraz Arts Festival",
-   "summary": "Annual international arts festival held in Shiraz and Persepolis, initiated by Farah Pahlavi.",
+   "summary": "Eleven consecutive annual festivals from 1967 to 1977 in Shiraz and at Persepolis, conceived by Queen Farah Pahlavi.",
    "sources": [
-    "wp-shiraz"
+    "iranica-shiraz-arts-festival"
    ],
-   "confidence": "medium",
+   "confidence": "high",
    "sections": [
     "the-long-boom-and-its-ceremonies"
    ],
-   "note": "Single tertiary source. Upgrade to an Iranica or festival-archive citation before publication.",
+   "note": null,
    "images": []
   },
   {
    "id": "1971-azadi",
-   "date": "1971",
-   "datePrecision": "year",
-   "title": "Shahyad (Azadi) Tower completed",
-   "summary": "Designed by Hossein Amanat; commissioned to mark the celebrations; renamed Azadi Tower after 1979.",
+   "date": "1971-10-16",
+   "datePrecision": "day",
+   "title": "Shahyad (Azadi) Tower inaugurated",
+   "summary": "The Shahyad Aryamehr Monument, designed by Hossein Amanat, was inaugurated at sunset on 16 October 1971 as part of the celebrations; it was renamed Azadi (Freedom) after 1979.",
    "sources": [
-    "wp-azadi"
+    "hemmati2015"
    ],
    "confidence": "medium",
    "sections": [
     "the-long-boom-and-its-ceremonies"
    ],
-   "note": "Tertiary only; verify with Iranica or the architect's own record.",
+   "note": "Day qualified: Hemmati (citing Ettela'at, 16 Oct 1971) gives 16 October; a 2025 Iranian Studies article is reported in search results to give 17 October for the shah's arrival (not opened). Say \"October 1971\" in short copy.",
    "images": [
     "azadi-tower"
    ]
@@ -604,10 +597,11 @@
    "date": "1971-10-12",
    "datePrecision": "day",
    "title": "2,500-year celebrations at Persepolis",
-   "summary": "Festivities marking 2,500 years of the Iranian empire began on 12 October 1971. LoC records adverse domestic comment and Khomeini's declaration condemning them.",
+   "summary": "Festivities marking 2,500 years of the Iranian monarchy opened on 12 October 1971 with the shah's homage at the tomb of Cyrus at Pasargadae, moved to Persepolis and ended in Tehran. LoC records adverse domestic comment and Khomeini's declaration condemning them.",
    "sources": [
     "loc19",
-    "wp-2500"
+    "lacma-abbas1971",
+    "hemmati2015"
    ],
    "confidence": "high",
    "sections": [
@@ -615,8 +609,7 @@
    ],
    "note": null,
    "images": [
-    "persepolis-apadana",
-    "tent-city-1971-HOLD"
+    "persepolis-apadana"
    ]
   },
   {
@@ -660,15 +653,16 @@
    "date": "1977",
    "datePrecision": "year",
    "title": "Tehran Museum of Contemporary Art opens",
-   "summary": "Inaugurated by Farah Pahlavi; designed by Kamran Diba with Nader Ardalan.",
+   "summary": "Inaugurated by Farah Pahlavi; designed by Kamran Diba.",
    "sources": [
-    "wp-tmoca"
+    "cubbon2019-tmoca",
+    "diba-tmoca"
    ],
-   "confidence": "medium",
+   "confidence": "high",
    "sections": [
     "the-long-boom-and-its-ceremonies"
    ],
-   "note": "Tertiary only; upgrade to museum or Iranica source.",
+   "note": null,
    "images": [
     "tmoca"
    ]
@@ -803,9 +797,7 @@
     "revolution-1977-1979"
    ],
    "note": null,
-   "images": [
-    "khomeini-ghotbzadeh-1978-HOLD"
-   ]
+   "images": []
   },
   {
    "id": "1979-collapse",

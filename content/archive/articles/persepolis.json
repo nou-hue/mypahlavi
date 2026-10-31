@@ -30,17 +30,23 @@
     },
     {
       "type": "paragraph",
-      "text": "Site of the October 1971 celebrations of 2,500 years of the Iranian monarchy[@loc19; @wp-2500].",
+      "text": "Venue for part of the October 1971 celebrations of 2,500 years of the Iranian monarchy; they opened on 12 October at the tomb of Cyrus at Pasargadae[@hemmati2015; @lacma-abbas1971; @loc19].",
       "cite": [
         {
-          "sourceId": "loc19"
+          "sourceId": "hemmati2015"
         },
         {
-          "sourceId": "wp-2500"
+          "sourceId": "lacma-abbas1971"
+        },
+        {
+          "sourceId": "loc19"
         }
       ]
     }
   ],
   "furtherReading": [],
-  "related": []
+  "related": [
+    "the-long-boom-and-its-ceremonies",
+    "persepolis-capitals-and-1971"
+  ]
 }

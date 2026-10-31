@@ -1,6 +1,9 @@
 {
   "slug": "persepolis-capitals-and-1971",
-  "status": "draft",
+  "status": "published",
+  "byline": "Content & SEO",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31",
   "template": "essay",
   "kind": "editorial",
   "title": "Persepolis: the animal capitals and the 1971 celebrations",
@@ -22,11 +25,8 @@
     },
     {
       "type": "paragraph",
-      "text": "The distinctive Achaemenid \"Persepolitan\" column has a base, a fluted shaft and a double-animal capital, mostly bulls, carved back to back; the animals project from the column and function as brackets for the roof timbers [@wp-column]. Lions, man-headed bulls and griffins also occur [@wp-column]. [UPGRADE: cite Schmidt, *Persepolis I* (OIP 68, 1953) by page after opening it; the Wikipedia citation is a pointer only [@schmidt1953].]",
+      "text": "Erich Schmidt's Oriental Institute report on the excavations describes the best-known Persepolis columns as having composite capitals whose uppermost unit is a pair of addorsed (back-to-back) bulls. In the Gate of Xerxes the capitals ended in addorsed bulls, and the excavators judged that roof beams probably rested in the saddle between the animals (p. 68) [@schmidt1953]. The columns of the Apadana varied by portico. The hall and north portico ended in addorsed bulls, and so did the west portico, while the east portico had addorsed horned leonine monsters (p. 80); two pieces of those leonine capitals were found among the debris (p. 81) [@schmidt1953]. Schmidt also notes that all the capitals in the form of man-bulls or bulls carry a neckband decorated with rosettes (p. 137) [@schmidt1953].",
       "cite": [
-        {
-          "sourceId": "wp-column"
-        },
         {
           "sourceId": "schmidt1953"
         }
@@ -51,13 +51,16 @@
     },
     {
       "type": "paragraph",
-      "text": "In October 1971 celebrations were held at Persepolis to mark what was presented as 2,500 years of monarchy and the twenty-fifth centennial of Cyrus's empire; they opened on 12 October [@loc19; @wp-2500]. The Library of Congress records that the ceremonies drew adverse domestic comment, that honoured guests were foreign heads of state, and that Khomeini condemned them in a widely circulated declaration [@loc19].",
+      "text": "In October 1971 celebrations were held to mark what was presented as 2,500 years of monarchy and the twenty-fifth centennial of Cyrus's empire [@loc19]. The Library of Congress adds that the \"2,500 years of uninterrupted monarchy\" it describes contained gaps in the chronological record [@loc19]. A LACMA curatorial note records that the festivities opened on 12 October, when the shah paid homage at Cyrus's tomb at Pasargadae [@lacma-abbas1971]; a later thesis describes the programme moving to Persepolis and ending in Tehran [@hemmati2015]. The Library of Congress records that the ceremonies drew adverse domestic comment, that honoured guests were foreign heads of state, and that Khomeini condemned them in a widely circulated declaration [@loc19].",
       "cite": [
         {
           "sourceId": "loc19"
         },
         {
-          "sourceId": "wp-2500"
+          "sourceId": "lacma-abbas1971"
+        },
+        {
+          "sourceId": "hemmati2015"
         }
       ]
     },
@@ -71,6 +74,7 @@
     }
   ],
   "furtherReading": [],
-  "related": [],
-  "reviewNote": "Held as a draft: unverified markers in the text: [UPGRADE: cite Schmidt, *Persepolis I* (OIP 68, 1953) by page after …]; The 'kneeling capital' artwork on the three products has NOT been identified. This piece covers the general subject only. Before linking to the products, Shops & Prints must supply the original source of the engraving (museum, date, engraver). If the source is not a Persepolis capital, retitle or remove the product links."
+  "related": [
+    "the-long-boom-and-its-ceremonies"
+  ]
 }

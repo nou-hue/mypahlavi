@@ -17,7 +17,7 @@
     "status": "unknown",
     "holder": "Bahman Jalali",
     "licence": "Public domain",
-    "evidence": "DO NOT USE: named photographer (Bahman Jalali, d. 2010); copyright runs to 2080 in the UK. 'Licensed-PD-Art' tag relates to the magazine cover, not the photograph. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "evidence": "DO NOT USE: named photographer (Bahman Jalali, d. 2010); copyright runs to 2080 in the UK. 'Licensed-PD-Art' tag relates to the magazine cover, not the photograph. Reviewed 2026-10-31: stays do-not-use; no CC BY / CC BY-SA licence exists for it. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
     "tier": "X",
     "ukSafe": "false",
     "checkedBy": "Content & SEO (automated Commons API check)",
@@ -26,5 +26,7 @@
   "sourceIds": [],
   "useFor": [],
   "captionBasis": "—",
-  "holdReason": "DO NOT USE: named photographer (Bahman Jalali, d. 2010); copyright runs to 2080 in the UK. 'Licensed-PD-Art' tag relates to the magazine cover, not the photograph."
+  "holdReason": "DO NOT USE: named photographer (Bahman Jalali, d. 2010); copyright runs to 2080 in the UK. 'Licensed-PD-Art' tag relates to the magazine cover, not the photograph. Reviewed 2026-10-31: stays do-not-use; no CC BY / CC BY-SA licence exists for it.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
 }

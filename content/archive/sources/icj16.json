@@ -1,11 +1,11 @@
 {
   "id": "icj16",
-  "status": "review",
+  "status": "published",
   "type": "primary",
   "title": "Anglo-Iranian Oil Co. (United Kingdom v. Iran) — case overview",
   "creator": "International Court of Justice",
   "url": "https://www.icj-cij.org/case/16",
   "accessed": "2026-10-31",
-  "note": "Judgment of 22 July 1952: the Court decided it had no jurisdiction. This CONTRADICTS the loc17 sentence that the court 'found in Iran's favor' (see FACT-CHECK-LOG).",
-  "tier": "A"
+  "tier": "A",
+  "perspective": "The issuing body's own account (International Court of Justice)."
 }

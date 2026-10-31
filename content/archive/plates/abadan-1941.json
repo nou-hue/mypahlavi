@@ -1,6 +1,6 @@
 {
   "id": "abadan-1941",
-  "status": "review",
+  "status": "draft",
   "title": "British troops at Abadan during the Anglo-Soviet occupation of Iran, 4 September 1941",
   "caption": "British troops at Abadan during the Anglo-Soviet occupation of Iran, 4 September 1941.",
   "image": null,
@@ -17,20 +17,16 @@
     "status": "pending",
     "holder": "Geoffrey Keating",
     "licence": "Public domain",
-    "evidence": "Imperial War Museums photograph (PD-Scan / UK government). Check IWM's current reuse terms before publishing. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
-    "tier": "B",
+    "evidence": "HOLD (Content & SEO, 2026-10-31): Imperial War Museums photograph E 5323 (Geoffrey Keating). The IWM page offers it under the IWM Non-Commercial Licence, which excludes commercial and shop-bearing sites, bars uploading to Wikimedia and bars cropping or altering. A \"PD-Scan\" tag on Commons does not override that. mypahlavi carries a shop, so the licence does not permit this use. Release path: an IWM commercial licence, or a different image. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
     "ukSafe": "verify",
     "checkedBy": "Content & SEO (automated Commons API check)",
     "checkedOn": "2026-10-31"
   },
-  "sourceIds": [
-    "loc16",
-    "wp-anglosoviet"
-  ],
-  "uncertainty": "Rights check pending: the licence needs confirming at the holding institution before the image is shown.",
-  "useFor": [
-    "editorial"
-  ],
+  "sourceIds": [],
+  "useFor": [],
   "captionBasis": "Commons title/description; IWM ref E 5323. Confirm caption against the IWM catalogue entry.",
-  "holdReason": "Imperial War Museums photograph (PD-Scan / UK government). Check IWM's current reuse terms before publishing."
+  "holdReason": "HOLD (Content & SEO, 2026-10-31): Imperial War Museums photograph E 5323 (Geoffrey Keating). The IWM page offers it under the IWM Non-Commercial Licence, which excludes commercial and shop-bearing sites, bars uploading to Wikimedia and bars cropping or altering. A \"PD-Scan\" tag on Commons does not override that. mypahlavi carries a shop, so the licence does not permit this use. Release path: an IWM commercial licence, or a different image.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
 }

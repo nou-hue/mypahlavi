@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { archive, type ArchiveEntry, type ArchiveSource } from "@/content/load";
 import { cn } from "@/lib/utils";
+import { formatDate } from "@/content/dates.mjs";
 import { splitCitations } from "@/content/citations.mjs";
 import { ArchiveFigure as PlateFigure } from "./archive-figure";
 import {
@@ -273,7 +274,7 @@ function Header({ entry }: { entry: ArchiveEntry }) {
       {(entry.byline || entry.reviewedBy) && (
         <p className="mt-6 font-sans text-[0.56rem] uppercase tracking-[0.18em] text-ink-subtle">
           {entry.byline}
-          {entry.reviewedBy ? ` · Reviewed by ${entry.reviewedBy}` : ""}
+          {entry.reviewedBy ? ` · Reviewed by ${entry.reviewedBy}${entry.reviewedOn ? `, ${formatDate({ precision: "day", value: entry.reviewedOn })}` : ""}` : ""}
           {entry.updated ? ` · Updated ${entry.updated}` : ""}
         </p>
       )}

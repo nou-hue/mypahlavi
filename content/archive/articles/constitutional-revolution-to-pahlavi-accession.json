@@ -22,7 +22,6 @@
   ],
   "plateIds": [
     "wdl-first-majlis-1906",
-    "cossack-brigade-1909",
     "ahmad-shah-c1916",
     "golestan-palace"
   ],
@@ -42,7 +41,7 @@
     },
     {
       "type": "plate",
-      "plateId": "cossack-brigade-1909"
+      "plateId": "ahmad-shah-c1916"
     },
     {
       "type": "heading",
@@ -59,7 +58,7 @@
     },
     {
       "type": "plate",
-      "plateId": "ahmad-shah-c1916"
+      "plateId": "golestan-palace"
     },
     {
       "type": "heading",
@@ -73,10 +72,6 @@
           "sourceId": "loc14"
         }
       ]
-    },
-    {
-      "type": "plate",
-      "plateId": "golestan-palace"
     },
     {
       "type": "heading",

@@ -14,10 +14,11 @@
      ]
     },
     {
-     "t": "Site of the October 1971 celebrations of 2,500 years of the Iranian monarchy.",
+     "t": "Venue for part of the October 1971 celebrations of 2,500 years of the Iranian monarchy; they opened on 12 October at the tomb of Cyrus at Pasargadae.",
      "s": [
-      "loc19",
-      "wp-2500"
+      "hemmati2015",
+      "lacma-abbas1971",
+      "loc19"
      ]
     }
    ],
@@ -96,13 +97,18 @@
    "slug": "university-of-tehran",
    "name": "University of Tehran",
    "region": "Tehran",
-   "summary": "Iran's first European-style university, founded in the mid-1930s.",
+   "summary": "Iran's first university, inaugurated on 4 February 1935 under a law introduced in 1934.",
    "facts": [
     {
-     "t": "LoC: established in 1935 as the country's first European-style university. Another source says inaugurated 1934.",
+     "t": "A law establishing the university was introduced in the Majlis on 13 March 1934; the university was inaugurated on 4 February 1935.",
      "s": [
-      "loc15",
-      "wp-uot"
+      "iranica-higher-education"
+     ]
+    },
+    {
+     "t": "The Library of Congress gives 1935 for its establishment as the first European-style university.",
+     "s": [
+      "loc15"
      ]
     }
    ],
@@ -115,18 +121,24 @@
    "editorial": [
     "how-this-archive-handles-contested-facts"
    ],
-   "flag": "date contested"
+   "flag": "1934 law, 1935 opening"
   },
   {
    "slug": "azadi-tower",
    "name": "Azadi (Shahyad) Tower",
    "region": "Tehran",
-   "summary": "Marble-clad monument completed in 1971, designed by Hossein Amanat.",
+   "summary": "Marble-clad monument inaugurated in October 1971, designed by Hossein Amanat.",
    "facts": [
     {
-     "t": "Completed in 1971; designed by Hossein Amanat; originally named Shahyad Tower.",
+     "t": "Designed by Hossein Amanat, whose entry was chosen in a national competition announced in September 1966; originally the Shahyad Aryamehr Monument, renamed Azadi after 1979.",
      "s": [
-      "wp-azadi"
+      "hemmati2015"
+     ]
+    },
+    {
+     "t": "Inaugurated at sunset on 16 October 1971 as part of the celebrations (one thesis, citing the contemporary press; other accounts may give 17 October).",
+     "s": [
+      "hemmati2015"
      ]
     }
    ],
@@ -137,7 +149,7 @@
     "the-long-boom-and-its-ceremonies"
    ],
    "editorial": [],
-   "flag": "tertiary source only"
+   "flag": "inauguration day differs by source"
   },
   {
    "slug": "tehran-museum-of-contemporary-art",
@@ -146,9 +158,15 @@
    "summary": "Museum inaugurated in 1977 and designed by Kamran Diba.",
    "facts": [
     {
-     "t": "Inaugurated in 1977; designed by Kamran Diba with Nader Ardalan.",
+     "t": "Inaugurated by Farah Pahlavi in 1977; designed by Kamran Diba.",
      "s": [
-      "wp-tmoca"
+      "cubbon2019-tmoca"
+     ]
+    },
+    {
+     "t": "The architect dates the project 1967-1976 and was interim director for eighteen months after completion.",
+     "s": [
+      "diba-tmoca"
      ]
     }
    ],
@@ -158,8 +176,7 @@
    "sections": [
     "the-long-boom-and-its-ceremonies"
    ],
-   "editorial": [],
-   "flag": "tertiary source only"
+   "editorial": []
   }
  ]
 }

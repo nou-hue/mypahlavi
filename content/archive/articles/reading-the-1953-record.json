@@ -1,6 +1,9 @@
 {
   "slug": "reading-the-1953-record",
-  "status": "draft",
+  "status": "published",
+  "byline": "Content & SEO",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31",
   "template": "essay",
   "kind": "editorial",
   "title": "Reading the 1953 record: a guide to the sources",
@@ -33,10 +36,13 @@
     },
     {
       "type": "paragraph",
-      "text": "CIA officials have stated that most of the records on the coup were lost or destroyed in the early 1960s [@nsa435]. The State Department's *Foreign Relations of the United States* volume on the period, published in 1989, did not mention the US role; the omission provoked criticism and led to a 1991 statute, and a retrospective volume was still unpublished when the Archive wrote in 2013 [@nsa435]. [VERIFY: whether the FRUS retrospective has since been published; check history.state.gov before publishing this paragraph.]",
+      "text": "CIA officials have stated that most of the records on the coup were lost or destroyed in the early 1960s [@nsa435]. The State Department's *Foreign Relations of the United States* volume on the period, published in 1989, did not mention the US role; the omission provoked criticism and led to a 1991 statute, and a retrospective volume was still unpublished when the Archive wrote in 2013 [@nsa435]. The Office of the Historian released that retrospective volume, *Foreign Relations of the United States, Iran, 1951–1954*, on 15 June 2017; the State Department says it complements the 1989 volume by documenting the use of covert operations by the Truman and Eisenhower administrations [@frus-iran-2017].",
       "cite": [
         {
           "sourceId": "nsa435"
+        },
+        {
+          "sourceId": "frus-iran-2017"
         }
       ]
     },
@@ -71,8 +77,5 @@
     }
   ],
   "furtherReading": [],
-  "related": [
-    "oil-mossadeq-and-1953"
-  ],
-  "reviewNote": "Held as a draft: unverified markers in the text: [VERIFY: whether the FRUS retrospective has since been published; c…]"
+  "related": []
 }

@@ -1,6 +1,6 @@
 {
   "id": "rijksmuseum-gold-coin",
-  "status": "review",
+  "status": "published",
   "title": "Gold coin with a portrait of Mohammad Reza Pahlavi. Rijksmuseum object NG-776",
   "caption": "Gold coin with a portrait of Mohammad Reza Pahlavi. Rijksmuseum object NG-776.",
   "image": {
@@ -30,7 +30,7 @@
     "holder": "Rijksmuseum (object NG-776)",
     "licence": "CC0",
     "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "evidence": "CC0 (Rijksmuseum). Strongest candidate for object-led pages and product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "evidence": "CC0. Wikimedia Commons file page (CC-zero); checked on 2026-10-31.",
     "tier": "A",
     "ukSafe": "true",
     "checkedBy": "Content & SEO (automated Commons API check)",
@@ -38,12 +38,11 @@
   },
   "sourceIds": [
     "loc19",
-    "wp-mrp",
-    "wp-2500"
+    "lacma-abbas1971",
+    "hemmati2015"
   ],
   "useFor": [
     "editorial",
     "product"
-  ],
-  "captionBasis": "Commons description (Rijksmuseum object NG-776, Dutch)."
+  ]
 }

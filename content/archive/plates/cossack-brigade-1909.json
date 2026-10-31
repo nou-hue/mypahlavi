@@ -1,6 +1,6 @@
 {
   "id": "cossack-brigade-1909",
-  "status": "review",
+  "status": "draft",
   "title": "Persian Cossack Brigade, April 1909",
   "caption": "Persian Cossack Brigade, April 1909.",
   "image": null,
@@ -17,21 +17,16 @@
     "status": "pending",
     "holder": "Unknown author",
     "licence": "Public domain",
-    "evidence": "PD-Iran tag; source a magazine page. 1909 age makes UK expiry very likely, but photographer is unrecorded and the source is secondary. Verify before use. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
-    "tier": "B",
+    "evidence": "HOLD (Content & SEO, 2026-10-31): Source is a magazine page (secondary) and the photographer is unrecorded. Only a PD-Iran tag supports the licence. Age makes expiry likely but not shown. Release path: the original archive or first-publication record. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
     "ukSafe": "verify",
     "checkedBy": "Content & SEO (automated Commons API check)",
     "checkedOn": "2026-10-31"
   },
-  "sourceIds": [
-    "loc13",
-    "loc14",
-    "loc15"
-  ],
-  "uncertainty": "Rights check pending: the licence needs confirming at the holding institution before the image is shown.",
-  "useFor": [
-    "editorial"
-  ],
+  "sourceIds": [],
+  "useFor": [],
   "captionBasis": "Commons title/date.",
-  "holdReason": "PD-Iran tag; source a magazine page. 1909 age makes UK expiry very likely, but photographer is unrecorded and the source is secondary. Verify before use."
+  "holdReason": "HOLD (Content & SEO, 2026-10-31): Source is a magazine page (secondary) and the photographer is unrecorded. Only a PD-Iran tag supports the licence. Age makes expiry likely but not shown. Release path: the original archive or first-publication record.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
 }

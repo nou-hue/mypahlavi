@@ -17,7 +17,7 @@
     "status": "pending",
     "holder": "Unknown author",
     "licence": "Public domain",
-    "evidence": "HOLD: PD-Iran only; source iranian.com; author unknown; 1971 is inside the UK 70-year window. Do not use. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "evidence": "HOLD: PD-Iran only; source iranian.com; author unknown; 1971 is inside the UK 70-year window. Do not use. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
     "tier": "C",
     "ukSafe": "false",
     "checkedBy": "Content & SEO (automated Commons API check)",
@@ -26,5 +26,7 @@
   "sourceIds": [],
   "useFor": [],
   "captionBasis": "—",
-  "holdReason": "HOLD: PD-Iran only; source iranian.com; author unknown; 1971 is inside the UK 70-year window. Do not use."
+  "holdReason": "HOLD: PD-Iran only; source iranian.com; author unknown; 1971 is inside the UK 70-year window. Do not use. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
 }

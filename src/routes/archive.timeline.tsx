@@ -14,6 +14,8 @@ export const Route = createFileRoute("/archive/timeline")({
   head: () =>
     archiveHead({
       path: "/archive/timeline",
+      // Thin until something is published here.
+      noindex: !archive.events.some((r) => r.status === "published"),
       title: "Timeline",
       description: "Events in date order, shown at the precision the evidence supports and marked documented, disputed or to be verified.",
     }),

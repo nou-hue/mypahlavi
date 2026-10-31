@@ -13,10 +13,6 @@
     {
       "label": "Region",
       "value": "Tehran"
-    },
-    {
-      "label": "Evidence note",
-      "value": "Currently tertiary source only."
     }
   ],
   "plateIds": [
@@ -25,14 +21,25 @@
   "body": [
     {
       "type": "paragraph",
-      "text": "Inaugurated in 1977; designed by Kamran Diba with Nader Ardalan[@wp-tmoca].",
+      "text": "Inaugurated by Farah Pahlavi in 1977; designed by Kamran Diba[@cubbon2019-tmoca].",
       "cite": [
         {
-          "sourceId": "wp-tmoca"
+          "sourceId": "cubbon2019-tmoca"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The architect dates the project 1967-1976 and was interim director for eighteen months after completion[@diba-tmoca].",
+      "cite": [
+        {
+          "sourceId": "diba-tmoca"
         }
       ]
     }
   ],
   "furtherReading": [],
-  "related": []
+  "related": [
+    "the-long-boom-and-its-ceremonies"
+  ]
 }

@@ -1,8 +1,17 @@
 {
   "slug": "emblems-and-motifs",
-  "status": "draft",
+  "status": "review",
   "title": "Emblems and motifs",
   "description": "Symbols that recur on objects: the Lion and Sun and the Persepolis capitals.",
-  "members": [],
-  "curatorNote": "Held: every member is still a draft."
+  "coverPlateId": "persepolis-apadana",
+  "members": [
+    {
+      "kind": "entry",
+      "id": "the-lion-and-sun"
+    },
+    {
+      "kind": "entry",
+      "id": "persepolis-capitals-and-1971"
+    }
+  ]
 }

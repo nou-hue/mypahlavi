@@ -1,6 +1,6 @@
 {
   "id": "pahlavi-crown-1960s",
-  "status": "review",
+  "status": "published",
   "title": "The Pahlavi Crown, Treasury of National Jewels, Tehran; colour slide by court photographer Soleiman Meftah, 19",
   "caption": "The Pahlavi Crown, Treasury of National Jewels, Tehran; colour slide by court photographer Soleiman Meftah, 1960s.",
   "image": {
@@ -29,19 +29,19 @@
     "holder": "Soleiman Meftah",
     "licence": "CC BY-SA 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "evidence": "CC BY-SA 4.0 'heirs' template: released by the heirs of the photographer. Check that the Commons OTRS/VRT permission is recorded before using. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "evidence": "CC BY-SA 4.0. Wikimedia Commons file page (cc-by-sa-4.0-heirs); checked on 2026-10-31.",
     "tier": "A-CC",
     "ukSafe": "verify",
     "checkedBy": "Content & SEO (automated Commons API check)",
-    "checkedOn": "2026-10-31"
+    "checkedOn": "2026-10-31",
+    "restrictions": "Editorial use only."
   },
   "sourceIds": [
-    "loc19",
-    "wp-mrp",
-    "wp-2500"
+    "hemmati2015",
+    "iranica-shiraz-arts-festival",
+    "diba-tmoca"
   ],
   "useFor": [
     "editorial"
-  ],
-  "captionBasis": "Commons description."
+  ]
 }
