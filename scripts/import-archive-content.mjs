@@ -128,6 +128,26 @@ for (const s of srcRaw) {
 
 /* ------------------------------ plates ------------------------------- */
 const imgRaw = readJson("data/images.json").images;
+// Holds decided after Content & SEO's drop (31 Oct, relayed by the parent). Applied here so the import stays
+// reproducible; delete an entry once the drop itself carries the hold.
+const HOLD_OVERRIDES = {
+  "reza-shah-portrait-1938":
+    "Held: no primary source yet for the public-domain status of this painting in both the UK and the US. Released again only once one is on file.",
+};
+for (const i of imgRaw) {
+  const why = HOLD_OVERRIDES[i.id];
+  if (!why) continue;
+  Object.assign(i, { status: "hold", useFor: [], rightsTier: "C", ukSafe: "verify", rightsNote: `${why} ${i.rightsNote ?? ""}`.trim() });
+  delete i.reviewedBy;
+  delete i.reviewedOn;
+}
+// Title: the caption without its trailing full stop or parenthetical, cut at a word boundary.
+const plateTitle = (c) => {
+  const t = c.split(/\.\s+(?=[A-Z])/)[0].replace(/\s*\([^)]*\)\s*/g, " ").replace(/\s+/g, " ").replace(/\.$/, "").trim();
+  if (t.length <= 110) return t;
+  const cut = t.slice(0, 110);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:]$/, "") + "…";
+};
 const plateId = (id) => lc(id);
 const IMAGE_STATUS = { approved: "review", "approved-editorial-with-attribution": "review", "verify-before-use": "review", hold: "draft", "do-not-use": "draft" };
 const plates = new Map();
@@ -141,7 +161,7 @@ for (const i of imgRaw) {
     rec: clean({
       id,
       status: IMAGE_STATUS[i.status],
-      title: i.caption.replace(/\.$/, "").slice(0, 110),
+      title: plateTitle(i.caption),
       caption: i.caption,
       image: shown
         ? { src: `/archive/plates/${id}.jpg`, alt: i.alt, width: undefined, height: undefined }
@@ -485,6 +505,11 @@ async function fetchTo(url, file) {
   throw new Error(`gave up on ${url}`);
 }
 mkdirSync(plateDir, { recursive: true });
+// A held plate ships no file: remove any image left from an earlier import.
+for (const [id, p] of plates) {
+  if (p.rec.image) continue;
+  for (const f of [`${id}.jpg`, `${id}-500.jpg`]) if (existsSync(join(plateDir, f))) rmSync(join(plateDir, f));
+}
 for (const [id, p] of plates) {
   if (!p.rec.image) continue;
   const base = join(plateDir, `${id}.jpg`);

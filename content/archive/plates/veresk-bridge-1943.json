@@ -1,7 +1,7 @@
 {
   "id": "veresk-bridge-1943",
   "status": "review",
-  "title": "Panorama of the Veresk valley with railway and bridge, 1943. U.S. Army Corps of Engineers",
+  "title": "Panorama of the Veresk valley with railway and bridge, 1943",
   "caption": "Panorama of the Veresk valley with railway and bridge, 1943. U.S. Army Corps of Engineers.",
   "image": {
     "src": "/archive/plates/veresk-bridge-1943.jpg",
@@ -36,7 +36,6 @@
   },
   "sourceIds": [
     "loc15",
-    "iranica-higher-education",
     "unesco1585"
   ],
   "useFor": [

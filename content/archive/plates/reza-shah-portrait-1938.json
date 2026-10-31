@@ -1,20 +1,9 @@
 {
   "id": "reza-shah-portrait-1938",
-  "status": "published",
-  "title": "Reza Shah Pahlavi, 1938, portrait by Samuel Johnson Woolf (oil on canvas, National Portrait Gallery, Smithsoni",
+  "status": "draft",
+  "title": "Reza Shah Pahlavi, 1938, portrait by Samuel Johnson Woolf",
   "caption": "Reza Shah Pahlavi, 1938, portrait by Samuel Johnson Woolf (oil on canvas, National Portrait Gallery, Smithsonian Institution).",
-  "image": {
-    "src": "/archive/plates/reza-shah-portrait-1938.jpg",
-    "alt": "Portrait of Reza Shah Pahlavi, 1938, by Samuel Johnson Woolf",
-    "width": 960,
-    "height": 1154,
-    "variants": [
-      {
-        "src": "/archive/plates/reza-shah-portrait-1938-500.jpg",
-        "width": 500
-      }
-    ]
-  },
+  "image": null,
   "date": {
     "precision": "year",
     "value": "1938"
@@ -25,22 +14,17 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AReza_Shah_Pahlavi_portrait_%281938%29.jpg"
   },
   "rights": {
-    "status": "public-domain",
+    "status": "pending",
     "holder": "Samuel Johnson Woolf",
     "licence": "Public domain (2-D work by an artist who died in 1948; UK copyright expired end of 2018)",
-    "evidence": "Public domain (2-D work by an artist who died in 1948; UK copyright expired end of 2018). Wikimedia Commons file page (PD-art); checked on 2026-10-31.",
-    "tier": "A",
-    "ukSafe": "true",
+    "evidence": "Held: no primary source yet for the public-domain status of this painting in both the UK and the US. Released again only once one is on file. RELEASED, editorial only (no product use). Basis: faithful photographic reproduction of a 2-D painting by Samuel Johnson Woolf (1880-1948); life + 70 expired in the UK on 31 Dec 2018. Commons credit line reads \"GettyImages\": use the Commons file, never a Getty hotlink or Getty licence page. US status was not independently checked. Content & SEO release is conditional on Grok Bot go/no-go; this release rests on artist death, not on a CC licence, so it is flagged for explicit sign-off. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext; NPG record via search result (page blocked when opened directly) on 2026-10-31.",
+    "tier": "C",
+    "ukSafe": "verify",
     "checkedBy": "Content & SEO (automated Commons API check)",
-    "checkedOn": "2026-10-31",
-    "restrictions": "Editorial use only."
+    "checkedOn": "2026-10-31"
   },
-  "sourceIds": [
-    "loc15"
-  ],
-  "useFor": [
-    "editorial"
-  ],
-  "reviewedBy": "Content & SEO",
-  "reviewedOn": "2026-10-31"
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "NPG object record NPG.86.TC78 (title, date, medium, credit line) as returned by search; page itself blocked by a bot challenge when opened directly. Commons file title/date/artist match; aspect ratio matches the NPG dimensions (60.9 x 50.8 cm).",
+  "holdReason": "Held: no primary source yet for the public-domain status of this painting in both the UK and the US. Released again only once one is on file. RELEASED, editorial only (no product use). Basis: faithful photographic reproduction of a 2-D painting by Samuel Johnson Woolf (1880-1948); life + 70 expired in the UK on 31 Dec 2018. Commons credit line reads \"GettyImages\": use the Commons file, never a Getty hotlink or Getty licence page. US status was not independently checked. Content & SEO release is conditional on Grok Bot go/no-go; this release rests on artist death, not on a CC licence, so it is flagged for explicit sign-off."
 }

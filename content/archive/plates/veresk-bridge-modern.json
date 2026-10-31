@@ -1,7 +1,7 @@
 {
   "id": "veresk-bridge-modern",
   "status": "review",
-  "title": "Veresk Bridge on the Trans-Iranian Railway (photo 2017)",
+  "title": "Veresk Bridge on the Trans-Iranian Railway",
   "caption": "Veresk Bridge on the Trans-Iranian Railway (photo 2017).",
   "image": {
     "src": "/archive/plates/veresk-bridge-modern.jpg",
@@ -37,8 +37,8 @@
   },
   "sourceIds": [
     "loc15",
-    "unesco1585",
-    "wp-reza"
+    "iranica-higher-education",
+    "unesco1585"
   ],
   "useFor": [
     "editorial"

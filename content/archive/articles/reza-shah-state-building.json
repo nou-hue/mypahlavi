@@ -21,7 +21,6 @@
     }
   ],
   "plateIds": [
-    "reza-shah-portrait-1938",
     "veresk-bridge-1943",
     "veresk-bridge-modern",
     "university-of-tehran-gate",
@@ -43,7 +42,7 @@
     },
     {
       "type": "plate",
-      "plateId": "veresk-bridge-1943"
+      "plateId": "veresk-bridge-modern"
     },
     {
       "type": "heading",
@@ -63,7 +62,7 @@
     },
     {
       "type": "plate",
-      "plateId": "veresk-bridge-modern"
+      "plateId": "university-of-tehran-gate"
     },
     {
       "type": "heading",
@@ -83,7 +82,7 @@
     },
     {
       "type": "plate",
-      "plateId": "university-of-tehran-gate"
+      "plateId": "dar-ul-funun"
     },
     {
       "type": "heading",
@@ -100,10 +99,6 @@
           "sourceId": "loc15"
         }
       ]
-    },
-    {
-      "type": "plate",
-      "plateId": "dar-ul-funun"
     },
     {
       "type": "heading",

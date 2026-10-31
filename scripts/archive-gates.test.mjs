@@ -93,7 +93,7 @@ test("site config: canonical host defaults to www and comes from one constant", 
 });
 
 /* ---- the 31 October review ---- */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 const rec = (d, k) => JSON.parse(readFileSync(new URL(`../content/archive/${d}/${k}.json`, import.meta.url), "utf8"));
 
 test("review: the four previously flagged pieces are published, reviewed by Content & SEO on 2026-10-31", () => {
@@ -111,19 +111,20 @@ test("review: Lion and Sun opens with 'a long-used emblem' and carries no shop c
   assert.doesNotMatch(JSON.stringify(a), /shop|canvas|products/i);
 });
 
-test("review: only the Woolf portrait is released, editorial use only; the other 8 stay held and 1 do-not-use", () => {
-  const p = rec("plates", "reza-shah-portrait-1938");
-  assert.equal(p.status, "published");
-  assert.deepEqual(p.useFor, ["editorial"]);
-  assert.equal(canShowImage(p), true);
-  assert.equal(canUseOnProduct(p), false);
-  const held = ["abadan-1941", "tabriz-soviet-1941", "cossack-brigade-1909", "coronation-reza-shah-1926", "tent-city-1971-hold", "demonstrators-1979-hold", "revolutionaries-1979-hold", "khomeini-ghotbzadeh-1978-hold", "shiraz-festival-jalali-1972-do-not-use"];
+test("review: no image is released; all 9 on hold and 1 do-not-use ship no file and never show", () => {
+  const held = ["reza-shah-portrait-1938", "abadan-1941", "tabriz-soviet-1941", "cossack-brigade-1909", "coronation-reza-shah-1926", "tent-city-1971-hold", "demonstrators-1979-hold", "revolutionaries-1979-hold", "khomeini-ghotbzadeh-1978-hold", "shiraz-festival-jalali-1972-do-not-use"];
   for (const id of held) {
     const h = rec("plates", id);
     assert.equal(h.status, "draft", id);
     assert.equal(h.image, null, id);
     assert.equal(canShowImage(h), false, id);
+    assert.equal(canUseOnProduct(h), false, id);
+    assert.equal(existsSync(new URL(`../public/archive/plates/${id}.jpg`, import.meta.url)), false, `${id}: no file shipped`);
   }
+  // Nothing refers to a held image from a visible record.
+  const { data } = checkContent({ production: false });
+  const visible = JSON.stringify([...data.articles, ...data.events, ...data.collections]);
+  for (const id of held) assert.equal(visible.includes(`"${id}"`), false, `${id} must not be listed anywhere`);
 });
 
 test("review: Schmidt has page locators, Najmabadi has none", () => {
@@ -150,6 +151,7 @@ test("review: a production build shows exactly the reviewed pieces and what they
   const { data } = checkContent({ production: true });
   assert.deepEqual(data.articles.map((a) => a.slug).sort(), ["persepolis-capitals-and-1971", "reading-the-1953-record", "the-lion-and-sun", "the-long-boom-and-its-ceremonies"]);
   assert.ok(data.plates.every((p) => canShowImage(p) && p.status === "published"));
+  assert.equal(data.plates.some((p) => p.id === "reza-shah-portrait-1938"), false);
   assert.ok(data.articles.every((a) => a.status === "published"));
   assert.equal(data.events.length, 0);
 });

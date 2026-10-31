@@ -1,7 +1,7 @@
 {
   "id": "university-of-tehran-gate",
   "status": "review",
-  "title": "Main entrance gate, University of Tehran (photo 2020)",
+  "title": "Main entrance gate, University of Tehran",
   "caption": "Main entrance gate, University of Tehran (photo 2020).",
   "image": {
     "src": "/archive/plates/university-of-tehran-gate.jpg",
@@ -36,9 +36,9 @@
     "checkedOn": "2026-10-31"
   },
   "sourceIds": [
-    "unesco1585",
     "loc15",
-    "iranica-higher-education"
+    "iranica-higher-education",
+    "wp-reza"
   ],
   "useFor": [
     "editorial"
