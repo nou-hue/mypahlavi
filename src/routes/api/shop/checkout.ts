@@ -1,10 +1,13 @@
+import { randomBytes } from "node:crypto";
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { estimateShippingGBP } from "@/data/shop";
+import { priceCheckoutLine } from "@/lib/shop/checkout-pricing";
 import { printifyConfigured } from "@/lib/printify/client";
 import { resolveProductForCheckout } from "@/lib/shop/catalog.server";
 import {
   insertOrder,
+  OrderPersistenceError,
   orderToStripeMetadata,
   updateOrder,
 } from "@/lib/shop/orders.server";
@@ -32,7 +35,8 @@ const bodySchema = z.object({
 });
 
 function orderId() {
-  return `MP-${Date.now().toString(36).toUpperCase()}${Math.random().toString(36).slice(2, 5).toUpperCase()}`;
+  // Unguessable suffix: the order id is the lookup key for the order page.
+  return `MP-${Date.now().toString(36).toUpperCase()}${randomBytes(6).toString("hex").toUpperCase()}`;
 }
 
 function originFrom(request: Request) {
@@ -96,6 +100,19 @@ export const Route = createFileRoute("/api/shop/checkout")({
               { status: 400 },
             );
           }
+          // Server-side price: always re-derived from the GBP price map, never
+          // from the client, the cart, or a vendor (Printify) price.
+          const priced = priceCheckoutLine(product, variant);
+          if (!priced.ok) {
+            return Response.json(
+              {
+                error:
+                  "This item is price on request and cannot be bought online yet. No payment has been taken.",
+              },
+              { status: 409 },
+            );
+          }
+          const unitPence = priced.unitPence;
           if (
             stripeConfigured() &&
             (!product.printifyProductId || !variant.printifyVariantId)
@@ -116,7 +133,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
             name: product.name,
             variantId: variant.id,
             variantLabel: variant.label,
-            unitPriceGBP: variant.priceGBP,
+            unitPriceGBP: unitPence / 100,
             quantity: line.quantity,
             sku: variant.sku,
             gradient: product.gradient,
@@ -179,7 +196,9 @@ export const Route = createFileRoute("/api/shop/checkout")({
             shipping,
             lines: resolved,
             metadata: { mode: "stripe" },
-          });
+          },
+          // Fail closed: no Stripe session unless the order is durably saved.
+          { requireDurable: true });
 
           const TAX_GENERAL = "txcd_99999999";
           const TAX_SHIPPING = "txcd_92010001";
@@ -262,10 +281,18 @@ export const Route = createFileRoute("/api/shop/checkout")({
           });
         } catch (err) {
           console.error("[checkout]", err);
+          if (err instanceof OrderPersistenceError) {
+            return Response.json(
+              {
+                error:
+                  "Checkout is temporarily unavailable. No payment has been taken.",
+              },
+              { status: 503 },
+            );
+          }
+          // Do not leak vendor error text to the browser.
           return Response.json(
-            {
-              error: err instanceof Error ? err.message : "Checkout failed",
-            },
+            { error: "Checkout failed. No payment has been taken." },
             { status: 500 },
           );
         }

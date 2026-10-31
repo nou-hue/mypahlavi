@@ -3,8 +3,10 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, Check } from "lucide-react";
 import { LayoutShell } from "@/components/archive/layout-shell";
 import {
-  formatGBP,
-  startingPrice,
+  isPurchasable,
+  PRICE_ON_REQUEST,
+  startingPriceLabel,
+  variantPriceLabel,
   type ShopProduct,
 } from "@/data/shop";
 import { useCartStore } from "@/lib/cart-store";
@@ -132,7 +134,7 @@ function ProductDetail({
         : "Object";
 
   function handleAdd() {
-    if (!variant) return;
+    if (!variant || !isPurchasable(variant)) return;
     addItem(product, variant, 1);
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1600);
@@ -166,9 +168,7 @@ function ProductDetail({
               {product.name}
             </h1>
             <p className="mt-5 font-serif text-xl text-ink-soft sm:text-2xl">
-              {variant
-                ? formatGBP(variant.priceGBP)
-                : `from ${formatGBP(startingPrice(product))}`}
+              {variant ? variantPriceLabel(variant) : startingPriceLabel(product)}
             </p>
 
             {description && (
@@ -210,9 +210,12 @@ function ProductDetail({
               <button
                 type="button"
                 onClick={handleAdd}
-                className="inline-flex h-12 min-w-[11rem] items-center justify-center gap-2 bg-ink px-7 font-sans text-[0.68rem] uppercase tracking-[0.16em] text-cream transition-opacity hover:opacity-90"
+                disabled={!variant || !isPurchasable(variant)}
+                className="inline-flex h-12 min-w-[11rem] items-center justify-center gap-2 bg-ink px-7 font-sans text-[0.68rem] uppercase tracking-[0.16em] text-cream transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {added ? (
+                {variant && !isPurchasable(variant) ? (
+                  PRICE_ON_REQUEST
+                ) : added ? (
                   <>
                     <Check className="size-4" /> Added
                   </>
@@ -260,7 +263,7 @@ function ProductDetail({
                   </div>
                   <p className="mt-4 font-serif text-xl tracking-tight">{p.name}</p>
                   <p className="mt-1 font-sans text-[0.58rem] uppercase tracking-[0.14em] text-ink-subtle">
-                    from {formatGBP(startingPrice(p))}
+                    {startingPriceLabel(p)}
                   </p>
                 </Link>
               ))}

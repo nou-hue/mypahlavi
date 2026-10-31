@@ -46,7 +46,10 @@ export const Route = createFileRoute("/api/shop/webhook")({
         }
 
         try {
-          if (event.type === "checkout.session.completed") {
+          if (
+            event.type === "checkout.session.completed" ||
+            event.type === "checkout.session.async_payment_succeeded"
+          ) {
             const session = event.data.object;
 
             // Circle patronage subscription
@@ -108,15 +111,59 @@ export const Route = createFileRoute("/api/shop/webhook")({
               return Response.json({ received: true, warning: "order_missing" });
             }
 
-            await updateOrder(order.id, {
-              status: "paid",
-              stripe_session_id: session.id,
-              stripe_payment_intent:
-                typeof session.payment_intent === "string"
-                  ? session.payment_intent
-                  : session.payment_intent?.id ?? null,
-              error_message: null,
-            });
+            // Only act on money actually received (async methods complete unpaid).
+            if (
+              session.payment_status !== "paid" &&
+              session.payment_status !== "no_payment_required"
+            ) {
+              return Response.json({ received: true, warning: "not_paid" });
+            }
+
+            // The order must belong to this session.
+            if (order.stripe_session_id && order.stripe_session_id !== session.id) {
+              console.error(
+                "[stripe webhook] session/order mismatch",
+                order.id,
+                session.id,
+              );
+              return Response.json({ received: true, warning: "session_mismatch" });
+            }
+
+            // Idempotent on Stripe retries / duplicate events: never regress
+            // status or re-submit an order that is already with Printify.
+            if (
+              order.printify_order_id ||
+              order.status === "printify_submitted" ||
+              order.status === "fulfilled"
+            ) {
+              return Response.json({ received: true, duplicate: true });
+            }
+
+            // Strict: if the DB write fails, return 500 so Stripe retries.
+            await updateOrder(
+              order.id,
+              {
+                status: "paid",
+                stripe_session_id: session.id,
+                stripe_payment_intent:
+                  typeof session.payment_intent === "string"
+                    ? session.payment_intent
+                    : session.payment_intent?.id ?? null,
+                error_message: null,
+              },
+              { strict: true },
+            );
+
+            // Amount paid must equal what we recorded; otherwise hold for review.
+            if (
+              typeof session.amount_total === "number" &&
+              session.amount_total !== order.total_pence
+            ) {
+              const msg = `Amount mismatch: Stripe ${session.amount_total}p vs order ${order.total_pence}p — held for manual review`;
+              console.error("[stripe webhook]", order.id, msg);
+              await updateOrder(order.id, { error_message: msg });
+              return Response.json({ received: true, warning: "amount_mismatch" });
+            }
 
             await fulfillOrderWithPrintify(order.id);
           }

@@ -2,11 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ShoppingBag } from "lucide-react";
 import { LayoutShell } from "@/components/archive/layout-shell";
-import {
-  formatGBP,
-  startingPrice,
-  type ShopProduct,
-} from "@/data/shop";
+import { startingPriceLabel, type ShopProduct } from "@/data/shop";
 import { useCartStore } from "@/lib/cart-store";
 import { cn } from "@/lib/utils";
 
@@ -157,8 +153,7 @@ function EditionsPage() {
                 </Link>
                 <div className="mt-6 space-y-2">
                   <p className="font-sans text-[0.58rem] uppercase tracking-[0.18em] text-ink-subtle">
-                    {item.accentLabel || "Edition"} · from{" "}
-                    {formatGBP(startingPrice(item))}
+                    {item.accentLabel || "Edition"} · {startingPriceLabel(item)}
                   </p>
                   <Link
                     to="/editions/$productId"

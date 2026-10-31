@@ -1,13 +1,25 @@
 export type ProductCategory = "print" | "apparel" | "object";
 
+import { applyGbpPrices } from "@/data/gbp-prices";
+
 export type ProductVariant = {
   id: string;
   label: string;
-  priceGBP: number;
+  /**
+   * Retail price in GBP pounds, from the GBP price map (src/data/gbp-prices.ts)
+   * only. `null` = not mapped = "Price on request" (not purchasable).
+   * Never derived from a vendor (Printify) price.
+   */
+  priceGBP: number | null;
+  /** Always GBP. Prices in any other unit must never reach this field. */
+  currency: "GBP";
   sku: string;
   /** Printify variant id (number) once product is published in your shop */
   printifyVariantId?: number | null;
 };
+
+/** Variant as authored: price comes from the GBP price map, not from here. */
+type RawVariant = Omit<ProductVariant, "priceGBP" | "currency">;
 
 export type ShopProduct = {
   id: string;
@@ -33,7 +45,9 @@ export type ShopProduct = {
  * Connect Printify: create matching products in your Printify shop, then set
  * printifyProductId + each variant's printifyVariantId (or use /api/shop/printify/sync).
  */
-export const shopProducts: ShopProduct[] = [
+type RawShopProduct = Omit<ShopProduct, "variants"> & { variants: RawVariant[] };
+
+const rawShopProducts: RawShopProduct[] = [
   {
     id: "e-01",
     slug: "coronation-study-print",
@@ -50,9 +64,9 @@ export const shopProducts: ShopProduct[] = [
     imageSrc: "/archive/farah-pahlavi/user-farah-coronation-crown-ermine.jpg",
     printifyProductId: null,
     variants: [
-      { id: "a3", label: "A3 (297 × 420 mm)", priceGBP: 48, sku: "PRINT-COR-A3" },
-      { id: "a2", label: "A2 (420 × 594 mm)", priceGBP: 72, sku: "PRINT-COR-A2" },
-      { id: "a1", label: "A1 (594 × 841 mm)", priceGBP: 110, sku: "PRINT-COR-A1" },
+      { id: "a3", label: "A3 (297 × 420 mm)", sku: "PRINT-COR-A3" },
+      { id: "a2", label: "A2 (420 × 594 mm)", sku: "PRINT-COR-A2" },
+      { id: "a1", label: "A1 (594 × 841 mm)", sku: "PRINT-COR-A1" },
     ],
   },
   {
@@ -71,8 +85,8 @@ export const shopProducts: ShopProduct[] = [
     imageSrc: "/archive/other-family/user-garden-laughter-with-baby.jpg",
     printifyProductId: null,
     variants: [
-      { id: "a3", label: "A3", priceGBP: 48, sku: "PRINT-GAR-A3" },
-      { id: "a2", label: "A2", priceGBP: 72, sku: "PRINT-GAR-A2" },
+      { id: "a3", label: "A3", sku: "PRINT-GAR-A3" },
+      { id: "a2", label: "A2", sku: "PRINT-GAR-A2" },
     ],
   },
   {
@@ -90,8 +104,8 @@ export const shopProducts: ShopProduct[] = [
     imageSrc: "/archive/other-family/user-imperial-trio-reza-farah-shah.jpg",
     printifyProductId: null,
     variants: [
-      { id: "a3", label: "A3", priceGBP: 46, sku: "PRINT-TRI-A3" },
-      { id: "a2", label: "A2", priceGBP: 68, sku: "PRINT-TRI-A2" },
+      { id: "a3", label: "A3", sku: "PRINT-TRI-A3" },
+      { id: "a2", label: "A2", sku: "PRINT-TRI-A2" },
     ],
   },
   {
@@ -109,11 +123,11 @@ export const shopProducts: ShopProduct[] = [
     featured: true,
     printifyProductId: null,
     variants: [
-      { id: "s", label: "S", priceGBP: 36, sku: "TEE-CR-S" },
-      { id: "m", label: "M", priceGBP: 36, sku: "TEE-CR-M" },
-      { id: "l", label: "L", priceGBP: 36, sku: "TEE-CR-L" },
-      { id: "xl", label: "XL", priceGBP: 36, sku: "TEE-CR-XL" },
-      { id: "2xl", label: "2XL", priceGBP: 38, sku: "TEE-CR-2XL" },
+      { id: "s", label: "S", sku: "TEE-CR-S" },
+      { id: "m", label: "M", sku: "TEE-CR-M" },
+      { id: "l", label: "L", sku: "TEE-CR-L" },
+      { id: "xl", label: "XL", sku: "TEE-CR-XL" },
+      { id: "2xl", label: "2XL", sku: "TEE-CR-2XL" },
     ],
   },
   {
@@ -130,10 +144,10 @@ export const shopProducts: ShopProduct[] = [
     fulfilment: "Made to order",
     printifyProductId: null,
     variants: [
-      { id: "s", label: "S", priceGBP: 58, sku: "HOOD-AR-S" },
-      { id: "m", label: "M", priceGBP: 58, sku: "HOOD-AR-M" },
-      { id: "l", label: "L", priceGBP: 58, sku: "HOOD-AR-L" },
-      { id: "xl", label: "XL", priceGBP: 58, sku: "HOOD-AR-XL" },
+      { id: "s", label: "S", sku: "HOOD-AR-S" },
+      { id: "m", label: "M", sku: "HOOD-AR-M" },
+      { id: "l", label: "L", sku: "HOOD-AR-L" },
+      { id: "xl", label: "XL", sku: "HOOD-AR-XL" },
     ],
   },
   {
@@ -149,10 +163,10 @@ export const shopProducts: ShopProduct[] = [
     fulfilment: "Made to order",
     printifyProductId: null,
     variants: [
-      { id: "s", label: "S", priceGBP: 42, sku: "LS-PR-S" },
-      { id: "m", label: "M", priceGBP: 42, sku: "LS-PR-M" },
-      { id: "l", label: "L", priceGBP: 42, sku: "LS-PR-L" },
-      { id: "xl", label: "XL", priceGBP: 42, sku: "LS-PR-XL" },
+      { id: "s", label: "S", sku: "LS-PR-S" },
+      { id: "m", label: "M", sku: "LS-PR-M" },
+      { id: "l", label: "L", sku: "LS-PR-L" },
+      { id: "xl", label: "XL", sku: "LS-PR-XL" },
     ],
   },
   {
@@ -168,7 +182,7 @@ export const shopProducts: ShopProduct[] = [
     fulfilment: "Made to order",
     printifyProductId: null,
     variants: [
-      { id: "one", label: "One size", priceGBP: 28, sku: "TOTE-PAR-1" },
+      { id: "one", label: "One size", sku: "TOTE-PAR-1" },
     ],
   },
   {
@@ -184,11 +198,16 @@ export const shopProducts: ShopProduct[] = [
     fulfilment: "Made to order",
     printifyProductId: null,
     variants: [
-      { id: "11oz", label: "11 oz", priceGBP: 18, sku: "MUG-AR-11" },
-      { id: "15oz", label: "15 oz", priceGBP: 22, sku: "MUG-AR-15" },
+      { id: "11oz", label: "11 oz", sku: "MUG-AR-11" },
+      { id: "15oz", label: "15 oz", sku: "MUG-AR-15" },
     ],
   },
 ];
+
+/** Every product leaves this module priced from the GBP map (or null). */
+export const shopProducts: ShopProduct[] = rawShopProducts.map((p) =>
+  applyGbpPrices(p),
+);
 
 export const shopCategories = [
   { id: "all", label: "All" },
@@ -208,8 +227,28 @@ export function getProduct(idOrSlug: string) {
   return shopProducts.find((p) => p.id === idOrSlug || p.slug === idOrSlug);
 }
 
-export function startingPrice(product: ShopProduct) {
-  return Math.min(...product.variants.map((v) => v.priceGBP));
+export const PRICE_ON_REQUEST = "Price on request";
+
+/** Lowest mapped GBP price, or null when no variant has a price. */
+export function startingPrice(product: ShopProduct): number | null {
+  const prices = product.variants
+    .map((v) => v.priceGBP)
+    .filter((n): n is number => typeof n === "number");
+  return prices.length ? Math.min(...prices) : null;
+}
+
+/** "from £65.00", or "Price on request" if nothing is priced. */
+export function startingPriceLabel(product: ShopProduct): string {
+  const n = startingPrice(product);
+  return n === null ? PRICE_ON_REQUEST : `from ${formatGBP(n)}`;
+}
+
+export function variantPriceLabel(variant: ProductVariant): string {
+  return variant.priceGBP === null ? PRICE_ON_REQUEST : formatGBP(variant.priceGBP);
+}
+
+export function isPurchasable(variant: ProductVariant): boolean {
+  return typeof variant.priceGBP === "number" && variant.priceGBP > 0;
 }
 
 export function estimateShippingGBP(country: string) {
@@ -224,7 +263,7 @@ export const editions = shopProducts.map((p) => ({
   id: p.id,
   name: p.name,
   description: p.shortDescription,
-  price: `from ${formatGBP(startingPrice(p))}`,
+  price: startingPriceLabel(p),
   category: p.category,
   gradient: p.gradient,
 }));

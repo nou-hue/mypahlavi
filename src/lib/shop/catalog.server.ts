@@ -5,6 +5,7 @@ import {
   getPrintifyProduct,
   resolvePrintifyShopId,
 } from "@/lib/printify/client";
+import { applyGbpPrices } from "@/data/gbp-prices";
 import {
   shopProducts,
   type ProductCategory,
@@ -65,9 +66,9 @@ const gradients = [
   "from-[#161412] via-[#2e2824] to-[#0a0908]",
 ];
 
-function centsToGbp(cents: number) {
-  return Math.round(cents) / 100;
-}
+// NOTE: Printify's `price` (integer minor units, shop currency — USD in
+// practice, no currency field) is intentionally NOT used for display or
+// checkout. Prices come from the GBP price map (src/data/gbp-prices.ts).
 
 export function mapPrintifyProduct(p: {
   id: string;
@@ -83,10 +84,9 @@ export function mapPrintifyProduct(p: {
   images: Array<{ src: string; is_default: boolean }>;
 }): ShopProduct {
   const enabled = p.variants.filter((v) => v.is_enabled);
-  const variants = (enabled.length ? enabled : p.variants).map((v) => ({
+  const rawVariants = (enabled.length ? enabled : p.variants).map((v) => ({
     id: String(v.id),
     label: v.title || `Variant ${v.id}`,
-    priceGBP: centsToGbp(v.price),
     sku: v.sku || `PFY-${v.id}`,
     printifyVariantId: v.id,
   }));
@@ -140,6 +140,12 @@ export function mapPrintifyProduct(p: {
       "Issued as a limited cultural object from the archive.";
   }
 
+  const priced = applyGbpPrices({
+    slug,
+    printifyProductId: p.id,
+    variants: rawVariants,
+  });
+
   return {
     id: `pfy-${p.id}`,
     slug,
@@ -158,7 +164,7 @@ export function mapPrintifyProduct(p: {
     // Original Printify product image only — never substitute assets
     imageSrc: image,
     printifyProductId: p.id,
-    variants,
+    variants: priced.variants,
   };
 }
 

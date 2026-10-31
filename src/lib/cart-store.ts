@@ -49,6 +49,9 @@ export const useCartStore = create<CartState>()(
       closeCart: () => set({ isOpen: false }),
       toggleCart: () => set((s) => ({ isOpen: !s.isOpen })),
       addItem: (product, variant, quantity = 1) => {
+        // Unpriced variants ("price on request") can never enter the bag.
+        if (variant.priceGBP === null) return;
+        const unitPriceGBP = variant.priceGBP;
         const key = lineKey(product.id, variant.id);
         set((state) => {
           const existing = state.lines.find((l) => l.key === key);
@@ -73,7 +76,7 @@ export const useCartStore = create<CartState>()(
                 name: product.name,
                 variantId: variant.id,
                 variantLabel: variant.label,
-                unitPriceGBP: variant.priceGBP,
+                unitPriceGBP,
                 quantity,
                 gradient: product.gradient,
                 sku: variant.sku,
@@ -106,7 +109,8 @@ export const useCartStore = create<CartState>()(
         get().lines.reduce((n, l) => n + l.unitPriceGBP * l.quantity, 0),
     }),
     {
-      name: "mypahlavi-cart",
+      // v2: drops carts persisted with vendor (Printify) prices shown as GBP.
+      name: "mypahlavi-cart-v2",
       partialize: (s) => ({ lines: s.lines }),
     },
   ),
