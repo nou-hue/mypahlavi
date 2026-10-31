@@ -224,3 +224,45 @@ test("collection membership resolves both ways and skips hidden records", () => 
   assert.deepEqual(a.membersOf(a.collection("c1")).entries.map((e) => e.slug), ["pub"]);
   assert.deepEqual(a.collectionsContaining("entry", "pub").map((c) => c.slug), ["c1"]);
 });
+
+/* ---------------- preview isolation ---------------- */
+import { scrubProductionSecrets } from "../src/lib/preview-guard.mjs";
+
+const prodEnv = () => ({
+  VERCEL_ENV: "preview",
+  DATABASE_URL: "postgres://prod", POSTGRES_URL: "p", PGHOST: "h", NEON_PROJECT_ID: "n", VITE_NEON_AUTH_URL: "a",
+  STRIPE_SECRET_KEY: "sk_live_x", STRIPE_WEBHOOK_SECRET: "whsec_x", STRIPE_PUBLISHABLE_KEY: "pk_live_x",
+  PRINTIFY_API_TOKEN: "t", PRINTIFY_SHOP_ID: "1", SHOP_ADMIN_SECRET: "s", UNRELATED: "keep",
+});
+
+test("preview: production database, live Stripe, Printify and auth variables are removed", () => {
+  const env = prodEnv();
+  const r = scrubProductionSecrets(env);
+  assert.equal(r.active, true);
+  assert.deepEqual(Object.keys(env).sort(), ["UNRELATED", "VERCEL_ENV"]);
+});
+
+test("preview: a test-mode Stripe set is kept, a live publishable key is not", () => {
+  const env = { ...prodEnv(), STRIPE_SECRET_KEY: "sk_test_x", STRIPE_PUBLISHABLE_KEY: "pk_live_oops" };
+  scrubProductionSecrets(env);
+  assert.equal(env.STRIPE_SECRET_KEY, "sk_test_x");
+  assert.equal(env.STRIPE_WEBHOOK_SECRET, "whsec_x");
+  assert.equal(env.STRIPE_PUBLISHABLE_KEY, undefined);
+  assert.equal(env.DATABASE_URL, undefined);
+});
+
+test("preview: PREVIEW_DATABASE_URL becomes the only database", () => {
+  const env = { ...prodEnv(), PREVIEW_DATABASE_URL: "postgres://preview-only" };
+  scrubProductionSecrets(env);
+  assert.equal(env.DATABASE_URL, "postgres://preview-only");
+  assert.equal(env.POSTGRES_URL, undefined);
+});
+
+test("production and local environments are left untouched", () => {
+  for (const vercelEnv of ["production", undefined]) {
+    const env = { ...prodEnv(), VERCEL_ENV: vercelEnv };
+    const before = { ...env };
+    assert.equal(scrubProductionSecrets(env).active, false);
+    assert.deepEqual(env, before);
+  }
+});

@@ -1,3 +1,6 @@
+// Preview builds must not see production DB/Stripe/Printify/auth variables.
+// @ts-expect-error JS module alongside the TS vite config
+import "./src/lib/preview-guard.mjs";
 import type { Plugin } from "vite";
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";

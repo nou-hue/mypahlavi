@@ -12,6 +12,8 @@ import { readdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import pg from "pg";
+// Never run migrations against production data from a Preview build.
+import "../src/lib/preview-guard.mjs";
 
 function resolveDatabaseUrl() {
   // Prefer non-pooling for migrations (Neon pooler can break multi-statement DDL)

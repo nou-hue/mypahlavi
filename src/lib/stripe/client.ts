@@ -1,3 +1,4 @@
+import "@/lib/preview-guard.mjs";
 /**
  * Stripe server client.
  *

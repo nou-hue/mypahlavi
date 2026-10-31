@@ -18,6 +18,7 @@ import { Route as LibraryRouteImport } from './routes/library'
 import { Route as LineageRouteImport } from './routes/lineage'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as PatronageRouteImport } from './routes/patronage'
+import { Route as ShopRouteImport } from './routes/shop'
 import { Route as VaultRouteImport } from './routes/vault'
 import { Route as EditionsProductIdRouteImport } from './routes/editions_.$productId'
 import { Route as LibrarySlugRouteImport } from './routes/library_.$slug'
@@ -26,6 +27,8 @@ import { Route as VaultRoomRouteImport } from './routes/vault_.$room'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiCircleCheckoutRouteImport } from './routes/api/circle/checkout'
 import { Route as ApiCircleStatusRouteImport } from './routes/api/circle/status'
+import { Route as ApiMarketingGoogleRouteImport } from './routes/api/marketing/google'
+import { Route as ApiMarketingPinterestRouteImport } from './routes/api/marketing/pinterest'
 import { Route as ApiShopCatalogRouteImport } from './routes/api/shop/catalog'
 import { Route as ApiShopCheckoutRouteImport } from './routes/api/shop/checkout'
 import { Route as ApiShopStatusRouteImport } from './routes/api/shop/status'
@@ -78,6 +81,11 @@ const PatronageRoute = PatronageRouteImport.update({
   path: '/patronage',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VaultRoute = VaultRouteImport.update({
   id: '/vault',
   path: '/vault',
@@ -116,6 +124,16 @@ const ApiCircleCheckoutRoute = ApiCircleCheckoutRouteImport.update({
 const ApiCircleStatusRoute = ApiCircleStatusRouteImport.update({
   id: '/api/circle/status',
   path: '/api/circle/status',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiMarketingGoogleRoute = ApiMarketingGoogleRouteImport.update({
+  id: '/api/marketing/google',
+  path: '/api/marketing/google',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiMarketingPinterestRoute = ApiMarketingPinterestRouteImport.update({
+  id: '/api/marketing/pinterest',
+  path: '/api/marketing/pinterest',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiShopCatalogRoute = ApiShopCatalogRouteImport.update({
@@ -159,6 +177,7 @@ export interface FileRoutesByFullPath {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/shop': typeof ShopRoute
   '/vault': typeof VaultRoute
   '/editions/$productId': typeof EditionsProductIdRoute
   '/library/$slug': typeof LibrarySlugRoute
@@ -167,6 +186,8 @@ export interface FileRoutesByFullPath {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/circle/checkout': typeof ApiCircleCheckoutRoute
   '/api/circle/status': typeof ApiCircleStatusRoute
+  '/api/marketing/google': typeof ApiMarketingGoogleRoute
+  '/api/marketing/pinterest': typeof ApiMarketingPinterestRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
@@ -184,6 +205,7 @@ export interface FileRoutesByTo {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/shop': typeof ShopRoute
   '/vault': typeof VaultRoute
   '/editions/$productId': typeof EditionsProductIdRoute
   '/library/$slug': typeof LibrarySlugRoute
@@ -192,6 +214,8 @@ export interface FileRoutesByTo {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/circle/checkout': typeof ApiCircleCheckoutRoute
   '/api/circle/status': typeof ApiCircleStatusRoute
+  '/api/marketing/google': typeof ApiMarketingGoogleRoute
+  '/api/marketing/pinterest': typeof ApiMarketingPinterestRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
@@ -210,6 +234,7 @@ export interface FileRoutesById {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/shop': typeof ShopRoute
   '/vault': typeof VaultRoute
   '/editions_/$productId': typeof EditionsProductIdRoute
   '/library_/$slug': typeof LibrarySlugRoute
@@ -218,6 +243,8 @@ export interface FileRoutesById {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/circle/checkout': typeof ApiCircleCheckoutRoute
   '/api/circle/status': typeof ApiCircleStatusRoute
+  '/api/marketing/google': typeof ApiMarketingGoogleRoute
+  '/api/marketing/pinterest': typeof ApiMarketingPinterestRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
@@ -237,6 +264,7 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/shop'
     | '/vault'
     | '/editions/$productId'
     | '/library/$slug'
@@ -245,6 +273,8 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/circle/checkout'
     | '/api/circle/status'
+    | '/api/marketing/google'
+    | '/api/marketing/pinterest'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
@@ -262,6 +292,7 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/shop'
     | '/vault'
     | '/editions/$productId'
     | '/library/$slug'
@@ -270,6 +301,8 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/circle/checkout'
     | '/api/circle/status'
+    | '/api/marketing/google'
+    | '/api/marketing/pinterest'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
@@ -287,6 +320,7 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/shop'
     | '/vault'
     | '/editions_/$productId'
     | '/library_/$slug'
@@ -295,6 +329,8 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/circle/checkout'
     | '/api/circle/status'
+    | '/api/marketing/google'
+    | '/api/marketing/pinterest'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
@@ -313,6 +349,7 @@ export interface RootRouteChildren {
   LineageRoute: typeof LineageRoute
   LoginRoute: typeof LoginRoute
   PatronageRoute: typeof PatronageRoute
+  ShopRoute: typeof ShopRoute
   VaultRoute: typeof VaultRoute
   EditionsProductIdRoute: typeof EditionsProductIdRoute
   LibrarySlugRoute: typeof LibrarySlugRoute
@@ -321,6 +358,8 @@ export interface RootRouteChildren {
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiCircleCheckoutRoute: typeof ApiCircleCheckoutRoute
   ApiCircleStatusRoute: typeof ApiCircleStatusRoute
+  ApiMarketingGoogleRoute: typeof ApiMarketingGoogleRoute
+  ApiMarketingPinterestRoute: typeof ApiMarketingPinterestRoute
   ApiShopCatalogRoute: typeof ApiShopCatalogRoute
   ApiShopCheckoutRoute: typeof ApiShopCheckoutRoute
   ApiShopStatusRoute: typeof ApiShopStatusRoute
@@ -394,6 +433,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PatronageRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/vault': {
       id: '/vault'
       path: '/vault'
@@ -448,6 +494,20 @@ declare module '@tanstack/react-router' {
       path: '/api/circle/status'
       fullPath: '/api/circle/status'
       preLoaderRoute: typeof ApiCircleStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/marketing/google': {
+      id: '/api/marketing/google'
+      path: '/api/marketing/google'
+      fullPath: '/api/marketing/google'
+      preLoaderRoute: typeof ApiMarketingGoogleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/marketing/pinterest': {
+      id: '/api/marketing/pinterest'
+      path: '/api/marketing/pinterest'
+      fullPath: '/api/marketing/pinterest'
+      preLoaderRoute: typeof ApiMarketingPinterestRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/shop/catalog': {
@@ -505,6 +565,7 @@ const rootRouteChildren: RootRouteChildren = {
   LineageRoute: LineageRoute,
   LoginRoute: LoginRoute,
   PatronageRoute: PatronageRoute,
+  ShopRoute: ShopRoute,
   VaultRoute: VaultRoute,
   EditionsProductIdRoute: EditionsProductIdRoute,
   LibrarySlugRoute: LibrarySlugRoute,
@@ -513,6 +574,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiCircleCheckoutRoute: ApiCircleCheckoutRoute,
   ApiCircleStatusRoute: ApiCircleStatusRoute,
+  ApiMarketingGoogleRoute: ApiMarketingGoogleRoute,
+  ApiMarketingPinterestRoute: ApiMarketingPinterestRoute,
   ApiShopCatalogRoute: ApiShopCatalogRoute,
   ApiShopCheckoutRoute: ApiShopCheckoutRoute,
   ApiShopStatusRoute: ApiShopStatusRoute,
@@ -523,12 +586,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
