@@ -171,7 +171,7 @@ test("dropping a broken record also drops records that depend on it", () => {
   assert.equal(r.data.events.length, 0);
 });
 
-test("only published and placeholder records are visible; drafts stay hidden", () => {
+test("published, placeholder and review records are visible; drafts stay hidden", () => {
   const r = buildDataset(files(
     f("sources", src()),
     f("articles", art({ slug: "pub" }), "slug"),
@@ -179,8 +179,9 @@ test("only published and placeholder records are visible; drafts stay hidden", (
     f("articles", art({ slug: "rv", status: "review" }), "slug"),
   ));
   const a = createArchive(r.data);
-  assert.deepEqual(a.articles.map((x) => x.slug), ["pub"]);
+  assert.deepEqual(a.articles.map((x) => x.slug).sort(), ["pub", "rv"]);
   assert.equal(a.article("dr"), undefined);
+  assert.equal(a.hasReview, true);
   assert.equal(a.onlyPlaceholders, false);
 });
 
@@ -216,11 +217,13 @@ test("collection membership resolves both ways and skips hidden records", () => 
     f("sources", src()),
     f("articles", art({ slug: "pub" }), "slug"),
     f("articles", art({ slug: "dr", status: "draft" }), "slug"),
-    f("collections", col({ members: [{ kind: "entry", id: "pub" }, { kind: "entry", id: "dr" }] }), "slug"),
+    f("collections", col({ status: "draft", members: [{ kind: "entry", id: "pub" }, { kind: "entry", id: "dr" }] }), "slug"),
+    f("collections", col({ slug: "c2", members: [{ kind: "entry", id: "pub" }, { kind: "entry", id: "dr" }] }), "slug"),
   ));
+  assert.match(msgs(r), /draft/, "a shipped collection may not include a draft entry");
   const a = createArchive(r.data);
-  assert.deepEqual(a.membersOf(a.collection("c1")).entries.map((e) => e.slug), ["pub"]);
-  assert.deepEqual(a.collectionsContaining("entry", "pub").map((c) => c.slug), ["c1"]);
+  assert.equal(a.collection("c2"), undefined, "the collection that references a draft is dropped");
+  assert.equal(a.collection("c1"), undefined, "draft collections are hidden");
 });
 
 /* ---------------- preview isolation ---------------- */
