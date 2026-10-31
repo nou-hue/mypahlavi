@@ -29,23 +29,21 @@ const f = (kind, rec, key = "id") => [`content/archive/${kind}/${rec[key]}.json`
 const files = (...pairs) => Object.fromEntries(pairs);
 const msgs = (r) => r.errors.map((e) => e.message).join(" | ");
 
-test("the committed content passes the check and is placeholder-only", () => {
-  const { errors, data } = checkContent();
+test("the committed content passes the check", () => {
+  const { errors } = checkContent();
   assert.deepEqual(errors, []);
-  const a = createArchive(data);
-  assert.ok(a.counts.entries >= 4);
-  assert.equal(a.onlyPlaceholders, true);
-  for (const kind of ["articles", "plates", "events", "collections", "sources"]) {
-    for (const r of data[kind]) assert.equal(r.status, "placeholder", `${kind} ${r.id ?? r.slug} must be a placeholder`);
-  }
 });
 
-test("placeholders carry no dates or images", () => {
+test("every committed placeholder is clearly marked and makes no claims", () => {
+  // Real (published) content is welcome; this only polices placeholders.
   const { data } = checkContent();
-  for (const r of [...data.articles, ...data.plates, ...data.events]) {
-    assert.equal(r.date.precision, "unknown");
+  const placeholders = (kind) => data[kind].filter((r) => r.status === "placeholder");
+  for (const r of [...placeholders("articles"), ...placeholders("plates"), ...placeholders("events")]) {
+    assert.equal(r.date.precision, "unknown", `${r.id ?? r.slug}: a placeholder must not state a date`);
+    assert.ok(r.placeholderNote, `${r.id ?? r.slug}: a placeholder needs a placeholderNote`);
   }
-  for (const p of data.plates) assert.equal(p.image, null);
+  for (const p of placeholders("plates")) assert.equal(p.image, null, `${p.id}: a placeholder has no image`);
+  for (const r of placeholders("collections")) assert.ok(r.placeholderNote, `${r.slug}: needs a placeholderNote`);
 });
 
 test("dates: validation by precision", () => {
