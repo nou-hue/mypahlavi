@@ -9,17 +9,20 @@ import {
   updateOrder,
 } from "@/lib/shop/orders.server";
 import { getStripe, poundsToPence, stripeConfigured } from "@/lib/stripe/client";
+import { canonicalOrigin } from "@/lib/security/origin.server";
+import { rateLimit } from "@/lib/security/rate-limit.server";
+import { randomBytes } from "node:crypto";
 
 const bodySchema = z.object({
-  email: z.string().email(),
-  fullName: z.string().min(2),
-  line1: z.string().min(2),
-  line2: z.string().optional(),
-  city: z.string().min(1),
-  postcode: z.string().min(2),
+  email: z.string().email().max(254),
+  fullName: z.string().min(2).max(120),
+  line1: z.string().min(2).max(200),
+  line2: z.string().max(200).optional(),
+  city: z.string().min(1).max(100),
+  postcode: z.string().min(2).max(16),
   country: z.literal("United Kingdom"),
-  phone: z.string().optional(),
-  notes: z.string().optional(),
+  phone: z.string().max(32).optional(),
+  notes: z.string().max(1000).optional(),
   lines: z
     .array(
       z.object({
@@ -28,24 +31,30 @@ const bodySchema = z.object({
         quantity: z.number().int().min(1).max(20),
       }),
     )
-    .min(1),
+    .min(1)
+    .max(20),
 });
 
+/** Unguessable order id (80 bits): the id doubles as a bearer reference on order lookup. */
 function orderId() {
-  return `MP-${Date.now().toString(36).toUpperCase()}${Math.random().toString(36).slice(2, 5).toUpperCase()}`;
+  return `MP-${randomBytes(10).toString("hex").toUpperCase()}`;
 }
 
 function originFrom(request: Request) {
-  const host = request.headers.get("x-forwarded-host") ?? request.headers.get("host");
-  const proto = request.headers.get("x-forwarded-proto") ?? "https";
-  if (host) return `${proto}://${host}`;
-  return "http://127.0.0.1:8080";
+  return canonicalOrigin(request);
 }
 
 export const Route = createFileRoute("/api/shop/checkout")({
   server: {
     handlers: {
       POST: async ({ request }) => {
+        // Each call can create an order row and a Stripe session: cap per client.
+        const limited = rateLimit(request, "shop-checkout", { limit: 10, windowMs: 10 * 60_000 });
+        if (limited) return limited;
+        const declared = Number(request.headers.get("content-length") ?? 0);
+        if (declared > 64_000) {
+          return Response.json({ error: "Payload too large" }, { status: 413 });
+        }
         let json: unknown;
         try {
           json = await request.json();
@@ -55,10 +64,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
 
         const parsed = bodySchema.safeParse(json);
         if (!parsed.success) {
-          return Response.json(
-            { error: "Invalid checkout payload", details: parsed.error.flatten() },
-            { status: 400 },
-          );
+          return Response.json({ error: "Invalid checkout payload" }, { status: 400 });
         }
 
         const data = parsed.data;
@@ -263,9 +269,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
         } catch (err) {
           console.error("[checkout]", err);
           return Response.json(
-            {
-              error: err instanceof Error ? err.message : "Checkout failed",
-            },
+            { error: "Checkout could not be started. No payment has been taken." },
             { status: 500 },
           );
         }

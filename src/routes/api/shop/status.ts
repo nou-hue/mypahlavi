@@ -6,11 +6,16 @@ import {
 } from "@/lib/printify/client";
 import { databaseStatus } from "@/lib/shop/orders.server";
 import { stripeConfigured } from "@/lib/stripe/client";
+import { isAdminRequest } from "@/lib/security/admin.server";
+import { rateLimit } from "@/lib/security/rate-limit.server";
 
 export const Route = createFileRoute("/api/shop/status")({
   server: {
     handlers: {
-      GET: async () => {
+      GET: async ({ request }) => {
+        const limited = rateLimit(request, "shop-status", { limit: 60, windowMs: 60_000 });
+        if (limited) return limited;
+        const admin = await isAdminRequest(request);
         const stripe = stripeConfigured();
         const stripeWebhook = Boolean(process.env.STRIPE_WEBHOOK_SECRET?.trim());
         const hasToken = Boolean(process.env.PRINTIFY_API_TOKEN?.trim());
@@ -56,27 +61,47 @@ export const Route = createFileRoute("/api/shop/status")({
             ? "Printify connected — add STRIPE_SECRET_KEY for card checkout"
             : printifyError ?? "Add Stripe + Printify keys on Vercel, then Redeploy";
 
-        return Response.json({
-          stripe,
-          printify,
-          printifyConfigured: printifyConfigured(),
-          hasToken,
-          hasShopId: Boolean(shopId),
-          hasShopIdEnv,
-          shopId,
-          shopTitle,
-          shops,
-          autoSelected,
-          printifyError,
-          database: db,
-          stripeWebhook,
-          ready: Boolean(stripe && stripeWebhook && printify && db.ok),
-          mode:
-            stripe && stripeWebhook && printify && db.ok
-              ? "live_checkout"
-              : "demo",
-          message,
-        });
+        const ready = Boolean(stripe && stripeWebhook && printify && db.ok);
+
+        // Public callers only learn what the checkout page needs. Provider shop
+        // ids/titles, database host/provider and raw upstream errors are
+        // operator-only (Authorization: Bearer ADMIN_API_TOKEN).
+        if (!admin) {
+          return Response.json(
+            {
+              stripe,
+              printify,
+              ready,
+              mode: ready ? "live_checkout" : "demo",
+              message: ready
+                ? "Checkout is available."
+                : "Checkout is temporarily unavailable.",
+            },
+            { headers: { "Cache-Control": "no-store" } },
+          );
+        }
+
+        return Response.json(
+          {
+            stripe,
+            printify,
+            printifyConfigured: printifyConfigured(),
+            hasToken,
+            hasShopId: Boolean(shopId),
+            hasShopIdEnv,
+            shopId,
+            shopTitle,
+            shops,
+            autoSelected,
+            printifyError,
+            database: db,
+            stripeWebhook,
+            ready,
+            mode: ready ? "live_checkout" : "demo",
+            message,
+          },
+          { headers: { "Cache-Control": "no-store" } },
+        );
       },
     },
   },
