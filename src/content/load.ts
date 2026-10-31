@@ -1,5 +1,6 @@
 import { buildDataset } from "./validate.mjs";
 import { createArchive } from "./queries.mjs";
+import type { Archive } from "./types";
 
 /**
  * Loads every JSON record under /content/archive at build time.
@@ -21,12 +22,14 @@ if (errors.length > 0 && typeof console !== "undefined") {
   );
 }
 
-export const archive = createArchive(data);
+export const archive = createArchive(data) as Archive;
 export const archiveErrors = errors;
 
-export type Archive = typeof archive;
-export type ArchiveEntry = NonNullable<ReturnType<Archive["article"]>>;
-export type ArchivePlate = NonNullable<ReturnType<Archive["plate"]>>;
-export type ArchiveEvent = NonNullable<ReturnType<Archive["event"]>>;
-export type ArchiveCollection = NonNullable<ReturnType<Archive["collection"]>>;
-export type ArchiveSource = NonNullable<ReturnType<Archive["source"]>>;
+export type {
+  Archive,
+  ArchiveCollection,
+  ArchiveEntry,
+  ArchiveEvent,
+  ArchivePlate,
+  ArchiveSource,
+} from "./types";
