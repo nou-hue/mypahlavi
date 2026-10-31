@@ -1,0 +1,33 @@
+{
+  "id": "tabriz-soviet-1941",
+  "status": "draft",
+  "title": "Soviet tankmen of the 6th Armoured Division in Tabriz, 27-28 August 1941",
+  "caption": "Soviet tankmen of the 6th Armoured Division in Tabriz, 27-28 August 1941.",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "1941-08-27",
+    "end": "1941-08-28"
+  },
+  "credit": {
+    "line": "Unknown author / Wikimedia Commons / Public domain (PD-Russia)",
+    "creator": "Unknown author",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASoviet_tankmen_of_the_6th_Armoured_Division_drive_through_the_streets_of_Tabriz_%282%29.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Unknown author",
+    "licence": "Public domain",
+    "evidence": "HOLD (Content & SEO, 2026-10-31): Source is topwar.ru, photographer unknown, only a PD-Russia tag. Neither establishes UK status for a 1941 photograph by an unidentified author (UK term depends on author death or publication). Release path: the Soviet archive record naming the photographer. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
+    "ukSafe": "verify",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "Commons description.",
+  "holdReason": "HOLD (Content & SEO, 2026-10-31): Source is topwar.ru, photographer unknown, only a PD-Russia tag. Neither establishes UK status for a 1941 photograph by an unidentified author (UK term depends on author death or publication). Release path: the Soviet archive record naming the photographer.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
+}

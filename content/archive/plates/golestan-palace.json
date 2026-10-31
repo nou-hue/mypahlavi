@@ -1,0 +1,47 @@
+{
+  "id": "golestan-palace",
+  "status": "review",
+  "title": "Golestan Palace, Tehran",
+  "caption": "Golestan Palace, Tehran (photo 2016).",
+  "image": {
+    "src": "/archive/plates/golestan-palace.jpg",
+    "alt": "Golestan Palace in Tehran",
+    "width": 960,
+    "height": 819,
+    "variants": [
+      {
+        "src": "/archive/plates/golestan-palace-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "2016-09-17"
+  },
+  "credit": {
+    "line": "Diego Delso / Wikimedia Commons / CC BY-SA 4.0",
+    "creator": "Diego Delso",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APalacio_de_Golest%C3%A1n%2C_Teher%C3%A1n%2C_Ir%C3%A1n%2C_2016-09-17%2C_DD_07.jpg"
+  },
+  "rights": {
+    "status": "cc",
+    "holder": "Diego Delso",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "evidence": "CC BY-SA 4.0 (Diego Delso). Editorial only. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A-CC",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc14",
+    "unesco114",
+    "unesco1422"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title."
+}

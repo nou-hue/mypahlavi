@@ -1,0 +1,32 @@
+{
+  "id": "shiraz-festival-jalali-1972-do-not-use",
+  "status": "draft",
+  "title": "—",
+  "caption": "—",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "1972-09-07"
+  },
+  "credit": {
+    "line": "Bahman Jalali / Wikimedia Commons / Public domain (Licensed-PD-Art)",
+    "creator": "Bahman Jalali",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AShiraz_Arts_Festival_by_Bahman_Jalali.jpg"
+  },
+  "rights": {
+    "status": "unknown",
+    "holder": "Bahman Jalali",
+    "licence": "Public domain",
+    "evidence": "DO NOT USE: named photographer (Bahman Jalali, d. 2010); copyright runs to 2080 in the UK. 'Licensed-PD-Art' tag relates to the magazine cover, not the photograph. Reviewed 2026-10-31: stays do-not-use; no CC BY / CC BY-SA licence exists for it. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "X",
+    "ukSafe": "false",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "—",
+  "holdReason": "DO NOT USE: named photographer (Bahman Jalali, d. 2010); copyright runs to 2080 in the UK. 'Licensed-PD-Art' tag relates to the magazine cover, not the photograph. Reviewed 2026-10-31: stays do-not-use; no CC BY / CC BY-SA licence exists for it.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
+}

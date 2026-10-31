@@ -1,0 +1,33 @@
+{
+  "id": "khomeini-ghotbzadeh-1978-hold",
+  "status": "draft",
+  "title": "—",
+  "caption": "—",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "1979-02-01",
+    "note": "Before this date."
+  },
+  "credit": {
+    "line": "iichs.ir (Unknown photographer) / Wikimedia Commons / Public domain (PD-1996)",
+    "creator": "iichs.ir (Unknown photographer)",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASadegh_Ghotbzadeh_and_Ruhollah_Khomeini%2C_Neauphle-le-Ch%C3%A2teau_-_1978.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "iichs.ir (Unknown photographer)",
+    "licence": "Public domain",
+    "evidence": "HOLD: PD-1996 (Iranian law basis); source iichs.ir; photographer unknown; 1978 inside UK window. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
+    "ukSafe": "false",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "—",
+  "holdReason": "HOLD: PD-1996 (Iranian law basis); source iichs.ir; photographer unknown; 1978 inside UK window. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
+}

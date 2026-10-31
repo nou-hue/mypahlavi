@@ -1,7 +1,8 @@
+import { SITE_URL } from "@/lib/site-config.mjs";
 import { getLiveCatalog } from "@/lib/shop/catalog.server";
 import type { ShopProduct } from "@/data/shop";
 
-const ORIGIN = "https://www.mypahlavi.com";
+const ORIGIN = SITE_URL;
 
 function csv(value: string | number) {
   const text = String(value);

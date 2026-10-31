@@ -1,0 +1,18 @@
+{
+  "id": "1925-qajar-deposed",
+  "status": "review",
+  "title": "Qajar dynasty deposed",
+  "summary": "A Majlis dominated by Reza Khan's supporters deposed the Qajars; in December it conferred the crown on Reza Khan and his heirs.",
+  "date": {
+    "precision": "month",
+    "value": "1925-10"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc15"
+    }
+  ],
+  "entrySlug": "constitutional-revolution-to-pahlavi-accession",
+  "plateIds": []
+}

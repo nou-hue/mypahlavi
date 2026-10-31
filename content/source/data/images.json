@@ -1,0 +1,1195 @@
+{
+ "version": 1,
+ "generated": "2026-10-31",
+ "ukSafeKey": {
+  "true": "expired/free in UK and US on the evidence seen",
+  "likely": "anonymous or very old; probable but confirm",
+  "editorial-only": "fine to display editorially; do not print on products without advice",
+  "verify": "unclear",
+  "false": "do not use"
+ },
+ "policy": "Self-host approved images; do not hotlink upload.wikimedia.org. Show 'attribution' beside every image. Never ship status != approved* without nou's/rights sign-off.",
+ "tiers": {
+  "A": "Public domain or CC0: safe for editorial and (subject to design review) products",
+  "A-CC": "CC BY-SA: editorial use with attribution; share-alike applies to adaptations; do NOT use as product artwork",
+  "B": "Probably fine but provenance/licence needs checking at source",
+  "C": "HOLD: licence rests on Iranian-law tag or unknown author within the UK 70-year window",
+  "X": "Do not use"
+ },
+ "images": [
+  {
+   "id": "abadan-1941",
+   "commonsFile": "File:Abadan invasion of Iran.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAbadan_invasion_of_Iran.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Abadan_invasion_of_Iran.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Abadan_invasion_of_Iran.jpg/960px-Abadan_invasion_of_Iran.jpg",
+   "width": 1600,
+   "height": 1378,
+   "author": "Geoffrey Keating",
+   "commonsCredit": "This photograph E 5323 comes from the collections of the Imperial War Museums.",
+   "dateText": "Taken on 4 September 1941",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "PD-Scan"
+   ],
+   "attribution": "Geoffrey Keating / Wikimedia Commons / Public domain (PD-Scan)",
+   "rightsTier": "C",
+   "ukSafe": "verify",
+   "useFor": [],
+   "status": "hold",
+   "alt": "British soldiers entering the Abadan oil refinery area in September 1941",
+   "caption": "British troops at Abadan during the Anglo-Soviet occupation of Iran, 4 September 1941.",
+   "captionBasis": "Commons title/description; IWM ref E 5323. Confirm caption against the IWM catalogue entry.",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "HOLD (Content & SEO, 2026-10-31): Imperial War Museums photograph E 5323 (Geoffrey Keating). The IWM page offers it under the IWM Non-Commercial Licence, which excludes commercial and shop-bearing sites, bars uploading to Wikimedia and bars cropping or altering. A \"PD-Scan\" tag on Commons does not override that. mypahlavi carries a shop, so the licence does not permit this use. Release path: an IWM commercial licence, or a different image.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "ahmad-shah-c1916",
+   "commonsFile": "File:AhmadShahQajar2.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAhmadShahQajar2.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/AhmadShahQajar2.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/AhmadShahQajar2.jpg/960px-AhmadShahQajar2.jpg",
+   "width": 3000,
+   "height": 4284,
+   "author": "Bain News Service",
+   "commonsCredit": "This image  is available from the United States Library of Congress's Prints and Photographs division under the digital ID ggbain.30323.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing.",
+   "dateText": "circa 1916",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "LOC-image",
+    "PD-Bain"
+   ],
+   "attribution": "Bain News Service / Wikimedia Commons / Public domain (PD-Bain)",
+   "rightsTier": "A",
+   "ukSafe": "likely",
+   "useFor": [
+    "editorial",
+    "product"
+   ],
+   "status": "approved",
+   "alt": "Portrait photograph of Ahmad Shah Qajar, about 1916",
+   "caption": "Ahmad Shah Qajar, last Qajar ruler, about 1916.",
+   "captionBasis": "Commons description; LoC Prints & Photographs (Bain News Service).",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "Bain collection: LoC states no known restrictions. Confirm the LoC call number on the Commons page.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "veresk-bridge-1943",
+   "commonsFile": "File:B20 Panorama of the Vresk valley - USACE-p15141coll5-9280.jpeg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AB20_Panorama_of_the_Vresk_valley_-_USACE-p15141coll5-9280.jpeg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/B20_Panorama_of_the_Vresk_valley_-_USACE-p15141coll5-9280.jpeg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/B20_Panorama_of_the_Vresk_valley_-_USACE-p15141coll5-9280.jpeg/960px-B20_Panorama_of_the_Vresk_valley_-_USACE-p15141coll5-9280.jpeg",
+   "width": 8765,
+   "height": 6111,
+   "author": "Stanley Scott Collection",
+   "commonsCredit": "https://usace.contentdm.oclc.org/digital/collection/p15141coll5/id/9280",
+   "dateText": "1943",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-USGov-Military-Army-USACE",
+    "Photograph"
+   ],
+   "attribution": "Stanley Scott Collection / Wikimedia Commons / Public domain (PD-USGov-Military-Army-USACE)",
+   "rightsTier": "A",
+   "ukSafe": "likely",
+   "useFor": [
+    "editorial",
+    "product"
+   ],
+   "status": "approved",
+   "alt": "Wide panorama of the Veresk valley showing railway and bridge, 1943",
+   "caption": "Panorama of the Veresk valley with railway and bridge, 1943. U.S. Army Corps of Engineers.",
+   "captionBasis": "Commons description: 'wide view of railway and bridge'.",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "USACE Stanley Scott Collection; US government work.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "coronation-reza-shah-1926",
+   "commonsFile": "File:Coronation of Reza Shah.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ACoronation_of_Reza_Shah.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Coronation_of_Reza_Shah.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Coronation_of_Reza_Shah.jpg/960px-Coronation_of_Reza_Shah.jpg",
+   "width": 2048,
+   "height": 1423,
+   "author": "Tehran Pariroz",
+   "commonsCredit": "https://www.facebook.com/TehranParirooz/photos/a.803914506455432/803920469788169/?type=3&theater",
+   "dateText": "1926-04-25",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-Iran"
+   ],
+   "attribution": "Tehran Pariroz / Wikimedia Commons / Public domain (PD-Iran)",
+   "rightsTier": "C",
+   "ukSafe": "verify",
+   "useFor": [],
+   "status": "hold",
+   "alt": "Reza Shah Pahlavi's coronation ceremony in 1926",
+   "caption": "Coronation of Reza Shah Pahlavi, 1926.",
+   "captionBasis": "Commons title only. Source is a Facebook page; photographer unknown.",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "HOLD (Content & SEO, 2026-10-31): Source is a Facebook page (\"Tehran Pariroz\") and the ceremony date on the file is not backed by a tier A/B source. Only the PD-Iran tag supports it, and that does not establish UK status. Release path: original publication or archive record (photographer, date, first publication).",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "dar-ul-funun",
+   "commonsFile": "File:Dar ul-Funun, Tehran, Iran.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ADar_ul-Funun%2C_Tehran%2C_Iran.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Dar_ul-Funun%2C_Tehran%2C_Iran.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Dar_ul-Funun%2C_Tehran%2C_Iran.jpg/960px-Dar_ul-Funun%2C_Tehran%2C_Iran.jpg",
+   "width": 1280,
+   "height": 765,
+   "author": "Armin Abbasi",
+   "commonsCredit": "Own work",
+   "dateText": "2017-11-20",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "licenseTemplates": [
+    "Information"
+   ],
+   "attribution": "Armin Abbasi / Wikimedia Commons / CC BY-SA 4.0",
+   "rightsTier": "A-CC",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "Exterior of the Dar ul-Funun building in Tehran",
+   "caption": "Dar ul-Funun, Tehran (photo 2017).",
+   "captionBasis": "Commons title.",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "Contemporary photo; CC BY-SA 4.0 needs attribution and share-alike on adaptations. NOT for product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "carter-shah-1977-review",
+   "commonsFile": "File:Jimmy Carter and Shah of Iran inspect the troop during welcoming ceremony for the Shah. - NARA - 176850.tif",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJimmy_Carter_and_Shah_of_Iran_inspect_the_troop_during_welcoming_ceremony_for_the_Shah._-_NARA_-_176850.tif",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Jimmy_Carter_and_Shah_of_Iran_inspect_the_troop_during_welcoming_ceremony_for_the_Shah._-_NARA_-_176850.tif",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Jimmy_Carter_and_Shah_of_Iran_inspect_the_troop_during_welcoming_ceremony_for_the_Shah._-_NARA_-_176850.tif/lossy-page1-960px-Jimmy_Carter_and_Shah_of_Iran_inspect_the_troop_during_welcoming_ceremony_for_the_Shah._-_NARA_-_176850.tif.jpg",
+   "width": 3000,
+   "height": 2053,
+   "author": "Unknown author",
+   "commonsCredit": "U.S. National Archives and Records Administration",
+   "dateText": "Taken on 15 November 1977",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "NARA-cooperation",
+    "NARA-image-full",
+    "PD-USGov"
+   ],
+   "attribution": "Unknown author / Wikimedia Commons / Public domain (NARA-image-full, PD-USGov)",
+   "rightsTier": "A",
+   "ukSafe": "editorial-only",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved",
+   "alt": "President Carter and the Shah of Iran reviewing troops at a welcoming ceremony",
+   "caption": "President Carter and the Shah review troops at a welcoming ceremony, 15 November 1977.",
+   "captionBasis": "Commons title and date; NARA identifier 176850.",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "NARA / White House photo: PD-USGov. Note the tif original is large. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "carter-hussein-shah-1977-12-31",
+   "commonsFile": "File:Jimmy Carter with King Hussein of Jordan the Shah of Iran and Shahbanou of Iran - NARA - 177332 04.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJimmy_Carter_with_King_Hussein_of_Jordan_the_Shah_of_Iran_and_Shahbanou_of_Iran_-_NARA_-_177332_04.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Jimmy_Carter_with_King_Hussein_of_Jordan_the_Shah_of_Iran_and_Shahbanou_of_Iran_-_NARA_-_177332_04.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Jimmy_Carter_with_King_Hussein_of_Jordan_the_Shah_of_Iran_and_Shahbanou_of_Iran_-_NARA_-_177332_04.jpg/960px-Jimmy_Carter_with_King_Hussein_of_Jordan_the_Shah_of_Iran_and_Shahbanou_of_Iran_-_NARA_-_177332_04.jpg",
+   "width": 2772,
+   "height": 1652,
+   "author": "Unknown author",
+   "commonsCredit": "File:Jimmyn Carter with King Hussein of Jordan, the Shah of Iran and Shahbanou of Iran. - NARA - 177332.tif",
+   "dateText": "Taken on 31 December 1977",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-USGov"
+   ],
+   "attribution": "Unknown author / Wikimedia Commons / Public domain (PD-USGov)",
+   "rightsTier": "A",
+   "ukSafe": "editorial-only",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved",
+   "alt": "President Carter, King Hussein of Jordan, the Shah of Iran and Shahbanou Farah Pahlavi",
+   "caption": "President Carter with King Hussein of Jordan, the Shah and Shahbanou Farah Pahlavi, 31 December 1977.",
+   "captionBasis": "Commons description; NARA identifier 177332.",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "PD-USGov. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "cossack-brigade-1909",
+   "commonsFile": "File:Persian Cossack Brigade.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APersian_Cossack_Brigade.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Persian_Cossack_Brigade.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Persian_Cossack_Brigade.jpg/960px-Persian_Cossack_Brigade.jpg",
+   "width": 1822,
+   "height": 1025,
+   "author": "Unknown author",
+   "commonsCredit": "www.rozanehmagazine.com/NoveDec05/PARTIIAzar.html",
+   "dateText": "1909-04",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-Iran"
+   ],
+   "attribution": "Unknown author / Wikimedia Commons / Public domain (PD-Iran)",
+   "rightsTier": "C",
+   "ukSafe": "verify",
+   "useFor": [],
+   "status": "hold",
+   "alt": "Members of the Persian Cossack Brigade in 1909",
+   "caption": "Persian Cossack Brigade, April 1909.",
+   "captionBasis": "Commons title/date.",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "HOLD (Content & SEO, 2026-10-31): Source is a magazine page (secondary) and the photographer is unrecorded. Only a PD-Iran tag supports the licence. Age makes expiry likely but not shown. Release path: the original archive or first-publication record.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "truman-shah-1949",
+   "commonsFile": "File:Photograph of President Truman, the Shah of Iran, Secretary of State Dean Acheson, and other dignitaries standing at... - NARA - 200144.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APhotograph_of_President_Truman%2C_the_Shah_of_Iran%2C_Secretary_of_State_Dean_Acheson%2C_and_other_dignitaries_standing_at..._-_NARA_-_200144.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Photograph_of_President_Truman%2C_the_Shah_of_Iran%2C_Secretary_of_State_Dean_Acheson%2C_and_other_dignitaries_standing_at..._-_NARA_-_200144.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Photograph_of_President_Truman%2C_the_Shah_of_Iran%2C_Secretary_of_State_Dean_Acheson%2C_and_other_dignitaries_standing_at..._-_NARA_-_200144.jpg/960px-Photograph_of_President_Truman%2C_the_Shah_of_Iran%2C_Secretary_of_State_Dean_Acheson%2C_and_other_dignitaries_standing_at..._-_NARA_-_200144.jpg",
+   "width": 3000,
+   "height": 2420,
+   "author": "Abbie Rowe",
+   "commonsCredit": "U.S. National Archives and Records Administration",
+   "dateText": "16 November 1949",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "NARA-Author",
+    "NARA-cooperation",
+    "NARA-image-full",
+    "PD-USGov"
+   ],
+   "attribution": "Abbie Rowe / Wikimedia Commons / Public domain (NARA-image-full, PD-USGov)",
+   "rightsTier": "A",
+   "ukSafe": "editorial-only",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved",
+   "alt": "President Truman with the Shah of Iran and Secretary of State, 16 November 1949",
+   "caption": "President Truman with the Shah of Iran, 16 November 1949 (photo: Abbie Rowe).",
+   "captionBasis": "Commons title/date; NARA.",
+   "sections": [
+    "oil-mossadeq-and-1953"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "NARA, Abbie Rowe: PD-USGov. Full Commons title mentions the Secretary of State; confirm names on the NARA record. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "nixon-shah-1973",
+   "commonsFile": "File:President Nixon and the Shah of Iran in the Oval Office - NARA - 194536.tif",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APresident_Nixon_and_the_Shah_of_Iran_in_the_Oval_Office_-_NARA_-_194536.tif",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/President_Nixon_and_the_Shah_of_Iran_in_the_Oval_Office_-_NARA_-_194536.tif",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/President_Nixon_and_the_Shah_of_Iran_in_the_Oval_Office_-_NARA_-_194536.tif/lossy-page1-960px-President_Nixon_and_the_Shah_of_Iran_in_the_Oval_Office_-_NARA_-_194536.tif.jpg",
+   "width": 3000,
+   "height": 2053,
+   "author": "Robert LeRoy Knudsen",
+   "commonsCredit": "U.S. National Archives and Records Administration",
+   "dateText": "24 July 1973",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "NARA-Author",
+    "NARA-cooperation",
+    "NARA-image-full",
+    "PD-USGov"
+   ],
+   "attribution": "Robert LeRoy Knudsen / Wikimedia Commons / Public domain (NARA-image-full, PD-USGov)",
+   "rightsTier": "A",
+   "ukSafe": "editorial-only",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved",
+   "alt": "President Nixon and the Shah of Iran in the Oval Office, 24 July 1973",
+   "caption": "President Nixon and the Shah of Iran in the Oval Office, 24 July 1973 (photo: Robert L. Knudsen).",
+   "captionBasis": "Commons title/date; NARA.",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "PD-USGov. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "mossadegh-supreme-court-1951",
+   "commonsFile": "File:Prime Minister Mohammed Mossadegh of Iran on the steps of the Supreme Court Building.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APrime_Minister_Mohammed_Mossadegh_of_Iran_on_the_steps_of_the_Supreme_Court_Building.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Prime_Minister_Mohammed_Mossadegh_of_Iran_on_the_steps_of_the_Supreme_Court_Building.jpg",
+   "thumbUrl960": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Prime_Minister_Mohammed_Mossadegh_of_Iran_on_the_steps_of_the_Supreme_Court_Building.jpg",
+   "width": 800,
+   "height": 593,
+   "author": "U.S. Department of State (Truman Library record 66-8015)",
+   "commonsCredit": "https://www.trumanlibrary.gov/photograph-records/66-8015",
+   "dateText": "5 November 1951",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Artwork",
+    "PD-USGov-DOS"
+   ],
+   "attribution": "U.S. Department of State (Truman Library record 66-8015) / Wikimedia Commons / Public domain (PD-USGov-DOS)",
+   "rightsTier": "A",
+   "ukSafe": "editorial-only",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved",
+   "alt": "Prime Minister Mohammad Mossadegh on the steps of the Supreme Court Building in Washington, November 1951",
+   "caption": "Prime Minister Mohammad Mossadegh on the steps of the U.S. Supreme Court Building, Washington, 5 November 1951.",
+   "captionBasis": "Commons title/description; Truman Library record 66-8015.",
+   "sections": [
+    "oil-mossadeq-and-1953"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "Commons: PD-USGov-DOS; Truman Library record. Confirm the department-of-state attribution at trumanlibrary.gov before publication. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "mossadegh-acheson-1951",
+   "commonsFile": "File:Prime Minister Mohammed Mossadegh of Iran speaking with Dean Acheson.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APrime_Minister_Mohammed_Mossadegh_of_Iran_speaking_with_Dean_Acheson.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Prime_Minister_Mohammed_Mossadegh_of_Iran_speaking_with_Dean_Acheson.jpg",
+   "thumbUrl960": "https://upload.wikimedia.org/wikipedia/commons/6/62/Prime_Minister_Mohammed_Mossadegh_of_Iran_speaking_with_Dean_Acheson.jpg",
+   "width": 800,
+   "height": 627,
+   "author": "U.S. Department of State (Truman Library record 66-8008)",
+   "commonsCredit": "https://www.trumanlibrary.gov/photograph-records/66-8008",
+   "dateText": "24 October 1951",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Artwork",
+    "PD-USGov-DOS"
+   ],
+   "attribution": "U.S. Department of State (Truman Library record 66-8008) / Wikimedia Commons / Public domain (PD-USGov-DOS)",
+   "rightsTier": "A",
+   "ukSafe": "editorial-only",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved",
+   "alt": "Secretary of State Dean Acheson conferring with Prime Minister Mossadegh at Walter Reed Army Medical Center, October 1951",
+   "caption": "Dean Acheson (right) with Prime Minister Mossadegh at Walter Reed Army Medical Center, Washington, 24 October 1951.",
+   "captionBasis": "Commons description; Truman Library record 66-8008.",
+   "sections": [
+    "oil-mossadeq-and-1953"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "As above. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "veresk-bridge-modern",
+   "commonsFile": "File:RAI 60-878 Veresk.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARAI_60-878_Veresk.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/RAI_60-878_Veresk.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/RAI_60-878_Veresk.jpg/960px-RAI_60-878_Veresk.jpg",
+   "width": 6704,
+   "height": 4138,
+   "author": "Kabelleger / David Gubler",
+   "commonsCredit": "Own work, also available at https://bahnbilder.ch/picture/28541",
+   "dateText": "2017-10-31 11:40:33",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "licenseTemplates": [
+    "Information",
+    "Location"
+   ],
+   "attribution": "Kabelleger / David Gubler / Wikimedia Commons / CC BY-SA 4.0",
+   "rightsTier": "A-CC",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "Veresk railway bridge in the Alborz mountains, Iran",
+   "caption": "Veresk Bridge on the Trans-Iranian Railway (photo 2017).",
+   "captionBasis": "Commons title (RAI 60-878 Veresk). Confirm subject = Veresk Bridge on the Trans-Iranian Railway.",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC BY-SA 4.0 (Kabelleger / David Gubler). Editorial only.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "wdl-first-majlis-1906",
+   "commonsFile": "File:Representatives of the First Iranian Parliament WDL11288.png",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARepresentatives_of_the_First_Iranian_Parliament_WDL11288.png",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Representatives_of_the_First_Iranian_Parliament_WDL11288.png",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Representatives_of_the_First_Iranian_Parliament_WDL11288.png/960px-Representatives_of_the_First_Iranian_Parliament_WDL11288.png",
+   "width": 1196,
+   "height": 878,
+   "author": "Unknown (photograph reproduced by the World Digital Library)",
+   "commonsCredit": "http://dl.wdl.org/11288.png\n\nGallery: http://www.wdl.org/en/item/11288/",
+   "dateText": "1906",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Artwork",
+    "PD-Art"
+   ],
+   "attribution": "Unknown (photograph reproduced by the World Digital Library) / Wikimedia Commons / Public domain (PD-Art)",
+   "rightsTier": "A",
+   "ukSafe": "likely",
+   "useFor": [
+    "editorial",
+    "product"
+   ],
+   "status": "approved",
+   "alt": "Members of the first Iranian Majlis in front of the military academy, 1906",
+   "caption": "Representatives of the first Iranian Majlis (parliament) in front of the military academy building, 1906. World Digital Library item 11288.",
+   "captionBasis": "Commons description (WDL).",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "PD-Art via WDL. Photographer unrecorded in Commons; confirm the WDL record before publishing a named credit.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "reza-shah-portrait-1938",
+   "commonsFile": "File:Reza Shah Pahlavi portrait (1938).jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AReza_Shah_Pahlavi_portrait_%281938%29.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Reza_Shah_Pahlavi_portrait_%281938%29.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Reza_Shah_Pahlavi_portrait_%281938%29.jpg/960px-Reza_Shah_Pahlavi_portrait_%281938%29.jpg",
+   "width": 1704,
+   "height": 2048,
+   "author": "Samuel Johnson Woolf",
+   "commonsCredit": "GettyImages",
+   "dateText": "1938",
+   "license": "Public domain (2-D work by an artist who died in 1948; UK copyright expired end of 2018)",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-art"
+   ],
+   "attribution": "Samuel Johnson Woolf, Reza Shah Pahlavi, 1938, oil on canvas. National Portrait Gallery, Smithsonian Institution; gift of Muriel Woolf Hobson (NPG.86.TC78). Image via Wikimedia Commons (public domain, PD-art).",
+   "rightsTier": "A",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "Portrait of Reza Shah Pahlavi, 1938, by Samuel Johnson Woolf",
+   "caption": "Reza Shah Pahlavi, 1938, portrait by Samuel Johnson Woolf (oil on canvas, National Portrait Gallery, Smithsonian Institution).",
+   "captionBasis": "NPG object record NPG.86.TC78 (title, date, medium, credit line) as returned by search; page itself blocked by a bot challenge when opened directly. Commons file title/date/artist match; aspect ratio matches the NPG dimensions (60.9 x 50.8 cm).",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "RELEASED, editorial only (no product use). Basis: faithful photographic reproduction of a 2-D painting by Samuel Johnson Woolf (1880-1948); life + 70 expired in the UK on 31 Dec 2018. Commons credit line reads \"GettyImages\": use the Commons file, never a Getty hotlink or Getty licence page. US status was not independently checked. Content & SEO release is conditional on Grok Bot go/no-go; this release rests on artist death, not on a CC licence, so it is flagged for explicit sign-off.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext; NPG record via search result (page blocked when opened directly)",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "tabriz-soviet-1941",
+   "commonsFile": "File:Soviet tankmen of the 6th Armoured Division drive through the streets of Tabriz (2).jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ASoviet_tankmen_of_the_6th_Armoured_Division_drive_through_the_streets_of_Tabriz_%282%29.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Soviet_tankmen_of_the_6th_Armoured_Division_drive_through_the_streets_of_Tabriz_%282%29.jpg",
+   "thumbUrl960": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Soviet_tankmen_of_the_6th_Armoured_Division_drive_through_the_streets_of_Tabriz_%282%29.jpg",
+   "width": 800,
+   "height": 545,
+   "author": "Unknown author",
+   "commonsCredit": "topwar.ru",
+   "dateText": "27-28 August 1941",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-Russia"
+   ],
+   "attribution": "Unknown author / Wikimedia Commons / Public domain (PD-Russia)",
+   "rightsTier": "C",
+   "ukSafe": "verify",
+   "useFor": [],
+   "status": "hold",
+   "alt": "Soviet tank crews of the 6th Armoured Division driving through the streets of Tabriz, August 1941",
+   "caption": "Soviet tankmen of the 6th Armoured Division in Tabriz, 27-28 August 1941.",
+   "captionBasis": "Commons description.",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "HOLD (Content & SEO, 2026-10-31): Source is topwar.ru, photographer unknown, only a PD-Russia tag. Neither establishes UK status for a 1941 photograph by an unidentified author (UK term depends on author death or publication). Release path: the Soviet archive record naming the photographer.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "tehran-conference-1943",
+   "commonsFile": "File:Tehran Conference 1943.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ATehran_Conference_1943.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Tehran_Conference_1943.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Tehran_Conference_1943.jpg/960px-Tehran_Conference_1943.jpg",
+   "width": 5658,
+   "height": 4566,
+   "author": "U.S. Government (Franklin D. Roosevelt Presidential Library)",
+   "commonsCredit": "https://www.flickr.com/photos/fdrlibrary/5692883651/in/photolist-9F4vYp-22ae5pb-pJ7JqW-K3WmE1-aLPLs-6Vabay-NqPyuh-HWjDm-c6vbJb-6nB5GV-2nz3Z3L-2ng3EXs-jPHsby-2mjXbtV-2mk35mZ-2mk1R6S-N3mAhq-badiTV-Tbz48z-8FEJKL-cW5Ai3-6DbnWC-2mk2hny-8r4J3U-rf4YtS-2mk2dbs-Pc4H6w-c7JERw-2mjTwCr-2mk2fmV-2mk33V2-2mjYipt-2",
+   "dateText": "1943-11-29",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-USGov"
+   ],
+   "attribution": "U.S. Government (Franklin D. Roosevelt Presidential Library) / Wikimedia Commons / Public domain (PD-USGov)",
+   "rightsTier": "A",
+   "ukSafe": "likely",
+   "useFor": [
+    "editorial",
+    "product"
+   ],
+   "status": "approved",
+   "alt": "Stalin, Roosevelt and Churchill seated together at the Tehran Conference, 29 November 1943",
+   "caption": "Joseph Stalin, Franklin D. Roosevelt and Winston Churchill at the Tehran Conference, 29 November 1943. Franklin D. Roosevelt Library.",
+   "captionBasis": "Commons description.",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "PD-USGov.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "tent-city-1971-HOLD",
+   "commonsFile": "File:Tentcitypersepolis.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ATentcitypersepolis.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Tentcitypersepolis.jpg",
+   "thumbUrl960": "https://upload.wikimedia.org/wikipedia/commons/1/10/Tentcitypersepolis.jpg",
+   "width": 513,
+   "height": 576,
+   "author": "Unknown author",
+   "commonsCredit": "http://www.iranian.com/CyrusKadivar/2002/January/2500/16.html",
+   "dateText": "1971",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-Iran"
+   ],
+   "attribution": "Unknown author / Wikimedia Commons / Public domain (PD-Iran)",
+   "rightsTier": "C",
+   "ukSafe": "false",
+   "useFor": [],
+   "status": "hold",
+   "alt": "Tent City at Persepolis during the 1971 celebrations",
+   "caption": "Tent City, 1971 celebrations at Persepolis.",
+   "captionBasis": "—",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "HOLD: PD-Iran only; source iranian.com; author unknown; 1971 is inside the UK 70-year window. Do not use. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "nixon-shah-1969",
+   "commonsFile": "File:The Shah of Iran and President Nixon - NARA - 194301.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThe_Shah_of_Iran_and_President_Nixon_-_NARA_-_194301.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/The_Shah_of_Iran_and_President_Nixon_-_NARA_-_194301.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/The_Shah_of_Iran_and_President_Nixon_-_NARA_-_194301.jpg/960px-The_Shah_of_Iran_and_President_Nixon_-_NARA_-_194301.jpg",
+   "width": 1968,
+   "height": 2919,
+   "author": "Robert LeRoy Knudsen",
+   "commonsCredit": "General Services Administration. National Archives and Records Service. Office of Presidential Libraries. Office of Presidential Papers.\t (01/20/1969 - ca. 12/1974)",
+   "dateText": "1969-10-21",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "NARA-Author",
+    "PD-USGov"
+   ],
+   "attribution": "Robert LeRoy Knudsen / Wikimedia Commons / Public domain (PD-USGov)",
+   "rightsTier": "A",
+   "ukSafe": "editorial-only",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved",
+   "alt": "The Shah of Iran and President Nixon, 21 October 1969",
+   "caption": "The Shah of Iran and President Nixon, 21 October 1969.",
+   "captionBasis": "Commons title/date; NARA 194301.",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "PD-USGov. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "university-of-tehran-gate",
+   "commonsFile": "File:University of Tehran Main Entrance Gate.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUniversity_of_Tehran_Main_Entrance_Gate.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/University_of_Tehran_Main_Entrance_Gate.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/University_of_Tehran_Main_Entrance_Gate.jpg/960px-University_of_Tehran_Main_Entrance_Gate.jpg",
+   "width": 2806,
+   "height": 1578,
+   "author": "Armin Abbasi",
+   "commonsCredit": "Own work",
+   "dateText": "Taken on 5 February 2018, 18:36:40",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "licenseTemplates": [
+    "Information",
+    "Location"
+   ],
+   "attribution": "Armin Abbasi / Wikimedia Commons / CC BY-SA 4.0",
+   "rightsTier": "A-CC",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "Main entrance gate of the University of Tehran",
+   "caption": "Main entrance gate, University of Tehran (photo 2020).",
+   "captionBasis": "Commons title.",
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC BY-SA 4.0 (Armin Abbasi). Editorial only.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "azadi-tower",
+   "commonsFile": "File:Azadi Tower, Tehran.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAzadi_Tower%2C_Tehran.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Azadi_Tower%2C_Tehran.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Azadi_Tower%2C_Tehran.jpg/960px-Azadi_Tower%2C_Tehran.jpg",
+   "width": 4828,
+   "height": 3219,
+   "author": "Bernard Gagnon",
+   "commonsCredit": "Own work",
+   "dateText": "2016-10-20",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "licenseTemplates": [
+    "Information",
+    "Location"
+   ],
+   "attribution": "Bernard Gagnon / Wikimedia Commons / CC BY-SA 4.0",
+   "rightsTier": "A-CC",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "Azadi Tower in Tehran",
+   "caption": "Azadi Tower, Tehran (photo 2016). Completed in 1971 as the Shahyad Tower.",
+   "captionBasis": "Commons title.",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC BY-SA 4.0 (Bernard Gagnon). Editorial only.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "farah-diba-1962",
+   "commonsFile": "File:Farah Diba in de bus, Bestanddeelnr 913-8568.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFarah_Diba_in_de_bus%2C_Bestanddeelnr_913-8568.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Farah_Diba_in_de_bus%2C_Bestanddeelnr_913-8568.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Farah_Diba_in_de_bus%2C_Bestanddeelnr_913-8568.jpg/960px-Farah_Diba_in_de_bus%2C_Bestanddeelnr_913-8568.jpg",
+   "width": 2580,
+   "height": 2604,
+   "author": "Hugo van Gelderen / Anefo",
+   "commonsCredit": "http://proxy.handle.net/10648/aa05c2ee-d0b4-102d-bcf8-003048976d84",
+   "dateText": "1962-05-02",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "licenseTemplates": [
+    "CC-zero",
+    "Information",
+    "Nationaal Archief"
+   ],
+   "attribution": "Hugo van Gelderen / Anefo / Wikimedia Commons / CC0 (credit given as courtesy)",
+   "rightsTier": "A",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial",
+    "product"
+   ],
+   "status": "approved",
+   "alt": "Farah Diba boarding a bus, 2 May 1962",
+   "caption": "Farah Diba, 2 May 1962. Nationaal Archief / Anefo.",
+   "captionBasis": "Commons description (Dutch Anefo record 913-8568).",
+   "sections": [
+    "white-revolution-and-reform"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC0 (Nationaal Archief). Attribution not legally required; give credit anyway.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "demonstrators-1979-HOLD",
+   "commonsFile": "File:Group of demonstrators during Iranian Revolution.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGroup_of_demonstrators_during_Iranian_Revolution.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Group_of_demonstrators_during_Iranian_Revolution.jpg",
+   "thumbUrl960": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Group_of_demonstrators_during_Iranian_Revolution.jpg",
+   "width": 591,
+   "height": 512,
+   "author": "iichs.ir (unknown photographer)",
+   "commonsCredit": "http://www.iichs.ir/Upload/Image/139407/Orginal/377205cc_b3e9_470b_a647_66cb8f8a450f.jpg",
+   "dateText": "before 11 February 1979",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-Iran"
+   ],
+   "attribution": "iichs.ir (unknown photographer) / Wikimedia Commons / Public domain (PD-Iran)",
+   "rightsTier": "C",
+   "ukSafe": "false",
+   "useFor": [],
+   "status": "hold",
+   "alt": "Demonstrators during the Iranian Revolution",
+   "caption": "Demonstrators during the Iranian Revolution (before 11 Feb 1979).",
+   "captionBasis": "—",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "HOLD: PD-Iran only; source iichs.ir (not the creator); photographer unknown. 1979 is inside the UK window. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "revolutionaries-1979-HOLD",
+   "commonsFile": "File:Iranian Revolutionaries Shahreza Ave 1979.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AIranian_Revolutionaries_Shahreza_Ave_1979.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Iranian_Revolutionaries_Shahreza_Ave_1979.jpg",
+   "thumbUrl960": "https://upload.wikimedia.org/wikipedia/commons/5/58/Iranian_Revolutionaries_Shahreza_Ave_1979.jpg",
+   "width": 600,
+   "height": 406,
+   "author": "Unknown author",
+   "commonsCredit": "[1]",
+   "dateText": "2012-12-29 18:50:45",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-IRAN"
+   ],
+   "attribution": "Unknown author / Wikimedia Commons / Public domain (PD-IRAN)",
+   "rightsTier": "C",
+   "ukSafe": "false",
+   "useFor": [],
+   "status": "hold",
+   "alt": "Revolutionaries on Shahreza Avenue in front of the University of Tehran, 1979",
+   "caption": "—",
+   "captionBasis": "—",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "HOLD: 'PD-Iran' with uploader-only source. Do not use. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "rijksmuseum-gold-coin",
+   "commonsFile": "File:Mohammed Reza Pahlavi, sjah van Perzië, NG-776.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMohammed_Reza_Pahlavi%2C_sjah_van_Perzi%C3%AB%2C_NG-776.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Mohammed_Reza_Pahlavi%2C_sjah_van_Perzi%C3%AB%2C_NG-776.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Mohammed_Reza_Pahlavi%2C_sjah_van_Perzi%C3%AB%2C_NG-776.jpg/960px-Mohammed_Reza_Pahlavi%2C_sjah_van_Perzi%C3%AB%2C_NG-776.jpg",
+   "width": 7050,
+   "height": 3500,
+   "author": "Rijksmuseum (object NG-776)",
+   "commonsCredit": "http://hdl.handle.net/10934/RM0001.COLLECT.235115",
+   "dateText": "between 1950 and 1981",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "licenseTemplates": [
+    "CC-zero",
+    "Information"
+   ],
+   "attribution": "Rijksmuseum (object NG-776) / Wikimedia Commons / CC0 (credit given as courtesy)",
+   "rightsTier": "A",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial",
+    "product"
+   ],
+   "status": "approved",
+   "alt": "Gold coin showing the Shah of Iran, in the Rijksmuseum collection",
+   "caption": "Gold coin with a portrait of Mohammad Reza Pahlavi. Rijksmuseum object NG-776.",
+   "captionBasis": "Commons description (Rijksmuseum object NG-776, Dutch).",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC0 (Rijksmuseum). Strongest candidate for object-led pages and product artwork.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "golestan-palace",
+   "commonsFile": "File:Palacio de Golestán, Teherán, Irán, 2016-09-17, DD 07.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APalacio_de_Golest%C3%A1n%2C_Teher%C3%A1n%2C_Ir%C3%A1n%2C_2016-09-17%2C_DD_07.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Palacio_de_Golest%C3%A1n%2C_Teher%C3%A1n%2C_Ir%C3%A1n%2C_2016-09-17%2C_DD_07.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Palacio_de_Golest%C3%A1n%2C_Teher%C3%A1n%2C_Ir%C3%A1n%2C_2016-09-17%2C_DD_07.jpg/960px-Palacio_de_Golest%C3%A1n%2C_Teher%C3%A1n%2C_Ir%C3%A1n%2C_2016-09-17%2C_DD_07.jpg",
+   "width": 5915,
+   "height": 5049,
+   "author": "Diego Delso",
+   "commonsCredit": "Own work",
+   "dateText": "2016-09-17 09:33:19",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "licenseTemplates": [
+    "Cc-by-sa-4.0",
+    "Information"
+   ],
+   "attribution": "Diego Delso / Wikimedia Commons / CC BY-SA 4.0",
+   "rightsTier": "A-CC",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "Golestan Palace in Tehran",
+   "caption": "Golestan Palace, Tehran (photo 2016).",
+   "captionBasis": "Commons title.",
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC BY-SA 4.0 (Diego Delso). Editorial only.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "persepolis-apadana",
+   "commonsFile": "File:Persepolis - Apadana 01.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APersepolis_-_Apadana_01.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Persepolis_-_Apadana_01.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Persepolis_-_Apadana_01.jpg/960px-Persepolis_-_Apadana_01.jpg",
+   "width": 4403,
+   "height": 2936,
+   "author": "Bernard Gagnon",
+   "commonsCredit": "Own work",
+   "dateText": "2016-10-27",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "licenseTemplates": [
+    "Information",
+    "Location"
+   ],
+   "attribution": "Bernard Gagnon / Wikimedia Commons / CC BY-SA 4.0",
+   "rightsTier": "A-CC",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "Columns of the Apadana at Persepolis",
+   "caption": "The Apadana at Persepolis (photo 2016).",
+   "captionBasis": "Commons title.",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC BY-SA 4.0 (Bernard Gagnon). Editorial only.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "khomeini-ghotbzadeh-1978-HOLD",
+   "commonsFile": "File:Sadegh Ghotbzadeh and Ruhollah Khomeini, Neauphle-le-Château - 1978.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ASadegh_Ghotbzadeh_and_Ruhollah_Khomeini%2C_Neauphle-le-Ch%C3%A2teau_-_1978.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sadegh_Ghotbzadeh_and_Ruhollah_Khomeini%2C_Neauphle-le-Ch%C3%A2teau_-_1978.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Sadegh_Ghotbzadeh_and_Ruhollah_Khomeini%2C_Neauphle-le-Ch%C3%A2teau_-_1978.jpg/960px-Sadegh_Ghotbzadeh_and_Ruhollah_Khomeini%2C_Neauphle-le-Ch%C3%A2teau_-_1978.jpg",
+   "width": 1000,
+   "height": 717,
+   "author": "iichs.ir (Unknown photographer)",
+   "commonsCredit": "http://www.iichs.ir/Upload/Image/2017/11/Orginal/d33c5ab8_bf51_4318_8c7f_02824e0cbcf5.jpg",
+   "dateText": "before 1 February 1979",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "PD-1996"
+   ],
+   "attribution": "iichs.ir (Unknown photographer) / Wikimedia Commons / Public domain (PD-1996)",
+   "rightsTier": "C",
+   "ukSafe": "false",
+   "useFor": [],
+   "status": "hold",
+   "alt": "Sadegh Ghotbzadeh and Ruhollah Khomeini at Neauphle-le-Château, 1978",
+   "caption": "—",
+   "captionBasis": "—",
+   "sections": [
+    "revolution-1977-1979"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "HOLD: PD-1996 (Iranian law basis); source iichs.ir; photographer unknown; 1978 inside UK window. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "shiraz-festival-jalali-1972-DO-NOT-USE",
+   "commonsFile": "File:Shiraz Arts Festival by Bahman Jalali.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AShiraz_Arts_Festival_by_Bahman_Jalali.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Shiraz_Arts_Festival_by_Bahman_Jalali.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Shiraz_Arts_Festival_by_Bahman_Jalali.jpg/960px-Shiraz_Arts_Festival_by_Bahman_Jalali.jpg",
+   "width": 2205,
+   "height": 2489,
+   "author": "Bahman Jalali",
+   "commonsCredit": "تماشا (تهران)، ش. ۷۶ (۱۶ شهریور ۱۳۵۱): روی جلد.",
+   "dateText": "1972-09-07",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "licenseTemplates": [
+    "Information",
+    "Licensed-PD-Art"
+   ],
+   "attribution": "Bahman Jalali / Wikimedia Commons / Public domain (Licensed-PD-Art)",
+   "rightsTier": "X",
+   "ukSafe": "false",
+   "useFor": [],
+   "status": "do-not-use",
+   "alt": "—",
+   "caption": "—",
+   "captionBasis": "—",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "DO NOT USE: named photographer (Bahman Jalali, d. 2010); copyright runs to 2080 in the UK. 'Licensed-PD-Art' tag relates to the magazine cover, not the photograph. Reviewed 2026-10-31: stays do-not-use; no CC BY / CC BY-SA licence exists for it.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31",
+   "reviewedBy": "Content & SEO",
+   "reviewedOn": "2026-10-31"
+  },
+  {
+   "id": "shah-schiphol-1949",
+   "commonsFile": "File:Sjah van Perzië op Schiphol met zuster, Bestanddeelnr 903-7733.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ASjah_van_Perzi%C3%AB_op_Schiphol_met_zuster%2C_Bestanddeelnr_903-7733.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Sjah_van_Perzi%C3%AB_op_Schiphol_met_zuster%2C_Bestanddeelnr_903-7733.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Sjah_van_Perzi%C3%AB_op_Schiphol_met_zuster%2C_Bestanddeelnr_903-7733.jpg/960px-Sjah_van_Perzi%C3%AB_op_Schiphol_met_zuster%2C_Bestanddeelnr_903-7733.jpg",
+   "width": 3409,
+   "height": 2854,
+   "author": "Winterbergen / Anefo",
+   "commonsCredit": "https://proxy.handle.net/10648/a8d31714-d0b4-102d-bcf8-003048976d84",
+   "dateText": "Taken on 31 December 1949",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "licenseTemplates": [
+    "CC-zero",
+    "Information",
+    "Nationaal Archief"
+   ],
+   "attribution": "Winterbergen / Anefo / Wikimedia Commons / CC0 (credit given as courtesy)",
+   "rightsTier": "A",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial",
+    "product"
+   ],
+   "status": "approved",
+   "alt": "The Shah of Iran at Schiphol airport with his sister, 31 December 1949",
+   "caption": "The Shah of Iran at Schiphol with his sister, 31 December 1949. Nationaal Archief / Anefo.",
+   "captionBasis": "Commons description (Anefo 903-7733).",
+   "sections": [
+    "occupation-and-accession"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC0. Note: 'sister' per Anefo record; identify her from the record before naming.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "tmoca",
+   "commonsFile": "File:Tehran Museum of Contemporary Art-1.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ATehran_Museum_of_Contemporary_Art-1.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Tehran_Museum_of_Contemporary_Art-1.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Tehran_Museum_of_Contemporary_Art-1.jpg/960px-Tehran_Museum_of_Contemporary_Art-1.jpg",
+   "width": 3120,
+   "height": 4160,
+   "author": "Farid.R",
+   "commonsCredit": "Own work",
+   "dateText": "2017-09-25 17:45:47",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "licenseTemplates": [
+    "Information",
+    "Location"
+   ],
+   "attribution": "Farid.R / Wikimedia Commons / CC BY-SA 4.0",
+   "rightsTier": "A-CC",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "Tehran Museum of Contemporary Art",
+   "caption": "Tehran Museum of Contemporary Art (photo 2017).",
+   "captionBasis": "Commons title.",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC BY-SA 4.0 (Farid.R). Editorial only.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "pahlavi-crown-1960s",
+   "commonsFile": "File:The Pahlavi Crown from the Treasury of National Jewels photographed by Soleiman Meftah.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThe_Pahlavi_Crown_from_the_Treasury_of_National_Jewels_photographed_by_Soleiman_Meftah.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/The_Pahlavi_Crown_from_the_Treasury_of_National_Jewels_photographed_by_Soleiman_Meftah.jpg",
+   "thumbUrl960": "https://upload.wikimedia.org/wikipedia/commons/c/c9/The_Pahlavi_Crown_from_the_Treasury_of_National_Jewels_photographed_by_Soleiman_Meftah.jpg",
+   "width": 912,
+   "height": 1170,
+   "author": "Soleiman Meftah",
+   "commonsCredit": "Inherited private family collection of Soleiman Meftah.",
+   "dateText": "1960s",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "licenseTemplates": [
+    "Information",
+    "cc-by-sa-4.0-heirs"
+   ],
+   "attribution": "Soleiman Meftah / Wikimedia Commons / CC BY-SA 4.0",
+   "rightsTier": "A-CC",
+   "ukSafe": "verify",
+   "useFor": [
+    "editorial"
+   ],
+   "status": "approved-editorial-with-attribution",
+   "alt": "The Pahlavi Crown from the Treasury of National Jewels, photographed in the 1960s",
+   "caption": "The Pahlavi Crown, Treasury of National Jewels, Tehran; colour slide by court photographer Soleiman Meftah, 1960s.",
+   "captionBasis": "Commons description.",
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC BY-SA 4.0 'heirs' template: released by the heirs of the photographer. Check that the Commons OTRS/VRT permission is recorded before using.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  },
+  {
+   "id": "shah-departure-1959",
+   "commonsFile": "File:Vertrek van de Sjah van Perzië van Schiphol v.l.n.r. prins Bernhard, Sjah Moha…, Bestanddeelnr 910-3896.jpg",
+   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AVertrek_van_de_Sjah_van_Perzi%C3%AB_van_Schiphol_v.l.n.r._prins_Bernhard%2C_Sjah_Moha%E2%80%A6%2C_Bestanddeelnr_910-3896.jpg",
+   "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Vertrek_van_de_Sjah_van_Perzi%C3%AB_van_Schiphol_v.l.n.r._prins_Bernhard%2C_Sjah_Moha%E2%80%A6%2C_Bestanddeelnr_910-3896.jpg",
+   "thumbUrl960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Vertrek_van_de_Sjah_van_Perzi%C3%AB_van_Schiphol_v.l.n.r._prins_Bernhard%2C_Sjah_Moha%E2%80%A6%2C_Bestanddeelnr_910-3896.jpg/960px-Vertrek_van_de_Sjah_van_Perzi%C3%AB_van_Schiphol_v.l.n.r._prins_Bernhard%2C_Sjah_Moha%E2%80%A6%2C_Bestanddeelnr_910-3896.jpg",
+   "width": 4172,
+   "height": 3304,
+   "author": "Harry Pot / Anefo",
+   "commonsCredit": "https://proxy.handle.net/10648/a99474d6-d0b4-102d-bcf8-003048976d84",
+   "dateText": "1959-05-23",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "licenseTemplates": [
+    "CC-zero",
+    "Information",
+    "Nationaal Archief"
+   ],
+   "attribution": "Harry Pot / Anefo / Wikimedia Commons / CC0 (credit given as courtesy)",
+   "rightsTier": "A",
+   "ukSafe": "true",
+   "useFor": [
+    "editorial",
+    "product"
+   ],
+   "status": "approved",
+   "alt": "The Shah of Iran and Prince Bernhard at Schiphol, 23 May 1959",
+   "caption": "Departure of the Shah of Iran from Schiphol after a state visit to the Netherlands, 23 May 1959. Nationaal Archief / Anefo (Harry Pot).",
+   "captionBasis": "Commons description (Anefo 910-3896). Names in the title are truncated; confirm the full list from the Anefo record.",
+   "sections": [
+    "white-revolution-and-reform"
+   ],
+   "relatedProducts": [],
+   "rightsNote": "CC0.",
+   "verifiedVia": "Wikimedia Commons API imageinfo+extmetadata+wikitext",
+   "verifiedOn": "2026-10-31"
+  }
+ ]
+}

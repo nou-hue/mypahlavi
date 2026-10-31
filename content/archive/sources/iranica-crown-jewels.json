@@ -1,0 +1,15 @@
+{
+  "id": "iranica-crown-jewels",
+  "status": "published",
+  "type": "reference",
+  "title": "Crown Jewels of Persia",
+  "creator": "Patricia Jellicoe",
+  "publisher": "Encyclopaedia Iranica (online edition), vol. VI, fasc. 4, pp. 426-430",
+  "date": {
+    "precision": "day",
+    "value": "1993-12-15"
+  },
+  "url": "https://www.iranicaonline.org/articles/crown-jewels-of-persia-the-assemblage-of-jewels-collected-by-the-kings-of-persia-kept-now-in-the-bank-e-markazi-e-iran/",
+  "accessed": "2026-10-31",
+  "tier": "A"
+}

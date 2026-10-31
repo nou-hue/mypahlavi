@@ -1,0 +1,20 @@
+{
+  "id": "1943-tehran-conference",
+  "status": "review",
+  "title": "Tehran Conference",
+  "summary": "Roosevelt, Churchill and Stalin reaffirmed commitment to Iran's independence and territorial integrity.",
+  "date": {
+    "precision": "month",
+    "value": "1943-11"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc16"
+    }
+  ],
+  "entrySlug": "occupation-and-accession",
+  "plateIds": [
+    "tehran-conference-1943"
+  ]
+}

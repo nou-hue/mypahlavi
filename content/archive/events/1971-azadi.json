@@ -1,0 +1,21 @@
+{
+  "id": "1971-azadi",
+  "status": "review",
+  "title": "Shahyad (Azadi) Tower inaugurated",
+  "summary": "The Shahyad Aryamehr Monument, designed by Hossein Amanat, was inaugurated at sunset on 16 October 1971 as part of the celebrations; it was renamed Azadi (Freedom) after 1979.",
+  "date": {
+    "precision": "month",
+    "value": "1971-10"
+  },
+  "confidence": "to-verify",
+  "note": "Accounts differ on the exact day of the inauguration, so only the month is given.",
+  "cite": [
+    {
+      "sourceId": "hemmati2015"
+    }
+  ],
+  "entrySlug": "the-long-boom-and-its-ceremonies",
+  "plateIds": [
+    "azadi-tower"
+  ]
+}

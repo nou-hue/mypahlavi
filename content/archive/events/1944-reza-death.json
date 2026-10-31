@@ -1,0 +1,21 @@
+{
+  "id": "1944-reza-death",
+  "status": "review",
+  "title": "Reza Shah dies in Johannesburg",
+  "summary": "LoC: died in July 1944 in Johannesburg. Day (26 July) per Wikipedia.",
+  "date": {
+    "precision": "month",
+    "value": "1944-07"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc16"
+    },
+    {
+      "sourceId": "wp-reza"
+    }
+  ],
+  "entrySlug": "occupation-and-accession",
+  "plateIds": []
+}

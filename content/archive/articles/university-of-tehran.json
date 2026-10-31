@@ -1,0 +1,50 @@
+{
+  "slug": "university-of-tehran",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "University of Tehran",
+  "standfirst": "Iran's first university, inaugurated on 4 February 1935 under a law introduced in 1934.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Tehran",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Tehran"
+    },
+    {
+      "label": "Evidence note",
+      "value": "Currently 1934 law, 1935 opening."
+    }
+  ],
+  "plateIds": [
+    "university-of-tehran-gate"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "A law establishing the university was introduced in the Majlis on 13 March 1934; the university was inaugurated on 4 February 1935[@iranica-higher-education].",
+      "cite": [
+        {
+          "sourceId": "iranica-higher-education"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The Library of Congress gives 1935 for its establishment as the first European-style university[@loc15].",
+      "cite": [
+        {
+          "sourceId": "loc15"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "reza-shah-state-building",
+    "how-this-archive-handles-contested-facts"
+  ]
+}

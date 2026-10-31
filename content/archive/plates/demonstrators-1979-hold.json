@@ -1,0 +1,33 @@
+{
+  "id": "demonstrators-1979-hold",
+  "status": "draft",
+  "title": "Demonstrators during the Iranian Revolution",
+  "caption": "Demonstrators during the Iranian Revolution (before 11 Feb 1979).",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "1979-02-11",
+    "note": "Before this date."
+  },
+  "credit": {
+    "line": "iichs.ir (unknown photographer) / Wikimedia Commons / Public domain (PD-Iran)",
+    "creator": "iichs.ir (unknown photographer)",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AGroup_of_demonstrators_during_Iranian_Revolution.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "iichs.ir (unknown photographer)",
+    "licence": "Public domain",
+    "evidence": "HOLD: PD-Iran only; source iichs.ir (not the creator); photographer unknown. 1979 is inside the UK window. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
+    "ukSafe": "false",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "—",
+  "holdReason": "HOLD: PD-Iran only; source iichs.ir (not the creator); photographer unknown. 1979 is inside the UK window. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
+}

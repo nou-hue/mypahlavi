@@ -1,0 +1,32 @@
+{
+  "id": "tent-city-1971-hold",
+  "status": "draft",
+  "title": "Tent City, 1971 celebrations at Persepolis",
+  "caption": "Tent City, 1971 celebrations at Persepolis.",
+  "image": null,
+  "date": {
+    "precision": "year",
+    "value": "1971"
+  },
+  "credit": {
+    "line": "Unknown author / Wikimedia Commons / Public domain (PD-Iran)",
+    "creator": "Unknown author",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ATentcitypersepolis.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Unknown author",
+    "licence": "Public domain",
+    "evidence": "HOLD: PD-Iran only; source iranian.com; author unknown; 1971 is inside the UK 70-year window. Do not use. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
+    "ukSafe": "false",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "—",
+  "holdReason": "HOLD: PD-Iran only; source iranian.com; author unknown; 1971 is inside the UK 70-year window. Do not use. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
+}

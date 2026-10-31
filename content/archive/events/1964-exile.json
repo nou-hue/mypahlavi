@@ -1,0 +1,18 @@
+{
+  "id": "1964-exile",
+  "status": "review",
+  "title": "Khomeini exiled",
+  "summary": "Arrested after a sermon against the Status of Forces bill and sent to Turkey; from October 1965 he lived in An Najaf, Iraq.",
+  "date": {
+    "precision": "month",
+    "value": "1964-11"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc19"
+    }
+  ],
+  "entrySlug": "the-long-boom-and-its-ceremonies",
+  "plateIds": []
+}

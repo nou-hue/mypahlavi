@@ -1,0 +1,18 @@
+{
+  "id": "1963-june",
+  "status": "review",
+  "title": "Khomeini arrested; three days of riots",
+  "summary": "After a speech attacking the shah, Ayatollah Khomeini was arrested in Qom; three days of violent riots followed and were severely suppressed.",
+  "date": {
+    "precision": "month",
+    "value": "1963-06"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc18"
+    }
+  ],
+  "entrySlug": "white-revolution-and-reform",
+  "plateIds": []
+}

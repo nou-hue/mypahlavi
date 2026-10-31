@@ -1,0 +1,46 @@
+{
+  "id": "veresk-bridge-1943",
+  "status": "review",
+  "title": "Panorama of the Veresk valley with railway and bridge, 1943",
+  "caption": "Panorama of the Veresk valley with railway and bridge, 1943. U.S. Army Corps of Engineers.",
+  "image": {
+    "src": "/archive/plates/veresk-bridge-1943.jpg",
+    "alt": "Wide panorama of the Veresk valley showing railway and bridge, 1943",
+    "width": 960,
+    "height": 669,
+    "variants": [
+      {
+        "src": "/archive/plates/veresk-bridge-1943-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "year",
+    "value": "1943"
+  },
+  "credit": {
+    "line": "Stanley Scott Collection / Wikimedia Commons / Public domain (PD-USGov-Military-Army-USACE)",
+    "creator": "Stanley Scott Collection",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AB20_Panorama_of_the_Vresk_valley_-_USACE-p15141coll5-9280.jpeg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Stanley Scott Collection",
+    "licence": "Public domain",
+    "evidence": "USACE Stanley Scott Collection; US government work. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "likely",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc15",
+    "unesco1585"
+  ],
+  "useFor": [
+    "editorial",
+    "product"
+  ],
+  "captionBasis": "Commons description: 'wide view of railway and bridge'."
+}

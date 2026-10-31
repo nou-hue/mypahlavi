@@ -1,0 +1,97 @@
+{
+  "slug": "the-lion-and-sun",
+  "status": "published",
+  "byline": "Content & SEO",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31",
+  "template": "essay",
+  "kind": "editorial",
+  "title": "The Lion and Sun: an emblem and its changing uses",
+  "standfirst": "A solar lion appears on coins, metalwork, tiles and flags. What do the sources say about where it comes from?",
+  "date": {
+    "precision": "unknown"
+  },
+  "seoTitle": "The Lion and Sun: history of an Iranian emblem",
+  "metaDescription": "A sourced introduction to the Persian Lion and Sun, a long-used emblem: early depictions, its place on the flag until 1979, and how its design changed.",
+  "readingMinutes": 4,
+  "facts": [],
+  "plateIds": [],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The lion and sun is a long-used emblem of Persia and Iran. It appeared on the national flag until 1979, when the device was replaced by the word \"Allah\" [@iranica-flags-i]. Article 5 of the Supplementary Fundamental Laws of 7 October 1907 says that the official colours of the Persian flag are green, white and red, \"with the emblem of the Lion and the sun\" [@sfl1907].",
+      "cite": [
+        {
+          "sourceId": "iranica-flags-i"
+        },
+        {
+          "sourceId": "sfl1907"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Early depictions"
+    },
+    {
+      "type": "paragraph",
+      "text": "Where the emblem comes from is debated. Encyclopaedia Iranica notes that by the time the Safavids unified the country, the lion and sun was a familiar sign on copper coins, banners and artworks [@iranica-flags-i]. Earlier depictions exist. A miniature in a copy of Shams al-Din Kashani's *Shah-nama*, dated 1423, shows a banner bearing a lion with a rising sun on its back, and the traveller Ruy González de Clavijo, who visited in 1403–06, reported the symbol on the gateway of a Samarqand palace that Timur had seized, where he was told it was the armorial bearing of the city's former lords [@iranica-flags-i].",
+      "cite": [
+        {
+          "sourceId": "iranica-flags-i"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Iranica finds no evidence that it was the emblem of Persia under Shah Ismail, but concludes that by the time of Shah Abbas it was the recognised emblem of Persia [@iranica-flags-i]. It suggests the association may have begun as a learned reading of the *Shah-nama*'s \"Sun of Iran\", and that the Safavids may have understood the lion as Imam Ali and the sun as the glory of religion; it presents both as interpretations, not documented intentions [@iranica-flags-i].",
+      "cite": [
+        {
+          "sourceId": "iranica-flags-i"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "From emblem to flag"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nader Shah's signet showed a lion and a rayed sun, and the motif appears on the tombstone of a Zand-period soldier; under the early Qajars it appeared, unevenly, on coins, medals and banners [@iranica-flags-i]. Fath-Ali Shah created the Order of the Persian Lion and Sun in 1807–10, and Iranica says Persia was then given an official flag with the lion and sun as its device [@iranica-flags-i]. Afsaneh Najmabadi instead dates the national emblem's formal adoption to 1836 [@najmabadi2005]. Because the sources differ, this archive says only that the emblem was in official use in the Qajar period.",
+      "cite": [
+        {
+          "sourceId": "iranica-flags-i"
+        },
+        {
+          "sourceId": "najmabadi2005"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "A changing design"
+    },
+    {
+      "type": "paragraph",
+      "text": "Najmabadi traces how the sun acquired a stylised face in the nineteenth century, lost most of its facial markings by the early twentieth, had all such features erased by the mid-1930s, and was fully geometric in the 1970s before being discarded in 1979; she reads gender and modernity into these changes [@najmabadi2005]. Iranica adds that the flag's exact measurements and form were re-established in 1957 and remained unchanged until the 1979 revolution [@iranica-flags-i].",
+      "cite": [
+        {
+          "sourceId": "najmabadi2005"
+        },
+        {
+          "sourceId": "iranica-flags-i"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Use today"
+    },
+    {
+      "type": "paragraph",
+      "text": "Because the emblem is politically contested, this archive describes designs and sources and does not endorse any current use of the symbol."
+    }
+  ],
+  "furtherReading": [],
+  "related": []
+}

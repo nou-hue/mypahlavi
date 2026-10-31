@@ -1,0 +1,32 @@
+{
+  "id": "coronation-reza-shah-1926",
+  "status": "draft",
+  "title": "Coronation of Reza Shah Pahlavi, 1926",
+  "caption": "Coronation of Reza Shah Pahlavi, 1926.",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "1926-04-25"
+  },
+  "credit": {
+    "line": "Tehran Pariroz / Wikimedia Commons / Public domain (PD-Iran)",
+    "creator": "Tehran Pariroz",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ACoronation_of_Reza_Shah.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Tehran Pariroz",
+    "licence": "Public domain",
+    "evidence": "HOLD (Content & SEO, 2026-10-31): Source is a Facebook page (\"Tehran Pariroz\") and the ceremony date on the file is not backed by a tier A/B source. Only the PD-Iran tag supports it, and that does not establish UK status. Release path: original publication or archive record (photographer, date, first publication). Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
+    "ukSafe": "verify",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "Commons title only. Source is a Facebook page; photographer unknown.",
+  "holdReason": "HOLD (Content & SEO, 2026-10-31): Source is a Facebook page (\"Tehran Pariroz\") and the ceremony date on the file is not backed by a tier A/B source. Only the PD-Iran tag supports it, and that does not establish UK status. Release path: original publication or archive record (photographer, date, first publication).",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
+}

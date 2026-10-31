@@ -1,3 +1,4 @@
+import "@/lib/preview-guard.mjs";
 import { getRequest } from "@tanstack/react-start/server";
 import { auth, authConfigured } from "./server";
 

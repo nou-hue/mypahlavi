@@ -1,0 +1,16 @@
+{
+  "slug": "how-we-source",
+  "status": "review",
+  "title": "How we source",
+  "description": "Method pieces: contested facts and a guide to the 1953 record.",
+  "members": [
+    {
+      "kind": "entry",
+      "id": "how-this-archive-handles-contested-facts"
+    },
+    {
+      "kind": "entry",
+      "id": "reading-the-1953-record"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "slug": "persepolis-capitals-and-1971",
+  "status": "published",
+  "byline": "Content & SEO",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31",
+  "template": "essay",
+  "kind": "editorial",
+  "title": "Persepolis: the animal capitals and the 1971 celebrations",
+  "standfirst": "Two centuries of ruins, one very public party, and a design motif that returns on objects.",
+  "date": {
+    "precision": "unknown"
+  },
+  "seoTitle": "Persepolis capitals and the 1971 celebrations",
+  "metaDescription": "What the double-animal column capitals of Persepolis are, and how the site was used for the 1971 celebrations of 2,500 years of Iranian monarchy.",
+  "readingMinutes": 5,
+  "facts": [],
+  "plateIds": [
+    "persepolis-apadana"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The capitals"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erich Schmidt's Oriental Institute report on the excavations describes the best-known Persepolis columns as having composite capitals whose uppermost unit is a pair of addorsed (back-to-back) bulls. In the Gate of Xerxes the capitals ended in addorsed bulls, and the excavators judged that roof beams probably rested in the saddle between the animals (p. 68) [@schmidt1953]. The columns of the Apadana varied by portico. The hall and north portico ended in addorsed bulls, and so did the west portico, while the east portico had addorsed horned leonine monsters (p. 80); two pieces of those leonine capitals were found among the debris (p. 81) [@schmidt1953]. Schmidt also notes that all the capitals in the form of man-bulls or bulls carry a neckband decorated with rosettes (p. 137) [@schmidt1953].",
+      "cite": [
+        {
+          "sourceId": "schmidt1953"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "The site"
+    },
+    {
+      "type": "paragraph",
+      "text": "UNESCO inscribed Persepolis on its World Heritage List in 1979 [@unesco114].",
+      "cite": [
+        {
+          "sourceId": "unesco114"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "1971"
+    },
+    {
+      "type": "paragraph",
+      "text": "In October 1971 celebrations were held to mark what was presented as 2,500 years of monarchy and the twenty-fifth centennial of Cyrus's empire [@loc19]. The Library of Congress adds that the \"2,500 years of uninterrupted monarchy\" it describes contained gaps in the chronological record [@loc19]. A LACMA curatorial note records that the festivities opened on 12 October, when the shah paid homage at Cyrus's tomb at Pasargadae [@lacma-abbas1971]; a later thesis describes the programme moving to Persepolis and ending in Tehran [@hemmati2015]. The Library of Congress records that the ceremonies drew adverse domestic comment, that honoured guests were foreign heads of state, and that Khomeini condemned them in a widely circulated declaration [@loc19].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        },
+        {
+          "sourceId": "lacma-abbas1971"
+        },
+        {
+          "sourceId": "hemmati2015"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Pictures"
+    },
+    {
+      "type": "paragraph",
+      "text": "The only freely licensed picture we have verified for this piece is a modern photograph of the Apadana columns (CC BY-SA 4.0, Bernard Gagnon). Contemporary photographs of the 1971 \"Tent City\" are on hold pending a rights check (see RIGHTS-AUDIT.md)."
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "the-long-boom-and-its-ceremonies"
+  ]
+}

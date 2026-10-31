@@ -1,0 +1,45 @@
+{
+  "id": "wdl-first-majlis-1906",
+  "status": "review",
+  "title": "Representatives of the first Iranian Majlis in front of the military academy building, 1906",
+  "caption": "Representatives of the first Iranian Majlis (parliament) in front of the military academy building, 1906. World Digital Library item 11288.",
+  "image": {
+    "src": "/archive/plates/wdl-first-majlis-1906.jpg",
+    "alt": "Members of the first Iranian Majlis in front of the military academy, 1906",
+    "width": 960,
+    "height": 705,
+    "variants": [
+      {
+        "src": "/archive/plates/wdl-first-majlis-1906-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "year",
+    "value": "1906"
+  },
+  "credit": {
+    "line": "Unknown (photograph reproduced by the World Digital Library) / Wikimedia Commons / Public domain (PD-Art)",
+    "creator": "Unknown (photograph reproduced by the World Digital Library)",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ARepresentatives_of_the_First_Iranian_Parliament_WDL11288.png"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Unknown (photograph reproduced by the World Digital Library)",
+    "licence": "Public domain",
+    "evidence": "PD-Art via WDL. Photographer unrecorded in Commons; confirm the WDL record before publishing a named credit. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "likely",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc13"
+  ],
+  "useFor": [
+    "editorial",
+    "product"
+  ],
+  "captionBasis": "Commons description (WDL)."
+}

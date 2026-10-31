@@ -1,0 +1,21 @@
+{
+  "id": "1975-rastakhiz",
+  "status": "review",
+  "title": "One-party state; calendar change; Algiers Agreement",
+  "summary": "The Rastakhiz party created a one-party state; the Majlis changed the calendar to begin with Cyrus's reign; Iran and Iraq signed the Algiers Agreement.",
+  "date": {
+    "precision": "year",
+    "value": "1975"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc19"
+    },
+    {
+      "sourceId": "loc21"
+    }
+  ],
+  "entrySlug": "the-long-boom-and-its-ceremonies",
+  "plateIds": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1979-khomeini-return",
+  "status": "review",
+  "title": "Khomeini returns to Tehran",
+  "summary": "Received by millions; named Mehdi Bazargan prime minister of a provisional government on 5 February.",
+  "date": {
+    "precision": "day",
+    "value": "1979-02-01"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc22"
+    }
+  ],
+  "entrySlug": "revolution-1977-1979",
+  "plateIds": []
+}

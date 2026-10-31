@@ -1,0 +1,47 @@
+{
+  "id": "veresk-bridge-modern",
+  "status": "review",
+  "title": "Veresk Bridge on the Trans-Iranian Railway",
+  "caption": "Veresk Bridge on the Trans-Iranian Railway (photo 2017).",
+  "image": {
+    "src": "/archive/plates/veresk-bridge-modern.jpg",
+    "alt": "Veresk railway bridge in the Alborz mountains, Iran",
+    "width": 960,
+    "height": 593,
+    "variants": [
+      {
+        "src": "/archive/plates/veresk-bridge-modern-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "2017-10-31"
+  },
+  "credit": {
+    "line": "Kabelleger / David Gubler / Wikimedia Commons / CC BY-SA 4.0",
+    "creator": "Kabelleger / David Gubler",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ARAI_60-878_Veresk.jpg"
+  },
+  "rights": {
+    "status": "cc",
+    "holder": "Kabelleger / David Gubler",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "evidence": "CC BY-SA 4.0 (Kabelleger / David Gubler). Editorial only. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A-CC",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc15",
+    "iranica-higher-education",
+    "unesco1585"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title (RAI 60-878 Veresk). Confirm subject = Veresk Bridge on the Trans-Iranian Railway."
+}

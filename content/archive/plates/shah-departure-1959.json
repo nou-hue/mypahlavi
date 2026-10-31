@@ -1,0 +1,48 @@
+{
+  "id": "shah-departure-1959",
+  "status": "review",
+  "title": "Departure of the Shah of Iran from Schiphol after a state visit to the Netherlands, 23 May 1959",
+  "caption": "Departure of the Shah of Iran from Schiphol after a state visit to the Netherlands, 23 May 1959. Nationaal Archief / Anefo (Harry Pot).",
+  "image": {
+    "src": "/archive/plates/shah-departure-1959.jpg",
+    "alt": "The Shah of Iran and Prince Bernhard at Schiphol, 23 May 1959",
+    "width": 960,
+    "height": 760,
+    "variants": [
+      {
+        "src": "/archive/plates/shah-departure-1959-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1959-05-23"
+  },
+  "credit": {
+    "line": "Harry Pot / Anefo / Wikimedia Commons / CC0 (credit given as courtesy)",
+    "creator": "Harry Pot / Anefo",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AVertrek_van_de_Sjah_van_Perzi%C3%AB_van_Schiphol_v.l.n.r._prins_Bernhard%2C_Sjah_Moha%E2%80%A6%2C_Bestanddeelnr_910-3896.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Harry Pot / Anefo",
+    "licence": "CC0",
+    "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "evidence": "CC0. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc18",
+    "loc19",
+    "wp-mrp"
+  ],
+  "useFor": [
+    "editorial",
+    "product"
+  ],
+  "captionBasis": "Commons description (Anefo 910-3896). Names in the title are truncated; confirm the full list from the Anefo record."
+}

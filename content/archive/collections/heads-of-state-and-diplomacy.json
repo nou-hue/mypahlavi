@@ -1,0 +1,41 @@
+{
+  "slug": "heads-of-state-and-diplomacy",
+  "status": "review",
+  "title": "Diplomacy in photographs",
+  "description": "Meetings between Iranian and foreign leaders, 1943–1977, from national archives.",
+  "coverPlateId": "tehran-conference-1943",
+  "members": [
+    {
+      "kind": "plate",
+      "id": "tehran-conference-1943"
+    },
+    {
+      "kind": "plate",
+      "id": "truman-shah-1949"
+    },
+    {
+      "kind": "plate",
+      "id": "mossadegh-acheson-1951"
+    },
+    {
+      "kind": "plate",
+      "id": "mossadegh-supreme-court-1951"
+    },
+    {
+      "kind": "plate",
+      "id": "nixon-shah-1969"
+    },
+    {
+      "kind": "plate",
+      "id": "nixon-shah-1973"
+    },
+    {
+      "kind": "plate",
+      "id": "carter-shah-1977-review"
+    },
+    {
+      "kind": "plate",
+      "id": "carter-hussein-shah-1977-12-31"
+    }
+  ]
+}

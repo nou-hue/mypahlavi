@@ -1,0 +1,55 @@
+{
+  "slug": "trans-iranian-railway",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "Trans-Iranian Railway",
+  "standfirst": "1,394 km standard-gauge line opened fully in 1938.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Caspian Sea to Persian Gulf",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Caspian Sea to Persian Gulf"
+    }
+  ],
+  "plateIds": [
+    "veresk-bridge-1943",
+    "veresk-bridge-modern"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Connects the Caspian Sea in the north to the Persian Gulf in the south; opened fully in 1938[@unesco1585].",
+      "cite": [
+        {
+          "sourceId": "unesco1585"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Inscribed on the World Heritage List on 25 July 2021[@unesco1585].",
+      "cite": [
+        {
+          "sourceId": "unesco1585"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Built during Reza Shah's reign as part of the expansion of roads, railways and state factories[@loc15].",
+      "cite": [
+        {
+          "sourceId": "loc15"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "reza-shah-state-building"
+  ]
+}

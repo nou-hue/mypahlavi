@@ -1,0 +1,19 @@
+{
+  "id": "1967-1977-shiraz",
+  "status": "review",
+  "title": "Shiraz Arts Festival",
+  "summary": "Eleven consecutive annual festivals from 1967 to 1977 in Shiraz and at Persepolis, conceived by Queen Farah Pahlavi.",
+  "date": {
+    "precision": "year",
+    "value": "1967",
+    "end": "1977"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "iranica-shiraz-arts-festival"
+    }
+  ],
+  "entrySlug": "the-long-boom-and-its-ceremonies",
+  "plateIds": []
+}

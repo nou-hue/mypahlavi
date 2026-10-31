@@ -1,0 +1,44 @@
+{
+  "id": "mossadegh-acheson-1951",
+  "status": "review",
+  "title": "Dean Acheson with Prime Minister Mossadegh at Walter Reed Army Medical Center, Washington, 24 October 1951",
+  "caption": "Dean Acheson (right) with Prime Minister Mossadegh at Walter Reed Army Medical Center, Washington, 24 October 1951.",
+  "image": {
+    "src": "/archive/plates/mossadegh-acheson-1951.jpg",
+    "alt": "Secretary of State Dean Acheson conferring with Prime Minister Mossadegh at Walter Reed Army Medical Center, October 1951",
+    "width": 800,
+    "height": 627,
+    "variants": [
+      {
+        "src": "/archive/plates/mossadegh-acheson-1951-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1951-10-24"
+  },
+  "credit": {
+    "line": "U.S. Department of State (Truman Library record 66-8008) / Wikimedia Commons / Public domain (PD-USGov-DOS)",
+    "creator": "U.S. Department of State (Truman Library record 66-8008)",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APrime_Minister_Mohammed_Mossadegh_of_Iran_speaking_with_Dean_Acheson.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "U.S. Department of State (Truman Library record 66-8008)",
+    "licence": "Public domain",
+    "evidence": "As above. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "editorial-only",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc17"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons description; Truman Library record 66-8008."
+}

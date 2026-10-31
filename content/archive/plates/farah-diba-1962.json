@@ -1,0 +1,48 @@
+{
+  "id": "farah-diba-1962",
+  "status": "review",
+  "title": "Farah Diba, 2 May 1962",
+  "caption": "Farah Diba, 2 May 1962. Nationaal Archief / Anefo.",
+  "image": {
+    "src": "/archive/plates/farah-diba-1962.jpg",
+    "alt": "Farah Diba boarding a bus, 2 May 1962",
+    "width": 960,
+    "height": 969,
+    "variants": [
+      {
+        "src": "/archive/plates/farah-diba-1962-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1962-05-02"
+  },
+  "credit": {
+    "line": "Hugo van Gelderen / Anefo / Wikimedia Commons / CC0 (credit given as courtesy)",
+    "creator": "Hugo van Gelderen / Anefo",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AFarah_Diba_in_de_bus%2C_Bestanddeelnr_913-8568.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Hugo van Gelderen / Anefo",
+    "licence": "CC0",
+    "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "evidence": "CC0 (Nationaal Archief). Attribution not legally required; give credit anyway. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc18",
+    "loc19",
+    "wp-mrp"
+  ],
+  "useFor": [
+    "editorial",
+    "product"
+  ],
+  "captionBasis": "Commons description (Dutch Anefo record 913-8568)."
+}

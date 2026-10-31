@@ -1,0 +1,18 @@
+{
+  "id": "1978-azhari",
+  "status": "review",
+  "title": "Military government under General Azhari",
+  "summary": "The shah replaced Sharif-Emami with General Gholam-Reza Azhari after violent demonstrations in Tehran.",
+  "date": {
+    "precision": "day",
+    "value": "1978-11-05"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc21"
+    }
+  ],
+  "entrySlug": "revolution-1977-1979",
+  "plateIds": []
+}

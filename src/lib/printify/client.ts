@@ -1,3 +1,4 @@
+import "@/lib/preview-guard.mjs";
 /**
  * Printify REST client (server-only).
  * Docs: https://developers.printify.com/

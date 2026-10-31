@@ -1,0 +1,23 @@
+{
+  "id": "1977-tmoca",
+  "status": "review",
+  "title": "Tehran Museum of Contemporary Art opens",
+  "summary": "Inaugurated by Farah Pahlavi; designed by Kamran Diba.",
+  "date": {
+    "precision": "year",
+    "value": "1977"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "cubbon2019-tmoca"
+    },
+    {
+      "sourceId": "diba-tmoca"
+    }
+  ],
+  "entrySlug": "the-long-boom-and-its-ceremonies",
+  "plateIds": [
+    "tmoca"
+  ]
+}

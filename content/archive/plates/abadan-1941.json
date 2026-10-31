@@ -1,0 +1,32 @@
+{
+  "id": "abadan-1941",
+  "status": "draft",
+  "title": "British troops at Abadan during the Anglo-Soviet occupation of Iran, 4 September 1941",
+  "caption": "British troops at Abadan during the Anglo-Soviet occupation of Iran, 4 September 1941.",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "1941-09-04"
+  },
+  "credit": {
+    "line": "Geoffrey Keating / Wikimedia Commons / Public domain (PD-Scan)",
+    "creator": "Geoffrey Keating",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AAbadan_invasion_of_Iran.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Geoffrey Keating",
+    "licence": "Public domain",
+    "evidence": "HOLD (Content & SEO, 2026-10-31): Imperial War Museums photograph E 5323 (Geoffrey Keating). The IWM page offers it under the IWM Non-Commercial Licence, which excludes commercial and shop-bearing sites, bars uploading to Wikimedia and bars cropping or altering. A \"PD-Scan\" tag on Commons does not override that. mypahlavi carries a shop, so the licence does not permit this use. Release path: an IWM commercial licence, or a different image. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
+    "ukSafe": "verify",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "Commons title/description; IWM ref E 5323. Confirm caption against the IWM catalogue entry.",
+  "holdReason": "HOLD (Content & SEO, 2026-10-31): Imperial War Museums photograph E 5323 (Geoffrey Keating). The IWM page offers it under the IWM Non-Commercial Licence, which excludes commercial and shop-bearing sites, bars uploading to Wikimedia and bars cropping or altering. A \"PD-Scan\" tag on Commons does not override that. mypahlavi carries a shop, so the licence does not permit this use. Release path: an IWM commercial licence, or a different image.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
+}

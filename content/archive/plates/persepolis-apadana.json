@@ -1,0 +1,46 @@
+{
+  "id": "persepolis-apadana",
+  "status": "published",
+  "title": "The Apadana at Persepolis",
+  "caption": "The Apadana at Persepolis (photo 2016).",
+  "image": {
+    "src": "/archive/plates/persepolis-apadana.jpg",
+    "alt": "Columns of the Apadana at Persepolis",
+    "width": 960,
+    "height": 640,
+    "variants": [
+      {
+        "src": "/archive/plates/persepolis-apadana-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "2016-10-27"
+  },
+  "credit": {
+    "line": "Bernard Gagnon / Wikimedia Commons / CC BY-SA 4.0",
+    "creator": "Bernard Gagnon",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APersepolis_-_Apadana_01.jpg"
+  },
+  "rights": {
+    "status": "cc",
+    "holder": "Bernard Gagnon",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "evidence": "CC BY-SA 4.0. Wikimedia Commons file page (Location); checked on 2026-10-31.",
+    "tier": "A-CC",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31",
+    "restrictions": "Editorial use only."
+  },
+  "sourceIds": [
+    "loc19",
+    "loc21"
+  ],
+  "useFor": [
+    "editorial"
+  ]
+}

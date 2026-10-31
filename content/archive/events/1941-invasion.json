@@ -1,0 +1,23 @@
+{
+  "id": "1941-invasion",
+  "status": "review",
+  "title": "Anglo-Soviet invasion",
+  "summary": "Britain and the Soviet Union invaded Iran. Most sources give 25 August 1941; LoC gives 26 August.",
+  "date": {
+    "precision": "day",
+    "value": "1941-08-25"
+  },
+  "confidence": "disputed",
+  "perspective": "Accounts differ between the cited sources.",
+  "note": "Sources differ on this point. The entry above follows the cited sources; read them for the variance.",
+  "cite": [
+    {
+      "sourceId": "loc16"
+    },
+    {
+      "sourceId": "wp-anglosoviet"
+    }
+  ],
+  "entrySlug": "occupation-and-accession",
+  "plateIds": []
+}

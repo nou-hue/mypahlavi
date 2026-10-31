@@ -1,0 +1,17 @@
+{
+  "slug": "objects",
+  "status": "review",
+  "title": "Objects",
+  "description": "Coins, crowns and other objects with museum records.",
+  "coverPlateId": "rijksmuseum-gold-coin",
+  "members": [
+    {
+      "kind": "plate",
+      "id": "rijksmuseum-gold-coin"
+    },
+    {
+      "kind": "plate",
+      "id": "pahlavi-crown-1960s"
+    }
+  ]
+}

@@ -7,11 +7,16 @@ import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { useCartStore } from "@/lib/cart-store";
 
 const nav = [
-  { to: "/library", label: "Journal" },
-  { to: "/gallery", label: "Archive" },
-  { to: "/lineage", label: "Century" },
-  { to: "/editions", label: "Editions" },
+  { to: "/library", label: "Journal", also: [] as string[] },
+  // The archive hub; /gallery (the photographic gallery) lives under it.
+  { to: "/archive", label: "Archive", also: ["/gallery"] },
+  { to: "/lineage", label: "Century", also: [] as string[] },
+  { to: "/editions", label: "Editions", also: [] as string[] },
 ] as const;
+
+function isActive(pathname: string, item: (typeof nav)[number]) {
+  return [item.to, ...item.also].some((p) => pathname === p || pathname.startsWith(`${p}/`));
+}
 
 function bagLabel(count: number) {
   if (count <= 0) return "Bag";
@@ -85,8 +90,7 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
           <div className="hidden min-w-0 flex-1 items-center justify-end gap-7 lg:flex xl:gap-9">
             <nav className="flex items-center gap-6 xl:gap-8" aria-label="Primary">
               {nav.map((item) => {
-                const active =
-                  pathname === item.to || pathname.startsWith(`${item.to}/`);
+                const active = isActive(pathname, item);
                 return (
                   <Link
                     key={item.to}
@@ -171,8 +175,7 @@ export function SiteHeader({ variant = "default" }: { variant?: "default" | "gho
             aria-label="Mobile"
           >
             {nav.map((item) => {
-              const active =
-                pathname === item.to || pathname.startsWith(`${item.to}/`);
+              const active = isActive(pathname, item);
               return (
                 <Link
                   key={item.to}

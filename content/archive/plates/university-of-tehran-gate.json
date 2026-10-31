@@ -1,0 +1,47 @@
+{
+  "id": "university-of-tehran-gate",
+  "status": "review",
+  "title": "Main entrance gate, University of Tehran",
+  "caption": "Main entrance gate, University of Tehran (photo 2020).",
+  "image": {
+    "src": "/archive/plates/university-of-tehran-gate.jpg",
+    "alt": "Main entrance gate of the University of Tehran",
+    "width": 960,
+    "height": 540,
+    "variants": [
+      {
+        "src": "/archive/plates/university-of-tehran-gate-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "2018-02-05"
+  },
+  "credit": {
+    "line": "Armin Abbasi / Wikimedia Commons / CC BY-SA 4.0",
+    "creator": "Armin Abbasi",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AUniversity_of_Tehran_Main_Entrance_Gate.jpg"
+  },
+  "rights": {
+    "status": "cc",
+    "holder": "Armin Abbasi",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "evidence": "CC BY-SA 4.0 (Armin Abbasi). Editorial only. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A-CC",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc15",
+    "iranica-higher-education",
+    "wp-reza"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title."
+}

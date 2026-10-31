@@ -1,0 +1,15 @@
+{
+  "id": "iranica-shiraz-arts-festival",
+  "status": "published",
+  "type": "reference",
+  "title": "Shiraz Arts Festival",
+  "creator": "Hormoz Farhat",
+  "publisher": "Encyclopaedia Iranica (online edition)",
+  "date": {
+    "precision": "day",
+    "value": "2015-12-02"
+  },
+  "url": "https://www.iranicaonline.org/articles/shiraz-arts-festival/",
+  "accessed": "2026-10-31",
+  "tier": "A"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1965-mansur",
+  "status": "review",
+  "title": "Prime Minister Mansur assassinated",
+  "summary": "Hasan Ali Mansur was assassinated; Amir Abbas Hoveyda became prime minister and served for twelve years.",
+  "date": {
+    "precision": "day",
+    "value": "1965-01-21"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc19"
+    }
+  ],
+  "entrySlug": "the-long-boom-and-its-ceremonies",
+  "plateIds": []
+}

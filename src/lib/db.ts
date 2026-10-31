@@ -1,3 +1,4 @@
+import "@/lib/preview-guard.mjs";
 /** Which database backend is active. */
 export type DbSource = "neon" | "pglite";
 

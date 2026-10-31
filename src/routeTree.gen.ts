@@ -18,7 +18,10 @@ import { Route as LibraryRouteImport } from './routes/library'
 import { Route as LineageRouteImport } from './routes/lineage'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as PatronageRouteImport } from './routes/patronage'
+import { Route as ShopRouteImport } from './routes/shop'
 import { Route as VaultRouteImport } from './routes/vault'
+import { Route as ArchiveIndexRouteImport } from './routes/archive.index'
+import { Route as ArchiveTimelineRouteImport } from './routes/archive.timeline'
 import { Route as EditionsProductIdRouteImport } from './routes/editions_.$productId'
 import { Route as LibrarySlugRouteImport } from './routes/library_.$slug'
 import { Route as OrderOrderIdRouteImport } from './routes/order.$orderId'
@@ -26,10 +29,19 @@ import { Route as VaultRoomRouteImport } from './routes/vault_.$room'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiCircleCheckoutRouteImport } from './routes/api/circle/checkout'
 import { Route as ApiCircleStatusRouteImport } from './routes/api/circle/status'
+import { Route as ApiMarketingGoogleRouteImport } from './routes/api/marketing/google'
+import { Route as ApiMarketingPinterestRouteImport } from './routes/api/marketing/pinterest'
 import { Route as ApiShopCatalogRouteImport } from './routes/api/shop/catalog'
 import { Route as ApiShopCheckoutRouteImport } from './routes/api/shop/checkout'
 import { Route as ApiShopStatusRouteImport } from './routes/api/shop/status'
 import { Route as ApiShopWebhookRouteImport } from './routes/api/shop/webhook'
+import { Route as ArchiveCollectionsIndexRouteImport } from './routes/archive.collections.index'
+import { Route as ArchiveCollectionsSlugRouteImport } from './routes/archive.collections.$slug'
+import { Route as ArchiveEntriesIndexRouteImport } from './routes/archive.entries.index'
+import { Route as ArchiveEntriesSlugRouteImport } from './routes/archive.entries.$slug'
+import { Route as ArchivePlatesIndexRouteImport } from './routes/archive.plates.index'
+import { Route as ArchivePlatesIdRouteImport } from './routes/archive.plates.$id'
+import { Route as ArchiveSourcesIndexRouteImport } from './routes/archive.sources.index'
 import { Route as ApiShopOrderOrderIdRouteImport } from './routes/api/shop/order.$orderId'
 import { Route as ApiShopPrintifyProductsRouteImport } from './routes/api/shop/printify/products'
 
@@ -78,9 +90,24 @@ const PatronageRoute = PatronageRouteImport.update({
   path: '/patronage',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VaultRoute = VaultRouteImport.update({
   id: '/vault',
   path: '/vault',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiveIndexRoute = ArchiveIndexRouteImport.update({
+  id: '/archive/',
+  path: '/archive/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiveTimelineRoute = ArchiveTimelineRouteImport.update({
+  id: '/archive/timeline',
+  path: '/archive/timeline',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EditionsProductIdRoute = EditionsProductIdRouteImport.update({
@@ -118,6 +145,16 @@ const ApiCircleStatusRoute = ApiCircleStatusRouteImport.update({
   path: '/api/circle/status',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiMarketingGoogleRoute = ApiMarketingGoogleRouteImport.update({
+  id: '/api/marketing/google',
+  path: '/api/marketing/google',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiMarketingPinterestRoute = ApiMarketingPinterestRouteImport.update({
+  id: '/api/marketing/pinterest',
+  path: '/api/marketing/pinterest',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiShopCatalogRoute = ApiShopCatalogRouteImport.update({
   id: '/api/shop/catalog',
   path: '/api/shop/catalog',
@@ -136,6 +173,41 @@ const ApiShopStatusRoute = ApiShopStatusRouteImport.update({
 const ApiShopWebhookRoute = ApiShopWebhookRouteImport.update({
   id: '/api/shop/webhook',
   path: '/api/shop/webhook',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiveCollectionsIndexRoute = ArchiveCollectionsIndexRouteImport.update({
+  id: '/archive/collections/',
+  path: '/archive/collections/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiveCollectionsSlugRoute = ArchiveCollectionsSlugRouteImport.update({
+  id: '/archive/collections/$slug',
+  path: '/archive/collections/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiveEntriesIndexRoute = ArchiveEntriesIndexRouteImport.update({
+  id: '/archive/entries/',
+  path: '/archive/entries/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiveEntriesSlugRoute = ArchiveEntriesSlugRouteImport.update({
+  id: '/archive/entries/$slug',
+  path: '/archive/entries/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchivePlatesIndexRoute = ArchivePlatesIndexRouteImport.update({
+  id: '/archive/plates/',
+  path: '/archive/plates/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchivePlatesIdRoute = ArchivePlatesIdRouteImport.update({
+  id: '/archive/plates/$id',
+  path: '/archive/plates/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiveSourcesIndexRoute = ArchiveSourcesIndexRouteImport.update({
+  id: '/archive/sources/',
+  path: '/archive/sources/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiShopOrderOrderIdRoute = ApiShopOrderOrderIdRouteImport.update({
@@ -159,18 +231,30 @@ export interface FileRoutesByFullPath {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/shop': typeof ShopRoute
   '/vault': typeof VaultRoute
+  '/archive/timeline': typeof ArchiveTimelineRoute
   '/editions/$productId': typeof EditionsProductIdRoute
   '/library/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/vault/$room': typeof VaultRoomRoute
+  '/archive/': typeof ArchiveIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/circle/checkout': typeof ApiCircleCheckoutRoute
   '/api/circle/status': typeof ApiCircleStatusRoute
+  '/api/marketing/google': typeof ApiMarketingGoogleRoute
+  '/api/marketing/pinterest': typeof ApiMarketingPinterestRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
   '/api/shop/webhook': typeof ApiShopWebhookRoute
+  '/archive/collections/$slug': typeof ArchiveCollectionsSlugRoute
+  '/archive/entries/$slug': typeof ArchiveEntriesSlugRoute
+  '/archive/plates/$id': typeof ArchivePlatesIdRoute
+  '/archive/collections/': typeof ArchiveCollectionsIndexRoute
+  '/archive/entries/': typeof ArchiveEntriesIndexRoute
+  '/archive/plates/': typeof ArchivePlatesIndexRoute
+  '/archive/sources/': typeof ArchiveSourcesIndexRoute
   '/api/shop/order/$orderId': typeof ApiShopOrderOrderIdRoute
   '/api/shop/printify/products': typeof ApiShopPrintifyProductsRoute
 }
@@ -184,18 +268,30 @@ export interface FileRoutesByTo {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/shop': typeof ShopRoute
   '/vault': typeof VaultRoute
+  '/archive/timeline': typeof ArchiveTimelineRoute
   '/editions/$productId': typeof EditionsProductIdRoute
   '/library/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/vault/$room': typeof VaultRoomRoute
+  '/archive': typeof ArchiveIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/circle/checkout': typeof ApiCircleCheckoutRoute
   '/api/circle/status': typeof ApiCircleStatusRoute
+  '/api/marketing/google': typeof ApiMarketingGoogleRoute
+  '/api/marketing/pinterest': typeof ApiMarketingPinterestRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
   '/api/shop/webhook': typeof ApiShopWebhookRoute
+  '/archive/collections/$slug': typeof ArchiveCollectionsSlugRoute
+  '/archive/entries/$slug': typeof ArchiveEntriesSlugRoute
+  '/archive/plates/$id': typeof ArchivePlatesIdRoute
+  '/archive/collections': typeof ArchiveCollectionsIndexRoute
+  '/archive/entries': typeof ArchiveEntriesIndexRoute
+  '/archive/plates': typeof ArchivePlatesIndexRoute
+  '/archive/sources': typeof ArchiveSourcesIndexRoute
   '/api/shop/order/$orderId': typeof ApiShopOrderOrderIdRoute
   '/api/shop/printify/products': typeof ApiShopPrintifyProductsRoute
 }
@@ -210,18 +306,30 @@ export interface FileRoutesById {
   '/lineage': typeof LineageRoute
   '/login': typeof LoginRoute
   '/patronage': typeof PatronageRoute
+  '/shop': typeof ShopRoute
   '/vault': typeof VaultRoute
+  '/archive/timeline': typeof ArchiveTimelineRoute
   '/editions_/$productId': typeof EditionsProductIdRoute
   '/library_/$slug': typeof LibrarySlugRoute
   '/order/$orderId': typeof OrderOrderIdRoute
   '/vault_/$room': typeof VaultRoomRoute
+  '/archive/': typeof ArchiveIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/circle/checkout': typeof ApiCircleCheckoutRoute
   '/api/circle/status': typeof ApiCircleStatusRoute
+  '/api/marketing/google': typeof ApiMarketingGoogleRoute
+  '/api/marketing/pinterest': typeof ApiMarketingPinterestRoute
   '/api/shop/catalog': typeof ApiShopCatalogRoute
   '/api/shop/checkout': typeof ApiShopCheckoutRoute
   '/api/shop/status': typeof ApiShopStatusRoute
   '/api/shop/webhook': typeof ApiShopWebhookRoute
+  '/archive/collections/$slug': typeof ArchiveCollectionsSlugRoute
+  '/archive/entries/$slug': typeof ArchiveEntriesSlugRoute
+  '/archive/plates/$id': typeof ArchivePlatesIdRoute
+  '/archive/collections/': typeof ArchiveCollectionsIndexRoute
+  '/archive/entries/': typeof ArchiveEntriesIndexRoute
+  '/archive/plates/': typeof ArchivePlatesIndexRoute
+  '/archive/sources/': typeof ArchiveSourcesIndexRoute
   '/api/shop/order/$orderId': typeof ApiShopOrderOrderIdRoute
   '/api/shop/printify/products': typeof ApiShopPrintifyProductsRoute
 }
@@ -237,18 +345,30 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/shop'
     | '/vault'
+    | '/archive/timeline'
     | '/editions/$productId'
     | '/library/$slug'
     | '/order/$orderId'
     | '/vault/$room'
+    | '/archive/'
     | '/api/auth/$'
     | '/api/circle/checkout'
     | '/api/circle/status'
+    | '/api/marketing/google'
+    | '/api/marketing/pinterest'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
     | '/api/shop/webhook'
+    | '/archive/collections/$slug'
+    | '/archive/entries/$slug'
+    | '/archive/plates/$id'
+    | '/archive/collections/'
+    | '/archive/entries/'
+    | '/archive/plates/'
+    | '/archive/sources/'
     | '/api/shop/order/$orderId'
     | '/api/shop/printify/products'
   fileRoutesByTo: FileRoutesByTo
@@ -262,18 +382,30 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/shop'
     | '/vault'
+    | '/archive/timeline'
     | '/editions/$productId'
     | '/library/$slug'
     | '/order/$orderId'
     | '/vault/$room'
+    | '/archive'
     | '/api/auth/$'
     | '/api/circle/checkout'
     | '/api/circle/status'
+    | '/api/marketing/google'
+    | '/api/marketing/pinterest'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
     | '/api/shop/webhook'
+    | '/archive/collections/$slug'
+    | '/archive/entries/$slug'
+    | '/archive/plates/$id'
+    | '/archive/collections'
+    | '/archive/entries'
+    | '/archive/plates'
+    | '/archive/sources'
     | '/api/shop/order/$orderId'
     | '/api/shop/printify/products'
   id:
@@ -287,18 +419,30 @@ export interface FileRouteTypes {
     | '/lineage'
     | '/login'
     | '/patronage'
+    | '/shop'
     | '/vault'
+    | '/archive/timeline'
     | '/editions_/$productId'
     | '/library_/$slug'
     | '/order/$orderId'
     | '/vault_/$room'
+    | '/archive/'
     | '/api/auth/$'
     | '/api/circle/checkout'
     | '/api/circle/status'
+    | '/api/marketing/google'
+    | '/api/marketing/pinterest'
     | '/api/shop/catalog'
     | '/api/shop/checkout'
     | '/api/shop/status'
     | '/api/shop/webhook'
+    | '/archive/collections/$slug'
+    | '/archive/entries/$slug'
+    | '/archive/plates/$id'
+    | '/archive/collections/'
+    | '/archive/entries/'
+    | '/archive/plates/'
+    | '/archive/sources/'
     | '/api/shop/order/$orderId'
     | '/api/shop/printify/products'
   fileRoutesById: FileRoutesById
@@ -313,18 +457,30 @@ export interface RootRouteChildren {
   LineageRoute: typeof LineageRoute
   LoginRoute: typeof LoginRoute
   PatronageRoute: typeof PatronageRoute
+  ShopRoute: typeof ShopRoute
   VaultRoute: typeof VaultRoute
+  ArchiveTimelineRoute: typeof ArchiveTimelineRoute
   EditionsProductIdRoute: typeof EditionsProductIdRoute
   LibrarySlugRoute: typeof LibrarySlugRoute
   OrderOrderIdRoute: typeof OrderOrderIdRoute
   VaultRoomRoute: typeof VaultRoomRoute
+  ArchiveIndexRoute: typeof ArchiveIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiCircleCheckoutRoute: typeof ApiCircleCheckoutRoute
   ApiCircleStatusRoute: typeof ApiCircleStatusRoute
+  ApiMarketingGoogleRoute: typeof ApiMarketingGoogleRoute
+  ApiMarketingPinterestRoute: typeof ApiMarketingPinterestRoute
   ApiShopCatalogRoute: typeof ApiShopCatalogRoute
   ApiShopCheckoutRoute: typeof ApiShopCheckoutRoute
   ApiShopStatusRoute: typeof ApiShopStatusRoute
   ApiShopWebhookRoute: typeof ApiShopWebhookRoute
+  ArchiveCollectionsSlugRoute: typeof ArchiveCollectionsSlugRoute
+  ArchiveEntriesSlugRoute: typeof ArchiveEntriesSlugRoute
+  ArchivePlatesIdRoute: typeof ArchivePlatesIdRoute
+  ArchiveCollectionsIndexRoute: typeof ArchiveCollectionsIndexRoute
+  ArchiveEntriesIndexRoute: typeof ArchiveEntriesIndexRoute
+  ArchivePlatesIndexRoute: typeof ArchivePlatesIndexRoute
+  ArchiveSourcesIndexRoute: typeof ArchiveSourcesIndexRoute
   ApiShopOrderOrderIdRoute: typeof ApiShopOrderOrderIdRoute
   ApiShopPrintifyProductsRoute: typeof ApiShopPrintifyProductsRoute
 }
@@ -394,11 +550,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PatronageRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/vault': {
       id: '/vault'
       path: '/vault'
       fullPath: '/vault'
       preLoaderRoute: typeof VaultRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/': {
+      id: '/archive/'
+      path: '/archive'
+      fullPath: '/archive/'
+      preLoaderRoute: typeof ArchiveIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/timeline': {
+      id: '/archive/timeline'
+      path: '/archive/timeline'
+      fullPath: '/archive/timeline'
+      preLoaderRoute: typeof ArchiveTimelineRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/editions_/$productId': {
@@ -450,6 +627,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiCircleStatusRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/marketing/google': {
+      id: '/api/marketing/google'
+      path: '/api/marketing/google'
+      fullPath: '/api/marketing/google'
+      preLoaderRoute: typeof ApiMarketingGoogleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/marketing/pinterest': {
+      id: '/api/marketing/pinterest'
+      path: '/api/marketing/pinterest'
+      fullPath: '/api/marketing/pinterest'
+      preLoaderRoute: typeof ApiMarketingPinterestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/shop/catalog': {
       id: '/api/shop/catalog'
       path: '/api/shop/catalog'
@@ -476,6 +667,55 @@ declare module '@tanstack/react-router' {
       path: '/api/shop/webhook'
       fullPath: '/api/shop/webhook'
       preLoaderRoute: typeof ApiShopWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/collections/': {
+      id: '/archive/collections/'
+      path: '/archive/collections'
+      fullPath: '/archive/collections/'
+      preLoaderRoute: typeof ArchiveCollectionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/collections/$slug': {
+      id: '/archive/collections/$slug'
+      path: '/archive/collections/$slug'
+      fullPath: '/archive/collections/$slug'
+      preLoaderRoute: typeof ArchiveCollectionsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/entries/': {
+      id: '/archive/entries/'
+      path: '/archive/entries'
+      fullPath: '/archive/entries/'
+      preLoaderRoute: typeof ArchiveEntriesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/entries/$slug': {
+      id: '/archive/entries/$slug'
+      path: '/archive/entries/$slug'
+      fullPath: '/archive/entries/$slug'
+      preLoaderRoute: typeof ArchiveEntriesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/plates/': {
+      id: '/archive/plates/'
+      path: '/archive/plates'
+      fullPath: '/archive/plates/'
+      preLoaderRoute: typeof ArchivePlatesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/plates/$id': {
+      id: '/archive/plates/$id'
+      path: '/archive/plates/$id'
+      fullPath: '/archive/plates/$id'
+      preLoaderRoute: typeof ArchivePlatesIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive/sources/': {
+      id: '/archive/sources/'
+      path: '/archive/sources'
+      fullPath: '/archive/sources/'
+      preLoaderRoute: typeof ArchiveSourcesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/shop/order/$orderId': {
@@ -505,30 +745,33 @@ const rootRouteChildren: RootRouteChildren = {
   LineageRoute: LineageRoute,
   LoginRoute: LoginRoute,
   PatronageRoute: PatronageRoute,
+  ShopRoute: ShopRoute,
   VaultRoute: VaultRoute,
+  ArchiveTimelineRoute: ArchiveTimelineRoute,
   EditionsProductIdRoute: EditionsProductIdRoute,
   LibrarySlugRoute: LibrarySlugRoute,
   OrderOrderIdRoute: OrderOrderIdRoute,
   VaultRoomRoute: VaultRoomRoute,
+  ArchiveIndexRoute: ArchiveIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiCircleCheckoutRoute: ApiCircleCheckoutRoute,
   ApiCircleStatusRoute: ApiCircleStatusRoute,
+  ApiMarketingGoogleRoute: ApiMarketingGoogleRoute,
+  ApiMarketingPinterestRoute: ApiMarketingPinterestRoute,
   ApiShopCatalogRoute: ApiShopCatalogRoute,
   ApiShopCheckoutRoute: ApiShopCheckoutRoute,
   ApiShopStatusRoute: ApiShopStatusRoute,
   ApiShopWebhookRoute: ApiShopWebhookRoute,
+  ArchiveCollectionsSlugRoute: ArchiveCollectionsSlugRoute,
+  ArchiveEntriesSlugRoute: ArchiveEntriesSlugRoute,
+  ArchivePlatesIdRoute: ArchivePlatesIdRoute,
+  ArchiveCollectionsIndexRoute: ArchiveCollectionsIndexRoute,
+  ArchiveEntriesIndexRoute: ArchiveEntriesIndexRoute,
+  ArchivePlatesIndexRoute: ArchivePlatesIndexRoute,
+  ArchiveSourcesIndexRoute: ArchiveSourcesIndexRoute,
   ApiShopOrderOrderIdRoute: ApiShopOrderOrderIdRoute,
   ApiShopPrintifyProductsRoute: ApiShopPrintifyProductsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

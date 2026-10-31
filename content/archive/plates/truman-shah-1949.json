@@ -1,0 +1,44 @@
+{
+  "id": "truman-shah-1949",
+  "status": "review",
+  "title": "President Truman with the Shah of Iran, 16 November 1949",
+  "caption": "President Truman with the Shah of Iran, 16 November 1949 (photo: Abbie Rowe).",
+  "image": {
+    "src": "/archive/plates/truman-shah-1949.jpg",
+    "alt": "President Truman with the Shah of Iran and Secretary of State, 16 November 1949",
+    "width": 960,
+    "height": 774,
+    "variants": [
+      {
+        "src": "/archive/plates/truman-shah-1949-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1949-11-16"
+  },
+  "credit": {
+    "line": "Abbie Rowe / Wikimedia Commons / Public domain (NARA-image-full, PD-USGov)",
+    "creator": "Abbie Rowe",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APhotograph_of_President_Truman%2C_the_Shah_of_Iran%2C_Secretary_of_State_Dean_Acheson%2C_and_other_dignitaries_standing_at..._-_NARA_-_200144.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Abbie Rowe",
+    "licence": "Public domain",
+    "evidence": "NARA, Abbie Rowe: PD-USGov. Full Commons title mentions the Secretary of State; confirm names on the NARA record. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "editorial-only",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc17"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title/date; NARA."
+}

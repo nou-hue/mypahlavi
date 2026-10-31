@@ -1,0 +1,46 @@
+{
+  "id": "dar-ul-funun",
+  "status": "review",
+  "title": "Dar ul-Funun, Tehran",
+  "caption": "Dar ul-Funun, Tehran (photo 2017).",
+  "image": {
+    "src": "/archive/plates/dar-ul-funun.jpg",
+    "alt": "Exterior of the Dar ul-Funun building in Tehran",
+    "width": 960,
+    "height": 574,
+    "variants": [
+      {
+        "src": "/archive/plates/dar-ul-funun-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "2017-11-20"
+  },
+  "credit": {
+    "line": "Armin Abbasi / Wikimedia Commons / CC BY-SA 4.0",
+    "creator": "Armin Abbasi",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ADar_ul-Funun%2C_Tehran%2C_Iran.jpg"
+  },
+  "rights": {
+    "status": "cc",
+    "holder": "Armin Abbasi",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "evidence": "Contemporary photo; CC BY-SA 4.0 needs attribution and share-alike on adaptations. NOT for product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A-CC",
+    "ukSafe": "true",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "unesco1585",
+    "loc15"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons title."
+}

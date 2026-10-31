@@ -1,0 +1,32 @@
+{
+  "id": "revolutionaries-1979-hold",
+  "status": "draft",
+  "title": "—",
+  "caption": "—",
+  "image": null,
+  "date": {
+    "precision": "day",
+    "value": "2012-12-29"
+  },
+  "credit": {
+    "line": "Unknown author / Wikimedia Commons / Public domain (PD-IRAN)",
+    "creator": "Unknown author",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AIranian_Revolutionaries_Shahreza_Ave_1979.jpg"
+  },
+  "rights": {
+    "status": "pending",
+    "holder": "Unknown author",
+    "licence": "Public domain",
+    "evidence": "HOLD: 'PD-Iran' with uploader-only source. Do not use. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "C",
+    "ukSafe": "false",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [],
+  "useFor": [],
+  "captionBasis": "—",
+  "holdReason": "HOLD: 'PD-Iran' with uploader-only source. Do not use. Reviewed 2026-10-31: stays on hold; the Commons tag is Iranian-law PD, which does not establish UK status, and no CC licence applies.",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31"
+}

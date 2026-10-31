@@ -1,0 +1,182 @@
+{
+ "version": 1,
+ "places": [
+  {
+   "slug": "persepolis",
+   "name": "Persepolis",
+   "region": "Fars",
+   "summary": "Ceremonial capital of the Achaemenid Empire; inscribed by UNESCO in 1979.",
+   "facts": [
+    {
+     "t": "Inscribed on the UNESCO World Heritage List in 1979.",
+     "s": [
+      "unesco114"
+     ]
+    },
+    {
+     "t": "Venue for part of the October 1971 celebrations of 2,500 years of the Iranian monarchy; they opened on 12 October at the tomb of Cyrus at Pasargadae.",
+     "s": [
+      "hemmati2015",
+      "lacma-abbas1971",
+      "loc19"
+     ]
+    }
+   ],
+   "images": [
+    "persepolis-apadana"
+   ],
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "editorial": [
+    "persepolis-capitals-and-1971"
+   ]
+  },
+  {
+   "slug": "golestan-palace",
+   "name": "Golestan Palace",
+   "region": "Tehran",
+   "summary": "Qajar-era royal complex in the historic core of Tehran.",
+   "facts": [
+    {
+     "t": "Originally built in the Safavid period; took its most characteristic form in the 19th century as the Qajar family's royal residence and seat of power.",
+     "s": [
+      "unesco1422"
+     ]
+    },
+    {
+     "t": "Inscribed on the World Heritage List on 23 June 2013.",
+     "s": [
+      "unesco1422"
+     ]
+    }
+   ],
+   "images": [
+    "golestan-palace"
+   ],
+   "sections": [
+    "constitutional-revolution-to-pahlavi-accession"
+   ],
+   "editorial": []
+  },
+  {
+   "slug": "trans-iranian-railway",
+   "name": "Trans-Iranian Railway",
+   "region": "Caspian Sea to Persian Gulf",
+   "summary": "1,394 km standard-gauge line opened fully in 1938.",
+   "facts": [
+    {
+     "t": "Connects the Caspian Sea in the north to the Persian Gulf in the south; opened fully in 1938.",
+     "s": [
+      "unesco1585"
+     ]
+    },
+    {
+     "t": "Inscribed on the World Heritage List on 25 July 2021.",
+     "s": [
+      "unesco1585"
+     ]
+    },
+    {
+     "t": "Built during Reza Shah's reign as part of the expansion of roads, railways and state factories.",
+     "s": [
+      "loc15"
+     ]
+    }
+   ],
+   "images": [
+    "veresk-bridge-1943",
+    "veresk-bridge-modern"
+   ],
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "editorial": []
+  },
+  {
+   "slug": "university-of-tehran",
+   "name": "University of Tehran",
+   "region": "Tehran",
+   "summary": "Iran's first university, inaugurated on 4 February 1935 under a law introduced in 1934.",
+   "facts": [
+    {
+     "t": "A law establishing the university was introduced in the Majlis on 13 March 1934; the university was inaugurated on 4 February 1935.",
+     "s": [
+      "iranica-higher-education"
+     ]
+    },
+    {
+     "t": "The Library of Congress gives 1935 for its establishment as the first European-style university.",
+     "s": [
+      "loc15"
+     ]
+    }
+   ],
+   "images": [
+    "university-of-tehran-gate"
+   ],
+   "sections": [
+    "reza-shah-state-building"
+   ],
+   "editorial": [
+    "how-this-archive-handles-contested-facts"
+   ],
+   "flag": "1934 law, 1935 opening"
+  },
+  {
+   "slug": "azadi-tower",
+   "name": "Azadi (Shahyad) Tower",
+   "region": "Tehran",
+   "summary": "Marble-clad monument inaugurated in October 1971, designed by Hossein Amanat.",
+   "facts": [
+    {
+     "t": "Designed by Hossein Amanat, whose entry was chosen in a national competition announced in September 1966; originally the Shahyad Aryamehr Monument, renamed Azadi after 1979.",
+     "s": [
+      "hemmati2015"
+     ]
+    },
+    {
+     "t": "Inaugurated at sunset on 16 October 1971 as part of the celebrations (one thesis, citing the contemporary press; other accounts may give 17 October).",
+     "s": [
+      "hemmati2015"
+     ]
+    }
+   ],
+   "images": [
+    "azadi-tower"
+   ],
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "editorial": [],
+   "flag": "inauguration day differs by source"
+  },
+  {
+   "slug": "tehran-museum-of-contemporary-art",
+   "name": "Tehran Museum of Contemporary Art",
+   "region": "Tehran",
+   "summary": "Museum inaugurated in 1977 and designed by Kamran Diba.",
+   "facts": [
+    {
+     "t": "Inaugurated by Farah Pahlavi in 1977; designed by Kamran Diba.",
+     "s": [
+      "cubbon2019-tmoca"
+     ]
+    },
+    {
+     "t": "The architect dates the project 1967-1976 and was interim director for eighteen months after completion.",
+     "s": [
+      "diba-tmoca"
+     ]
+    }
+   ],
+   "images": [
+    "tmoca"
+   ],
+   "sections": [
+    "the-long-boom-and-its-ceremonies"
+   ],
+   "editorial": []
+  }
+ ]
+}

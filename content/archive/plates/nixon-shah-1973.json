@@ -1,0 +1,45 @@
+{
+  "id": "nixon-shah-1973",
+  "status": "published",
+  "title": "President Nixon and the Shah of Iran in the Oval Office, 24 July 1973 (photo: Robert L",
+  "caption": "President Nixon and the Shah of Iran in the Oval Office, 24 July 1973 (photo: Robert L. Knudsen).",
+  "image": {
+    "src": "/archive/plates/nixon-shah-1973.jpg",
+    "alt": "President Nixon and the Shah of Iran in the Oval Office, 24 July 1973",
+    "width": 960,
+    "height": 657,
+    "variants": [
+      {
+        "src": "/archive/plates/nixon-shah-1973-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1973-07-24"
+  },
+  "credit": {
+    "line": "Robert LeRoy Knudsen / Wikimedia Commons / Public domain (NARA-image-full, PD-USGov)",
+    "creator": "Robert LeRoy Knudsen",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APresident_Nixon_and_the_Shah_of_Iran_in_the_Oval_Office_-_NARA_-_194536.tif"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Robert LeRoy Knudsen",
+    "licence": "Public domain",
+    "evidence": "Public domain. Wikimedia Commons file page (NARA-Author, NARA-cooperation, NARA-image-full, PD-USGov); checked on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "editorial-only",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31",
+    "restrictions": "Editorial use only."
+  },
+  "sourceIds": [
+    "loc19",
+    "iranica-crown-jewels"
+  ],
+  "useFor": [
+    "editorial"
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "the-long-boom-and-its-ceremonies",
+  "status": "published",
+  "byline": "Content & SEO",
+  "reviewedBy": "Content & SEO",
+  "reviewedOn": "2026-10-31",
+  "template": "essay",
+  "kind": "section",
+  "order": 6,
+  "period": "1964–1976",
+  "title": "The long boom and its ceremonies",
+  "standfirst": "Economic growth, a coronation, the 1971 celebrations, new institutions and a narrowing political space.",
+  "date": {
+    "precision": "year",
+    "value": "1964",
+    "end": "1976"
+  },
+  "seoTitle": "Iran 1964–1976: growth, ceremony, one-party rule",
+  "metaDescription": "Sourced overview of the Hoveyda years: growth, the 1967 coronation, the 1971 Persepolis celebrations, culture and political controls.",
+  "facts": [
+    {
+      "label": "Period",
+      "value": "1964–1976"
+    }
+  ],
+  "plateIds": [
+    "nixon-shah-1969",
+    "nixon-shah-1973",
+    "rijksmuseum-gold-coin",
+    "pahlavi-crown-1960s",
+    "persepolis-apadana",
+    "azadi-tower",
+    "tmoca"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "Growth and control"
+    },
+    {
+      "type": "paragraph",
+      "text": "After Prime Minister Mansur was assassinated on 21 January 1965, Amir Abbas Hoveyda took office and served for twelve years, the longest term of any modern Iranian prime minister [@loc19]. The Library of Congress describes a period of impressive economic growth and relative political stability, helped by the land distribution programme, expanding jobs and moderate inflation between 1964 and 1973 [@loc19]. It also records that the 1967 and 1971 elections, which the government party Iran Novin won by large majorities, were carefully controlled, with only the Mardom Party and, later, the Pan-Iranist Party allowed to take part alongside it, and that only 10 per cent of eligible voters in Tehran voted in the 1968 municipal elections [@loc19].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "nixon-shah-1973"
+    },
+    {
+      "type": "heading",
+      "text": "Succession and coronation"
+    },
+    {
+      "type": "paragraph",
+      "text": "A constituent assembly in September 1967 provided for the queen to act as regent if the crown prince had not come of age [@loc19]. In October 1967 the shah celebrated his long-postponed coronation and, like his father, placed the crown on his own head; the Majlis conferred the title Arya-Mehr, \"Light of the Aryans\" [@loc19]. The coronation took place on 26 October 1967, and the shah wore the Pahlavi crown that his father had commissioned for his own coronation in 1926 [@iranica-crown-jewels]. The Library of Congress adds that this glorification of the monarchy was not universally popular [@loc19].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        },
+        {
+          "sourceId": "iranica-crown-jewels"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "rijksmuseum-gold-coin"
+    },
+    {
+      "type": "heading",
+      "text": "Persepolis, 1971"
+    },
+    {
+      "type": "paragraph",
+      "text": "Celebrations in 1971 marked what was presented as 2,500 years of uninterrupted monarchy and the twenty-fifth centennial of Cyrus the Great's founding of the empire [@loc19]. They opened on 12 October 1971 with the shah's homage at the tomb of Cyrus at Pasargadae [@lacma-abbas1971], moved to Persepolis and ended in Tehran [@hemmati2015]. The Library of Congress notes that the ceremonies drew adverse domestic comment, that honoured guests were foreign heads of state, and that Khomeini issued a declaration condemning the celebrations [@loc19]. UNESCO inscribed Persepolis on the World Heritage List in 1979 [@unesco114]. See the editorial piece on the 1971 celebrations.",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        },
+        {
+          "sourceId": "lacma-abbas1971"
+        },
+        {
+          "sourceId": "hemmati2015"
+        },
+        {
+          "sourceId": "unesco114"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "pahlavi-crown-1960s"
+    },
+    {
+      "type": "heading",
+      "text": "Institutions and objects"
+    },
+    {
+      "type": "paragraph",
+      "text": "The monument now called the Azadi Tower was built as the Shahyad Aryamehr Monument and renamed after 1979; its architect Hossein Amanat won a national competition announced in September 1966 [@hemmati2015]. A thesis citing the contemporary press dates its inauguration to the evening of 16 October 1971, during the celebrations; other accounts may give 17 October, so shorter copy says \"October 1971\" [@hemmati2015]. The Shiraz Arts Festival ran for eleven consecutive years from 1967, at Shiraz and Persepolis, and owed its conception to Queen Farah [@iranica-shiraz-arts-festival]. The Tehran Museum of Contemporary Art was designed by Kamran Diba, who dates the project 1967–1976 [@diba-tmoca], and was inaugurated by Farah Pahlavi in 1977 [@cubbon2019-tmoca]. The crown jewels were transferred by law to Bank Melli on 16 November 1935, where they are held as collateral for banknotes; they are now kept at the Central Bank of Iran [@iranica-crown-jewels].",
+      "cite": [
+        {
+          "sourceId": "hemmati2015"
+        },
+        {
+          "sourceId": "iranica-shiraz-arts-festival"
+        },
+        {
+          "sourceId": "diba-tmoca"
+        },
+        {
+          "sourceId": "cubbon2019-tmoca"
+        },
+        {
+          "sourceId": "iranica-crown-jewels"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "persepolis-apadana"
+    },
+    {
+      "type": "heading",
+      "text": "Foreign policy"
+    },
+    {
+      "type": "paragraph",
+      "text": "The shah supported regional co-operation, improved relations with the Soviet Union, and expanded Iran's armed forces; in 1972 Nixon allowed him to buy any conventional weapon in the US arsenal [@loc19]. Iran and Iraq signed the Algiers Agreement in 1975 [@loc19].",
+      "cite": [
+        {
+          "sourceId": "loc19"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "azadi-tower"
+    },
+    {
+      "type": "heading",
+      "text": "Opposition and repression"
+    },
+    {
+      "type": "paragraph",
+      "text": "After the 1963 riots there was little overt opposition, but new groups committed to armed struggle formed; the Fadayan attacked a gendarmerie post at Siahkal in February 1971, and 341 guerrilla members died between 1971 and 1979 in armed confrontations, by execution or suicide, or in custody [@loc20]. In 1975 a one-party state was established under the Rastakhiz party, which the Library of Congress says further alienated the educated classes [@loc21]. Organisations such as Amnesty International drew attention to the treatment of political prisoners [@loc21].",
+      "cite": [
+        {
+          "sourceId": "loc20"
+        },
+        {
+          "sourceId": "loc21"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "tmoca"
+    }
+  ],
+  "furtherReading": [],
+  "related": []
+}

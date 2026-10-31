@@ -1,0 +1,21 @@
+{
+  "id": "1980-death",
+  "status": "review",
+  "title": "Mohammad Reza Pahlavi dies in Cairo",
+  "summary": "Died in exile in Egypt at age 60; state funeral held in Cairo on 30 July.",
+  "date": {
+    "precision": "day",
+    "value": "1980-07-27"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "upi1980"
+    },
+    {
+      "sourceId": "brit-mrp"
+    }
+  ],
+  "entrySlug": "exile-and-aftermath",
+  "plateIds": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1928-capitulations",
+  "status": "review",
+  "title": "Capitulations abolished",
+  "summary": "Reza Shah abolished the capitulations under which Europeans were subject to their own consular courts.",
+  "date": {
+    "precision": "year",
+    "value": "1928"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc15"
+    }
+  ],
+  "entrySlug": "reza-shah-state-building",
+  "plateIds": []
+}

@@ -1,0 +1,23 @@
+{
+  "id": "1935-university",
+  "status": "review",
+  "title": "University of Tehran inaugurated",
+  "summary": "A law establishing the university was introduced in the Majlis on 13 March 1934; Tehran University was inaugurated on 4 February 1935. The Library of Congress gives 1935 for its establishment.",
+  "date": {
+    "precision": "day",
+    "value": "1935-02-04"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "iranica-higher-education"
+    },
+    {
+      "sourceId": "loc15"
+    }
+  ],
+  "entrySlug": "reza-shah-state-building",
+  "plateIds": [
+    "university-of-tehran-gate"
+  ]
+}

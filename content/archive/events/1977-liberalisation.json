@@ -1,0 +1,21 @@
+{
+  "id": "1977-liberalisation",
+  "status": "review",
+  "title": "Hoveyda replaced by Amuzegar; limited liberalisation",
+  "summary": "After Carter took office the shah released some political prisoners and replaced Hoveyda after twelve years.",
+  "date": {
+    "precision": "month",
+    "value": "1977-07"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc21"
+    }
+  ],
+  "entrySlug": "revolution-1977-1979",
+  "plateIds": [
+    "carter-shah-1977-review",
+    "carter-hussein-shah-1977-12-31"
+  ]
+}

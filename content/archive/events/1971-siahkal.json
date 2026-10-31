@@ -1,0 +1,18 @@
+{
+  "id": "1971-siahkal",
+  "status": "review",
+  "title": "Siahkal attack",
+  "summary": "The Fadayan launched the first major guerrilla action against the state with an attack on a gendarmerie post at Siahkal.",
+  "date": {
+    "precision": "month",
+    "value": "1971-02"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc20"
+    }
+  ],
+  "entrySlug": "the-long-boom-and-its-ceremonies",
+  "plateIds": []
+}

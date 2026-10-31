@@ -1,0 +1,112 @@
+{
+ "version": 1,
+ "collections": [
+  {
+   "slug": "timeline-1906-1980",
+   "title": "Timeline, 1906–1980",
+   "kind": "timeline",
+   "description": "Fifty dated events with sources and confidence flags.",
+   "members": {
+    "data": "timeline.json"
+   }
+  },
+  {
+   "slug": "history-sections",
+   "title": "History in eight parts",
+   "kind": "sections",
+   "description": "The narrative from the Constitutional Revolution to 1980.",
+   "members": {
+    "sections": [
+     "constitutional-revolution-to-pahlavi-accession",
+     "reza-shah-state-building",
+     "occupation-and-accession",
+     "oil-mossadeq-and-1953",
+     "white-revolution-and-reform",
+     "the-long-boom-and-its-ceremonies",
+     "revolution-1977-1979",
+     "exile-and-aftermath"
+    ]
+   }
+  },
+  {
+   "slug": "places",
+   "title": "Places",
+   "kind": "places",
+   "description": "Six sites with sourced fact cards.",
+   "members": {
+    "places": [
+     "persepolis",
+     "golestan-palace",
+     "trans-iranian-railway",
+     "university-of-tehran",
+     "azadi-tower",
+     "tehran-museum-of-contemporary-art"
+    ]
+   }
+  },
+  {
+   "slug": "photographs",
+   "title": "Photographs and objects",
+   "kind": "gallery",
+   "description": "Rights-cleared images only (status approved*). Each carries source, author, licence and attribution.",
+   "members": {
+    "filter": "images.status in ['approved','approved-editorial-with-attribution']"
+   }
+  },
+  {
+   "slug": "heads-of-state-and-diplomacy",
+   "title": "Diplomacy in photographs",
+   "kind": "gallery",
+   "description": "Meetings between Iranian and foreign leaders, 1943–1977, from national archives.",
+   "members": {
+    "images": [
+     "tehran-conference-1943",
+     "truman-shah-1949",
+     "mossadegh-acheson-1951",
+     "mossadegh-supreme-court-1951",
+     "nixon-shah-1969",
+     "nixon-shah-1973",
+     "carter-shah-1977-review",
+     "carter-hussein-shah-1977-12-31"
+    ]
+   }
+  },
+  {
+   "slug": "objects",
+   "title": "Objects",
+   "kind": "gallery",
+   "description": "Coins, crowns and other objects with museum records.",
+   "members": {
+    "images": [
+     "rijksmuseum-gold-coin",
+     "pahlavi-crown-1960s"
+    ]
+   }
+  },
+  {
+   "slug": "how-we-source",
+   "title": "How we source",
+   "kind": "editorial",
+   "description": "Method pieces: contested facts and a guide to the 1953 record.",
+   "members": {
+    "editorial": [
+     "how-this-archive-handles-contested-facts",
+     "reading-the-1953-record"
+    ]
+   }
+  },
+  {
+   "slug": "emblems-and-motifs",
+   "title": "Emblems and motifs",
+   "kind": "editorial",
+   "description": "Symbols that recur on objects: the Lion and Sun and the Persepolis capitals.",
+   "members": {
+    "editorial": [
+     "the-lion-and-sun",
+     "persepolis-capitals-and-1971"
+    ]
+   },
+   "status": "blocked-until-sources-upgraded"
+  }
+ ]
+}

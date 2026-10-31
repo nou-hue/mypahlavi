@@ -1,0 +1,18 @@
+{
+  "id": "1926-coronation",
+  "status": "review",
+  "title": "Reza Shah crowned",
+  "summary": "Reza Khan was crowned Reza Shah Pahlavi in April 1926.",
+  "date": {
+    "precision": "month",
+    "value": "1926-04"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc15"
+    }
+  ],
+  "entrySlug": "reza-shah-state-building",
+  "plateIds": []
+}

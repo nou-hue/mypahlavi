@@ -1,0 +1,208 @@
+{
+  "slug": "timeline-1906-1980",
+  "status": "review",
+  "title": "Timeline, 1906–1980",
+  "description": "Fifty dated events with sources and confidence flags.",
+  "members": [
+    {
+      "kind": "event",
+      "id": "1906-constitution"
+    },
+    {
+      "kind": "event",
+      "id": "1907-anglo-russian"
+    },
+    {
+      "kind": "event",
+      "id": "1908-majlis-bombarded"
+    },
+    {
+      "kind": "event",
+      "id": "1909-constitution-restored"
+    },
+    {
+      "kind": "event",
+      "id": "1911-shuster"
+    },
+    {
+      "kind": "event",
+      "id": "1919-anglo-persian"
+    },
+    {
+      "kind": "event",
+      "id": "1921-coup"
+    },
+    {
+      "kind": "event",
+      "id": "1925-qajar-deposed"
+    },
+    {
+      "kind": "event",
+      "id": "1926-coronation"
+    },
+    {
+      "kind": "event",
+      "id": "1927-civil-code"
+    },
+    {
+      "kind": "event",
+      "id": "1928-capitulations"
+    },
+    {
+      "kind": "event",
+      "id": "1935-university"
+    },
+    {
+      "kind": "event",
+      "id": "1936-mashhad"
+    },
+    {
+      "kind": "event",
+      "id": "1936-unveiling"
+    },
+    {
+      "kind": "event",
+      "id": "1938-railway"
+    },
+    {
+      "kind": "event",
+      "id": "1941-invasion"
+    },
+    {
+      "kind": "event",
+      "id": "1941-abdication"
+    },
+    {
+      "kind": "event",
+      "id": "1942-tripartite"
+    },
+    {
+      "kind": "event",
+      "id": "1943-tehran-conference"
+    },
+    {
+      "kind": "event",
+      "id": "1944-reza-death"
+    },
+    {
+      "kind": "event",
+      "id": "1946-azerbaijan"
+    },
+    {
+      "kind": "event",
+      "id": "1951-nationalisation"
+    },
+    {
+      "kind": "event",
+      "id": "1952-icj"
+    },
+    {
+      "kind": "event",
+      "id": "1953-coup"
+    },
+    {
+      "kind": "event",
+      "id": "1959-farah"
+    },
+    {
+      "kind": "event",
+      "id": "1962-land"
+    },
+    {
+      "kind": "event",
+      "id": "1963-referendum"
+    },
+    {
+      "kind": "event",
+      "id": "1963-women-vote"
+    },
+    {
+      "kind": "event",
+      "id": "1963-june"
+    },
+    {
+      "kind": "event",
+      "id": "1964-exile"
+    },
+    {
+      "kind": "event",
+      "id": "1965-mansur"
+    },
+    {
+      "kind": "event",
+      "id": "1967-coronation"
+    },
+    {
+      "kind": "event",
+      "id": "1967-1977-shiraz"
+    },
+    {
+      "kind": "event",
+      "id": "1971-azadi"
+    },
+    {
+      "kind": "event",
+      "id": "1971-siahkal"
+    },
+    {
+      "kind": "event",
+      "id": "1971-celebrations"
+    },
+    {
+      "kind": "event",
+      "id": "1972-nixon"
+    },
+    {
+      "kind": "event",
+      "id": "1975-rastakhiz"
+    },
+    {
+      "kind": "event",
+      "id": "1977-tmoca"
+    },
+    {
+      "kind": "event",
+      "id": "1977-liberalisation"
+    },
+    {
+      "kind": "event",
+      "id": "1978-qom"
+    },
+    {
+      "kind": "event",
+      "id": "1978-rex"
+    },
+    {
+      "kind": "event",
+      "id": "1978-jaleh"
+    },
+    {
+      "kind": "event",
+      "id": "1978-azhari"
+    },
+    {
+      "kind": "event",
+      "id": "1979-persepolis-unesco"
+    },
+    {
+      "kind": "event",
+      "id": "1979-departure"
+    },
+    {
+      "kind": "event",
+      "id": "1979-khomeini-return"
+    },
+    {
+      "kind": "event",
+      "id": "1979-collapse"
+    },
+    {
+      "kind": "event",
+      "id": "1980-death"
+    },
+    {
+      "kind": "event",
+      "id": "2013-golestan"
+    }
+  ]
+}

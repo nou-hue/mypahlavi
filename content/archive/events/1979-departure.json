@@ -1,0 +1,18 @@
+{
+  "id": "1979-departure",
+  "status": "review",
+  "title": "The shah leaves Iran",
+  "summary": "Announced as a 'short holiday'; celebrations broke out as his aircraft took off.",
+  "date": {
+    "precision": "day",
+    "value": "1979-01-16"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc21"
+    }
+  ],
+  "entrySlug": "revolution-1977-1979",
+  "plateIds": []
+}

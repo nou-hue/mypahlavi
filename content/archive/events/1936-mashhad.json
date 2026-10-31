@@ -1,0 +1,18 @@
+{
+  "id": "1936-mashhad",
+  "status": "review",
+  "title": "Imam Reza shrine confrontation, Mashhad",
+  "summary": "Troops entered the Imam Reza shrine where worshippers had gathered to protest the reforms; dozens were killed and many injured.",
+  "date": {
+    "precision": "year",
+    "value": "1936"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc15"
+    }
+  ],
+  "entrySlug": "reza-shah-state-building",
+  "plateIds": []
+}

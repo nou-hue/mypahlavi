@@ -1,0 +1,52 @@
+{
+  "slug": "persepolis",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "Persepolis",
+  "standfirst": "Ceremonial capital of the Achaemenid Empire; inscribed by UNESCO in 1979.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Fars",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Fars"
+    }
+  ],
+  "plateIds": [
+    "persepolis-apadana"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Inscribed on the UNESCO World Heritage List in 1979[@unesco114].",
+      "cite": [
+        {
+          "sourceId": "unesco114"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Venue for part of the October 1971 celebrations of 2,500 years of the Iranian monarchy; they opened on 12 October at the tomb of Cyrus at Pasargadae[@hemmati2015; @lacma-abbas1971; @loc19].",
+      "cite": [
+        {
+          "sourceId": "hemmati2015"
+        },
+        {
+          "sourceId": "lacma-abbas1971"
+        },
+        {
+          "sourceId": "loc19"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "the-long-boom-and-its-ceremonies",
+    "persepolis-capitals-and-1971"
+  ]
+}

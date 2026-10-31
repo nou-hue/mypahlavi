@@ -1,0 +1,20 @@
+{
+  "id": "1978-jaleh",
+  "status": "review",
+  "title": "Jaleh Square shooting ('Black Friday')",
+  "summary": "Troops fired on demonstrators after martial law was declared in Tehran and eleven other cities. LoC: 'certainly many more' died than the official figure of eighty-seven.",
+  "date": {
+    "precision": "day",
+    "value": "1978-09-08"
+  },
+  "confidence": "disputed",
+  "perspective": "Accounts differ between the cited sources.",
+  "note": "Sources differ on this point. The entry above follows the cited sources; read them for the variance.",
+  "cite": [
+    {
+      "sourceId": "loc21"
+    }
+  ],
+  "entrySlug": "revolution-1977-1979",
+  "plateIds": []
+}

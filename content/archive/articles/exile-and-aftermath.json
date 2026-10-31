@@ -1,0 +1,81 @@
+{
+  "slug": "exile-and-aftermath",
+  "status": "review",
+  "template": "essay",
+  "kind": "section",
+  "order": 8,
+  "period": "1979–1980",
+  "title": "Exile and aftermath",
+  "standfirst": "The last Shah's departure, his death in Cairo in 1980, and what survives.",
+  "date": {
+    "precision": "year",
+    "value": "1979",
+    "end": "1980"
+  },
+  "seoTitle": "After 1979: exile and what survives",
+  "metaDescription": "The last Shah's exile and death, and the sites inscribed by UNESCO that are associated with the Pahlavi and earlier periods.",
+  "facts": [
+    {
+      "label": "Period",
+      "value": "1979–1980"
+    }
+  ],
+  "plateIds": [
+    "persepolis-apadana",
+    "golestan-palace"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "Departure and death"
+    },
+    {
+      "type": "paragraph",
+      "text": "The shah left Iran on 16 January 1979 [@loc21]. He died in exile in Cairo on 27 July 1980, aged 60, after about four weeks in hospital [@upi1980; @brit-mrp].",
+      "cite": [
+        {
+          "sourceId": "loc21"
+        },
+        {
+          "sourceId": "upi1980"
+        },
+        {
+          "sourceId": "brit-mrp"
+        }
+      ]
+    },
+    {
+      "type": "plate",
+      "plateId": "golestan-palace"
+    },
+    {
+      "type": "heading",
+      "text": "What survives"
+    },
+    {
+      "type": "paragraph",
+      "text": "Several places associated with the dynasty and its predecessors are protected today. Persepolis was inscribed on UNESCO's World Heritage List in 1979 [@unesco114]; the Golestan Palace in 2013 [@unesco1422]; and the Trans-Iranian Railway in 2021 [@unesco1585]. The archive's \"Places\" collection gives each place card with sources.",
+      "cite": [
+        {
+          "sourceId": "unesco114"
+        },
+        {
+          "sourceId": "unesco1422"
+        },
+        {
+          "sourceId": "unesco1585"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Scope note"
+    },
+    {
+      "type": "paragraph",
+      "text": "This archive ends its narrative in 1980. Events after that date, and current political questions, are deliberately outside its scope."
+    }
+  ],
+  "furtherReading": [],
+  "related": []
+}

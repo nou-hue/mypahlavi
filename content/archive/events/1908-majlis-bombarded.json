@@ -1,0 +1,18 @@
+{
+  "id": "1908-majlis-bombarded",
+  "status": "review",
+  "title": "Majlis bombarded",
+  "summary": "Mohammad Ali Shah used the Russian-officered Persian Cossacks Brigade to bomb the Majlis building and close the assembly.",
+  "date": {
+    "precision": "month",
+    "value": "1908-06"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc13"
+    }
+  ],
+  "entrySlug": "constitutional-revolution-to-pahlavi-accession",
+  "plateIds": []
+}

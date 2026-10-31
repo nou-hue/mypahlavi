@@ -1,0 +1,98 @@
+{
+  "slug": "how-this-archive-handles-contested-facts",
+  "status": "review",
+  "template": "essay",
+  "kind": "editorial",
+  "title": "How this archive handles contested facts",
+  "standfirst": "Three examples of sources that disagree, and the rule we use to decide what to print.",
+  "date": {
+    "precision": "unknown"
+  },
+  "seoTitle": "How we handle contested facts and sources",
+  "metaDescription": "Our sourcing rules, with worked examples: the ICJ ruling on Iran's oil case, the date of the 1941 invasion and the Jaleh Square death toll.",
+  "readingMinutes": 4,
+  "facts": [],
+  "plateIds": [],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "An archive earns trust by showing where sources disagree rather than choosing quietly. Our rules: every factual sentence is cited; the strongest available source wins (court, archive or official record over reference works, reference works over encyclopaedias); where reliable sources conflict, we say so; and we never fill gaps with plausible-sounding detail."
+    },
+    {
+      "type": "heading",
+      "text": "Example 1: what the International Court of Justice decided"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Library of Congress country study says that, in the oil dispute, \"the court found in Iran's favor\" [@loc17]. The Court's own overview says something narrower: in its judgment of 22 July 1952 it decided that it had no jurisdiction, because Iran's 1932 declaration covered only disputes arising from treaties concluded after that date [@icj16]. Iran had contested jurisdiction; the Court agreed with that objection. We therefore print the Court's wording and note that a widely used summary states the outcome differently.",
+      "cite": [
+        {
+          "sourceId": "loc17"
+        },
+        {
+          "sourceId": "icj16"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Example 2: the start of the 1941 invasion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Most accounts date the Anglo-Soviet invasion to 25 August 1941 [@wp-anglosoviet]. The Library of Congress gives 26 August [@loc16]. Where we cannot settle a one-day difference with a primary source, we write \"late August 1941\".",
+      "cite": [
+        {
+          "sourceId": "wp-anglosoviet"
+        },
+        {
+          "sourceId": "loc16"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Example 3: Jaleh Square"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Library of Congress gives the official figure of eighty-seven dead on 8 September 1978 and adds that \"certainly many more\" were killed [@loc21]. We print both parts of that sentence and do not publish a single total.",
+      "cite": [
+        {
+          "sourceId": "loc21"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Example 4: who did what in 1953"
+    },
+    {
+      "type": "paragraph",
+      "text": "The National Security Archive's 2013 release is described by the Archive as including what is believed to be the CIA's first formal acknowledgement that it helped to plan and execute the coup [@nsa435]. The same publication stresses that basic questions, such as how to apportion responsibility among the Iranian and outside actors, remain disputed and may never be settled [@nsa435]. We state what the documents show and mark the rest as disputed.",
+      "cite": [
+        {
+          "sourceId": "nsa435"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What you can expect"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Dates are given at the precision the evidence supports.",
+        "Pictures carry a credit, a licence and a link to the original record.",
+        "Material we could not verify is marked as unverified, or left out."
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "oil-mossadeq-and-1953",
+    "occupation-and-accession",
+    "revolution-1977-1979"
+  ]
+}

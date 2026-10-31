@@ -1,0 +1,24 @@
+{
+  "id": "1938-railway",
+  "status": "review",
+  "title": "Trans-Iranian Railway fully opened",
+  "summary": "The 1,394 km line linking the Caspian Sea with the Persian Gulf opened fully in 1938 (UNESCO World Heritage Site since 2021).",
+  "date": {
+    "precision": "year",
+    "value": "1938"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "unesco1585"
+    },
+    {
+      "sourceId": "loc15"
+    }
+  ],
+  "entrySlug": "reza-shah-state-building",
+  "plateIds": [
+    "veresk-bridge-1943",
+    "veresk-bridge-modern"
+  ]
+}

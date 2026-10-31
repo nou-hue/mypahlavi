@@ -1,0 +1,44 @@
+{
+  "id": "carter-hussein-shah-1977-12-31",
+  "status": "review",
+  "title": "President Carter with King Hussein of Jordan, the Shah and Shahbanou Farah Pahlavi, 31 December 1977",
+  "caption": "President Carter with King Hussein of Jordan, the Shah and Shahbanou Farah Pahlavi, 31 December 1977.",
+  "image": {
+    "src": "/archive/plates/carter-hussein-shah-1977-12-31.jpg",
+    "alt": "President Carter, King Hussein of Jordan, the Shah of Iran and Shahbanou Farah Pahlavi",
+    "width": 960,
+    "height": 572,
+    "variants": [
+      {
+        "src": "/archive/plates/carter-hussein-shah-1977-12-31-500.jpg",
+        "width": 500
+      }
+    ]
+  },
+  "date": {
+    "precision": "day",
+    "value": "1977-12-31"
+  },
+  "credit": {
+    "line": "Unknown author / Wikimedia Commons / Public domain (PD-USGov)",
+    "creator": "Unknown author",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AJimmy_Carter_with_King_Hussein_of_Jordan_the_Shah_of_Iran_and_Shahbanou_of_Iran_-_NARA_-_177332_04.jpg"
+  },
+  "rights": {
+    "status": "public-domain",
+    "holder": "Unknown author",
+    "licence": "Public domain",
+    "evidence": "PD-USGov. UK NOTE: US federal-government works are public domain in the US, but their term in the UK is not settled where an identified photographer is involved; keep to editorial use and take advice before using as product artwork. Checked via Wikimedia Commons API imageinfo+extmetadata+wikitext on 2026-10-31.",
+    "tier": "A",
+    "ukSafe": "editorial-only",
+    "checkedBy": "Content & SEO (automated Commons API check)",
+    "checkedOn": "2026-10-31"
+  },
+  "sourceIds": [
+    "loc21"
+  ],
+  "useFor": [
+    "editorial"
+  ],
+  "captionBasis": "Commons description; NARA identifier 177332."
+}

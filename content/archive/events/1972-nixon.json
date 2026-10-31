@@ -1,0 +1,21 @@
+{
+  "id": "1972-nixon",
+  "status": "review",
+  "title": "Nixon's visit; arms purchase policy",
+  "summary": "During his 1972 visit Nixon allowed the shah to buy any conventional US weapon in the quantities he judged necessary.",
+  "date": {
+    "precision": "year",
+    "value": "1972"
+  },
+  "confidence": "documented",
+  "cite": [
+    {
+      "sourceId": "loc19"
+    }
+  ],
+  "entrySlug": "the-long-boom-and-its-ceremonies",
+  "plateIds": [
+    "nixon-shah-1969",
+    "nixon-shah-1973"
+  ]
+}

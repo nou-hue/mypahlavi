@@ -1,3 +1,6 @@
+// Preview builds must not see production DB/Stripe/Printify/auth variables.
+// @ts-expect-error JS module alongside the TS vite config
+import "./src/lib/preview-guard.mjs";
 import type { Plugin } from "vite";
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
@@ -6,6 +9,8 @@ import tailwindcss from "@tailwindcss/vite";
 import { nitro } from "nitro/vite";
 // @ts-expect-error JS plugin alongside the TS vite config
 import { grokPwaPlugin } from "./scripts/grok-pwa-plugin.mjs";
+// @ts-expect-error JS plugin alongside the TS vite config
+import { archiveContentGate } from "./scripts/archive-content-gate.mjs";
 
 /**
  * Finish PGLite bootstrap during dev-server setup (before traffic). Vite awaits
@@ -144,6 +149,8 @@ export default defineConfig(({ command }) => ({
     authPopupPlugin(),
     // PWA head + ?install=1 tutorial page; runs before Start/Nitro.
     grokPwaPlugin(),
+    // Drafts never ship; records awaiting review ship to previews only.
+    archiveContentGate(),
     tailwindcss(),
     tanstackStart(),
     ...(command === "build"

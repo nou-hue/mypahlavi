@@ -1,0 +1,45 @@
+{
+  "slug": "tehran-museum-of-contemporary-art",
+  "status": "review",
+  "template": "place",
+  "kind": "place",
+  "title": "Tehran Museum of Contemporary Art",
+  "standfirst": "Museum inaugurated in 1977 and designed by Kamran Diba.",
+  "date": {
+    "precision": "unknown"
+  },
+  "place": "Tehran",
+  "facts": [
+    {
+      "label": "Region",
+      "value": "Tehran"
+    }
+  ],
+  "plateIds": [
+    "tmoca"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Inaugurated by Farah Pahlavi in 1977; designed by Kamran Diba[@cubbon2019-tmoca].",
+      "cite": [
+        {
+          "sourceId": "cubbon2019-tmoca"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The architect dates the project 1967-1976 and was interim director for eighteen months after completion[@diba-tmoca].",
+      "cite": [
+        {
+          "sourceId": "diba-tmoca"
+        }
+      ]
+    }
+  ],
+  "furtherReading": [],
+  "related": [
+    "the-long-boom-and-its-ceremonies"
+  ]
+}
