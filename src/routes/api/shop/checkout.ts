@@ -2,6 +2,7 @@ import { randomBytes } from "node:crypto";
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { estimateShippingGBP } from "@/data/shop";
+import { priceCheckoutLine } from "@/lib/shop/checkout-pricing";
 import { printifyConfigured } from "@/lib/printify/client";
 import { resolveProductForCheckout } from "@/lib/shop/catalog.server";
 import {
@@ -99,6 +100,19 @@ export const Route = createFileRoute("/api/shop/checkout")({
               { status: 400 },
             );
           }
+          // Server-side price: always re-derived from the GBP price map, never
+          // from the client, the cart, or a vendor (Printify) price.
+          const priced = priceCheckoutLine(product, variant);
+          if (!priced.ok) {
+            return Response.json(
+              {
+                error:
+                  "This item is price on request and cannot be bought online yet. No payment has been taken.",
+              },
+              { status: 409 },
+            );
+          }
+          const unitPence = priced.unitPence;
           if (
             stripeConfigured() &&
             (!product.printifyProductId || !variant.printifyVariantId)
@@ -119,7 +133,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
             name: product.name,
             variantId: variant.id,
             variantLabel: variant.label,
-            unitPriceGBP: variant.priceGBP,
+            unitPriceGBP: unitPence / 100,
             quantity: line.quantity,
             sku: variant.sku,
             gradient: product.gradient,

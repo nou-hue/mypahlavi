@@ -26,7 +26,7 @@ async function getMarketingCatalog(): Promise<ShopProduct[] | null> {
     (product) =>
       Boolean(product.printifyProductId) &&
       Boolean(product.imageSrc) &&
-      product.variants.length > 0,
+      product.variants.some((v) => v.priceGBP !== null),
   );
 
   return products.length > 0 ? products : null;
@@ -51,7 +51,9 @@ export async function buildPinterestFeed(): Promise<string | null> {
   ].join(",");
 
   const rows = products.flatMap((product) =>
-    product.variants.map((variant) => {
+    product.variants
+      .filter((v): v is typeof v & { priceGBP: number } => v.priceGBP !== null)
+      .map((variant) => {
       const title =
         product.variants.length > 1
           ? `${product.name} — ${variant.label}`
@@ -96,7 +98,9 @@ export async function buildGoogleFeed(): Promise<string | null> {
   ].join("\t");
 
   const rows = products.flatMap((product) =>
-    product.variants.map((variant) => {
+    product.variants
+      .filter((v): v is typeof v & { priceGBP: number } => v.priceGBP !== null)
+      .map((variant) => {
       const title =
         product.variants.length > 1
           ? `${product.name} — ${variant.label}`
