@@ -4,6 +4,7 @@ import { MuseumPlate } from "@/components/archive/museum-plate";
 import { editorialStories, sourcesForStory } from "@/data/editorial-v4";
 
 export const Route = createFileRoute("/")({
+  head: () => ({ links: [{ rel: "canonical", href: "https://www.mypahlavi.com" }] }),
   component: HomePage,
 });
 
