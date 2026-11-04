@@ -5,6 +5,7 @@ import {
   splitName,
 } from "@/lib/printify/client";
 import {
+  claimFulfilment,
   getOrderById,
   parseOrder,
   updateOrder,
@@ -41,6 +42,9 @@ export async function fulfillOrderWithPrintify(orderId: string) {
     });
     return parseOrder((await getOrderById(orderId))!);
   }
+
+  // Another handler (webhook retry / order-page confirm) may be submitting.
+  if (!(await claimFulfilment(orderId))) return parseOrder(row);
 
   const shipping = order.shipping as ShippingRecord;
   const { first, last } = splitName(shipping.fullName);

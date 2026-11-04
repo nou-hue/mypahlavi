@@ -103,6 +103,14 @@ function rowFromSnapshot(s: Snapshot): ShopOrderRecord {
   };
 }
 
+/** Thrown when an order could not be written to durable storage. */
+export class OrderPersistenceError extends Error {
+  constructor(message: string, readonly cause?: unknown) {
+    super(message);
+    this.name = "OrderPersistenceError";
+  }
+}
+
 function saveMem(row: ShopOrderRecord) {
   mem().set(row.id, row);
   if (row.stripe_session_id) {
@@ -184,7 +192,7 @@ export async function insertOrder(input: {
   shipping: ShippingRecord;
   lines: OrderLineRecord[];
   metadata?: Record<string, unknown>;
-}) {
+}, opts: { requireDurable?: boolean } = {}) {
   const row = rowFromSnapshot({
     id: input.id,
     email: input.email,
@@ -199,6 +207,8 @@ export async function insertOrder(input: {
   });
   saveMem(row);
 
+  let persisted = false;
+  let failure: unknown = null;
   if (await dbAvailable()) {
     try {
       const { getSql } = await import("@/lib/db");
@@ -222,9 +232,20 @@ export async function insertOrder(input: {
         )
         on conflict (id) do nothing
       `;
+      persisted = true;
     } catch (err) {
-      console.warn("[orders] db insert failed, using memory/stripe", err);
+      failure = err;
+      console.error("[orders] db insert failed", err);
     }
+  }
+
+  if (opts.requireDurable && !persisted) {
+    // Fail closed: never take payment for an order we could not record.
+    mem().delete(row.id);
+    throw new OrderPersistenceError(
+      "Order could not be saved to the database",
+      failure,
+    );
   }
 
   return row;
@@ -240,6 +261,7 @@ export async function updateOrder(
     error_message: string | null;
     metadata_json: string;
   }>,
+  opts: { strict?: boolean } = {},
 ) {
   const current = await getOrderById(id);
   if (!current) return null;
@@ -268,27 +290,82 @@ export async function updateOrder(
   };
   saveMem(next);
 
+  // Upsert: an order recovered from Stripe metadata may not exist in the DB yet
+  // (e.g. the checkout-time insert failed); a plain UPDATE would silently no-op.
   if (await dbAvailable()) {
     try {
       const { getSql } = await import("@/lib/db");
       const sql = await getSql();
       await sql`
-        update shop_orders set
-          status = ${next.status},
-          stripe_session_id = ${next.stripe_session_id},
-          stripe_payment_intent = ${next.stripe_payment_intent},
-          printify_order_id = ${next.printify_order_id},
-          error_message = ${next.error_message},
-          metadata_json = ${next.metadata_json},
-          updated_at = ${next.updated_at}
-        where id = ${id}
+        insert into shop_orders (
+          id, created_at, updated_at, email, status,
+          stripe_session_id, stripe_payment_intent, printify_order_id,
+          currency, subtotal_pence, shipping_pence, total_pence,
+          shipping_json, lines_json, metadata_json, error_message
+        ) values (
+          ${next.id}, ${next.created_at}, ${next.updated_at}, ${next.email},
+          ${next.status}, ${next.stripe_session_id},
+          ${next.stripe_payment_intent}, ${next.printify_order_id},
+          ${next.currency}, ${next.subtotal_pence}, ${next.shipping_pence},
+          ${next.total_pence}, ${next.shipping_json}, ${next.lines_json},
+          ${next.metadata_json}, ${next.error_message}
+        )
+        on conflict (id) do update set
+          status = excluded.status,
+          stripe_session_id = excluded.stripe_session_id,
+          stripe_payment_intent = excluded.stripe_payment_intent,
+          printify_order_id = excluded.printify_order_id,
+          error_message = excluded.error_message,
+          metadata_json = excluded.metadata_json,
+          updated_at = excluded.updated_at
       `;
     } catch (err) {
-      console.warn("[orders] db update failed", err);
+      console.error("[orders] db upsert failed", id, err);
+      if (opts.strict) {
+        throw new OrderPersistenceError(`Order ${id} could not be saved`, err);
+      }
     }
+  } else if (opts.strict) {
+    throw new OrderPersistenceError(`Database unavailable while saving ${id}`);
   }
 
   return next;
+}
+
+/**
+ * Atomically claim the right to submit an order to Printify.
+ * Stripe retries the webhook and the order page also confirms payment, so two
+ * handlers can race; only the one that flips paid → printify_submitting wins.
+ * A claim older than 10 minutes is treated as abandoned and can be retaken.
+ * Without a durable DB there is nothing to coordinate on, so the claim succeeds.
+ */
+export async function claimFulfilment(id: string): Promise<boolean> {
+  if (!(await dbAvailable())) return true;
+  try {
+    const { getSql } = await import("@/lib/db");
+    const sql = await getSql();
+    const rows = await sql<{ id: string }>`
+      update shop_orders
+      set status = 'printify_submitting', updated_at = now()
+      where id = ${id}
+        and printify_order_id is null
+        and (
+          status = 'paid'
+          or (status = 'printify_submitting'
+              and updated_at < now() - interval '10 minutes')
+        )
+      returning id
+    `;
+    if (rows.length > 0) {
+      const cached = mem().get(id);
+      if (cached) saveMem({ ...cached, status: "printify_submitting" });
+      return true;
+    }
+    return false;
+  } catch (err) {
+    console.error("[orders] claimFulfilment failed", id, err);
+    return false;
+  }
 }
 
 export async function getOrderById(id: string) {

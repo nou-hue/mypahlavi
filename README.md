@@ -41,7 +41,7 @@ Orders need a real Postgres on Vercel. The app already uses Neon when
    - Environments: **Production** (and Preview if you want preview deploys to use it)
 4. **Redeploy** the latest production deployment (Deployments → ⋮ → Redeploy).
 5. Confirm:  
-   `https://www.mypahlavi.com/api/shop/status`  
+   `curl -H "x-shop-admin-secret: $SHOP_ADMIN_SECRET" https://www.mypahlavi.com/api/shop/status`  
    should show `"database": { "ok": true, "provider": "neon", ... }`.
 
 Also accepted env names (if you use Vercel Storage / Neon integration):  
@@ -71,6 +71,10 @@ https://www.mypahlavi.com/api/shop/webhook
 Event: `checkout.session.completed`
 
 Shop status: `GET /api/shop/status`  
+Public response is `{ "ok": boolean }` only (shop ready to take payments). Full
+vendor/DB detail is returned only when the request carries the header
+`x-shop-admin-secret: <SHOP_ADMIN_SECRET>`; set `SHOP_ADMIN_SECRET` in Vercel to
+enable it (unset = detail disabled).  
 Catalog: `GET /api/shop/catalog`
 
 ## Sections
