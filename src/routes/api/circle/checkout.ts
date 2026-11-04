@@ -13,6 +13,8 @@ import {
   getSessionUser,
   UnauthorizedError,
 } from "@/lib/auth/verify.server";
+import { canonicalOrigin } from "@/lib/security/origin.server";
+import { rateLimit } from "@/lib/security/rate-limit.server";
 
 const bodySchema = z.object({
   tierId: z.enum(["reader", "patron", "benefactor"]),
@@ -21,17 +23,15 @@ const bodySchema = z.object({
 });
 
 function originFrom(request: Request) {
-  const host =
-    request.headers.get("x-forwarded-host") ?? request.headers.get("host");
-  const proto = request.headers.get("x-forwarded-proto") ?? "https";
-  if (host) return `${proto}://${host}`;
-  return "http://127.0.0.1:8080";
+  return canonicalOrigin(request);
 }
 
 export const Route = createFileRoute("/api/circle/checkout")({
   server: {
     handlers: {
       POST: async ({ request }) => {
+        const limited = rateLimit(request, "circle-checkout", { limit: 10, windowMs: 10 * 60_000 });
+        if (limited) return limited;
         if (!stripeConfigured()) {
           return Response.json(
             {
@@ -152,12 +152,7 @@ export const Route = createFileRoute("/api/circle/checkout")({
         } catch (err) {
           console.error("[circle checkout]", err);
           return Response.json(
-            {
-              error:
-                err instanceof Error
-                  ? err.message
-                  : "Could not start Circle checkout",
-            },
+            { error: "Could not start Circle checkout" },
             { status: 500 },
           );
         }

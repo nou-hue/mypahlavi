@@ -1,4 +1,3 @@
-import { timingSafeEqual } from "node:crypto";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   listPrintifyShops,
@@ -7,6 +6,8 @@ import {
 } from "@/lib/printify/client";
 import { databaseStatus } from "@/lib/shop/orders.server";
 import { stripeConfigured } from "@/lib/stripe/client";
+import { isAdminRequest } from "@/lib/security/admin.server";
+import { rateLimit } from "@/lib/security/rate-limit.server";
 
 type ShopStatus = Record<string, unknown> & { ready: boolean };
 
@@ -91,27 +92,17 @@ async function getStatus(): Promise<ShopStatus> {
   return value;
 }
 
-/**
- * Admin access: header `x-shop-admin-secret` must equal SHOP_ADMIN_SECRET.
- * If SHOP_ADMIN_SECRET is not set, the detailed view is disabled entirely.
- */
-function isAdmin(request: Request): boolean {
-  const expected = process.env.SHOP_ADMIN_SECRET?.trim();
-  if (!expected) return false;
-  const given = request.headers.get("x-shop-admin-secret") ?? "";
-  const a = Buffer.from(given);
-  const b = Buffer.from(expected);
-  return a.length === b.length && timingSafeEqual(a, b);
-}
-
 const NO_STORE = { "Cache-Control": "no-store" } as const;
 
 export const Route = createFileRoute("/api/shop/status")({
   server: {
     handlers: {
       GET: async ({ request }) => {
+        const limited = rateLimit(request, "shop-status", { limit: 60, windowMs: 60_000 });
+        if (limited) return limited;
+        const admin = await isAdminRequest(request);
         const status = await getStatus();
-        if (isAdmin(request)) {
+        if (admin) {
           return Response.json(status, { headers: NO_STORE });
         }
         // Public: readiness only. No vendor, mode, shop, host or key details.

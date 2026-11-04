@@ -4,11 +4,19 @@ import {
   listPrintifyShops,
   printifyConfigured,
 } from "@/lib/printify/client";
+import { isAdminRequest } from "@/lib/security/admin.server";
+import { rateLimit } from "@/lib/security/rate-limit.server";
 
 export const Route = createFileRoute("/api/shop/printify/products")({
   server: {
     handlers: {
-      GET: async () => {
+      GET: async ({ request }) => {
+        // Operator-only: exposes provider shop ids, SKUs and cost prices.
+        const limited = rateLimit(request, "printify-products", { limit: 30, windowMs: 60_000 });
+        if (limited) return limited;
+        if (!(await isAdminRequest(request))) {
+          return Response.json({ error: "Not found" }, { status: 404 });
+        }
         if (!printifyConfigured()) {
           return Response.json(
             {
@@ -46,7 +54,7 @@ export const Route = createFileRoute("/api/shop/printify/products")({
           return Response.json(
             {
               connected: false,
-              error: err instanceof Error ? err.message : "Printify error",
+              error: "Printify request failed",
             },
             { status: 502 },
           );
