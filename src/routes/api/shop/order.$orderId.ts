@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { shopReadOnly } from "@/lib/shop/read-only";
 import {
   getOrderById,
   getOrderByStripeSession,
@@ -25,7 +26,8 @@ export const Route = createFileRoute("/api/shop/order/$orderId")({
         let row = await getOrderById(params.orderId);
 
         // Reconstruct from Stripe metadata (serverless without durable DB)
-        if (!row && sessionId && stripeConfigured()) {
+        const writable = !shopReadOnly();
+        if (writable && !row && sessionId && stripeConfigured()) {
           try {
             const stripe = getStripe();
             const session = await stripe.checkout.sessions.retrieve(sessionId);
@@ -44,6 +46,7 @@ export const Route = createFileRoute("/api/shop/order/$orderId")({
         }
 
         if (
+          writable &&
           sessionId &&
           stripeConfigured() &&
           row &&

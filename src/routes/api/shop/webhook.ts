@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { shopReadOnly, shopReadOnlyResponse } from "@/lib/shop/read-only";
 import {
   getOrderById,
   getOrderByStripeSession,
@@ -22,6 +23,8 @@ export const Route = createFileRoute("/api/shop/webhook")({
   server: {
     handlers: {
       POST: async ({ request }) => {
+        // Cut-over window: 503 makes Stripe retry this event after the window.
+        if (shopReadOnly()) return shopReadOnlyResponse();
         if (!stripeConfigured()) {
           return Response.json({ error: "Stripe not configured" }, { status: 503 });
         }
