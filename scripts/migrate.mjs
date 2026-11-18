@@ -12,28 +12,13 @@ import { readdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import pg from "pg";
+import { resolveMigrationTarget } from "./db-target.mjs";
 
-function resolveDatabaseUrl() {
-  // Prefer non-pooling for migrations (Neon pooler can break multi-statement DDL)
-  for (const key of [
-    "DATABASE_URL_UNPOOLED",
-    "POSTGRES_URL_NON_POOLING",
-    "DATABASE_URL",
-    "POSTGRES_URL",
-    "POSTGRES_PRISMA_URL",
-    "NEON_DATABASE_URL",
-  ]) {
-    const v = process.env[key]?.trim();
-    if (v) return { key, url: v };
-  }
-  return undefined;
-}
-
-const resolved = resolveDatabaseUrl();
-if (!resolved) {
-  console.log(
-    "[migrate] DATABASE_URL not set — skipping (PGLite fallback migrates at runtime).",
-  );
+// Target selection (SHOP_DATABASE_URL first, legacy names as fallback, never on
+// non-production Vercel builds) lives in ./db-target.mjs so it can be tested.
+const resolved = resolveMigrationTarget(process.env);
+if (resolved.skip) {
+  console.log(`[migrate] ${resolved.reason}`);
   process.exit(0);
 }
 

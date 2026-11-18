@@ -34,7 +34,7 @@ import { tanstackStartCookies } from "better-auth/tanstack-start";
 import { getCookie } from "@tanstack/react-start/server";
 import { randomBytes } from "node:crypto";
 import { Pool } from "pg";
-import { ensureDbReady, getPglite } from "../db";
+import { ensureDbReady, getPglite, resolvedDatabaseUrl } from "../db";
 import { emailAndPasswordEnabled } from "./email-password";
 import { GROK_PROVIDERS } from "./providers";
 import { pgliteDialect } from "./pglite-dialect";
@@ -122,7 +122,12 @@ const trustedOrigins: string[] = explicitBaseURL
       ...LOCAL_DEV_ORIGINS,
     ];
 
-const databaseUrl = env("DATABASE_URL");
+// Follows app data (`../db`): SHOP_DATABASE_URL first; otherwise DATABASE_URL as
+// before, but only when `../db` picked a real database (non-production Vercel
+// deployments get PGLite, never the integration's copy of shared production).
+const databaseUrl =
+  env("SHOP_DATABASE_URL") ??
+  (resolvedDatabaseUrl ? (env("DATABASE_URL") ?? resolvedDatabaseUrl) : undefined);
 
 // Static broker OAuth endpoints (skip OIDC discovery on every sign-in / callback).
 // Discovery would cost an extra network hop to the broker before the popup can

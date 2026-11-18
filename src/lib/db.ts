@@ -34,6 +34,18 @@ function scoreDatabaseUrl(url: string): number {
 
 function resolveDatabaseUrl(): string | undefined {
   if (typeof process === "undefined") return undefined;
+  // Dedicated shop database (separation from the CRD Neon project). Always wins.
+  const shopUrl = process.env.SHOP_DATABASE_URL?.trim();
+  if (shopUrl) return shopUrl;
+  // Non-production Vercel deployments must not use the generic names: the Neon
+  // integration points them at a copy of the shared production database. They
+  // use PGLite unless SHOP_DATABASE_URL is set. Same rule as scripts/db-target.mjs.
+  const vercelEnv =
+    process.env.VERCEL_TARGET_ENV?.trim() ||
+    process.env.VERCEL_ENV?.trim() ||
+    (process.env.VERCEL === "1" ? "unknown" : "");
+  if (vercelEnv && vercelEnv !== "production") return undefined;
+  // Unchanged legacy fallback (production until SHOP_DATABASE_URL is set).
   const candidates: Array<{ key: string; url: string }> = [];
   for (const key of [
     "POSTGRES_URL_NON_POOLING", // best for migrations / long queries
@@ -52,6 +64,12 @@ function resolveDatabaseUrl(): string | undefined {
 }
 
 const databaseUrl = resolveDatabaseUrl();
+
+/**
+ * The connection string the app uses (undefined -> PGLite). Better Auth reads
+ * this too, so auth and app data can never end up on different databases.
+ */
+export const resolvedDatabaseUrl: string | undefined = databaseUrl;
 
 /**
  * Active backend: real **Neon** when a connection string is set (deployed /
