@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { shopReadOnly, shopReadOnlyResponse } from "@/lib/shop/read-only";
 import { z } from "zod";
 import {
   getCircleTier,
@@ -30,6 +31,7 @@ export const Route = createFileRoute("/api/circle/checkout")({
   server: {
     handlers: {
       POST: async ({ request }) => {
+        if (shopReadOnly()) return shopReadOnlyResponse();
         const limited = rateLimit(request, "circle-checkout", { limit: 10, windowMs: 10 * 60_000 });
         if (limited) return limited;
         if (!stripeConfigured()) {

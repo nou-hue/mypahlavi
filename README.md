@@ -49,6 +49,20 @@ Also accepted env names (if you use Vercel Storage / Neon integration):
 
 Local preview does **not** need Neon — it uses embedded PGLite automatically.
 
+### Dedicated shop database (`SHOP_DATABASE_URL`)
+
+The shop is moving off the Neon project it shares with CRD (clinical data).
+The cut-over runbook is kept outside this public repo.
+
+- `SHOP_DATABASE_URL` (pooled) and `SHOP_DATABASE_URL_UNPOOLED` (direct, for
+  DDL) point at the shop's own database. When set they win over every name above.
+- Until they are set, **production behaves exactly as before** (legacy names).
+- **Preview/development** Vercel deployments ignore the legacy names (the Neon
+  integration points them at a copy of the shared production database) and use
+  PGLite. `npm run db:migrate` is skipped on every non-production Vercel build.
+  To give previews a real database, set a preview-only `SHOP_DATABASE_URL` and
+  `SHOP_ALLOW_PREVIEW_MIGRATIONS=true` for Preview.
+
 ## Shop (Printify + Stripe)
 
 Set these on the **same** Vercel project (Settings → Environment Variables):

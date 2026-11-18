@@ -1,4 +1,5 @@
 import { randomBytes } from "node:crypto";
+import { shopReadOnly, shopReadOnlyResponse } from "@/lib/shop/read-only";
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { estimateShippingGBP } from "@/data/shop";
@@ -50,6 +51,7 @@ export const Route = createFileRoute("/api/shop/checkout")({
   server: {
     handlers: {
       POST: async ({ request }) => {
+        if (shopReadOnly()) return shopReadOnlyResponse();
         // Each call can create an order row and a Stripe session: cap per client.
         const limited = rateLimit(request, "shop-checkout", { limit: 10, windowMs: 10 * 60_000 });
         if (limited) return limited;
